@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_85ff291093567a975e1f4e9e0b7dc59f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <div style="position: fixed; top: 18px; left: 50%; transform: translateX(-50%); z-index: 9999;
+                background: rgba(255,255,255,.94); border: 1px solid #aaa; border-radius: 10px;
+                padding: 10px 16px; font-family: Arial, sans-serif; box-shadow: 0 1px 5px rgba(0,0,0,.25);
+                text-align:center;">
+      <div style="font-size:18px;font-weight:700;">Day 8 Travel Map</div>
+      <div style="font-size:12px;color:#444;">Las Vegas → Hurricane / 約138 miles / 約2:15</div>
+    </div>
+    
+    
+    <div style="position: fixed; bottom: 28px; left: 28px; z-index: 9999; background: white;
+                border: 1px solid #999; border-radius: 8px; padding: 12px 14px;
+                font-family: Arial, sans-serif; font-size: 13px; box-shadow: 0 1px 5px rgba(0,0,0,.25);">
+      <div style="font-weight:700; margin-bottom:7px;">Day 8</div>
+      <div><span style="background:#1a9850;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Hotel: 2</div>
+      <div><span style="background:#d7191c;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>行く予定: 3</div>
+      <div><span style="background:#2c7bb6;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>候補: 7</div>
+      <div><span style="background:#7b3294;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>候補（重い）: 1</div>
+      <div style="margin-top:7px;color:#555;max-width:260px;">Planning map. Use Apple Maps / Google Maps / NPS for final navigation.</div>
+    </div>
+    
+    
+            <div class="folium-map" id="map_85ff291093567a975e1f4e9e0b7dc59f" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_85ff291093567a975e1f4e9e0b7dc59f = L.map(
+                "map_85ff291093567a975e1f4e9e0b7dc59f",
+                {
+                    center: [36.206953846153844, -115.04235384615384],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_85ff291093567a975e1f4e9e0b7dc59f);
+
+            
+
+        
+    
+            var tile_layer_8f6f2d5712d1aa4f8b523301cbc55208 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_8f6f2d5712d1aa4f8b523301cbc55208.addTo(map_85ff291093567a975e1f4e9e0b7dc59f);
+        
+    
+            var marker_47e84e223dc205810a368ced1a46a655 = L.marker(
+                [36.1286, -115.1728],
+                {
+}
+            ).addTo(map_85ff291093567a975e1f4e9e0b7dc59f);
+        
+    
+            var div_icon_2779beb48fc70138a6f1f9bc75888ffb = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#1a9850; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                H07\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_9fd357b9b4be078fbbec68ebf8784bff = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_d04314ade0195ebc82f1d770c6bf2c01 = $(`<div id="html_d04314ade0195ebc82f1d770c6bf2c01" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>H07 Las Vegas泊 / 出発</h4>       <table>         <tr><th>Status</th><td>Hotel</td></tr>         <tr><th>Category</th><td>Hotel</td></tr>         <tr><th>Area</th><td>Las Vegas, NV</td></tr>                           <tr><th>Plan</th><td>Las Vegasで宿泊。</td></tr>                  <tr><th>Notes</th><td>最大4 guests/room-unitの記載あり。グループ8人なら部屋数要確認。チェックイン時に予約カードと写真IDが必要。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_9fd357b9b4be078fbbec68ebf8784bff.setContent(html_d04314ade0195ebc82f1d770c6bf2c01);
+            
+        
+
+        marker_47e84e223dc205810a368ced1a46a655.bindPopup(popup_9fd357b9b4be078fbbec68ebf8784bff)
+        ;
+
+        
+    
+    
+            marker_47e84e223dc205810a368ced1a46a655.bindTooltip(
+                `<div>
+                     H07 Las Vegas泊 / 出発
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_47e84e223dc205810a368ced1a46a655.setIcon(div_icon_2779beb48fc70138a6f1f9bc75888ffb);
+            
+    
+            var marker_40d10e59f4ee53fc36a68a10864bfe5a = L.marker(
+                [37.1798, -113.2944],
+                {
+}
+            ).addTo(map_85ff291093567a975e1f4e9e0b7dc59f);
+        
+    
+            var div_icon_ce3db090d86b85883cbeb5bcded3b8f5 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#1a9850; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                H08\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_8619c6e59bceae6c6c35034cc6213a6c = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_befeaf3f6bf3a845ad4337fdeb04a082 = $(`<div id="html_befeaf3f6bf3a845ad4337fdeb04a082" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>H08 Hurricane泊</h4>       <table>         <tr><th>Status</th><td>Hotel</td></tr>         <tr><th>Category</th><td>Hotel</td></tr>         <tr><th>Area</th><td>Hurricane, UT</td></tr>                           <tr><th>Plan</th><td>Hurricaneで宿泊。</td></tr>                  <tr><th>Notes</th><td>Host: Veloy &amp; Tamara. ゲスト定員9人。屋外カメラあり。騒音禁止 22:00–8:00。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_8619c6e59bceae6c6c35034cc6213a6c.setContent(html_befeaf3f6bf3a845ad4337fdeb04a082);
+            
+        
+
+        marker_40d10e59f4ee53fc36a68a10864bfe5a.bindPopup(popup_8619c6e59bceae6c6c35034cc6213a6c)
+        ;
+
+        
+    
+    
+            marker_40d10e59f4ee53fc36a68a10864bfe5a.bindTooltip(
+                `<div>
+                     H08 Hurricane泊
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_40d10e59f4ee53fc36a68a10864bfe5a.setIcon(div_icon_ce3db090d86b85883cbeb5bcded3b8f5);
+            
+    
+            var marker_2863c58f15b139bc1d4e24d7e1b64548 = L.marker(
+                [36.1127, -115.1767],
+                {
+}
+            ).addTo(map_85ff291093567a975e1f4e9e0b7dc59f);
+        
+    
+            var div_icon_3050d51eada19b39e9145f30eab7a099 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#d7191c; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                08-01\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_28afe70b9e50db9819108f4fd6fde5cd = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_b711d874d3fdda033a197129b3a95244 = $(`<div id="html_b711d874d3fdda033a197129b3a95244" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>08-01 Bellagio Conservatory &amp; Botanical Gardens</h4>       <table>         <tr><th>Status</th><td>行く予定</td></tr>         <tr><th>Category</th><td>Must</td></tr>         <tr><th>Area</th><td>Las Vegas Strip</td></tr>         <tr><th>Time</th><td>30–45 min</td></tr>         <tr><th>Effort</th><td>屋内。歩行少なめ。暑さ回避向き。</td></tr>         <tr><th>Plan</th><td>ホテル内の季節展示を見る。昼の暑い時間帯に入れる。</td></tr>         <tr><th>Skip rule</th><td>混雑が強い場合は短時間で写真だけ。</td></tr>         <tr><th>Notes</th><td>昼の屋内Must候補。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_28afe70b9e50db9819108f4fd6fde5cd.setContent(html_b711d874d3fdda033a197129b3a95244);
+            
+        
+
+        marker_2863c58f15b139bc1d4e24d7e1b64548.bindPopup(popup_28afe70b9e50db9819108f4fd6fde5cd)
+        ;
+
+        
+    
+    
+            marker_2863c58f15b139bc1d4e24d7e1b64548.bindTooltip(
+                `<div>
+                     08-01 Bellagio Conservatory & Botanical Gardens
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2863c58f15b139bc1d4e24d7e1b64548.setIcon(div_icon_3050d51eada19b39e9145f30eab7a099);
+            
+    
+            var marker_54177e943fdc12416b3f92ef5405ef81 = L.marker(
+                [36.1126, -115.1743],
+                {
+}
+            ).addTo(map_85ff291093567a975e1f4e9e0b7dc59f);
+        
+    
+            var div_icon_e8ae03ab859e18f7afc84666fe25b928 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#d7191c; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                08-02\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_1b08bb6089e8cabe123628f978357071 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_641d743257d3665d3e76f91c66bc6af3 = $(`<div id="html_641d743257d3665d3e76f91c66bc6af3" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>08-02 Fountains of Bellagio</h4>       <table>         <tr><th>Status</th><td>行く予定</td></tr>         <tr><th>Category</th><td>Must</td></tr>         <tr><th>Area</th><td>Las Vegas Strip</td></tr>         <tr><th>Time</th><td>15–30 min</td></tr>         <tr><th>Effort</th><td>屋外。夜または夕方推奨。</td></tr>         <tr><th>Plan</th><td>Bellagio前で噴水ショーを見る。</td></tr>         <tr><th>Skip rule</th><td>暑い時間帯は避ける。夜移動が迫る場合は1回だけ見る。</td></tr>         <tr><th>Notes</th><td>夕方から夜の主目的。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_1b08bb6089e8cabe123628f978357071.setContent(html_641d743257d3665d3e76f91c66bc6af3);
+            
+        
+
+        marker_54177e943fdc12416b3f92ef5405ef81.bindPopup(popup_1b08bb6089e8cabe123628f978357071)
+        ;
+
+        
+    
+    
+            marker_54177e943fdc12416b3f92ef5405ef81.bindTooltip(
+                `<div>
+                     08-02 Fountains of Bellagio
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_54177e943fdc12416b3f92ef5405ef81.setIcon(div_icon_e8ae03ab859e18f7afc84666fe25b928);
+            
+    
+            var marker_01c6d693225bdbc968477af9e04c7ea8 = L.marker(
+                [36.1212, -115.1696],
+                {
+}
+            ).addTo(map_85ff291093567a975e1f4e9e0b7dc59f);
+        
+    
+            var div_icon_bf2bd5fd3babc27715e0fc6c5e3f09a0 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#d7191c; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                08-03\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_1b8fd3181e266f1d3ed2df44af40b503 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_aae3a50cc7edad922b6a7e901a9cc123 = $(`<div id="html_aae3a50cc7edad922b6a7e901a9cc123" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>08-03 The Venetian / Grand Canal Shoppes</h4>       <table>         <tr><th>Status</th><td>行く予定</td></tr>         <tr><th>Category</th><td>Must</td></tr>         <tr><th>Area</th><td>Las Vegas Strip</td></tr>         <tr><th>Time</th><td>45–75 min</td></tr>         <tr><th>Effort</th><td>屋内中心。歩行あり。暑さ回避向き。</td></tr>         <tr><th>Plan</th><td>Venetianの運河・屋内街並み・ショップエリアを見る。</td></tr>         <tr><th>Skip rule</th><td>時間が押す場合は運河周辺だけ見る。</td></tr>         <tr><th>Notes</th><td>昼のホテル巡り中心候補。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_1b8fd3181e266f1d3ed2df44af40b503.setContent(html_aae3a50cc7edad922b6a7e901a9cc123);
+            
+        
+
+        marker_01c6d693225bdbc968477af9e04c7ea8.bindPopup(popup_1b8fd3181e266f1d3ed2df44af40b503)
+        ;
+
+        
+    
+    
+            marker_01c6d693225bdbc968477af9e04c7ea8.bindTooltip(
+                `<div>
+                     08-03 The Venetian / Grand Canal Shoppes
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_01c6d693225bdbc968477af9e04c7ea8.setIcon(div_icon_bf2bd5fd3babc27715e0fc6c5e3f09a0);
+            
+    
+            var marker_1e101ffd75578f1630c88d8d05f31921 = L.marker(
+                [36.1206, -115.1615],
+                {
+}
+            ).addTo(map_85ff291093567a975e1f4e9e0b7dc59f);
+        
+    
+            var div_icon_b27364134ca52a39c397aabed1ec4a43 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                08-04\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_f7b5ef1639cfd6eecd6eb958f7cdadec = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_c088e885ecd5c6ad180bf86b49131ef8 = $(`<div id="html_c088e885ecd5c6ad180bf86b49131ef8" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>08-04 Sphere外観 / The Venetian側</h4>       <table>         <tr><th>Status</th><td>候補</td></tr>         <tr><th>Category</th><td>Possibly</td></tr>         <tr><th>Area</th><td>Las Vegas Strip</td></tr>         <tr><th>Time</th><td>15–30 min</td></tr>         <tr><th>Effort</th><td>屋外または車窓。暑さに注意。</td></tr>         <tr><th>Plan</th><td>Sphere外観をThe Venetian周辺または車窓から見る。</td></tr>         <tr><th>Skip rule</th><td>暑い、歩行が長い、夜移動を優先する場合は車窓だけ。</td></tr>         <tr><th>Notes</th><td>中に入る場合は別途チケット検討。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_f7b5ef1639cfd6eecd6eb958f7cdadec.setContent(html_c088e885ecd5c6ad180bf86b49131ef8);
+            
+        
+
+        marker_1e101ffd75578f1630c88d8d05f31921.bindPopup(popup_f7b5ef1639cfd6eecd6eb958f7cdadec)
+        ;
+
+        
+    
+    
+            marker_1e101ffd75578f1630c88d8d05f31921.bindTooltip(
+                `<div>
+                     08-04 Sphere外観 / The Venetian側
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1e101ffd75578f1630c88d8d05f31921.setIcon(div_icon_b27364134ca52a39c397aabed1ec4a43);
+            
+    
+            var marker_5f1fef61411dc6e216ab1318aa52bea0 = L.marker(
+                [36.1174, -115.168],
+                {
+}
+            ).addTo(map_85ff291093567a975e1f4e9e0b7dc59f);
+        
+    
+            var div_icon_282e9233d34222e0e8e6977a5f88de5c = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                08-05\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_65fdf7d8e3723dad47cf496d0ff3a2d2 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_cb2030b468ec10b9e195f923c146b17c = $(`<div id="html_cb2030b468ec10b9e195f923c146b17c" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>08-05 High Roller / LINQ Promenade</h4>       <table>         <tr><th>Status</th><td>候補</td></tr>         <tr><th>Category</th><td>Possibly</td></tr>         <tr><th>Area</th><td>Las Vegas Strip</td></tr>         <tr><th>Time</th><td>45–75 min</td></tr>         <tr><th>Effort</th><td>歩行あり。夕方以降向き。</td></tr>         <tr><th>Plan</th><td>LINQ周辺を歩き、時間が合えばHigh Rollerを検討。</td></tr>         <tr><th>Skip rule</th><td>暑い、時間が押す、乗る費用が高い場合は外観だけ。</td></tr>         <tr><th>Notes</th><td>夕方以降の追加候補。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_65fdf7d8e3723dad47cf496d0ff3a2d2.setContent(html_cb2030b468ec10b9e195f923c146b17c);
+            
+        
+
+        marker_5f1fef61411dc6e216ab1318aa52bea0.bindPopup(popup_65fdf7d8e3723dad47cf496d0ff3a2d2)
+        ;
+
+        
+    
+    
+            marker_5f1fef61411dc6e216ab1318aa52bea0.bindTooltip(
+                `<div>
+                     08-05 High Roller / LINQ Promenade
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5f1fef61411dc6e216ab1318aa52bea0.setIcon(div_icon_282e9233d34222e0e8e6977a5f88de5c);
+            
+    
+            var marker_4a725af0c712458f6fa7f5bbd038b6c8 = L.marker(
+                [36.1307, -115.1806],
+                {
+}
+            ).addTo(map_85ff291093567a975e1f4e9e0b7dc59f);
+        
+    
+            var div_icon_a197047f18f5e2ea5808767ae8715935 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                08-06\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_6d211e3902d35503976aea326bca7401 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_516766a5148842225502ba310ca0ae3b = $(`<div id="html_516766a5148842225502ba310ca0ae3b" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>08-06 AREA15</h4>       <table>         <tr><th>Status</th><td>候補</td></tr>         <tr><th>Category</th><td>Possibly</td></tr>         <tr><th>Area</th><td>Las Vegas</td></tr>         <tr><th>Time</th><td>1.5–3 hr</td></tr>         <tr><th>Effort</th><td>屋内。体験型。費用と予約要確認。</td></tr>         <tr><th>Plan</th><td>暑い時間帯に屋内体験・展示・食事を組み込む。</td></tr>         <tr><th>Skip rule</th><td>無料ホテル観光で十分なら省略。Hurricane移動を優先。</td></tr>         <tr><th>Notes</th><td>入る施設を決める場合は別途Decision。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_6d211e3902d35503976aea326bca7401.setContent(html_516766a5148842225502ba310ca0ae3b);
+            
+        
+
+        marker_4a725af0c712458f6fa7f5bbd038b6c8.bindPopup(popup_6d211e3902d35503976aea326bca7401)
+        ;
+
+        
+    
+    
+            marker_4a725af0c712458f6fa7f5bbd038b6c8.bindTooltip(
+                `<div>
+                     08-06 AREA15
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4a725af0c712458f6fa7f5bbd038b6c8.setIcon(div_icon_a197047f18f5e2ea5808767ae8715935);
+            
+    
+            var marker_e211b5da37a717a953489ca97141d724 = L.marker(
+                [36.1019, -115.1735],
+                {
+}
+            ).addTo(map_85ff291093567a975e1f4e9e0b7dc59f);
+        
+    
+            var div_icon_7d074e27ffb9c7004395fc63b6c4bd8b = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                08-07\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_2bb3ec07771d8385c3c51cec334d0f0b = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_499587c668518cc81263ca462cc54dfb = $(`<div id="html_499587c668518cc81263ca462cc54dfb" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>08-07 M&amp;M’s World / Coca-Cola Store / New York-New York周辺</h4>       <table>         <tr><th>Status</th><td>候補</td></tr>         <tr><th>Category</th><td>Possibly</td></tr>         <tr><th>Area</th><td>Las Vegas Strip</td></tr>         <tr><th>Time</th><td>45–75 min</td></tr>         <tr><th>Effort</th><td>屋内中心。歩行あり。子供向き。</td></tr>         <tr><th>Plan</th><td>買い物・写真・休憩を兼ねて短時間立ち寄る。</td></tr>         <tr><th>Skip rule</th><td>買い物不要、時間不足なら省略。</td></tr>         <tr><th>Notes</th><td>子供向け短時間候補。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_2bb3ec07771d8385c3c51cec334d0f0b.setContent(html_499587c668518cc81263ca462cc54dfb);
+            
+        
+
+        marker_e211b5da37a717a953489ca97141d724.bindPopup(popup_2bb3ec07771d8385c3c51cec334d0f0b)
+        ;
+
+        
+    
+    
+            marker_e211b5da37a717a953489ca97141d724.bindTooltip(
+                `<div>
+                     08-07 M&M’s World / Coca-Cola Store / New York-New York周辺
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e211b5da37a717a953489ca97141d724.setIcon(div_icon_7d074e27ffb9c7004395fc63b6c4bd8b);
+            
+    
+            var marker_e9cea6272fe684bc15e97809dd3baa97 = L.marker(
+                [36.082, -115.1728],
+                {
+}
+            ).addTo(map_85ff291093567a975e1f4e9e0b7dc59f);
+        
+    
+            var div_icon_201ad0a5b8078e2b2aecfc3980f3cd4b = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                08-08\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_e308b065588905af4957eae478344baf = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_75be432a1e48e014848d663013dc077d = $(`<div id="html_75be432a1e48e014848d663013dc077d" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>08-08 Welcome to Fabulous Las Vegas Sign</h4>       <table>         <tr><th>Status</th><td>候補</td></tr>         <tr><th>Category</th><td>Backup</td></tr>         <tr><th>Area</th><td>Las Vegas Strip</td></tr>         <tr><th>Time</th><td>15–30 min</td></tr>         <tr><th>Effort</th><td>屋外。暑さ・行列に注意。</td></tr>         <tr><th>Plan</th><td>Las Vegas到着記念写真を撮る。</td></tr>         <tr><th>Skip rule</th><td>暑い、並んでいる、Hurricane移動が迫る場合は省略。</td></tr>         <tr><th>Notes</th><td>朝か夕方なら候補。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_e308b065588905af4957eae478344baf.setContent(html_75be432a1e48e014848d663013dc077d);
+            
+        
+
+        marker_e9cea6272fe684bc15e97809dd3baa97.bindPopup(popup_e308b065588905af4957eae478344baf)
+        ;
+
+        
+    
+    
+            marker_e9cea6272fe684bc15e97809dd3baa97.bindTooltip(
+                `<div>
+                     08-08 Welcome to Fabulous Las Vegas Sign
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e9cea6272fe684bc15e97809dd3baa97.setIcon(div_icon_201ad0a5b8078e2b2aecfc3980f3cd4b);
+            
+    
+            var marker_39d130733f770ae33816b10bfa15c92e = L.marker(
+                [36.1707, -115.1444],
+                {
+}
+            ).addTo(map_85ff291093567a975e1f4e9e0b7dc59f);
+        
+    
+            var div_icon_e82273679822312595d85eef7f184eb1 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                08-09\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_f31b59c50020762e637cc522329880fe = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_4157d9b6212146cb31e9a029e72a7666 = $(`<div id="html_4157d9b6212146cb31e9a029e72a7666" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>08-09 Fremont Street Experience</h4>       <table>         <tr><th>Status</th><td>候補</td></tr>         <tr><th>Category</th><td>Backup</td></tr>         <tr><th>Area</th><td>Downtown Las Vegas</td></tr>         <tr><th>Time</th><td>45–90 min</td></tr>         <tr><th>Effort</th><td>屋外・夜向き。移動が必要。</td></tr>         <tr><th>Plan</th><td>夜のLED canopyとDowntownの雰囲気を見る。</td></tr>         <tr><th>Skip rule</th><td>夜移動を優先。子供が疲れていれば省略。</td></tr>         <tr><th>Notes</th><td>Backup。雰囲気が強いので子供の疲労に注意。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_f31b59c50020762e637cc522329880fe.setContent(html_4157d9b6212146cb31e9a029e72a7666);
+            
+        
+
+        marker_39d130733f770ae33816b10bfa15c92e.bindPopup(popup_f31b59c50020762e637cc522329880fe)
+        ;
+
+        
+    
+    
+            marker_39d130733f770ae33816b10bfa15c92e.bindTooltip(
+                `<div>
+                     08-09 Fremont Street Experience
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_39d130733f770ae33816b10bfa15c92e.setIcon(div_icon_e82273679822312595d85eef7f184eb1);
+            
+    
+            var marker_b3ac9d3c3a7a6130fbc679ddadb1abef = L.marker(
+                [36.1772, -115.135],
+                {
+}
+            ).addTo(map_85ff291093567a975e1f4e9e0b7dc59f);
+        
+    
+            var div_icon_9df6aa2a6bb4663d51dc3079c83995b6 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                08-10\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_9751e7a3c729727586ed8ef9be0d1f2b = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_f22f1a80b3485da9624db3ea102bcf0c = $(`<div id="html_f22f1a80b3485da9624db3ea102bcf0c" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>08-10 Neon Museum</h4>       <table>         <tr><th>Status</th><td>候補</td></tr>         <tr><th>Category</th><td>Backup</td></tr>         <tr><th>Area</th><td>Las Vegas</td></tr>         <tr><th>Time</th><td>60–90 min</td></tr>         <tr><th>Effort</th><td>屋外展示。暑さと予約に注意。</td></tr>         <tr><th>Plan</th><td>古いLas Vegas看板の展示を見る。</td></tr>         <tr><th>Skip rule</th><td>暑い、予約できない、ホテル巡りで十分なら省略。</td></tr>         <tr><th>Notes</th><td>行くなら時間帯とチケット要確認。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_9751e7a3c729727586ed8ef9be0d1f2b.setContent(html_f22f1a80b3485da9624db3ea102bcf0c);
+            
+        
+
+        marker_b3ac9d3c3a7a6130fbc679ddadb1abef.bindPopup(popup_9751e7a3c729727586ed8ef9be0d1f2b)
+        ;
+
+        
+    
+    
+            marker_b3ac9d3c3a7a6130fbc679ddadb1abef.bindTooltip(
+                `<div>
+                     08-10 Neon Museum
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b3ac9d3c3a7a6130fbc679ddadb1abef.setIcon(div_icon_9df6aa2a6bb4663d51dc3079c83995b6);
+            
+    
+            var marker_df35c6ae1f93826cc4b72c92804e1900 = L.marker(
+                [36.135, -115.427],
+                {
+}
+            ).addTo(map_85ff291093567a975e1f4e9e0b7dc59f);
+        
+    
+            var div_icon_09a3bf841383bb8614ab73f130608bb9 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#7b3294; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                08-11\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_578d60b33127ad669e93e89b91603798 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_a90d751ffd50789e3b1cf84aaafb659c = $(`<div id="html_a90d751ffd50789e3b1cf84aaafb659c" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>08-11 Red Rock Canyon Scenic Drive</h4>       <table>         <tr><th>Status</th><td>候補（原則やらない）</td></tr>         <tr><th>Category</th><td>Backup</td></tr>         <tr><th>Area</th><td>Las Vegas周辺</td></tr>         <tr><th>Time</th><td>1.5–2.5 hr</td></tr>         <tr><th>Effort</th><td>車移動中心。ただし8月昼は暑い。</td></tr>         <tr><th>Plan</th><td>朝に時間があればLas Vegas近郊の赤岩景観をドライブで見る。</td></tr>         <tr><th>Skip rule</th><td>昼は暑い。市内観光や移動を優先する場合は省略。</td></tr>         <tr><th>Notes</th><td>行くなら朝のみ。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_578d60b33127ad669e93e89b91603798.setContent(html_a90d751ffd50789e3b1cf84aaafb659c);
+            
+        
+
+        marker_df35c6ae1f93826cc4b72c92804e1900.bindPopup(popup_578d60b33127ad669e93e89b91603798)
+        ;
+
+        
+    
+    
+            marker_df35c6ae1f93826cc4b72c92804e1900.bindTooltip(
+                `<div>
+                     08-11 Red Rock Canyon Scenic Drive
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_df35c6ae1f93826cc4b72c92804e1900.setIcon(div_icon_09a3bf841383bb8614ab73f130608bb9);
+            
+    
+            map_85ff291093567a975e1f4e9e0b7dc59f.fitBounds(
+                [[36.1286, -115.1728], [37.1798, -113.2944], [36.1127, -115.1767], [36.1126, -115.1743], [36.1212, -115.1696], [36.1206, -115.1615], [36.1174, -115.168], [36.1307, -115.1806], [36.1019, -115.1735], [36.082, -115.1728], [36.1707, -115.1444], [36.1772, -115.135], [36.135, -115.427]],
+                {"padding": [40, 40]}
+            );
+        
+    
+    window._spotMarkers = {"H07": marker_47e84e223dc205810a368ced1a46a655, "H08": marker_40d10e59f4ee53fc36a68a10864bfe5a, "08-01": marker_2863c58f15b139bc1d4e24d7e1b64548, "08-02": marker_54177e943fdc12416b3f92ef5405ef81, "08-03": marker_01c6d693225bdbc968477af9e04c7ea8, "08-04": marker_1e101ffd75578f1630c88d8d05f31921, "08-05": marker_5f1fef61411dc6e216ab1318aa52bea0, "08-06": marker_4a725af0c712458f6fa7f5bbd038b6c8, "08-07": marker_e211b5da37a717a953489ca97141d724, "08-08": marker_e9cea6272fe684bc15e97809dd3baa97, "08-09": marker_39d130733f770ae33816b10bfa15c92e, "08-10": marker_b3ac9d3c3a7a6130fbc679ddadb1abef, "08-11": marker_df35c6ae1f93826cc4b72c92804e1900};
+    function openSpotFromHash() {
+      var id = decodeURIComponent((window.location.hash || '').replace('#',''));
+      if (!id || !window._spotMarkers || !window._spotMarkers[id]) return;
+      var marker = window._spotMarkers[id];
+      marker.openPopup();
+      map_85ff291093567a975e1f4e9e0b7dc59f.setView(marker.getLatLng(), Math.max(map_85ff291093567a975e1f4e9e0b7dc59f.getZoom(), 10));
+    }
+    setTimeout(openSpotFromHash, 600);
+    window.addEventListener('hashchange', openSpotFromHash);
+    
+</script>
+</html>

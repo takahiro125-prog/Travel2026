@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_2f411e1ccea43de4a2d7270354d8b39b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <div style="position: fixed; top: 18px; left: 50%; transform: translateX(-50%); z-index: 9999;
+                background: rgba(255,255,255,.94); border: 1px solid #aaa; border-radius: 10px;
+                padding: 10px 16px; font-family: Arial, sans-serif; box-shadow: 0 1px 5px rgba(0,0,0,.25);
+                text-align:center;">
+      <div style="font-size:18px;font-weight:700;">Day 4 Travel Map</div>
+      <div style="font-size:12px;color:#444;">Moab → Canyonlands → Mesa Verde → Blanding / 327 miles / 5:27</div>
+    </div>
+    
+    
+    <div style="position: fixed; bottom: 28px; left: 28px; z-index: 9999; background: white;
+                border: 1px solid #999; border-radius: 8px; padding: 12px 14px;
+                font-family: Arial, sans-serif; font-size: 13px; box-shadow: 0 1px 5px rgba(0,0,0,.25);">
+      <div style="font-weight:700; margin-bottom:7px;">Day 4</div>
+      <div><span style="background:#1a9850;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Hotel: 2</div>
+      <div><span style="background:#d7191c;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>行く予定: 7</div>
+      <div><span style="background:#2c7bb6;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>候補: 7</div>
+      <div><span style="background:#7b3294;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>候補（重い）: 3</div>
+      <div style="margin-top:7px;color:#555;max-width:260px;">Planning map. Use Apple Maps / Google Maps / NPS for final navigation.</div>
+    </div>
+    
+    
+            <div class="folium-map" id="map_2f411e1ccea43de4a2d7270354d8b39b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_2f411e1ccea43de4a2d7270354d8b39b = L.map(
+                "map_2f411e1ccea43de4a2d7270354d8b39b",
+                {
+                    center: [37.732866, -109.08643373684211],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_2f411e1ccea43de4a2d7270354d8b39b);
+
+            
+
+        
+    
+            var tile_layer_074795f336c76a694f9f1f90cdb07fa0 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_074795f336c76a694f9f1f90cdb07fa0.addTo(map_2f411e1ccea43de4a2d7270354d8b39b);
+        
+    
+            var marker_f4068ca62966050fde8c9e590168b175 = L.marker(
+                [38.5364, -109.5088],
+                {
+}
+            ).addTo(map_2f411e1ccea43de4a2d7270354d8b39b);
+        
+    
+            var div_icon_d17522dad3b2d2bec4a1b728d1222a44 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#1a9850; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                H03\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_831e36ed2fe3da234b8af555de2dad9c = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_8a19bb631cb0d6e053a1c22f2f6bb721 = $(`<div id="html_8a19bb631cb0d6e053a1c22f2f6bb721" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>H03 Moab泊 / 出発</h4>       <table>         <tr><th>Status</th><td>Hotel</td></tr>         <tr><th>Category</th><td>Hotel</td></tr>         <tr><th>Area</th><td>Moab, UT</td></tr>                           <tr><th>Plan</th><td>Moabで宿泊。</td></tr>                  <tr><th>Notes</th><td>Host: Haley @ Copper Ridge Property Management. セルフチェックイン（スマートロック）。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_831e36ed2fe3da234b8af555de2dad9c.setContent(html_8a19bb631cb0d6e053a1c22f2f6bb721);
+            
+        
+
+        marker_f4068ca62966050fde8c9e590168b175.bindPopup(popup_831e36ed2fe3da234b8af555de2dad9c)
+        ;
+
+        
+    
+    
+            marker_f4068ca62966050fde8c9e590168b175.bindTooltip(
+                `<div>
+                     H03 Moab泊 / 出発
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f4068ca62966050fde8c9e590168b175.setIcon(div_icon_d17522dad3b2d2bec4a1b728d1222a44);
+            
+    
+            var marker_9de8f4456819e76f08ab14f7e4a3ab21 = L.marker(
+                [37.627754, -109.484741],
+                {
+}
+            ).addTo(map_2f411e1ccea43de4a2d7270354d8b39b);
+        
+    
+            var div_icon_2ce977ac0893d92a8bcbd5fbb76cea7f = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#1a9850; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                H04\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_fc980fd18a04761784661d422e264941 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_cd655d0c579d6a3c3be1d7c4f9e8db4e = $(`<div id="html_cd655d0c579d6a3c3be1d7c4f9e8db4e" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>H04 Blanding泊</h4>       <table>         <tr><th>Status</th><td>Hotel</td></tr>         <tr><th>Category</th><td>Hotel</td></tr>         <tr><th>Area</th><td>Blanding, UT</td></tr>                           <tr><th>Plan</th><td>Blandingで宿泊。</td></tr>                  <tr><th>Notes</th><td>Host: Bailey. 注意: 一酸化炭素検知器の記載なし。プール/ジャクージはゲートやロックなし。携帯CO検知器検討。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_fc980fd18a04761784661d422e264941.setContent(html_cd655d0c579d6a3c3be1d7c4f9e8db4e);
+            
+        
+
+        marker_9de8f4456819e76f08ab14f7e4a3ab21.bindPopup(popup_fc980fd18a04761784661d422e264941)
+        ;
+
+        
+    
+    
+            marker_9de8f4456819e76f08ab14f7e4a3ab21.bindTooltip(
+                `<div>
+                     H04 Blanding泊
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9de8f4456819e76f08ab14f7e4a3ab21.setIcon(div_icon_2ce977ac0893d92a8bcbd5fbb76cea7f);
+            
+    
+            var marker_b3247adafa9352e4ab74959a32a391c4 = L.marker(
+                [38.4597, -109.821],
+                {
+}
+            ).addTo(map_2f411e1ccea43de4a2d7270354d8b39b);
+        
+    
+            var div_icon_6ced07974f2c40dfb26ca6ba0b152f7b = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                04-01\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_7fb13c46279a3ca02175f94f2031698f = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_960d697e3c88a9e45af2b3041ad06b37 = $(`<div id="html_960d697e3c88a9e45af2b3041ad06b37" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>04-01 Island in the Sky Visitor Center</h4>       <table>         <tr><th>Status</th><td>候補</td></tr>         <tr><th>Category</th><td>Possibly</td></tr>         <tr><th>Area</th><td>Canyonlands National Park</td></tr>         <tr><th>Time</th><td>10–20 min</td></tr>         <tr><th>Effort</th><td>軽い。トイレ・水・地図・Junior Ranger向き。</td></tr>         <tr><th>Plan</th><td>入園直後に地図・水・トイレを確認し、必要ならJunior Ranger bookletを入手する。</td></tr>         <tr><th>Skip rule</th><td>Mesa Verdeへの移動時間が押していれば水・トイレだけに短縮。</td></tr>         <tr><th>Notes</th><td>Junior Ranger対象。Shafer Canyon Overlookとは別行に分離。</td></tr>       </table>       <p><a href="https://maps.apple.com/?q=Island%20in%20the%20Sky%20Visitor%20Center%20Canyonlands" target="_blank">Open map link</a></p>     </div>     </div>`)[0];
+                popup_7fb13c46279a3ca02175f94f2031698f.setContent(html_960d697e3c88a9e45af2b3041ad06b37);
+            
+        
+
+        marker_b3247adafa9352e4ab74959a32a391c4.bindPopup(popup_7fb13c46279a3ca02175f94f2031698f)
+        ;
+
+        
+    
+    
+            marker_b3247adafa9352e4ab74959a32a391c4.bindTooltip(
+                `<div>
+                     04-01 Island in the Sky Visitor Center
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b3247adafa9352e4ab74959a32a391c4.setIcon(div_icon_6ced07974f2c40dfb26ca6ba0b152f7b);
+            
+    
+            var marker_a40066362a850ba246abbb848bd695c0 = L.marker(
+                [38.4567, -109.818],
+                {
+}
+            ).addTo(map_2f411e1ccea43de4a2d7270354d8b39b);
+        
+    
+            var div_icon_f9886c9403c7a211355ea9d649dedfc1 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                04-02\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_0c6540b3deabfa0ce4eeb06c16752b3c = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_d45198e54def6b62fff34cf3cfb69195 = $(`<div id="html_d45198e54def6b62fff34cf3cfb69195" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>04-02 Shafer Canyon Overlook</h4>       <table>         <tr><th>Status</th><td>候補</td></tr>         <tr><th>Category</th><td>Possibly</td></tr>         <tr><th>Area</th><td>Canyonlands National Park</td></tr>         <tr><th>Time</th><td>10–20 min</td></tr>         <tr><th>Effort</th><td>ほぼ停車のみ。</td></tr>         <tr><th>Plan</th><td>短時間で展望を見る。</td></tr>         <tr><th>Skip rule</th><td>時間が押せば通過。</td></tr>         <tr><th>Notes</th><td>Visitor Centerは別行。</td></tr>       </table>       <p><a href="https://maps.apple.com/?q=Shafer%20Canyon%20Overlook%20Canyonlands" target="_blank">Open map link</a></p>     </div>     </div>`)[0];
+                popup_0c6540b3deabfa0ce4eeb06c16752b3c.setContent(html_d45198e54def6b62fff34cf3cfb69195);
+            
+        
+
+        marker_a40066362a850ba246abbb848bd695c0.bindPopup(popup_0c6540b3deabfa0ce4eeb06c16752b3c)
+        ;
+
+        
+    
+    
+            marker_a40066362a850ba246abbb848bd695c0.bindTooltip(
+                `<div>
+                     04-02 Shafer Canyon Overlook
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a40066362a850ba246abbb848bd695c0.setIcon(div_icon_f9886c9403c7a211355ea9d649dedfc1);
+            
+    
+            var marker_b10e4a4d32fbbe34dc064c04e1a6f403 = L.marker(
+                [38.3892, -109.8687],
+                {
+}
+            ).addTo(map_2f411e1ccea43de4a2d7270354d8b39b);
+        
+    
+            var div_icon_6763082594b247767bc0d808057437e8 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#d7191c; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                04-03\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_c34e592e26aee6c7de7c1bb5d43cf26e = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_245785300e66a2c32b230ce45b990012 = $(`<div id="html_245785300e66a2c32b230ce45b990012" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>04-03 Mesa Arch</h4>       <table>         <tr><th>Status</th><td>行く予定</td></tr>         <tr><th>Category</th><td>Must</td></tr>         <tr><th>Area</th><td>Canyonlands National Park</td></tr>         <tr><th>Time</th><td>30 min</td></tr>         <tr><th>Effort</th><td>0.6 mile程度の短い歩行。家族向き。</td></tr>         <tr><th>Plan</th><td>Mesa Arch越しに峡谷とLa Sal Mountains方向の景色を見る。</td></tr>         <tr><th>Skip rule</th><td>駐車が厳しければ短時間待ちまで。</td></tr>         <tr><th>Notes</th><td>朝は人気が高い。日の出狙いではないので無理しない。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_c34e592e26aee6c7de7c1bb5d43cf26e.setContent(html_245785300e66a2c32b230ce45b990012);
+            
+        
+
+        marker_b10e4a4d32fbbe34dc064c04e1a6f403.bindPopup(popup_c34e592e26aee6c7de7c1bb5d43cf26e)
+        ;
+
+        
+    
+    
+            marker_b10e4a4d32fbbe34dc064c04e1a6f403.bindTooltip(
+                `<div>
+                     04-03 Mesa Arch
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b10e4a4d32fbbe34dc064c04e1a6f403.setIcon(div_icon_6763082594b247767bc0d808057437e8);
+            
+    
+            var marker_6bc7f7c80eb97b5ba7be019fe376e449 = L.marker(
+                [38.3793, -109.8883],
+                {
+}
+            ).addTo(map_2f411e1ccea43de4a2d7270354d8b39b);
+        
+    
+            var div_icon_2f4d602723ae7524ad34db55712699a8 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#d7191c; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                04-04\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_e2d6bd75817017cbac046be46b8d5ef7 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_0c4afe252622a9ffa07d41175c9d388d = $(`<div id="html_0c4afe252622a9ffa07d41175c9d388d" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>04-04 Green River Overlook</h4>       <table>         <tr><th>Status</th><td>行く予定</td></tr>         <tr><th>Category</th><td>Must</td></tr>         <tr><th>Area</th><td>Canyonlands National Park</td></tr>         <tr><th>Time</th><td>15–25 min</td></tr>         <tr><th>Effort</th><td>ほぼ停車のみ。歩行負荷は低い。</td></tr>         <tr><th>Plan</th><td>Green Riverが削った峡谷と広い台地を展望する。</td></tr>         <tr><th>Skip rule</th><td>時間が押す場合は写真だけで短縮。駐車困難なら省略可。</td></tr>         <tr><th>Notes</th><td>Mustだが滞在時間は短め。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_e2d6bd75817017cbac046be46b8d5ef7.setContent(html_0c4afe252622a9ffa07d41175c9d388d);
+            
+        
+
+        marker_6bc7f7c80eb97b5ba7be019fe376e449.bindPopup(popup_e2d6bd75817017cbac046be46b8d5ef7)
+        ;
+
+        
+    
+    
+            marker_6bc7f7c80eb97b5ba7be019fe376e449.bindTooltip(
+                `<div>
+                     04-04 Green River Overlook
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6bc7f7c80eb97b5ba7be019fe376e449.setIcon(div_icon_2f4d602723ae7524ad34db55712699a8);
+            
+    
+            var marker_fa3b51de25f976837176ef81f65d7411 = L.marker(
+                [38.3675, -109.8562],
+                {
+}
+            ).addTo(map_2f411e1ccea43de4a2d7270354d8b39b);
+        
+    
+            var div_icon_5d0a4ddbb4a3d982cb55ca718a99360f = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                04-05\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_e479f4dc3e486f48716317af6c344a31 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_0f0e83d30a8a7bc46e2e780275f5ea99 = $(`<div id="html_0f0e83d30a8a7bc46e2e780275f5ea99" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>04-05 Buck Canyon Overlook</h4>       <table>         <tr><th>Status</th><td>候補</td></tr>         <tr><th>Category</th><td>Possibly</td></tr>         <tr><th>Area</th><td>Canyonlands National Park</td></tr>         <tr><th>Time</th><td>5–10 min</td></tr>         <tr><th>Effort</th><td>ほぼ停車のみ。</td></tr>         <tr><th>Plan</th><td>駐車できれば短時間で展望・写真。混雑時は通過。</td></tr>         <tr><th>Skip rule</th><td>駐車できない、またはMesa Verdeへの移動時間が押していれば省略。</td></tr>         <tr><th>Notes</th><td>Mustではない。5–10分以上かけない。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_e479f4dc3e486f48716317af6c344a31.setContent(html_0f0e83d30a8a7bc46e2e780275f5ea99);
+            
+        
+
+        marker_fa3b51de25f976837176ef81f65d7411.bindPopup(popup_e479f4dc3e486f48716317af6c344a31)
+        ;
+
+        
+    
+    
+            marker_fa3b51de25f976837176ef81f65d7411.bindTooltip(
+                `<div>
+                     04-05 Buck Canyon Overlook
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fa3b51de25f976837176ef81f65d7411.setIcon(div_icon_5d0a4ddbb4a3d982cb55ca718a99360f);
+            
+    
+            var marker_e8fb1ce5e66595b1abffc22e1c43faba = L.marker(
+                [38.3106, -109.8566],
+                {
+}
+            ).addTo(map_2f411e1ccea43de4a2d7270354d8b39b);
+        
+    
+            var div_icon_05794579f536822ff78ba8b99714a2fc = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#d7191c; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                04-06\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_859fea8793fe5d40bce8cccb526ea331 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_3ff9b041d62b7cce01eabca357570603 = $(`<div id="html_3ff9b041d62b7cce01eabca357570603" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>04-06 Grand View Point Overlook</h4>       <table>         <tr><th>Status</th><td>行く予定</td></tr>         <tr><th>Category</th><td>Must</td></tr>         <tr><th>Area</th><td>Canyonlands National Park</td></tr>         <tr><th>Time</th><td>20–45 min</td></tr>         <tr><th>Effort</th><td>展望台中心なら軽い。Trailを歩くと長くなる。</td></tr>         <tr><th>Plan</th><td>展望台からCanyonlandsの広大な台地・峡谷を確認する。時間があれば少しだけrim沿いを歩く。</td></tr>         <tr><th>Skip rule</th><td>フルトレイルはしない。時間が押す場合は展望台だけで終了。</td></tr>         <tr><th>Notes</th><td>この日の中心候補。短時間で切り上げる。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_859fea8793fe5d40bce8cccb526ea331.setContent(html_3ff9b041d62b7cce01eabca357570603);
+            
+        
+
+        marker_e8fb1ce5e66595b1abffc22e1c43faba.bindPopup(popup_859fea8793fe5d40bce8cccb526ea331)
+        ;
+
+        
+    
+    
+            marker_e8fb1ce5e66595b1abffc22e1c43faba.bindTooltip(
+                `<div>
+                     04-06 Grand View Point Overlook
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e8fb1ce5e66595b1abffc22e1c43faba.setIcon(div_icon_05794579f536822ff78ba8b99714a2fc);
+            
+    
+            var marker_0cd79d663905155d1185799ed3a2c158 = L.marker(
+                [38.3199, -109.846],
+                {
+}
+            ).addTo(map_2f411e1ccea43de4a2d7270354d8b39b);
+        
+    
+            var div_icon_1b88a6528e16a95f53f4757765edbf38 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#7b3294; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                04-07\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_1bb5bdf82e28e1b493eb5b0c49c770ba = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_d456a371eb52a6fdda6e6fdf15411f18 = $(`<div id="html_d456a371eb52a6fdda6e6fdf15411f18" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>04-07 White Rim Overlook Trail</h4>       <table>         <tr><th>Status</th><td>候補（原則やらない）</td></tr>         <tr><th>Category</th><td>Backup</td></tr>         <tr><th>Area</th><td>Canyonlands National Park</td></tr>         <tr><th>Time</th><td>1.5 hr</td></tr>         <tr><th>Effort</th><td>1.8 miles程度。歩行負荷あり。</td></tr>         <tr><th>Plan</th><td>時間・気温・体力に大きな余裕がある場合だけ歩く。</td></tr>         <tr><th>Skip rule</th><td>通常は入れない。Mesa Verdeへ向かう時間を優先。</td></tr>         <tr><th>Notes</th><td>Backup。朝の進行が非常によい場合のみ。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_1bb5bdf82e28e1b493eb5b0c49c770ba.setContent(html_d456a371eb52a6fdda6e6fdf15411f18);
+            
+        
+
+        marker_0cd79d663905155d1185799ed3a2c158.bindPopup(popup_1bb5bdf82e28e1b493eb5b0c49c770ba)
+        ;
+
+        
+    
+    
+            marker_0cd79d663905155d1185799ed3a2c158.bindTooltip(
+                `<div>
+                     04-07 White Rim Overlook Trail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0cd79d663905155d1185799ed3a2c158.setIcon(div_icon_1b88a6528e16a95f53f4757765edbf38);
+            
+    
+            var marker_ecdbae2fc564ebb42930606d0a97f785 = L.marker(
+                [37.3313, -108.4085],
+                {
+}
+            ).addTo(map_2f411e1ccea43de4a2d7270354d8b39b);
+        
+    
+            var div_icon_10e5a82a948237889668ccbdb3760edc = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#d7191c; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                04-10\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_d63a64c78a1b999676307badfcaa88eb = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_a922d7c31043c9d262fa47498695fb7e = $(`<div id="html_a922d7c31043c9d262fa47498695fb7e" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>04-10 Mesa Verde Visitor and Research Center</h4>       <table>         <tr><th>Status</th><td>行く予定</td></tr>         <tr><th>Category</th><td>Must</td></tr>         <tr><th>Area</th><td>Mesa Verde National Park</td></tr>         <tr><th>Time</th><td>10–20 min</td></tr>         <tr><th>Effort</th><td>軽い。トイレ・水・地図・Junior Ranger向き。</td></tr>         <tr><th>Plan</th><td>入園前後に短時間で情報確認。必要ならJunior Ranger bookletを入手。</td></tr>         <tr><th>Skip rule</th><td>時間が押していればトイレ・水だけに短縮。</td></tr>         <tr><th>Notes</th><td>Day 4は長いので長居しない。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_d63a64c78a1b999676307badfcaa88eb.setContent(html_a922d7c31043c9d262fa47498695fb7e);
+            
+        
+
+        marker_ecdbae2fc564ebb42930606d0a97f785.bindPopup(popup_d63a64c78a1b999676307badfcaa88eb)
+        ;
+
+        
+    
+    
+            marker_ecdbae2fc564ebb42930606d0a97f785.bindTooltip(
+                `<div>
+                     04-10 Mesa Verde Visitor and Research Center
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ecdbae2fc564ebb42930606d0a97f785.setIcon(div_icon_10e5a82a948237889668ccbdb3760edc);
+            
+    
+            var marker_2b18b63fe74294a99a77442ca01b23ec = L.marker(
+                [37.1931, -108.4882],
+                {
+}
+            ).addTo(map_2f411e1ccea43de4a2d7270354d8b39b);
+        
+    
+            var div_icon_13e3116db7e9afd28c87d28d5c81ca1d = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                04-11\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_7127036e11e6e2434ad571d8f72b522b = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_0b958eebabf1f3abfec7bf8c7a57924b = $(`<div id="html_0b958eebabf1f3abfec7bf8c7a57924b" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>04-11 Mesa Verde Museum / Chapin Mesa Archeological Museum</h4>       <table>         <tr><th>Status</th><td>候補</td></tr>         <tr><th>Category</th><td>Possibly</td></tr>         <tr><th>Area</th><td>Mesa Verde National Park / Chapin Mesa</td></tr>         <tr><th>Time</th><td>20–40 min</td></tr>         <tr><th>Effort</th><td>屋内展示中心。park filmは17分。</td></tr>         <tr><th>Plan</th><td>Mesa Verdeの展示を見て、17分のpark filmでAncestral Puebloの背景を確認する。</td></tr>         <tr><th>Skip rule</th><td>到着が遅い場合は展示を短縮。Mesa Top Loopの時間を優先。</td></tr>         <tr><th>Notes</th><td>NPSはMesa Verde Museumで展示と17分filmを案内。Day 4は長居しない。</td></tr>       </table>       <p><a href="https://maps.apple.com/?q=Mesa%20Verde%20Museum%20Mesa%20Verde%20National%20Park" target="_blank">Open map link</a></p>     </div>     </div>`)[0];
+                popup_7127036e11e6e2434ad571d8f72b522b.setContent(html_0b958eebabf1f3abfec7bf8c7a57924b);
+            
+        
+
+        marker_2b18b63fe74294a99a77442ca01b23ec.bindPopup(popup_7127036e11e6e2434ad571d8f72b522b)
+        ;
+
+        
+    
+    
+            marker_2b18b63fe74294a99a77442ca01b23ec.bindTooltip(
+                `<div>
+                     04-11 Mesa Verde Museum / Chapin Mesa Archeological Museum
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2b18b63fe74294a99a77442ca01b23ec.setIcon(div_icon_13e3116db7e9afd28c87d28d5c81ca1d);
+            
+    
+            var marker_c5beb66c1c13a0fa2e0b616f19f7435b = L.marker(
+                [37.1923, -108.4874],
+                {
+}
+            ).addTo(map_2f411e1ccea43de4a2d7270354d8b39b);
+        
+    
+            var div_icon_5f29b5b6d59badf28f8d5f661e3b9387 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#d7191c; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                04-12\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_eb87e3a140ee6ef3a14e0eda14815f53 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_e2f3f70e732afe2c1d8021e160055c9c = $(`<div id="html_e2f3f70e732afe2c1d8021e160055c9c" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>04-12 Spruce Tree House Overlook</h4>       <table>         <tr><th>Status</th><td>行く予定</td></tr>         <tr><th>Category</th><td>Must</td></tr>         <tr><th>Area</th><td>Mesa Verde National Park / Chapin Mesa</td></tr>         <tr><th>Time</th><td>10–20 min</td></tr>         <tr><th>Effort</th><td>短い展望。中には入らずoverlookから見る。</td></tr>         <tr><th>Plan</th><td>Spruce Tree Houseをoverlookから見る。写真と説明のみ。</td></tr>         <tr><th>Skip rule</th><td>Museum周辺で時間が押していれば写真だけ。</td></tr>         <tr><th>Notes</th><td>NPSではSpruce Tree Houseはthird largest and best preserved、Museum近くの2つのoverlookから見られると案内。</td></tr>       </table>       <p><a href="https://maps.apple.com/?q=Spruce%20Tree%20House%20Overlook%20Mesa%20Verde%20National%20Park" target="_blank">Open map link</a></p>     </div>     </div>`)[0];
+                popup_eb87e3a140ee6ef3a14e0eda14815f53.setContent(html_e2f3f70e732afe2c1d8021e160055c9c);
+            
+        
+
+        marker_c5beb66c1c13a0fa2e0b616f19f7435b.bindPopup(popup_eb87e3a140ee6ef3a14e0eda14815f53)
+        ;
+
+        
+    
+    
+            marker_c5beb66c1c13a0fa2e0b616f19f7435b.bindTooltip(
+                `<div>
+                     04-12 Spruce Tree House Overlook
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c5beb66c1c13a0fa2e0b616f19f7435b.setIcon(div_icon_5f29b5b6d59badf28f8d5f661e3b9387);
+            
+    
+            var marker_10032d3875cba562b93b4607685f6480 = L.marker(
+                [37.222, -108.476],
+                {
+}
+            ).addTo(map_2f411e1ccea43de4a2d7270354d8b39b);
+        
+    
+            var div_icon_a760f14fac85f4b569501b3ea0c76495 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                04-13\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_a1eeb1266a9f884acddbfc28c3d942bd = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_06a0aa7cbdf17ea05b57adb0e592c5f3 = $(`<div id="html_06a0aa7cbdf17ea05b57adb0e592c5f3" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>04-13 Mesa Top Loop Road</h4>       <table>         <tr><th>Status</th><td>候補</td></tr>         <tr><th>Category</th><td>Possibly</td></tr>         <tr><th>Area</th><td>Mesa Verde National Park / Mesa Top Loop</td></tr>         <tr><th>Time</th><td>60–90 min</td></tr>         <tr><th>Effort</th><td>6-mile loop。短い舗装路・展望が中心。</td></tr>         <tr><th>Plan</th><td>pithouse→pueblo→cliff dwellingへの住居様式の変化を、車移動と短い停車で見る。</td></tr>         <tr><th>Skip rule</th><td>Mesa Verde到着が遅い場合は、Square Tower House、Sun Point View、Sun Templeに絞る。</td></tr>         <tr><th>Notes</th><td>NPS: 6-mile loop、12の遺跡、8:00–sunset。音声ツアーあり。</td></tr>       </table>       <p><a href="https://maps.apple.com/?q=Mesa%20Top%20Loop%20Road%20Mesa%20Verde%20National%20Park" target="_blank">Open map link</a></p>     </div>     </div>`)[0];
+                popup_a1eeb1266a9f884acddbfc28c3d942bd.setContent(html_06a0aa7cbdf17ea05b57adb0e592c5f3);
+            
+        
+
+        marker_10032d3875cba562b93b4607685f6480.bindPopup(popup_a1eeb1266a9f884acddbfc28c3d942bd)
+        ;
+
+        
+    
+    
+            marker_10032d3875cba562b93b4607685f6480.bindTooltip(
+                `<div>
+                     04-13 Mesa Top Loop Road
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_10032d3875cba562b93b4607685f6480.setIcon(div_icon_a760f14fac85f4b569501b3ea0c76495);
+            
+    
+            var marker_a6c1367a33dfcc7cf1763c7225d839f6 = L.marker(
+                [37.2289, -108.4628],
+                {
+}
+            ).addTo(map_2f411e1ccea43de4a2d7270354d8b39b);
+        
+    
+            var div_icon_46d80d008e987fd3b0e7744f0dd754b3 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#d7191c; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                04-14\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_dc545f1c213064be48547f332849baba = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_4b52545ab17cb8962345746870d04bbd = $(`<div id="html_4b52545ab17cb8962345746870d04bbd" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>04-14 Square Tower House Overlook</h4>       <table>         <tr><th>Status</th><td>行く予定</td></tr>         <tr><th>Category</th><td>Must</td></tr>         <tr><th>Area</th><td>Mesa Verde National Park / Mesa Top Loop</td></tr>         <tr><th>Time</th><td>10–15 min</td></tr>         <tr><th>Effort</th><td>短い展望。歩行負荷は低い。</td></tr>         <tr><th>Plan</th><td>Square Tower Houseをoverlookから見る。</td></tr>         <tr><th>Skip rule</th><td>Mesa Top Loop全体を短縮する場合も、可能ならここは残す。</td></tr>         <tr><th>Notes</th><td>NPSはMesa Top LoopのハイライトにSquare Tower House Overlookを挙げている。</td></tr>       </table>       <p><a href="https://maps.apple.com/?q=Square%20Tower%20House%20Overlook%20Mesa%20Verde" target="_blank">Open map link</a></p>     </div>     </div>`)[0];
+                popup_dc545f1c213064be48547f332849baba.setContent(html_4b52545ab17cb8962345746870d04bbd);
+            
+        
+
+        marker_a6c1367a33dfcc7cf1763c7225d839f6.bindPopup(popup_dc545f1c213064be48547f332849baba)
+        ;
+
+        
+    
+    
+            marker_a6c1367a33dfcc7cf1763c7225d839f6.bindTooltip(
+                `<div>
+                     04-14 Square Tower House Overlook
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a6c1367a33dfcc7cf1763c7225d839f6.setIcon(div_icon_46d80d008e987fd3b0e7744f0dd754b3);
+            
+    
+            var marker_8843e0215a3843cda2eb76cd8e368ad3 = L.marker(
+                [37.2133, -108.4835],
+                {
+}
+            ).addTo(map_2f411e1ccea43de4a2d7270354d8b39b);
+        
+    
+            var div_icon_6e80e157aea3a891bf5c5397286b5e17 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#d7191c; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                04-15\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_1ec701e8e78ea7395043efc99ca52d0c = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_79bbd74b7e157fa03d261215a32cd50e = $(`<div id="html_79bbd74b7e157fa03d261215a32cd50e" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>04-15 Sun Point View</h4>       <table>         <tr><th>Status</th><td>行く予定</td></tr>         <tr><th>Category</th><td>Must</td></tr>         <tr><th>Area</th><td>Mesa Verde National Park / Mesa Top Loop</td></tr>         <tr><th>Time</th><td>10–20 min</td></tr>         <tr><th>Effort</th><td>短い展望。写真中心。</td></tr>         <tr><th>Plan</th><td>Cliff Palaceを遠望し、Mesa Verdeのcliff dwellingの全体像を把握する。</td></tr>         <tr><th>Skip rule</th><td>霧・日没・疲労が強い場合は短時間写真だけ。</td></tr>         <tr><th>Notes</th><td>NPSはCliff PalaceをSun Point ViewとSun Templeから見られると案内。</td></tr>       </table>       <p><a href="https://maps.apple.com/?q=Sun%20Point%20View%20Mesa%20Verde%20National%20Park" target="_blank">Open map link</a></p>     </div>     </div>`)[0];
+                popup_1ec701e8e78ea7395043efc99ca52d0c.setContent(html_79bbd74b7e157fa03d261215a32cd50e);
+            
+        
+
+        marker_8843e0215a3843cda2eb76cd8e368ad3.bindPopup(popup_1ec701e8e78ea7395043efc99ca52d0c)
+        ;
+
+        
+    
+    
+            marker_8843e0215a3843cda2eb76cd8e368ad3.bindTooltip(
+                `<div>
+                     04-15 Sun Point View
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8843e0215a3843cda2eb76cd8e368ad3.setIcon(div_icon_6e80e157aea3a891bf5c5397286b5e17);
+            
+    
+            var marker_8632fe5fed32b5a598e2730ba1c2735c = L.marker(
+                [37.201, -108.4866],
+                {
+}
+            ).addTo(map_2f411e1ccea43de4a2d7270354d8b39b);
+        
+    
+            var div_icon_20c23e8f0e9938965e0bd298619a56d0 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                04-16\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_fcd54657ae50755aea4df215d2c8852b = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_24f07de193d9c9fd560b822a82c615d4 = $(`<div id="html_24f07de193d9c9fd560b822a82c615d4" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>04-16 Sun Temple</h4>       <table>         <tr><th>Status</th><td>候補</td></tr>         <tr><th>Category</th><td>Possibly</td></tr>         <tr><th>Area</th><td>Mesa Verde National Park / Mesa Top Loop</td></tr>         <tr><th>Time</th><td>10–20 min</td></tr>         <tr><th>Effort</th><td>短い歩行・展望。</td></tr>         <tr><th>Plan</th><td>Sun Templeの遺構を見て、Cliff Palace側の眺めも確認する。</td></tr>         <tr><th>Skip rule</th><td>時間が押す場合はSun Point Viewを優先し、Sun Templeは短縮または省略。</td></tr>         <tr><th>Notes</th><td>Sun Point Viewと合わせてCliff Palace遠望に使う。</td></tr>       </table>       <p><a href="https://maps.apple.com/?q=Sun%20Temple%20Mesa%20Verde%20National%20Park" target="_blank">Open map link</a></p>     </div>     </div>`)[0];
+                popup_fcd54657ae50755aea4df215d2c8852b.setContent(html_24f07de193d9c9fd560b822a82c615d4);
+            
+        
+
+        marker_8632fe5fed32b5a598e2730ba1c2735c.bindPopup(popup_fcd54657ae50755aea4df215d2c8852b)
+        ;
+
+        
+    
+    
+            marker_8632fe5fed32b5a598e2730ba1c2735c.bindTooltip(
+                `<div>
+                     04-16 Sun Temple
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8632fe5fed32b5a598e2730ba1c2735c.setIcon(div_icon_20c23e8f0e9938965e0bd298619a56d0);
+            
+    
+            var marker_962e8b191eafd54ab3406799cd622047 = L.marker(
+                [37.1677, -108.4733],
+                {
+}
+            ).addTo(map_2f411e1ccea43de4a2d7270354d8b39b);
+        
+    
+            var div_icon_df6d786d0966f0867902a27ce524253e = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                04-17\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_5478a83abe9b15a2a002c5b990303e12 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_005e7d04517a5871a28c2313a075e2d2 = $(`<div id="html_005e7d04517a5871a28c2313a075e2d2" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>04-17 Cliff Palace Overlook</h4>       <table>         <tr><th>Status</th><td>候補</td></tr>         <tr><th>Category</th><td>Possibly</td></tr>         <tr><th>Area</th><td>Mesa Verde National Park / Cliff Palace Loop</td></tr>         <tr><th>Time</th><td>15–30 min</td></tr>         <tr><th>Effort</th><td>展望中心。ツアーなし。</td></tr>         <tr><th>Plan</th><td>Cliff Palaceをoverlookから見る。ツアーに入らない場合の代替。</td></tr>         <tr><th>Skip rule</th><td>Cliff Palace Loop Roadの開通状況・時間が厳しい場合は、Sun Point View / Sun Templeで代替。</td></tr>         <tr><th>Notes</th><td>NPSはCliff Palace Loop Road開通時にoverlookから見られると案内。</td></tr>       </table>       <p><a href="https://maps.apple.com/?q=Cliff%20Palace%20Overlook%20Mesa%20Verde%20National%20Park" target="_blank">Open map link</a></p>     </div>     </div>`)[0];
+                popup_5478a83abe9b15a2a002c5b990303e12.setContent(html_005e7d04517a5871a28c2313a075e2d2);
+            
+        
+
+        marker_962e8b191eafd54ab3406799cd622047.bindPopup(popup_5478a83abe9b15a2a002c5b990303e12)
+        ;
+
+        
+    
+    
+            marker_962e8b191eafd54ab3406799cd622047.bindTooltip(
+                `<div>
+                     04-17 Cliff Palace Overlook
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_962e8b191eafd54ab3406799cd622047.setIcon(div_icon_df6d786d0966f0867902a27ce524253e);
+            
+    
+            var marker_ff164ae934d9ca782398ab469be9d353 = L.marker(
+                [37.1677, -108.4733],
+                {
+}
+            ).addTo(map_2f411e1ccea43de4a2d7270354d8b39b);
+        
+    
+            var div_icon_870d45c841337eb5c50e07fabb43da88 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#7b3294; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                04-18\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_df810dbc9f255c2d00b9e6101314c2f6 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_cf4068e4096be356bdce71950ab11131 = $(`<div id="html_cf4068e4096be356bdce71950ab11131" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>04-18 Cliff Palace ranger-led tour</h4>       <table>         <tr><th>Status</th><td>候補（原則やらない）</td></tr>         <tr><th>Category</th><td>Backup</td></tr>         <tr><th>Area</th><td>Mesa Verde National Park / Tour option</td></tr>         <tr><th>Time</th><td>45 min + 集合余裕</td></tr>         <tr><th>Effort</th><td>階段・4つの梯子・100 ft高低差。子供も自力で梯子を登る必要あり。</td></tr>         <tr><th>Plan</th><td>予約が取れ、時刻が合えばCliff Palace内部をレンジャーツアーで見学する。</td></tr>         <tr><th>Skip rule</th><td>予約なし、時刻不一致、疲労、梯子が難しい場合はoverlookで代替。</td></tr>         <tr><th>Notes</th><td>2026 season May 4–Oct 21。予約はrecreation.govで14日前から。</td></tr>       </table>       <p><a href="https://maps.apple.com/?q=Cliff%20Palace%20Mesa%20Verde%20National%20Park" target="_blank">Open map link</a></p>     </div>     </div>`)[0];
+                popup_df810dbc9f255c2d00b9e6101314c2f6.setContent(html_cf4068e4096be356bdce71950ab11131);
+            
+        
+
+        marker_ff164ae934d9ca782398ab469be9d353.bindPopup(popup_df810dbc9f255c2d00b9e6101314c2f6)
+        ;
+
+        
+    
+    
+            marker_ff164ae934d9ca782398ab469be9d353.bindTooltip(
+                `<div>
+                     04-18 Cliff Palace ranger-led tour
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ff164ae934d9ca782398ab469be9d353.setIcon(div_icon_870d45c841337eb5c50e07fabb43da88);
+            
+    
+            var marker_15e42215400cba846e726b7df2c45ba3 = L.marker(
+                [37.1601, -108.4543],
+                {
+}
+            ).addTo(map_2f411e1ccea43de4a2d7270354d8b39b);
+        
+    
+            var div_icon_4e3d2ac9f860b804dfa67a08433ff414 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#7b3294; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                04-19\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_931bc673a2f2cae225ac708f6f9e261c = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_4b9b41324c03c0ffa3f5d7248883d597 = $(`<div id="html_4b9b41324c03c0ffa3f5d7248883d597" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>04-19 Balcony House ranger-led tour</h4>       <table>         <tr><th>Status</th><td>候補（原則やらない）</td></tr>         <tr><th>Category</th><td>Backup</td></tr>         <tr><th>Area</th><td>Mesa Verde National Park / Tour option</td></tr>         <tr><th>Time</th><td>60 min + 集合余裕</td></tr>         <tr><th>Effort</th><td>32 ft梯子、狭いトンネル、崖沿い出口。子供連れでは慎重判断。</td></tr>         <tr><th>Plan</th><td>冒険要素の強いcliff dwelling tourとして検討する。</td></tr>         <tr><th>Skip rule</th><td>予約なし、疲労、子供が梯子や狭所に不安がある場合は入れない。</td></tr>         <tr><th>Notes</th><td>2026 season May 4–Oct 21。Cliff Palaceより冒険寄り。</td></tr>       </table>       <p><a href="https://maps.apple.com/?q=Balcony%20House%20Mesa%20Verde%20National%20Park" target="_blank">Open map link</a></p>     </div>     </div>`)[0];
+                popup_931bc673a2f2cae225ac708f6f9e261c.setContent(html_4b9b41324c03c0ffa3f5d7248883d597);
+            
+        
+
+        marker_15e42215400cba846e726b7df2c45ba3.bindPopup(popup_931bc673a2f2cae225ac708f6f9e261c)
+        ;
+
+        
+    
+    
+            marker_15e42215400cba846e726b7df2c45ba3.bindTooltip(
+                `<div>
+                     04-19 Balcony House ranger-led tour
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_15e42215400cba846e726b7df2c45ba3.setIcon(div_icon_4e3d2ac9f860b804dfa67a08433ff414);
+            
+    
+            map_2f411e1ccea43de4a2d7270354d8b39b.fitBounds(
+                [[38.5364, -109.5088], [37.627754, -109.484741], [38.4597, -109.821], [38.4567, -109.818], [38.3892, -109.8687], [38.3793, -109.8883], [38.3675, -109.8562], [38.3106, -109.8566], [38.3199, -109.846], [37.3313, -108.4085], [37.1931, -108.4882], [37.1923, -108.4874], [37.222, -108.476], [37.2289, -108.4628], [37.2133, -108.4835], [37.201, -108.4866], [37.1677, -108.4733], [37.1677, -108.4733], [37.1601, -108.4543]],
+                {"padding": [40, 40]}
+            );
+        
+    
+    window._spotMarkers = {"H03": marker_f4068ca62966050fde8c9e590168b175, "H04": marker_9de8f4456819e76f08ab14f7e4a3ab21, "04-01": marker_b3247adafa9352e4ab74959a32a391c4, "04-02": marker_a40066362a850ba246abbb848bd695c0, "04-03": marker_b10e4a4d32fbbe34dc064c04e1a6f403, "04-04": marker_6bc7f7c80eb97b5ba7be019fe376e449, "04-05": marker_fa3b51de25f976837176ef81f65d7411, "04-06": marker_e8fb1ce5e66595b1abffc22e1c43faba, "04-07": marker_0cd79d663905155d1185799ed3a2c158, "04-10": marker_ecdbae2fc564ebb42930606d0a97f785, "04-11": marker_2b18b63fe74294a99a77442ca01b23ec, "04-12": marker_c5beb66c1c13a0fa2e0b616f19f7435b, "04-13": marker_10032d3875cba562b93b4607685f6480, "04-14": marker_a6c1367a33dfcc7cf1763c7225d839f6, "04-15": marker_8843e0215a3843cda2eb76cd8e368ad3, "04-16": marker_8632fe5fed32b5a598e2730ba1c2735c, "04-17": marker_962e8b191eafd54ab3406799cd622047, "04-18": marker_ff164ae934d9ca782398ab469be9d353, "04-19": marker_15e42215400cba846e726b7df2c45ba3};
+    function openSpotFromHash() {
+      var id = decodeURIComponent((window.location.hash || '').replace('#',''));
+      if (!id || !window._spotMarkers || !window._spotMarkers[id]) return;
+      var marker = window._spotMarkers[id];
+      marker.openPopup();
+      map_2f411e1ccea43de4a2d7270354d8b39b.setView(marker.getLatLng(), Math.max(map_2f411e1ccea43de4a2d7270354d8b39b.getZoom(), 10));
+    }
+    setTimeout(openSpotFromHash, 600);
+    window.addEventListener('hashchange', openSpotFromHash);
+    
+</script>
+</html>

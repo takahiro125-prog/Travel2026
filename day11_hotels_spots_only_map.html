@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_4eaeb845de006a80699f24f8e748096f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <div style="position: fixed; top: 18px; left: 50%; transform: translateX(-50%); z-index: 9999;
+                background: rgba(255,255,255,.94); border: 1px solid #aaa; border-radius: 10px;
+                padding: 10px 16px; font-family: Arial, sans-serif; box-shadow: 0 1px 5px rgba(0,0,0,.25);
+                text-align:center;">
+      <div style="font-size:18px;font-weight:700;">Day 11 Travel Map</div>
+      <div style="font-size:12px;color:#444;">Boise → Hanford/Richland → Seattle / 約510–520 miles / 約8:00</div>
+    </div>
+    
+    
+    <div style="position: fixed; bottom: 28px; left: 28px; z-index: 9999; background: white;
+                border: 1px solid #999; border-radius: 8px; padding: 12px 14px;
+                font-family: Arial, sans-serif; font-size: 13px; box-shadow: 0 1px 5px rgba(0,0,0,.25);">
+      <div style="font-weight:700; margin-bottom:7px;">Day 11</div>
+      <div><span style="background:#1a9850;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Hotel: 1</div>
+      <div><span style="background:#d7191c;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>行く予定: 2</div>
+      <div><span style="background:#2c7bb6;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>候補: 6</div>
+      <div><span style="background:#7b3294;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>候補（重い）: 0</div>
+      <div style="margin-top:7px;color:#555;max-width:260px;">Planning map. Use Apple Maps / Google Maps / NPS for final navigation.</div>
+    </div>
+    
+    
+            <div class="folium-map" id="map_4eaeb845de006a80699f24f8e748096f" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_4eaeb845de006a80699f24f8e748096f = L.map(
+                "map_4eaeb845de006a80699f24f8e748096f",
+                {
+                    center: [45.6747, -118.77503333333334],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_4eaeb845de006a80699f24f8e748096f);
+
+            
+
+        
+    
+            var tile_layer_4c251e8c762ab26999141e0f5324ed14 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_4c251e8c762ab26999141e0f5324ed14.addTo(map_4eaeb845de006a80699f24f8e748096f);
+        
+    
+            var marker_c8744480a5bd803fed50c702509a598c = L.marker(
+                [43.615, -116.2023],
+                {
+}
+            ).addTo(map_4eaeb845de006a80699f24f8e748096f);
+        
+    
+            var div_icon_2cc18a2e8dfe59b80b14de2e9b3b0d8f = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#1a9850; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                H10\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_12a545e87e0225349a1705f8e7bbdd0f = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_ca7e33602edd0d1f77d0316bd5f85a26 = $(`<div id="html_ca7e33602edd0d1f77d0316bd5f85a26" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>H10 Boise周辺泊 / 出発</h4>       <table>         <tr><th>Status</th><td>Hotel</td></tr>         <tr><th>Category</th><td>Hotel</td></tr>         <tr><th>Area</th><td>Boise, ID</td></tr>                           <tr><th>Plan</th><td>Boise周辺で宿泊。</td></tr>                  <tr><th>Notes</th><td>宿泊予約未確認。検索語: Boise, ボイシ, 8月9日, Aug 9, Airbnb, Hotels.com, reservation, confirmation。追加確認または予約が必要。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_12a545e87e0225349a1705f8e7bbdd0f.setContent(html_ca7e33602edd0d1f77d0316bd5f85a26);
+            
+        
+
+        marker_c8744480a5bd803fed50c702509a598c.bindPopup(popup_12a545e87e0225349a1705f8e7bbdd0f)
+        ;
+
+        
+    
+    
+            marker_c8744480a5bd803fed50c702509a598c.bindTooltip(
+                `<div>
+                     H10 Boise周辺泊 / 出発
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c8744480a5bd803fed50c702509a598c.setIcon(div_icon_2cc18a2e8dfe59b80b14de2e9b3b0d8f);
+            
+    
+            var marker_991d4dc3fad9658e3d07391000160fc3 = L.marker(
+                [43.6118, -116.2062],
+                {
+}
+            ).addTo(map_4eaeb845de006a80699f24f8e748096f);
+        
+    
+            var div_icon_d203873f9925286e37717fa1d91e05af = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                11-01\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_1c5725a9cf1a2c4f2093ea149eba79ba = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_2f81e1b1b224899c002b47515f8d9280 = $(`<div id="html_2f81e1b1b224899c002b47515f8d9280" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>11-01 Boise朝の軽い休憩 / Boise River Greenbelt周辺</h4>       <table>         <tr><th>Status</th><td>候補</td></tr>         <tr><th>Category</th><td>Possibly</td></tr>         <tr><th>Area</th><td>Boise → Seattle</td></tr>         <tr><th>Time</th><td>20–45 min</td></tr>         <tr><th>Effort</th><td>軽い散歩。出発前の気分転換。</td></tr>         <tr><th>Plan</th><td>出発前に少し歩いてから長距離移動に入る。</td></tr>         <tr><th>Skip rule</th><td>出発が遅れる場合は省略。</td></tr>         <tr><th>Notes</th><td>任意。出発優先。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_1c5725a9cf1a2c4f2093ea149eba79ba.setContent(html_2f81e1b1b224899c002b47515f8d9280);
+            
+        
+
+        marker_991d4dc3fad9658e3d07391000160fc3.bindPopup(popup_1c5725a9cf1a2c4f2093ea149eba79ba)
+        ;
+
+        
+    
+    
+            marker_991d4dc3fad9658e3d07391000160fc3.bindTooltip(
+                `<div>
+                     11-01 Boise朝の軽い休憩 / Boise River Greenbelt周辺
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_991d4dc3fad9658e3d07391000160fc3.setIcon(div_icon_d203873f9925286e37717fa1d91e05af);
+            
+    
+            var marker_ac588571b79c763d7b6870c6d3540e6c = L.marker(
+                [44.783, -117.747],
+                {
+}
+            ).addTo(map_4eaeb845de006a80699f24f8e748096f);
+        
+    
+            var div_icon_3aa7ed37d2e3a171cf408d45ae7b879e = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                11-03\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_6a3aa0e82221e21de4d5149f736c927c = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_cfab87804ff2809a11efda05169b83b1 = $(`<div id="html_cfab87804ff2809a11efda05169b83b1" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>11-03 Baker City / Oregon Trail Interpretive Center周辺</h4>       <table>         <tr><th>Status</th><td>候補</td></tr>         <tr><th>Category</th><td>Possibly</td></tr>         <tr><th>Area</th><td>Oregon Trail / Baker City</td></tr>         <tr><th>Time</th><td>45–90 min</td></tr>         <tr><th>Effort</th><td>軽い歩行。歴史展示。</td></tr>         <tr><th>Plan</th><td>時間に余裕があればOregon Trail関連の歴史展示を見る。</td></tr>         <tr><th>Skip rule</th><td>Hanford到着を優先。通常は省略。</td></tr>         <tr><th>Notes</th><td>時間に余裕がある場合のみ。Hanford到着を優先。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_6a3aa0e82221e21de4d5149f736c927c.setContent(html_cfab87804ff2809a11efda05169b83b1);
+            
+        
+
+        marker_ac588571b79c763d7b6870c6d3540e6c.bindPopup(popup_6a3aa0e82221e21de4d5149f736c927c)
+        ;
+
+        
+    
+    
+            marker_ac588571b79c763d7b6870c6d3540e6c.bindTooltip(
+                `<div>
+                     11-03 Baker City / Oregon Trail Interpretive Center周辺
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ac588571b79c763d7b6870c6d3540e6c.setIcon(div_icon_3aa7ed37d2e3a171cf408d45ae7b879e);
+            
+    
+            var marker_f1883c28ae4050a13243b3f76a605723 = L.marker(
+                [45.65, -118.6825],
+                {
+}
+            ).addTo(map_4eaeb845de006a80699f24f8e748096f);
+        
+    
+            var div_icon_388c2215b94d9bc85073a797ed8b98ff = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                11-05\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_eb0e469a8f071b4de1fa8f00a91f520e = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_942cedd735dc2740ed030c00e9b72969 = $(`<div id="html_942cedd735dc2740ed030c00e9b72969" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>11-05 Tamástslikt Cultural Institute / Pendleton周辺</h4>       <table>         <tr><th>Status</th><td>候補</td></tr>         <tr><th>Category</th><td>Backup</td></tr>         <tr><th>Area</th><td>Pendleton周辺</td></tr>         <tr><th>Time</th><td>45–90 min</td></tr>         <tr><th>Effort</th><td>屋内展示。文化・歴史系。</td></tr>         <tr><th>Plan</th><td>時間があれば地域の文化・歴史を学ぶ。</td></tr>         <tr><th>Skip rule</th><td>時間不足、閉館、疲労が強い場合は省略。</td></tr>         <tr><th>Notes</th><td>行くなら開館時間確認。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_eb0e469a8f071b4de1fa8f00a91f520e.setContent(html_942cedd735dc2740ed030c00e9b72969);
+            
+        
+
+        marker_f1883c28ae4050a13243b3f76a605723.bindPopup(popup_eb0e469a8f071b4de1fa8f00a91f520e)
+        ;
+
+        
+    
+    
+            marker_f1883c28ae4050a13243b3f76a605723.bindTooltip(
+                `<div>
+                     11-05 Tamástslikt Cultural Institute / Pendleton周辺
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f1883c28ae4050a13243b3f76a605723.setIcon(div_icon_388c2215b94d9bc85073a797ed8b98ff);
+            
+    
+            var marker_af9e4244663b532f3afc761dc2ff722c = L.marker(
+                [46.309, -119.282],
+                {
+}
+            ).addTo(map_4eaeb845de006a80699f24f8e748096f);
+        
+    
+            var div_icon_b6f7749c48c6f47d1a99e486afe5937d = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#d7191c; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                11-06\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_2b4b65b3daf9a00061f1f61b23205fb5 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_10ee2e0676e017912f6c7b3d900a40a0 = $(`<div id="html_10ee2e0676e017912f6c7b3d900a40a0" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>11-06 Hanford Unit / Richland Visitor Center</h4>       <table>         <tr><th>Status</th><td>行く予定</td></tr>         <tr><th>Category</th><td>Must</td></tr>         <tr><th>Area</th><td>Manhattan Project National Historical Park</td></tr>         <tr><th>Time</th><td>45–90 min</td></tr>         <tr><th>Effort</th><td>屋内中心。科学史・戦争史の学習。Junior Ranger候補。</td></tr>         <tr><th>Plan</th><td>Manhattan Project NHP Hanford Unitに休憩・見学として立ち寄る。</td></tr>         <tr><th>Skip rule</th><td>帰着が遅れる場合は短時間見学にする。</td></tr>         <tr><th>Notes</th><td>Junior Rangerあり。帰着時間を優先して短めに。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_2b4b65b3daf9a00061f1f61b23205fb5.setContent(html_10ee2e0676e017912f6c7b3d900a40a0);
+            
+        
+
+        marker_af9e4244663b532f3afc761dc2ff722c.bindPopup(popup_2b4b65b3daf9a00061f1f61b23205fb5)
+        ;
+
+        
+    
+    
+            marker_af9e4244663b532f3afc761dc2ff722c.bindTooltip(
+                `<div>
+                     11-06 Hanford Unit / Richland Visitor Center
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_af9e4244663b532f3afc761dc2ff722c.setIcon(div_icon_b6f7749c48c6f47d1a99e486afe5937d);
+            
+    
+            var marker_360a405e0c6deec88528d4a88b999c45 = L.marker(
+                [46.2726, -119.2601],
+                {
+}
+            ).addTo(map_4eaeb845de006a80699f24f8e748096f);
+        
+    
+            var div_icon_38ca91a9325cb7cdb038cd22c9497650 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                11-07\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_70f34c93735193105198bdd2c3729d4e = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_258227f4f856f8face11743e46df7f0e = $(`<div id="html_258227f4f856f8face11743e46df7f0e" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>11-07 The REACH Museum / Hanford Reach Interpretive Center</h4>       <table>         <tr><th>Status</th><td>候補</td></tr>         <tr><th>Category</th><td>Backup</td></tr>         <tr><th>Area</th><td>Richland / Hanford Reach</td></tr>         <tr><th>Time</th><td>60–90 min</td></tr>         <tr><th>Effort</th><td>屋内展示。科学・自然・地域史。</td></tr>         <tr><th>Plan</th><td>HanfordやColumbia Basinの自然・科学・歴史を屋内で見る。</td></tr>         <tr><th>Skip rule</th><td>Hanfordで十分、時間不足、Seattle帰着優先なら省略。</td></tr>         <tr><th>Notes</th><td>行くなら開館時間確認。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_70f34c93735193105198bdd2c3729d4e.setContent(html_258227f4f856f8face11743e46df7f0e);
+            
+        
+
+        marker_360a405e0c6deec88528d4a88b999c45.bindPopup(popup_70f34c93735193105198bdd2c3729d4e)
+        ;
+
+        
+    
+    
+            marker_360a405e0c6deec88528d4a88b999c45.bindTooltip(
+                `<div>
+                     11-07 The REACH Museum / Hanford Reach Interpretive Center
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_360a405e0c6deec88528d4a88b999c45.setIcon(div_icon_38ca91a9325cb7cdb038cd22c9497650);
+            
+    
+            var marker_7b57c9e9c95460759947c1c84c706aae = L.marker(
+                [46.2767, -119.2775],
+                {
+}
+            ).addTo(map_4eaeb845de006a80699f24f8e748096f);
+        
+    
+            var div_icon_6315e4fae94f0e63c236e924abbc8873 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                11-08\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_9607f1d225c300bdb85d3357e3a294d9 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_6767cad15455374a1e749e0a0bf1b85f = $(`<div id="html_6767cad15455374a1e749e0a0bf1b85f" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>11-08 Richland / Columbia River沿い休憩</h4>       <table>         <tr><th>Status</th><td>候補</td></tr>         <tr><th>Category</th><td>Backup</td></tr>         <tr><th>Area</th><td>Richland / Columbia River</td></tr>         <tr><th>Time</th><td>20–45 min</td></tr>         <tr><th>Effort</th><td>軽い散歩・トイレ・軽食。暑さに注意。</td></tr>         <tr><th>Plan</th><td>子供を少し歩かせ、後半のSeattle方面移動前に休憩する。</td></tr>         <tr><th>Skip rule</th><td>暑ければ短縮。</td></tr>         <tr><th>Notes</th><td>Hanford後の休憩候補。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_9607f1d225c300bdb85d3357e3a294d9.setContent(html_6767cad15455374a1e749e0a0bf1b85f);
+            
+        
+
+        marker_7b57c9e9c95460759947c1c84c706aae.bindPopup(popup_9607f1d225c300bdb85d3357e3a294d9)
+        ;
+
+        
+    
+    
+            marker_7b57c9e9c95460759947c1c84c706aae.bindTooltip(
+                `<div>
+                     11-08 Richland / Columbia River沿い休憩
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7b57c9e9c95460759947c1c84c706aae.setIcon(div_icon_6315e4fae94f0e63c236e924abbc8873);
+            
+    
+            var marker_eb3453e41ebed389c8b478c6926c873d = L.marker(
+                [46.948, -119.9856],
+                {
+}
+            ).addTo(map_4eaeb845de006a80699f24f8e748096f);
+        
+    
+            var div_icon_8365b0395485db9d1fdf538a87903329 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                11-10\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_9e5a2dccaf5c0bc372dd003bafb34fc8 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_272cf964ba3dc839062c116754a478c0 = $(`<div id="html_272cf964ba3dc839062c116754a478c0" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>11-10 Ginkgo Petrified Forest State Park / Vantage</h4>       <table>         <tr><th>Status</th><td>候補</td></tr>         <tr><th>Category</th><td>Backup</td></tr>         <tr><th>Area</th><td>Vantage / I-90</td></tr>         <tr><th>Time</th><td>30–60 min</td></tr>         <tr><th>Effort</th><td>短い展示・展望。State park feeに注意。</td></tr>         <tr><th>Plan</th><td>I-90沿いで地質・化石系の短時間スポットとして見る。</td></tr>         <tr><th>Skip rule</th><td>Hanfordで十分、帰着が遅い、疲労が強い場合は省略。</td></tr>         <tr><th>Notes</th><td>Backup。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_9e5a2dccaf5c0bc372dd003bafb34fc8.setContent(html_272cf964ba3dc839062c116754a478c0);
+            
+        
+
+        marker_eb3453e41ebed389c8b478c6926c873d.bindPopup(popup_9e5a2dccaf5c0bc372dd003bafb34fc8)
+        ;
+
+        
+    
+    
+            marker_eb3453e41ebed389c8b478c6926c873d.bindTooltip(
+                `<div>
+                     11-10 Ginkgo Petrified Forest State Park / Vantage
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_eb3453e41ebed389c8b478c6926c873d.setIcon(div_icon_8365b0395485db9d1fdf538a87903329);
+            
+    
+            var marker_72d4a0ddb1ad24b1ba129c65fafb0b5f = L.marker(
+                [47.6062, -122.3321],
+                {
+}
+            ).addTo(map_4eaeb845de006a80699f24f8e748096f);
+        
+    
+            var div_icon_36b4c038b1cd76e3d60acff7ae415023 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#d7191c; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                11-15\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_07d646b1e38d7b7d4464400f7a561f35 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_3c320c49a427c195fc359abd14a4e420 = $(`<div id="html_3c320c49a427c195fc359abd14a4e420" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>11-15 Seattle帰着</h4>       <table>         <tr><th>Status</th><td>行く予定</td></tr>         <tr><th>Category</th><td>Must</td></tr>         <tr><th>Area</th><td>Seattle, WA</td></tr>         <tr><th>Time</th><td>—</td></tr>         <tr><th>Effort</th><td>ロードトリップ終了。</td></tr>         <tr><th>Plan</th><td>Seattleに帰着する。</td></tr>         <tr><th>Skip rule</th><td>なし。</td></tr>         <tr><th>Notes</th><td>到着後は荷物整理と休息。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_07d646b1e38d7b7d4464400f7a561f35.setContent(html_3c320c49a427c195fc359abd14a4e420);
+            
+        
+
+        marker_72d4a0ddb1ad24b1ba129c65fafb0b5f.bindPopup(popup_07d646b1e38d7b7d4464400f7a561f35)
+        ;
+
+        
+    
+    
+            marker_72d4a0ddb1ad24b1ba129c65fafb0b5f.bindTooltip(
+                `<div>
+                     11-15 Seattle帰着
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_72d4a0ddb1ad24b1ba129c65fafb0b5f.setIcon(div_icon_36b4c038b1cd76e3d60acff7ae415023);
+            
+    
+            map_4eaeb845de006a80699f24f8e748096f.fitBounds(
+                [[43.615, -116.2023], [43.6118, -116.2062], [44.783, -117.747], [45.65, -118.6825], [46.309, -119.282], [46.2726, -119.2601], [46.2767, -119.2775], [46.948, -119.9856], [47.6062, -122.3321]],
+                {"padding": [40, 40]}
+            );
+        
+    
+    window._spotMarkers = {"H10": marker_c8744480a5bd803fed50c702509a598c, "11-01": marker_991d4dc3fad9658e3d07391000160fc3, "11-03": marker_ac588571b79c763d7b6870c6d3540e6c, "11-05": marker_f1883c28ae4050a13243b3f76a605723, "11-06": marker_af9e4244663b532f3afc761dc2ff722c, "11-07": marker_360a405e0c6deec88528d4a88b999c45, "11-08": marker_7b57c9e9c95460759947c1c84c706aae, "11-10": marker_eb3453e41ebed389c8b478c6926c873d, "11-15": marker_72d4a0ddb1ad24b1ba129c65fafb0b5f};
+    function openSpotFromHash() {
+      var id = decodeURIComponent((window.location.hash || '').replace('#',''));
+      if (!id || !window._spotMarkers || !window._spotMarkers[id]) return;
+      var marker = window._spotMarkers[id];
+      marker.openPopup();
+      map_4eaeb845de006a80699f24f8e748096f.setView(marker.getLatLng(), Math.max(map_4eaeb845de006a80699f24f8e748096f.getZoom(), 10));
+    }
+    setTimeout(openSpotFromHash, 600);
+    window.addEventListener('hashchange', openSpotFromHash);
+    
+</script>
+</html>

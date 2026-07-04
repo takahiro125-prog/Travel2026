@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_45910bafddda743b5e5f912d1b254798 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <div style="position: fixed; top: 18px; left: 50%; transform: translateX(-50%); z-index: 9999;
+                background: rgba(255,255,255,.94); border: 1px solid #aaa; border-radius: 10px;
+                padding: 10px 16px; font-family: Arial, sans-serif; box-shadow: 0 1px 5px rgba(0,0,0,.25);
+                text-align:center;">
+      <div style="font-size:18px;font-weight:700;">Day 10 Travel Map</div>
+      <div style="font-size:12px;color:#444;">Meadow → Boise周辺 / 約480–500 miles / 約7:00–7:30</div>
+    </div>
+    
+    
+    <div style="position: fixed; bottom: 28px; left: 28px; z-index: 9999; background: white;
+                border: 1px solid #999; border-radius: 8px; padding: 12px 14px;
+                font-family: Arial, sans-serif; font-size: 13px; box-shadow: 0 1px 5px rgba(0,0,0,.25);">
+      <div style="font-weight:700; margin-bottom:7px;">Day 10</div>
+      <div><span style="background:#1a9850;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Hotel: 2</div>
+      <div><span style="background:#d7191c;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>行く予定: 1</div>
+      <div><span style="background:#2c7bb6;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>候補: 3</div>
+      <div><span style="background:#7b3294;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>候補（重い）: 2</div>
+      <div style="margin-top:7px;color:#555;max-width:260px;">Planning map. Use Apple Maps / Google Maps / NPS for final navigation.</div>
+    </div>
+    
+    
+            <div class="folium-map" id="map_45910bafddda743b5e5f912d1b254798" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_45910bafddda743b5e5f912d1b254798 = L.map(
+                "map_45910bafddda743b5e5f912d1b254798",
+                {
+                    center: [41.4791, -113.74346249999999],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_45910bafddda743b5e5f912d1b254798);
+
+            
+
+        
+    
+            var tile_layer_0c11a39794897c4fd78b9a1d87ec9974 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_0c11a39794897c4fd78b9a1d87ec9974.addTo(map_45910bafddda743b5e5f912d1b254798);
+        
+    
+            var marker_09acc6cc24dc49bcc85a1a0fe0b1eb81 = L.marker(
+                [38.8867, -112.408],
+                {
+}
+            ).addTo(map_45910bafddda743b5e5f912d1b254798);
+        
+    
+            var div_icon_17cd61260537889ec9d9f47728cc9788 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#1a9850; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                H09\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_4c3b96d6aa22d1ddb326683276c55dd0 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_76f3bb8e4b869a573c808fb06d753afa = $(`<div id="html_76f3bb8e4b869a573c808fb06d753afa" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>H09 Meadow泊 / 出発</h4>       <table>         <tr><th>Status</th><td>Hotel</td></tr>         <tr><th>Category</th><td>Hotel</td></tr>         <tr><th>Area</th><td>Meadow, UT</td></tr>                           <tr><th>Plan</th><td>Meadowで宿泊。</td></tr>                  <tr><th>Notes</th><td>重要: 予定ワークシート上は8/8–8/9 Meadow泊を正本とする。8/8–8/9への変更確定メールはGmailでは未確認。変更完了通知待ち。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_4c3b96d6aa22d1ddb326683276c55dd0.setContent(html_76f3bb8e4b869a573c808fb06d753afa);
+            
+        
+
+        marker_09acc6cc24dc49bcc85a1a0fe0b1eb81.bindPopup(popup_4c3b96d6aa22d1ddb326683276c55dd0)
+        ;
+
+        
+    
+    
+            marker_09acc6cc24dc49bcc85a1a0fe0b1eb81.bindTooltip(
+                `<div>
+                     H09 Meadow泊 / 出発
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_09acc6cc24dc49bcc85a1a0fe0b1eb81.setIcon(div_icon_17cd61260537889ec9d9f47728cc9788);
+            
+    
+            var marker_8ea570e229f22c4e0342e45e949f3562 = L.marker(
+                [43.615, -116.2023],
+                {
+}
+            ).addTo(map_45910bafddda743b5e5f912d1b254798);
+        
+    
+            var div_icon_b8f838d0f55ab36850384eb855d62cee = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#1a9850; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                H10\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_2288fcf7b4a7a5e2d3d29e9f40015107 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_c035f1b3d10cc3d5ae8a6f6db766d071 = $(`<div id="html_c035f1b3d10cc3d5ae8a6f6db766d071" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>H10 Boise周辺泊</h4>       <table>         <tr><th>Status</th><td>Hotel</td></tr>         <tr><th>Category</th><td>Hotel</td></tr>         <tr><th>Area</th><td>Boise, ID</td></tr>                           <tr><th>Plan</th><td>Boise周辺で宿泊。</td></tr>                  <tr><th>Notes</th><td>宿泊予約未確認。検索語: Boise, ボイシ, 8月9日, Aug 9, Airbnb, Hotels.com, reservation, confirmation。追加確認または予約が必要。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_2288fcf7b4a7a5e2d3d29e9f40015107.setContent(html_c035f1b3d10cc3d5ae8a6f6db766d071);
+            
+        
+
+        marker_8ea570e229f22c4e0342e45e949f3562.bindPopup(popup_2288fcf7b4a7a5e2d3d29e9f40015107)
+        ;
+
+        
+    
+    
+            marker_8ea570e229f22c4e0342e45e949f3562.bindTooltip(
+                `<div>
+                     H10 Boise周辺泊
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8ea570e229f22c4e0342e45e949f3562.setIcon(div_icon_b8f838d0f55ab36850384eb855d62cee);
+            
+    
+            var marker_11d06d8aab8c59bc578beef45cddbbaf = L.marker(
+                [38.6267, -112.578],
+                {
+}
+            ).addTo(map_45910bafddda743b5e5f912d1b254798);
+        
+    
+            var div_icon_44a441df06b0a218f345c0d0c37d5a38 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                10-02\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_8ec46c7dc15898870cd732fbd7f0962c = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_d556bf4c6bb639e60953db332999d61f = $(`<div id="html_d556bf4c6bb639e60953db332999d61f" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>10-02 Cove Fort Historic Site</h4>       <table>         <tr><th>Status</th><td>候補</td></tr>         <tr><th>Category</th><td>Backup</td></tr>         <tr><th>Area</th><td>Meadow → Boise</td></tr>         <tr><th>Time</th><td>20–45 min</td></tr>         <tr><th>Effort</th><td>軽い。歴史スポット。</td></tr>         <tr><th>Plan</th><td>時間に余裕があれば短時間で歴史スポットを見る。</td></tr>         <tr><th>Skip rule</th><td>Minidoka/HagermanやBoise到着を優先する場合は省略。</td></tr>         <tr><th>Notes</th><td>Backup。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_8ec46c7dc15898870cd732fbd7f0962c.setContent(html_d556bf4c6bb639e60953db332999d61f);
+            
+        
+
+        marker_11d06d8aab8c59bc578beef45cddbbaf.bindPopup(popup_8ec46c7dc15898870cd732fbd7f0962c)
+        ;
+
+        
+    
+    
+            marker_11d06d8aab8c59bc578beef45cddbbaf.bindTooltip(
+                `<div>
+                     10-02 Cove Fort Historic Site
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_11d06d8aab8c59bc578beef45cddbbaf.setIcon(div_icon_44a441df06b0a218f345c0d0c37d5a38);
+            
+    
+            var marker_78802e5ca63021fde3edc0c519af516c = L.marker(
+                [40.7345, -112.2122],
+                {
+}
+            ).addTo(map_45910bafddda743b5e5f912d1b254798);
+        
+    
+            var div_icon_9008083eed584fa5d72a0a1437065f2e = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                10-03\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_d3a49789d9a084f3cb39261dd224b428 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_c6e97f3bc7d8cb38d3c92d6eac547a93 = $(`<div id="html_c6e97f3bc7d8cb38d3c92d6eac547a93" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>10-03 Salt Lake City周辺 / Great Salt Lake短時間</h4>       <table>         <tr><th>Status</th><td>候補</td></tr>         <tr><th>Category</th><td>Backup</td></tr>         <tr><th>Area</th><td>Utah / Salt Lake City周辺</td></tr>         <tr><th>Time</th><td>30–90 min</td></tr>         <tr><th>Effort</th><td>車移動中心。都市部・暑さ・渋滞に注意。</td></tr>         <tr><th>Plan</th><td>時間に余裕がある場合のみ、Great Salt Lake方面を短時間見る。</td></tr>         <tr><th>Skip rule</th><td>原則通過。Day 10後半の目的地を優先。</td></tr>         <tr><th>Notes</th><td>Backup。都市部渋滞に注意。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_d3a49789d9a084f3cb39261dd224b428.setContent(html_c6e97f3bc7d8cb38d3c92d6eac547a93);
+            
+        
+
+        marker_78802e5ca63021fde3edc0c519af516c.bindPopup(popup_d3a49789d9a084f3cb39261dd224b428)
+        ;
+
+        
+    
+    
+            marker_78802e5ca63021fde3edc0c519af516c.bindTooltip(
+                `<div>
+                     10-03 Salt Lake City周辺 / Great Salt Lake短時間
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_78802e5ca63021fde3edc0c519af516c.setIcon(div_icon_9008083eed584fa5d72a0a1437065f2e);
+            
+    
+            var marker_2fde29a0d7f481ad97ccdd3f8eacc737 = L.marker(
+                [41.6179, -112.5504],
+                {
+}
+            ).addTo(map_45910bafddda743b5e5f912d1b254798);
+        
+    
+            var div_icon_1d1ca7d0c9af52dea2e53a620dd8dfa5 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#7b3294; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                10-04\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_f152a4463d054bcc4f836c78f0be0fe0 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_84c7c8891ca38d711891b6211c843fd1 = $(`<div id="html_84c7c8891ca38d711891b6211c843fd1" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>10-04 Golden Spike National Historical Park</h4>       <table>         <tr><th>Status</th><td>候補（原則やらない）</td></tr>         <tr><th>Category</th><td>Backup</td></tr>         <tr><th>Area</th><td>Utah / Idaho</td></tr>         <tr><th>Time</th><td>1.5–2.5 hr</td></tr>         <tr><th>Effort</th><td>軽い歩行。寄り道が長め。</td></tr>         <tr><th>Plan</th><td>大陸横断鉄道の歴史を学ぶ。</td></tr>         <tr><th>Skip rule</th><td>Day 10の主目的を優先し、通常は省略。</td></tr>         <tr><th>Notes</th><td>Backup。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_f152a4463d054bcc4f836c78f0be0fe0.setContent(html_84c7c8891ca38d711891b6211c843fd1);
+            
+        
+
+        marker_2fde29a0d7f481ad97ccdd3f8eacc737.bindPopup(popup_f152a4463d054bcc4f836c78f0be0fe0)
+        ;
+
+        
+    
+    
+            marker_2fde29a0d7f481ad97ccdd3f8eacc737.bindTooltip(
+                `<div>
+                     10-04 Golden Spike National Historical Park
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2fde29a0d7f481ad97ccdd3f8eacc737.setIcon(div_icon_1d1ca7d0c9af52dea2e53a620dd8dfa5);
+            
+    
+            var marker_2bf3d4438ea69c78dac7ca6301a95ecc = L.marker(
+                [42.6777, -114.2468],
+                {
+}
+            ).addTo(map_45910bafddda743b5e5f912d1b254798);
+        
+    
+            var div_icon_3e5644bfe531b7d86558238fc679846e = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                10-05\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_9ac86b5810038f42e264d4c454a617d4 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_fe4f26a27000381bfc843939069ae19d = $(`<div id="html_fe4f26a27000381bfc843939069ae19d" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>10-05 Minidoka National Historic Site</h4>       <table>         <tr><th>Status</th><td>候補</td></tr>         <tr><th>Category</th><td>Possibly</td></tr>         <tr><th>Area</th><td>Minidoka National Historic Site</td></tr>         <tr><th>Time</th><td>1–1.5 hr</td></tr>         <tr><th>Effort</th><td>軽い歩行。歴史学習。Junior Ranger候補。</td></tr>         <tr><th>Plan</th><td>第二次世界大戦中の日系人強制収容の歴史を学ぶ。</td></tr>         <tr><th>Skip rule</th><td>疲労が強い、到着が遅い、子供向けを優先する場合はHagermanへ切替。</td></tr>         <tr><th>Notes</th><td>Hagermanとの二択。Junior Rangerあり。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_9ac86b5810038f42e264d4c454a617d4.setContent(html_fe4f26a27000381bfc843939069ae19d);
+            
+        
+
+        marker_2bf3d4438ea69c78dac7ca6301a95ecc.bindPopup(popup_9ac86b5810038f42e264d4c454a617d4)
+        ;
+
+        
+    
+    
+            marker_2bf3d4438ea69c78dac7ca6301a95ecc.bindTooltip(
+                `<div>
+                     10-05 Minidoka National Historic Site
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2bf3d4438ea69c78dac7ca6301a95ecc.setIcon(div_icon_3e5644bfe531b7d86558238fc679846e);
+            
+    
+            var marker_06355fa8c019c69a6c9a8c87fcec98b9 = L.marker(
+                [42.817, -114.8995],
+                {
+}
+            ).addTo(map_45910bafddda743b5e5f912d1b254798);
+        
+    
+            var div_icon_f053e28b30b9ee77140b04b741655bc3 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#d7191c; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                10-06\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_0b530c0c0ff4a38027601b612fcf0443 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_38a52fb5c86c5a9c32eb504b935130ed = $(`<div id="html_38a52fb5c86c5a9c32eb504b935130ed" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>10-06 Hagerman Fossil Beds National Monument / Thousand Springs Visitor Center</h4>       <table>         <tr><th>Status</th><td>行く予定</td></tr>         <tr><th>Category</th><td>Must</td></tr>         <tr><th>Area</th><td>Hagerman Fossil Beds National Monument</td></tr>         <tr><th>Time</th><td>45–90 min</td></tr>         <tr><th>Effort</th><td>軽い。屋内展示中心。子供向き。</td></tr>         <tr><th>Plan</th><td>化石・古生物・Hagerman horseについて学ぶ。</td></tr>         <tr><th>Skip rule</th><td>Minidokaを優先する場合、または時間不足なら省略。</td></tr>         <tr><th>Notes</th><td>Minidokaとの二択。Junior Rangerは現地確認。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_0b530c0c0ff4a38027601b612fcf0443.setContent(html_38a52fb5c86c5a9c32eb504b935130ed);
+            
+        
+
+        marker_06355fa8c019c69a6c9a8c87fcec98b9.bindPopup(popup_0b530c0c0ff4a38027601b612fcf0443)
+        ;
+
+        
+    
+    
+            marker_06355fa8c019c69a6c9a8c87fcec98b9.bindTooltip(
+                `<div>
+                     10-06 Hagerman Fossil Beds National Monument / Thousand Springs Visitor Center
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_06355fa8c019c69a6c9a8c87fcec98b9.setIcon(div_icon_f053e28b30b9ee77140b04b741655bc3);
+            
+    
+            var marker_48efc1a50d4d70a6a4eccf57c3f83025 = L.marker(
+                [42.8573, -114.8505],
+                {
+}
+            ).addTo(map_45910bafddda743b5e5f912d1b254798);
+        
+    
+            var div_icon_4c002a513aaef637b163957a329118b8 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#7b3294; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                10-07\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_1edbdebd48d8ce06e9c9d4b8faf06aa7 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_3ae8ec115c27fa02511c6fd9184fe090 = $(`<div id="html_3ae8ec115c27fa02511c6fd9184fe090" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>10-07 Thousand Springs State Park / Malad Gorge / Box Canyon周辺</h4>       <table>         <tr><th>Status</th><td>候補（原則やらない）</td></tr>         <tr><th>Category</th><td>Backup</td></tr>         <tr><th>Area</th><td>Hagerman / Thousand Springs</td></tr>         <tr><th>Time</th><td>45–90 min</td></tr>         <tr><th>Effort</th><td>短い展望・散策。暑さに注意。</td></tr>         <tr><th>Plan</th><td>Hagermanを選んだ場合に、近くの渓谷・湧水景観を追加する。</td></tr>         <tr><th>Skip rule</th><td>Minidokaを選んだ場合、またはBoise到着を優先する場合は省略。</td></tr>         <tr><th>Notes</th><td>Backup。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_1edbdebd48d8ce06e9c9d4b8faf06aa7.setContent(html_3ae8ec115c27fa02511c6fd9184fe090);
+            
+        
+
+        marker_48efc1a50d4d70a6a4eccf57c3f83025.bindPopup(popup_1edbdebd48d8ce06e9c9d4b8faf06aa7)
+        ;
+
+        
+    
+    
+            marker_48efc1a50d4d70a6a4eccf57c3f83025.bindTooltip(
+                `<div>
+                     10-07 Thousand Springs State Park / Malad Gorge / Box Canyon周辺
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_48efc1a50d4d70a6a4eccf57c3f83025.setIcon(div_icon_4c002a513aaef637b163957a329118b8);
+            
+    
+            map_45910bafddda743b5e5f912d1b254798.fitBounds(
+                [[38.8867, -112.408], [43.615, -116.2023], [38.6267, -112.578], [40.7345, -112.2122], [41.6179, -112.5504], [42.6777, -114.2468], [42.817, -114.8995], [42.8573, -114.8505]],
+                {"padding": [40, 40]}
+            );
+        
+    
+    window._spotMarkers = {"H09": marker_09acc6cc24dc49bcc85a1a0fe0b1eb81, "H10": marker_8ea570e229f22c4e0342e45e949f3562, "10-02": marker_11d06d8aab8c59bc578beef45cddbbaf, "10-03": marker_78802e5ca63021fde3edc0c519af516c, "10-04": marker_2fde29a0d7f481ad97ccdd3f8eacc737, "10-05": marker_2bf3d4438ea69c78dac7ca6301a95ecc, "10-06": marker_06355fa8c019c69a6c9a8c87fcec98b9, "10-07": marker_48efc1a50d4d70a6a4eccf57c3f83025};
+    function openSpotFromHash() {
+      var id = decodeURIComponent((window.location.hash || '').replace('#',''));
+      if (!id || !window._spotMarkers || !window._spotMarkers[id]) return;
+      var marker = window._spotMarkers[id];
+      marker.openPopup();
+      map_45910bafddda743b5e5f912d1b254798.setView(marker.getLatLng(), Math.max(map_45910bafddda743b5e5f912d1b254798.getZoom(), 10));
+    }
+    setTimeout(openSpotFromHash, 600);
+    window.addEventListener('hashchange', openSpotFromHash);
+    
+</script>
+</html>

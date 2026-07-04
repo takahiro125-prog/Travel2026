@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_5068fe9b9d4d3ab57949e4f79a85267f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <div style="position: fixed; top: 18px; left: 50%; transform: translateX(-50%); z-index: 9999;
+                background: rgba(255,255,255,.94); border: 1px solid #aaa; border-radius: 10px;
+                padding: 10px 16px; font-family: Arial, sans-serif; box-shadow: 0 1px 5px rgba(0,0,0,.25);
+                text-align:center;">
+      <div style="font-size:18px;font-weight:700;">Day 1 Travel Map</div>
+      <div style="font-size:12px;color:#444;">Seattle → Baker City / 368 miles / 5:49</div>
+    </div>
+    
+    
+    <div style="position: fixed; bottom: 28px; left: 28px; z-index: 9999; background: white;
+                border: 1px solid #999; border-radius: 8px; padding: 12px 14px;
+                font-family: Arial, sans-serif; font-size: 13px; box-shadow: 0 1px 5px rgba(0,0,0,.25);">
+      <div style="font-weight:700; margin-bottom:7px;">Day 1</div>
+      <div><span style="background:#1a9850;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Hotel: 1</div>
+      <div><span style="background:#d7191c;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>行く予定: 0</div>
+      <div><span style="background:#2c7bb6;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>候補: 0</div>
+      <div><span style="background:#7b3294;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>候補（重い）: 0</div>
+      <div style="margin-top:7px;color:#555;max-width:260px;">Planning map. Use Apple Maps / Google Maps / NPS for final navigation.</div>
+    </div>
+    
+    
+            <div class="folium-map" id="map_5068fe9b9d4d3ab57949e4f79a85267f" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_5068fe9b9d4d3ab57949e4f79a85267f = L.map(
+                "map_5068fe9b9d4d3ab57949e4f79a85267f",
+                {
+                    center: [44.7749, -117.8344],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_5068fe9b9d4d3ab57949e4f79a85267f);
+
+            
+
+        
+    
+            var tile_layer_5b80a35d938547b2a0369123eabf1699 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_5b80a35d938547b2a0369123eabf1699.addTo(map_5068fe9b9d4d3ab57949e4f79a85267f);
+        
+    
+            var marker_2852d361f0c5d16e08b449637d52a1ee = L.marker(
+                [44.7749, -117.8344],
+                {
+}
+            ).addTo(map_5068fe9b9d4d3ab57949e4f79a85267f);
+        
+    
+            var div_icon_a26e04c2dd107d397ded76ece8569bd5 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#1a9850; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                H01\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_b3dddc1e909ce67a53f8d8ad8d3af60c = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_971042f7ba4dd5fffba926e0cc335549 = $(`<div id="html_971042f7ba4dd5fffba926e0cc335549" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>H01 Baker City泊</h4>       <table>         <tr><th>Status</th><td>Hotel</td></tr>         <tr><th>Category</th><td>Hotel</td></tr>         <tr><th>Area</th><td>Baker City, OR</td></tr>                           <tr><th>Plan</th><td>Baker Cityで宿泊。</td></tr>                  <tr><th>Notes</th><td>Host: Troy. 騒音禁止 22:00–7:00。ペット不可。</td></tr>       </table>       <p><a href="https://maps.apple.com/?q=2621%20Grove%20St%2C%20Baker%20City%2C%20OR%2097814" target="_blank">Open map link</a></p>     </div>     </div>`)[0];
+                popup_b3dddc1e909ce67a53f8d8ad8d3af60c.setContent(html_971042f7ba4dd5fffba926e0cc335549);
+            
+        
+
+        marker_2852d361f0c5d16e08b449637d52a1ee.bindPopup(popup_b3dddc1e909ce67a53f8d8ad8d3af60c)
+        ;
+
+        
+    
+    
+            marker_2852d361f0c5d16e08b449637d52a1ee.bindTooltip(
+                `<div>
+                     H01 Baker City泊
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2852d361f0c5d16e08b449637d52a1ee.setIcon(div_icon_a26e04c2dd107d397ded76ece8569bd5);
+            
+    
+    window._spotMarkers = {"H01": marker_2852d361f0c5d16e08b449637d52a1ee};
+    function openSpotFromHash() {
+      var id = decodeURIComponent((window.location.hash || '').replace('#',''));
+      if (!id || !window._spotMarkers || !window._spotMarkers[id]) return;
+      var marker = window._spotMarkers[id];
+      marker.openPopup();
+      map_5068fe9b9d4d3ab57949e4f79a85267f.setView(marker.getLatLng(), Math.max(map_5068fe9b9d4d3ab57949e4f79a85267f.getZoom(), 10));
+    }
+    setTimeout(openSpotFromHash, 600);
+    window.addEventListener('hashchange', openSpotFromHash);
+    
+</script>
+</html>

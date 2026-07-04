@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_860eaec598061f6248cb072a5f64905b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <div style="position: fixed; top: 18px; left: 50%; transform: translateX(-50%); z-index: 9999;
+                background: rgba(255,255,255,.94); border: 1px solid #aaa; border-radius: 10px;
+                padding: 10px 16px; font-family: Arial, sans-serif; box-shadow: 0 1px 5px rgba(0,0,0,.25);
+                text-align:center;">
+      <div style="font-size:18px;font-weight:700;">Day 7 Travel Map</div>
+      <div style="font-size:12px;color:#444;">Grand Canyon Village → Sedona → Hoover Dam → Las Vegas / 約415 miles / 約7:15</div>
+    </div>
+    
+    
+    <div style="position: fixed; bottom: 28px; left: 28px; z-index: 9999; background: white;
+                border: 1px solid #999; border-radius: 8px; padding: 12px 14px;
+                font-family: Arial, sans-serif; font-size: 13px; box-shadow: 0 1px 5px rgba(0,0,0,.25);">
+      <div style="font-weight:700; margin-bottom:7px;">Day 7</div>
+      <div><span style="background:#1a9850;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Hotel: 2</div>
+      <div><span style="background:#fdae61;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Pickup: 1</div>
+      <div><span style="background:#d7191c;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>行く予定: 5</div>
+      <div><span style="background:#2c7bb6;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>候補: 8</div>
+      <div><span style="background:#7b3294;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>候補（重い）: 1</div>
+      <div style="margin-top:7px;color:#555;max-width:260px;">Planning map. Use Apple Maps / Google Maps / NPS for final navigation.</div>
+    </div>
+    
+    
+            <div class="folium-map" id="map_860eaec598061f6248cb072a5f64905b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_860eaec598061f6248cb072a5f64905b = L.map(
+                "map_860eaec598061f6248cb072a5f64905b",
+                {
+                    center: [35.508418750000004, -112.83701875],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_860eaec598061f6248cb072a5f64905b);
+
+            
+
+        
+    
+            var tile_layer_ee47b46c611167f8ceb3d7237157cdba = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_ee47b46c611167f8ceb3d7237157cdba.addTo(map_860eaec598061f6248cb072a5f64905b);
+        
+    
+            var marker_50514a8db638da93b8fae7f484f95b4f = L.marker(
+                [36.057, -112.137],
+                {
+}
+            ).addTo(map_860eaec598061f6248cb072a5f64905b);
+        
+    
+            var div_icon_fc42fa458fd88740722bc0de4881bb62 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#1a9850; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                H06\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_357a86d81149a530a49b8115291b5f24 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_19fcf496567e94d2b89368e4dda2ec02 = $(`<div id="html_19fcf496567e94d2b89368e4dda2ec02" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>H06 Grand Canyon Village Lodge / 出発</h4>       <table>         <tr><th>Status</th><td>Hotel</td></tr>         <tr><th>Category</th><td>Hotel</td></tr>         <tr><th>Area</th><td>Grand Canyon Village, AZ</td></tr>                           <tr><th>Plan</th><td>Grand Canyon Villageのロッジに宿泊。</td></tr>                  <tr><th>Notes</th><td>メール本文ではホテル名が明示されず。最大5 guests/room-unitの記載あり。人数/部屋数は要確認。キャンセル/変更は8/3 16:00以降100% fee。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_357a86d81149a530a49b8115291b5f24.setContent(html_19fcf496567e94d2b89368e4dda2ec02);
+            
+        
+
+        marker_50514a8db638da93b8fae7f484f95b4f.bindPopup(popup_357a86d81149a530a49b8115291b5f24)
+        ;
+
+        
+    
+    
+            marker_50514a8db638da93b8fae7f484f95b4f.bindTooltip(
+                `<div>
+                     H06 Grand Canyon Village Lodge / 出発
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_50514a8db638da93b8fae7f484f95b4f.setIcon(div_icon_fc42fa458fd88740722bc0de4881bb62);
+            
+    
+            var marker_a1a96282cec2322ade1bbbee1287ec5d = L.marker(
+                [36.1286, -115.1728],
+                {
+}
+            ).addTo(map_860eaec598061f6248cb072a5f64905b);
+        
+    
+            var div_icon_4534e5ae533ffa05a129966d713990e8 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#1a9850; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                H07\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_7a02d77c9ed05a5cead175fd683a65c4 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_64901b7cb7686a01a64309292ce2e64a = $(`<div id="html_64901b7cb7686a01a64309292ce2e64a" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>H07 Las Vegas泊</h4>       <table>         <tr><th>Status</th><td>Hotel</td></tr>         <tr><th>Category</th><td>Hotel</td></tr>         <tr><th>Area</th><td>Las Vegas, NV</td></tr>                           <tr><th>Plan</th><td>Las Vegasで宿泊。</td></tr>                  <tr><th>Notes</th><td>最大4 guests/room-unitの記載あり。グループ8人なら部屋数要確認。チェックイン時に予約カードと写真IDが必要。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_7a02d77c9ed05a5cead175fd683a65c4.setContent(html_64901b7cb7686a01a64309292ce2e64a);
+            
+        
+
+        marker_a1a96282cec2322ade1bbbee1287ec5d.bindPopup(popup_7a02d77c9ed05a5cead175fd683a65c4)
+        ;
+
+        
+    
+    
+            marker_a1a96282cec2322ade1bbbee1287ec5d.bindTooltip(
+                `<div>
+                     H07 Las Vegas泊
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a1a96282cec2322ade1bbbee1287ec5d.setIcon(div_icon_4534e5ae533ffa05a129966d713990e8);
+            
+    
+            var marker_c6efbd724033723ff114d03a8d25fb46 = L.marker(
+                [36.0613, -112.1092],
+                {
+}
+            ).addTo(map_860eaec598061f6248cb072a5f64905b);
+        
+    
+            var div_icon_a856ce52b54510ed9d68bc862dd8f105 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#d7191c; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                07-01\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_f5c48f0efdb4674dd2930eaae17c6491 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_b37c522b584cf1918af9524d76228a47 = $(`<div id="html_b37c522b584cf1918af9524d76228a47" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>07-01 Mather Point sunrise</h4>       <table>         <tr><th>Status</th><td>行く予定</td></tr>         <tr><th>Category</th><td>Must</td></tr>         <tr><th>Area</th><td>Grand Canyon South Rim</td></tr>         <tr><th>Time</th><td>45–60 min</td></tr>         <tr><th>Effort</th><td>軽い。車に戻りやすい。朝は寒暖差に注意。</td></tr>         <tr><th>Plan</th><td>朝日を見て、短時間で出発準備をし、そのままSedonaへ向かう。</td></tr>         <tr><th>Skip rule</th><td>起床が遅れた場合は短時間展望だけ。Sedonaへの出発を優先。</td></tr>         <tr><th>Notes</th><td>朝日20–30分前到着を目安。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_f5c48f0efdb4674dd2930eaae17c6491.setContent(html_b37c522b584cf1918af9524d76228a47);
+            
+        
+
+        marker_c6efbd724033723ff114d03a8d25fb46.bindPopup(popup_f5c48f0efdb4674dd2930eaae17c6491)
+        ;
+
+        
+    
+    
+            marker_c6efbd724033723ff114d03a8d25fb46.bindTooltip(
+                `<div>
+                     07-01 Mather Point sunrise
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c6efbd724033723ff114d03a8d25fb46.setIcon(div_icon_a856ce52b54510ed9d68bc862dd8f105);
+            
+    
+            var marker_bf3a98f58913317375b37f7a5f1b2e2a = L.marker(
+                [36.0658, -112.1167],
+                {
+}
+            ).addTo(map_860eaec598061f6248cb072a5f64905b);
+        
+    
+            var div_icon_3dcdd425eca027828d65fd46a56dfe0a = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                07-02\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_64677ba1f5f356835e8ceb06d0330d6f = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_b7a66e8386e82d333c94ef26513e3070 = $(`<div id="html_b7a66e8386e82d333c94ef26513e3070" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>07-02 Yavapai Point sunrise</h4>       <table>         <tr><th>Status</th><td>候補</td></tr>         <tr><th>Category</th><td>Possibly</td></tr>         <tr><th>Area</th><td>Grand Canyon South Rim</td></tr>         <tr><th>Time</th><td>45–60 min</td></tr>         <tr><th>Effort</th><td>軽い。Matherより少し落ち着く可能性。</td></tr>         <tr><th>Plan</th><td>前日にMatherを見た場合、朝はこちらで見る。</td></tr>         <tr><th>Skip rule</th><td>前日にYavapaiで夕方を見たなら、朝はMatherを優先。</td></tr>         <tr><th>Notes</th><td>Day 7朝の代替。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_64677ba1f5f356835e8ceb06d0330d6f.setContent(html_b7a66e8386e82d333c94ef26513e3070);
+            
+        
+
+        marker_bf3a98f58913317375b37f7a5f1b2e2a.bindPopup(popup_64677ba1f5f356835e8ceb06d0330d6f)
+        ;
+
+        
+    
+    
+            marker_bf3a98f58913317375b37f7a5f1b2e2a.bindTooltip(
+                `<div>
+                     07-02 Yavapai Point sunrise
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bf3a98f58913317375b37f7a5f1b2e2a.setIcon(div_icon_3dcdd425eca027828d65fd46a56dfe0a);
+            
+    
+            var marker_438e04afdff731d4a8815f60dbcbc84e = L.marker(
+                [36.0572, -112.0877],
+                {
+}
+            ).addTo(map_860eaec598061f6248cb072a5f64905b);
+        
+    
+            var div_icon_655e8dfbe69be34db3ca5ed1d5b0d2c4 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                07-03\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_a88fbc150c379e3bfbfed73f42defbd8 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_e395ce64f12af5e8e8ea7a646d5e2500 = $(`<div id="html_e395ce64f12af5e8e8ea7a646d5e2500" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>07-03 Yaki Point sunrise</h4>       <table>         <tr><th>Status</th><td>候補</td></tr>         <tr><th>Category</th><td>Backup</td></tr>         <tr><th>Area</th><td>Grand Canyon South Rim</td></tr>         <tr><th>Time</th><td>60–90 min</td></tr>         <tr><th>Effort</th><td>朝はシャトル利用が絡むためやや複雑。</td></tr>         <tr><th>Plan</th><td>朝日スポットとしては良いが、通常計画では入れない。</td></tr>         <tr><th>Skip rule</th><td>Mather Pointで代替。シャトル待ちが発生するなら避ける。</td></tr>         <tr><th>Notes</th><td>Backup。朝出発優先。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_a88fbc150c379e3bfbfed73f42defbd8.setContent(html_e395ce64f12af5e8e8ea7a646d5e2500);
+            
+        
+
+        marker_438e04afdff731d4a8815f60dbcbc84e.bindPopup(popup_a88fbc150c379e3bfbfed73f42defbd8)
+        ;
+
+        
+    
+    
+            marker_438e04afdff731d4a8815f60dbcbc84e.bindTooltip(
+                `<div>
+                     07-03 Yaki Point sunrise
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_438e04afdff731d4a8815f60dbcbc84e.setIcon(div_icon_655e8dfbe69be34db3ca5ed1d5b0d2c4);
+            
+    
+            var marker_ef8241a877d7834ad1879c423a8efc7d = L.marker(
+                [35.0275, -111.734],
+                {
+}
+            ).addTo(map_860eaec598061f6248cb072a5f64905b);
+        
+    
+            var div_icon_952fd9554b87e46e17dea26340a05b11 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                07-04\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_59dff072be03a36958965786715df5e6 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_b20efcfe2859740f20d5f9cc09b888c3 = $(`<div id="html_b20efcfe2859740f20d5f9cc09b888c3" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>07-04 Oak Creek Canyon / Scenic Drive</h4>       <table>         <tr><th>Status</th><td>候補</td></tr>         <tr><th>Category</th><td>Possibly</td></tr>         <tr><th>Area</th><td>Grand Canyon → Sedona</td></tr>         <tr><th>Time</th><td>車窓 + 10–20 min</td></tr>         <tr><th>Effort</th><td>車窓中心。カーブが多い。</td></tr>         <tr><th>Plan</th><td>Grand CanyonからSedonaへ入る道中で、景色が良い場所だけ短時間停車。</td></tr>         <tr><th>Skip rule</th><td>車酔い、時間遅れ、駐車困難なら通過。</td></tr>         <tr><th>Notes</th><td>道中の車窓候補。長居しない。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_59dff072be03a36958965786715df5e6.setContent(html_b20efcfe2859740f20d5f9cc09b888c3);
+            
+        
+
+        marker_ef8241a877d7834ad1879c423a8efc7d.bindPopup(popup_59dff072be03a36958965786715df5e6)
+        ;
+
+        
+    
+    
+            marker_ef8241a877d7834ad1879c423a8efc7d.bindTooltip(
+                `<div>
+                     07-04 Oak Creek Canyon / Scenic Drive
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ef8241a877d7834ad1879c423a8efc7d.setIcon(div_icon_952fd9554b87e46e17dea26340a05b11);
+            
+    
+            var marker_e0d998a48da36ad132ed86c95276a1f2 = L.marker(
+                [34.8326, -111.7669],
+                {
+}
+            ).addTo(map_860eaec598061f6248cb072a5f64905b);
+        
+    
+            var div_icon_040fd6f23470ff0f1aa2d4fe95104543 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#d7191c; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                07-05\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_f27c54528ef33a7949b31d165e3578ea = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_4d84ad0821a0f36d84e7a5f8a3832093 = $(`<div id="html_4d84ad0821a0f36d84e7a5f8a3832093" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>07-05 Chapel of the Holy Cross</h4>       <table>         <tr><th>Status</th><td>行く予定</td></tr>         <tr><th>Category</th><td>Must</td></tr>         <tr><th>Area</th><td>Sedona</td></tr>         <tr><th>Time</th><td>30–45 min</td></tr>         <tr><th>Effort</th><td>短い歩行。駐車場から坂あり。</td></tr>         <tr><th>Plan</th><td>赤岩の中に建つ礼拝堂と周囲の景色を見る。</td></tr>         <tr><th>Skip rule</th><td>駐車が難しい場合は短時間待ちまで。長く待つならBell Rockを優先。</td></tr>         <tr><th>Notes</th><td>Sedonaの主目的。昼の暑さに注意。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_f27c54528ef33a7949b31d165e3578ea.setContent(html_4d84ad0821a0f36d84e7a5f8a3832093);
+            
+        
+
+        marker_e0d998a48da36ad132ed86c95276a1f2.bindPopup(popup_f27c54528ef33a7949b31d165e3578ea)
+        ;
+
+        
+    
+    
+            marker_e0d998a48da36ad132ed86c95276a1f2.bindTooltip(
+                `<div>
+                     07-05 Chapel of the Holy Cross
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e0d998a48da36ad132ed86c95276a1f2.setIcon(div_icon_040fd6f23470ff0f1aa2d4fe95104543);
+            
+    
+            var marker_d68b4a82b5ce0295573601109c7115f4 = L.marker(
+                [34.8022, -111.7659],
+                {
+}
+            ).addTo(map_860eaec598061f6248cb072a5f64905b);
+        
+    
+            var div_icon_c1b421df2c9b9fc89288c263f5385bc6 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#d7191c; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                07-06\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_412819c3205ecae26599810198faf0fd = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_2726a3d445d58b8aaa5e730e114963a9 = $(`<div id="html_2726a3d445d58b8aaa5e730e114963a9" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>07-06 Bell Rock / Courthouse Butte Viewpoint</h4>       <table>         <tr><th>Status</th><td>行く予定</td></tr>         <tr><th>Category</th><td>Must</td></tr>         <tr><th>Area</th><td>Sedona</td></tr>         <tr><th>Time</th><td>20–45 min</td></tr>         <tr><th>Effort</th><td>展望・短い歩行。長いハイクはしない。</td></tr>         <tr><th>Plan</th><td>赤岩の代表的景観を短時間で見る。写真休憩中心。</td></tr>         <tr><th>Skip rule</th><td>暑い、駐車困難、Hoover Dam到着が遅れそうなら短縮。</td></tr>         <tr><th>Notes</th><td>歩きすぎない。水を持つ。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_412819c3205ecae26599810198faf0fd.setContent(html_2726a3d445d58b8aaa5e730e114963a9);
+            
+        
+
+        marker_d68b4a82b5ce0295573601109c7115f4.bindPopup(popup_412819c3205ecae26599810198faf0fd)
+        ;
+
+        
+    
+    
+            marker_d68b4a82b5ce0295573601109c7115f4.bindTooltip(
+                `<div>
+                     07-06 Bell Rock / Courthouse Butte Viewpoint
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d68b4a82b5ce0295573601109c7115f4.setIcon(div_icon_c1b421df2c9b9fc89288c263f5385bc6);
+            
+    
+            var marker_108362f1348342893312aaccdae71e92 = L.marker(
+                [34.8559, -111.7894],
+                {
+}
+            ).addTo(map_860eaec598061f6248cb072a5f64905b);
+        
+    
+            var div_icon_5eeefef9de9e135c282b46709b6b53ca = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                07-07\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_1fd6e6d19bdfa58e8a9f773e59333815 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_1ec4aded7a4c8cf6d9bdc0976c13bd0d = $(`<div id="html_1ec4aded7a4c8cf6d9bdc0976c13bd0d" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>07-07 Airport Mesa Overlook</h4>       <table>         <tr><th>Status</th><td>候補</td></tr>         <tr><th>Category</th><td>Possibly</td></tr>         <tr><th>Area</th><td>Sedona</td></tr>         <tr><th>Time</th><td>20–40 min</td></tr>         <tr><th>Effort</th><td>短い展望。駐車状況に注意。</td></tr>         <tr><th>Plan</th><td>Sedona全体を見渡す展望を短時間で見る。</td></tr>         <tr><th>Skip rule</th><td>駐車困難、時間不足、暑さが強い場合は省略。</td></tr>         <tr><th>Notes</th><td>時間が余った場合のみ。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_1fd6e6d19bdfa58e8a9f773e59333815.setContent(html_1ec4aded7a4c8cf6d9bdc0976c13bd0d);
+            
+        
+
+        marker_108362f1348342893312aaccdae71e92.bindPopup(popup_1fd6e6d19bdfa58e8a9f773e59333815)
+        ;
+
+        
+    
+    
+            marker_108362f1348342893312aaccdae71e92.bindTooltip(
+                `<div>
+                     07-07 Airport Mesa Overlook
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_108362f1348342893312aaccdae71e92.setIcon(div_icon_5eeefef9de9e135c282b46709b6b53ca);
+            
+    
+            var marker_0f46b89cdf1d985ce8d0bbaaaadd762f = L.marker(
+                [34.8649, -111.7639],
+                {
+}
+            ).addTo(map_860eaec598061f6248cb072a5f64905b);
+        
+    
+            var div_icon_f67b813da60281a3ed761e27d0019f8a = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                07-08\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_6043393cc646831998b29e4f075282c3 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_18cae077681a4087cbf71df8643f1cf4 = $(`<div id="html_18cae077681a4087cbf71df8643f1cf4" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>07-08 Tlaquepaque / Uptown Sedona</h4>       <table>         <tr><th>Status</th><td>候補</td></tr>         <tr><th>Category</th><td>Possibly</td></tr>         <tr><th>Area</th><td>Sedona</td></tr>         <tr><th>Time</th><td>45–75 min</td></tr>         <tr><th>Effort</th><td>軽い。昼食・トイレ・日陰・買い物向き。</td></tr>         <tr><th>Plan</th><td>昼食と休憩を兼ねて立ち寄る。</td></tr>         <tr><th>Skip rule</th><td>食事を別で済ませる、または時間が押す場合は省略。</td></tr>         <tr><th>Notes</th><td>観光より休憩目的。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_6043393cc646831998b29e4f075282c3.setContent(html_18cae077681a4087cbf71df8643f1cf4);
+            
+        
+
+        marker_0f46b89cdf1d985ce8d0bbaaaadd762f.bindPopup(popup_6043393cc646831998b29e4f075282c3)
+        ;
+
+        
+    
+    
+            marker_0f46b89cdf1d985ce8d0bbaaaadd762f.bindTooltip(
+                `<div>
+                     07-08 Tlaquepaque / Uptown Sedona
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0f46b89cdf1d985ce8d0bbaaaadd762f.setIcon(div_icon_f67b813da60281a3ed761e27d0019f8a);
+            
+    
+            var marker_8cfac0c0db251b811222ca0b48f5f873 = L.marker(
+                [34.8224, -111.8052],
+                {
+}
+            ).addTo(map_860eaec598061f6248cb072a5f64905b);
+        
+    
+            var div_icon_f6c64ea1f2e04cba3e7d49e857f1cddf = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                07-09\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_23182899c7ee257086aed26f303fae65 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_51371ea9b37bf922ebad72073b85b418 = $(`<div id="html_51371ea9b37bf922ebad72073b85b418" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>07-09 Cathedral Rock view / Red Rock Crossing</h4>       <table>         <tr><th>Status</th><td>候補</td></tr>         <tr><th>Category</th><td>Backup</td></tr>         <tr><th>Area</th><td>Sedona</td></tr>         <tr><th>Time</th><td>45–75 min</td></tr>         <tr><th>Effort</th><td>展望中心。駐車・暑さに注意。</td></tr>         <tr><th>Plan</th><td>時間に余裕があればCathedral Rockの景色を見る。</td></tr>         <tr><th>Skip rule</th><td>Hoover Dam到着が遅れそうなら省略。トレイルには入らない。</td></tr>         <tr><th>Notes</th><td>Backup。見るだけ。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_23182899c7ee257086aed26f303fae65.setContent(html_51371ea9b37bf922ebad72073b85b418);
+            
+        
+
+        marker_8cfac0c0db251b811222ca0b48f5f873.bindPopup(popup_23182899c7ee257086aed26f303fae65)
+        ;
+
+        
+    
+    
+            marker_8cfac0c0db251b811222ca0b48f5f873.bindTooltip(
+                `<div>
+                     07-09 Cathedral Rock view / Red Rock Crossing
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8cfac0c0db251b811222ca0b48f5f873.setIcon(div_icon_f6c64ea1f2e04cba3e7d49e857f1cddf);
+            
+    
+            var marker_cd078ee21b662f9662195c9e7bd77ff8 = L.marker(
+                [35.3256, -112.8742],
+                {
+}
+            ).addTo(map_860eaec598061f6248cb072a5f64905b);
+        
+    
+            var div_icon_7b131374bc42b4ea5e09b6f273f7a0e6 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                07-10\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_4217f84574b65d4d680cc97d077f169d = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_39ccf023608eea47d66316c244c521e9 = $(`<div id="html_39ccf023608eea47d66316c244c521e9" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>07-10 Seligman / Historic Route 66</h4>       <table>         <tr><th>Status</th><td>候補</td></tr>         <tr><th>Category</th><td>Possibly</td></tr>         <tr><th>Area</th><td>Sedona → Hoover Dam</td></tr>         <tr><th>Time</th><td>20–40 min</td></tr>         <tr><th>Effort</th><td>軽い。写真・トイレ休憩向き。</td></tr>         <tr><th>Plan</th><td>Route 66の雰囲気を短時間で見る。</td></tr>         <tr><th>Skip rule</th><td>Hoover Dam到着を優先。時間が押す場合は通過。</td></tr>         <tr><th>Notes</th><td>写真と休憩だけ。長居しない。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_4217f84574b65d4d680cc97d077f169d.setContent(html_39ccf023608eea47d66316c244c521e9);
+            
+        
+
+        marker_cd078ee21b662f9662195c9e7bd77ff8.bindPopup(popup_4217f84574b65d4d680cc97d077f169d)
+        ;
+
+        
+    
+    
+            marker_cd078ee21b662f9662195c9e7bd77ff8.bindTooltip(
+                `<div>
+                     07-10 Seligman / Historic Route 66
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cd078ee21b662f9662195c9e7bd77ff8.setIcon(div_icon_7b131374bc42b4ea5e09b6f273f7a0e6);
+            
+    
+            var marker_40926353894756a46ba8e180bc1a0bf2 = L.marker(
+                [35.1894, -114.053],
+                {
+}
+            ).addTo(map_860eaec598061f6248cb072a5f64905b);
+        
+    
+            var div_icon_360771c33337d99cd7dd136e2f6c99ce = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                07-11\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_157b53498043a735a23af35f7237d9f4 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_e150d206ff9675e21e235fc98810fa94 = $(`<div id="html_e150d206ff9675e21e235fc98810fa94" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>07-11 Kingman / Route 66休憩</h4>       <table>         <tr><th>Status</th><td>候補</td></tr>         <tr><th>Category</th><td>Possibly</td></tr>         <tr><th>Area</th><td>Sedona → Hoover Dam</td></tr>         <tr><th>Time</th><td>20–40 min</td></tr>         <tr><th>Effort</th><td>軽い。給油・トイレ・軽食向き。</td></tr>         <tr><th>Plan</th><td>Hoover Dam前の補給・休憩として使う。時間があればRoute 66写真。</td></tr>         <tr><th>Skip rule</th><td>Seligmanに寄った場合や時間不足なら通過。</td></tr>         <tr><th>Notes</th><td>給油・トイレ優先。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_157b53498043a735a23af35f7237d9f4.setContent(html_e150d206ff9675e21e235fc98810fa94);
+            
+        
+
+        marker_40926353894756a46ba8e180bc1a0bf2.bindPopup(popup_157b53498043a735a23af35f7237d9f4)
+        ;
+
+        
+    
+    
+            marker_40926353894756a46ba8e180bc1a0bf2.bindTooltip(
+                `<div>
+                     07-11 Kingman / Route 66休憩
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_40926353894756a46ba8e180bc1a0bf2.setIcon(div_icon_360771c33337d99cd7dd136e2f6c99ce);
+            
+    
+            var marker_a567e1f00a4b0ff0b1129194573b211e = L.marker(
+                [36.0121, -114.741],
+                {
+}
+            ).addTo(map_860eaec598061f6248cb072a5f64905b);
+        
+    
+            var div_icon_84d341a4c07fe60cb5e55cb48691ddea = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#d7191c; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                07-12\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_14a78e2ed81093aa3c7d2d474f3924c4 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_9dfe2cc5e07b083cf505f32265cf5fdd = $(`<div id="html_9dfe2cc5e07b083cf505f32265cf5fdd" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>07-12 Mike O’Callaghan–Pat Tillman Memorial Bridge Walkway</h4>       <table>         <tr><th>Status</th><td>行く予定</td></tr>         <tr><th>Category</th><td>Must</td></tr>         <tr><th>Area</th><td>Hoover Dam</td></tr>         <tr><th>Time</th><td>30–45 min</td></tr>         <tr><th>Effort</th><td>短い歩行。橋上は暑さ・風に注意。</td></tr>         <tr><th>Plan</th><td>Hoover Damを上から見下ろす。写真を短時間で撮る。</td></tr>         <tr><th>Skip rule</th><td>暑さが強い、駐車や歩行が難しい場合は短縮。</td></tr>         <tr><th>Notes</th><td>Hoover Damの主目的の一つ。水を持つ。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_14a78e2ed81093aa3c7d2d474f3924c4.setContent(html_9dfe2cc5e07b083cf505f32265cf5fdd);
+            
+        
+
+        marker_a567e1f00a4b0ff0b1129194573b211e.bindPopup(popup_14a78e2ed81093aa3c7d2d474f3924c4)
+        ;
+
+        
+    
+    
+            marker_a567e1f00a4b0ff0b1129194573b211e.bindTooltip(
+                `<div>
+                     07-12 Mike O’Callaghan–Pat Tillman Memorial Bridge Walkway
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a567e1f00a4b0ff0b1129194573b211e.setIcon(div_icon_84d341a4c07fe60cb5e55cb48691ddea);
+            
+    
+            var marker_99e917adea7e1b66e9be050eb85d3022 = L.marker(
+                [36.0161, -114.7377],
+                {
+}
+            ).addTo(map_860eaec598061f6248cb072a5f64905b);
+        
+    
+            var div_icon_cd5ce2fee714f5a2dc138e1cdbee7aeb = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#d7191c; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                07-13\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_ba35c54dc9d1107c8f2e75be6bd21182 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_ad9909278059248edac28c2804a4aed4 = $(`<div id="html_ad9909278059248edac28c2804a4aed4" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>07-13 Hoover Dam上部 / Visitor Center周辺</h4>       <table>         <tr><th>Status</th><td>行く予定</td></tr>         <tr><th>Category</th><td>Must</td></tr>         <tr><th>Area</th><td>Hoover Dam</td></tr>         <tr><th>Time</th><td>45–90 min</td></tr>         <tr><th>Effort</th><td>軽い歩行。暑さとセキュリティに注意。</td></tr>         <tr><th>Plan</th><td>Hoover Dam本体を見て、到着時刻が間に合えばVisitor Center周辺も確認。</td></tr>         <tr><th>Skip rule</th><td>到着が遅い場合は屋内見学を諦め、外観と橋だけに短縮。</td></tr>         <tr><th>Notes</th><td>America the Beautiful Pass対象外。持ち込み制限に注意。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_ba35c54dc9d1107c8f2e75be6bd21182.setContent(html_ad9909278059248edac28c2804a4aed4);
+            
+        
+
+        marker_99e917adea7e1b66e9be050eb85d3022.bindPopup(popup_ba35c54dc9d1107c8f2e75be6bd21182)
+        ;
+
+        
+    
+    
+            marker_99e917adea7e1b66e9be050eb85d3022.bindTooltip(
+                `<div>
+                     07-13 Hoover Dam上部 / Visitor Center周辺
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_99e917adea7e1b66e9be050eb85d3022.setIcon(div_icon_cd5ce2fee714f5a2dc138e1cdbee7aeb);
+            
+    
+            var marker_f8a7aa67af1746e51f513cb0cf9d5cee = L.marker(
+                [36.0161, -114.7377],
+                {
+}
+            ).addTo(map_860eaec598061f6248cb072a5f64905b);
+        
+    
+            var div_icon_a329897401e913483bb4b22377ecde2f = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background:#7b3294; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                07-14\n            \u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_6bde13a29a40173f3393d465fa8bf470 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_b8113abe9bb8e50ae0c30c2b0e0c7d39 = $(`<div id="html_b8113abe9bb8e50ae0c30c2b0e0c7d39" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>07-14 Hoover Dam Powerplant Tour / Visitor Center Tour</h4>       <table>         <tr><th>Status</th><td>候補（原則やらない）</td></tr>         <tr><th>Category</th><td>Backup</td></tr>         <tr><th>Area</th><td>Hoover Dam</td></tr>         <tr><th>Time</th><td>1–2 hr</td></tr>         <tr><th>Effort</th><td>屋内ツアー。時間制約あり。</td></tr>         <tr><th>Plan</th><td>到着が早く、子供が元気ならツアーを検討。</td></tr>         <tr><th>Skip rule</th><td>16時台以降に到着、疲労が強い、Las Vegas到着を優先する場合は省略。</td></tr>         <tr><th>Notes</th><td>Backup。時間が合えば。</td></tr>       </table>            </div>     </div>`)[0];
+                popup_6bde13a29a40173f3393d465fa8bf470.setContent(html_b8113abe9bb8e50ae0c30c2b0e0c7d39);
+            
+        
+
+        marker_f8a7aa67af1746e51f513cb0cf9d5cee.bindPopup(popup_6bde13a29a40173f3393d465fa8bf470)
+        ;
+
+        
+    
+    
+            marker_f8a7aa67af1746e51f513cb0cf9d5cee.bindTooltip(
+                `<div>
+                     07-14 Hoover Dam Powerplant Tour / Visitor Center Tour
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f8a7aa67af1746e51f513cb0cf9d5cee.setIcon(div_icon_a329897401e913483bb4b22377ecde2f);
+            
+    
+            map_860eaec598061f6248cb072a5f64905b.fitBounds(
+                [[36.057, -112.137], [36.1286, -115.1728], [36.0613, -112.1092], [36.0658, -112.1167], [36.0572, -112.0877], [35.0275, -111.734], [34.8326, -111.7669], [34.8022, -111.7659], [34.8559, -111.7894], [34.8649, -111.7639], [34.8224, -111.8052], [35.3256, -112.8742], [35.1894, -114.053], [36.0121, -114.741], [36.0161, -114.7377], [36.0161, -114.7377]],
+                {"padding": [40, 40]}
+            );
+        
+    
+    var marker_las_pickup = L.marker([36.0840, -115.1537], {}).addTo(map_860eaec598061f6248cb072a5f64905b);
+    var div_icon_las_pickup = L.divIcon({
+      "html": "
+            <div style="
+                background:#fdae61; color:white; border:2px solid white; border-radius:16px;
+                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;
+                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;
+                font-family:Arial, sans-serif;">
+                LAS
+            </div>",
+      "iconSize": [56, 28],
+      "iconAnchor": [28, 14],
+      "className": "empty"
+    });
+    var popup_las_pickup = L.popup({"maxWidth": 420});
+    var html_las_pickup = $(`<div style="width: 100.0%; height: 100.0%;">
+      <div class="popup">
+        <h4>LAS Harry Reid International Airport pickup</h4>
+        <table>
+          <tr><th>Status</th><td>Pickup / Need research</td></tr>
+          <tr><th>Category</th><td>Airport pickup</td></tr>
+          <tr><th>Area</th><td>Las Vegas, NV / LAS</td></tr>
+          <tr><th>Time</th><td>約60–90 min + 往復移動</td></tr>
+          <tr><th>Plan</th><td>8/6夜に追加参加者をHarry Reid International Airport (LAS)でピックアップ。</td></tr>
+          <tr><th>Skip rule</th><td>便名・到着時刻・ターミナル確認後に待機時間を調整。</td></tr>
+          <tr><th>Notes</th><td>Hoover Dam後にLas Vegas着。ホテルチェックインと空港迎えの順序は到着時刻で調整。</td></tr>
+        </table>
+        <p><a href="https://maps.apple.com/?q=Harry%20Reid%20International%20Airport%2C%20Las%20Vegas%2C%20NV" target="_blank">Open map link</a></p>
+      </div>
+    </div>`)[0];
+    popup_las_pickup.setContent(html_las_pickup);
+    marker_las_pickup.bindPopup(popup_las_pickup);
+    marker_las_pickup.bindTooltip(`<div>LAS Harry Reid International Airport pickup</div>`, {"sticky": true});
+    marker_las_pickup.setIcon(div_icon_las_pickup);
+    
+    
+    
+    window._spotMarkers = {"H06": marker_50514a8db638da93b8fae7f484f95b4f, "H07": marker_a1a96282cec2322ade1bbbee1287ec5d, "07-01": marker_c6efbd724033723ff114d03a8d25fb46, "07-02": marker_bf3a98f58913317375b37f7a5f1b2e2a, "07-03": marker_438e04afdff731d4a8815f60dbcbc84e, "07-04": marker_ef8241a877d7834ad1879c423a8efc7d, "07-05": marker_e0d998a48da36ad132ed86c95276a1f2, "07-06": marker_d68b4a82b5ce0295573601109c7115f4, "07-07": marker_108362f1348342893312aaccdae71e92, "07-08": marker_0f46b89cdf1d985ce8d0bbaaaadd762f, "07-09": marker_8cfac0c0db251b811222ca0b48f5f873, "07-10": marker_cd078ee21b662f9662195c9e7bd77ff8, "07-11": marker_40926353894756a46ba8e180bc1a0bf2, "07-12": marker_a567e1f00a4b0ff0b1129194573b211e, "07-13": marker_99e917adea7e1b66e9be050eb85d3022, "07-14": marker_f8a7aa67af1746e51f513cb0cf9d5cee, "LAS": marker_las_pickup};
+    function openSpotFromHash() {
+      var id = decodeURIComponent((window.location.hash || '').replace('#',''));
+      if (!id || !window._spotMarkers || !window._spotMarkers[id]) return;
+      var marker = window._spotMarkers[id];
+      marker.openPopup();
+      map_860eaec598061f6248cb072a5f64905b.setView(marker.getLatLng(), Math.max(map_860eaec598061f6248cb072a5f64905b.getZoom(), 10));
+    }
+    setTimeout(openSpotFromHash, 600);
+    window.addEventListener('hashchange', openSpotFromHash);
+    
+</script>
+</html>
