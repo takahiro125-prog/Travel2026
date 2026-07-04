@@ -842,26 +842,19 @@
             
     
             map_860eaec598061f6248cb072a5f64905b.fitBounds(
-                [[36.057, -112.137], [36.1286, -115.1728], [36.0613, -112.1092], [36.0658, -112.1167], [36.0572, -112.0877], [35.0275, -111.734], [34.8326, -111.7669], [34.8022, -111.7659], [34.8559, -111.7894], [34.8649, -111.7639], [34.8224, -111.8052], [35.3256, -112.8742], [35.1894, -114.053], [36.0121, -114.741], [36.0161, -114.7377], [36.0161, -114.7377]],
+                [[36.057, -112.137], [36.1286, -115.1728], [36.0840, -115.1537], [36.0613, -112.1092], [36.0658, -112.1167], [36.0572, -112.0877], [35.0275, -111.734], [34.8326, -111.7669], [34.8022, -111.7659], [34.8559, -111.7894], [34.8649, -111.7639], [34.8224, -111.8052], [35.3256, -112.8742], [35.1894, -114.053], [36.0121, -114.741], [36.0161, -114.7377], [36.0161, -114.7377]],
                 {"padding": [40, 40]}
             );
         
     
     var marker_las_pickup = L.marker([36.0840, -115.1537], {}).addTo(map_860eaec598061f6248cb072a5f64905b);
     var div_icon_las_pickup = L.divIcon({
-      "html": "
-            <div style="
-                background:#fdae61; color:white; border:2px solid white; border-radius:16px;
-                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;
-                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;
-                font-family:Arial, sans-serif;">
-                LAS
-            </div>",
+      "html": "\n            <div style=\"\n                background:#fdae61; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\">\n                LAS\n            </div>",
       "iconSize": [56, 28],
       "iconAnchor": [28, 14],
       "className": "empty"
     });
-    var popup_las_pickup = L.popup({"maxWidth": 420});
+        var popup_las_pickup = L.popup({"maxWidth": 420});
     var html_las_pickup = $(`<div style="width: 100.0%; height: 100.0%;">
       <div class="popup">
         <h4>LAS Harry Reid International Airport pickup</h4>
