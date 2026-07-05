@@ -3,10 +3,6 @@
 <head>
     
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    
-    <style>
-    .popup table{border-collapse:collapse;font-size:13px}.popup th{background:#f2f2f2;text-align:left;padding:4px 7px;border-bottom:1px solid #ddd;vertical-align:top;white-space:nowrap}.popup td{padding:4px 7px;border-bottom:1px solid #ddd;vertical-align:top}.popup h4{margin:0 0 8px;font-size:16px}.popup a{font-weight:700}.leaflet-popup-content{min-width:260px;max-width:420px}
-    </style>
     <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -21,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_219c5116992de61c704513df2df45c2c {
+                #map_aac6e05a2d844150c39f65acc45c2778 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -58,40 +54,39 @@
 <body>
     
     
-    <div style="position: fixed; top: 18px; left: 50%; transform: translateX(-50%); z-index: 9999;background: rgba(255,255,255,.94); border: 1px solid #aaa; border-radius: 10px;padding: 10px 16px; font-family: Arial, sans-serif; box-shadow: 0 1px 5px rgba(0,0,0,.25); text-align:center;">
+    <div style="position: fixed; top: 18px; left: 50%; transform: translateX(-50%); z-index:9999; background:rgba(255,255,255,.94); border:1px solid #aaa; border-radius:10px; padding:10px 16px; font-family:Arial,sans-serif; box-shadow:0 1px 5px rgba(0,0,0,.25); text-align:center;">
       <div style="font-size:18px;font-weight:700;">Day 7 Travel Map</div>
       <div style="font-size:12px;color:#444;">Grand Canyon Village → Sedona → Hoover Dam → Las Vegas / 約415 miles / 約7:15</div>
     </div>
     
-    <div style="position: fixed; bottom: 28px; left: 28px; z-index: 9999; background: white;border: 1px solid #999; border-radius: 8px; padding: 12px 14px;font-family: Arial, sans-serif; font-size: 13px; box-shadow: 0 1px 5px rgba(0,0,0,.25);">
-      <div style="font-weight:700; margin-bottom:7px;">Legend</div><div><span style="background:#1a9850;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Hotel</div><div><span style="background:#d7191c;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Must</div><div><span style="background:#2c7bb6;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Possibly</div><div><span style="background:#7b3294;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Backup / heavy</div><div><span style="background:#ff8c00;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Airport pickup</div>
-      <div style="margin-top:7px;color:#555;max-width:270px;">Planning map. Use Apple Maps / Google Maps / official park information for final navigation.</div>
+    <div style="position: fixed; bottom: 28px; left: 28px; z-index:9999; background:white; border:1px solid #999; border-radius:8px; padding:12px 14px; font-family:Arial,sans-serif; font-size:13px; box-shadow:0 1px 5px rgba(0,0,0,.25);">
+      <div style="font-weight:700; margin-bottom:7px;">Legend</div><div><span style="background:#1a9850;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Hotel: 2</div><div><span style="background:#d7191c;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Must: 5</div><div><span style="background:#2c7bb6;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Possibly: 6</div><div><span style="background:#7b3294;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Backup: 3</div><div><span style="background:#ff8c00;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Airport pickup: 1</div>
+      <div style="margin-top:7px;color:#555;max-width:260px;">Planning map. Use Apple Maps / Google Maps / NPS for final navigation.</div>
     </div>
     
-    <script>
-    window._spotMarkers = {"H06": marker_27c25e069954912da60b1d1c2d22469f, "H07": marker_1bcab2a19e1e9620183402506c323f21, "07-01": marker_f4bb8190751af51f4b053b47a5d9cb41, "07-02": marker_78ae7c2d20cde9bff2a8323a39ee28ad, "07-03": marker_4a4fe7527af4aa105b9395b88316c9b8, "07-04": marker_5378260a20235b3462feb3798466d889, "07-05": marker_b9a0f4029b53231eb766366d56cbd794, "07-06": marker_cee01fd7a30a93c74207bd0faea718fb, "07-07": marker_bf967a27efa5f15169d9e32e624264e7, "07-08": marker_6f36d1b4539293e71324b278c7890fa4, "07-09": marker_bd568cbc4b01c93e17cd27b970bd652c, "07-10": marker_5e5f4072c6d6c620d1724c9d232a4682, "07-11": marker_4d38dc8b664c77789377d69fa2bd6fc2, "07-12": marker_38bacd78d47b64557dee3df6ef04a6bf, "07-13": marker_4f258c66491738473964b90afdab936a, "07-14": marker_9e5b274b88e300d38ebba1b3e73f4da6, "LAS": marker_776672cfa13f441d416dd23211eb9b25};
-    function openSpotFromHash() {
-      var id = decodeURIComponent((window.location.hash || '').replace('#',''));
-      if (!id || !window._spotMarkers || !window._spotMarkers[id]) return;
-      var marker = window._spotMarkers[id];
-      marker.openPopup();
-      map_219c5116992de61c704513df2df45c2c.setView(marker.getLatLng(), Math.max(map_219c5116992de61c704513df2df45c2c.getZoom(), 10));
-    }
-    setTimeout(openSpotFromHash, 600);
-    window.addEventListener('hashchange', openSpotFromHash);
-    </script>
+<script>
+window._spotMarkers = {"H06": marker_a73e076516c3477d2fdee1b5ce59ec12, "H07": marker_d236e961afc5e0cb5f3135402acbde1b, "07-01": marker_d2610e9588bf6c13cbc64ca93e02b899, "07-02": marker_142d1df5f48a0d46d8c72b96bb30a62e, "07-03": marker_e54c8ea4232e3e64365ddc1bb6309ed2, "07-04": marker_e1f28539de2d5a5dd20af5eb1c29753f, "07-05": marker_a92ac17a46413121b9f6895e0331f118, "07-06": marker_034b3fa0dfcbe24b7ef8d2be5c6b62f6, "07-07": marker_3fd2a0edd4565a65a62fee9d83c60fa3, "07-08": marker_e0d881704834e8d6e10ffacd1380af06, "07-09": marker_42072843875273fcebb2aa578a5fc35d, "07-10": marker_e32542b839cf9385138140c83c318fda, "07-11": marker_3806ad13751c85c6224b832d73280105, "07-12": marker_b41eff80ad758b630b9f7d623702d07b, "07-13": marker_d7a766bf784a885229a25adae33fda1c, "07-14": marker_db25b6c6bfbcaae9136d887cc676dea4, "LAS": marker_2bf2eff49db920ad7b41c749aa16b17a};
+function openSpotFromHash() {
+  var id = decodeURIComponent((window.location.hash || '').replace('#',''));
+  if (!id || !window._spotMarkers || !window._spotMarkers[id]) return;
+  var marker = window._spotMarkers[id];
+  marker.openPopup();
+  map_aac6e05a2d844150c39f65acc45c2778.setView(marker.getLatLng(), Math.max(map_aac6e05a2d844150c39f65acc45c2778.getZoom(), 10));
+}
+setTimeout(openSpotFromHash, 600);
+window.addEventListener('hashchange', openSpotFromHash);
+</script>
     
-    
-            <div class="folium-map" id="map_219c5116992de61c704513df2df45c2c" ></div>
+            <div class="folium-map" id="map_aac6e05a2d844150c39f65acc45c2778" ></div>
         
 </body>
 <script>
     
     
-            var map_219c5116992de61c704513df2df45c2c = L.map(
-                "map_219c5116992de61c704513df2df45c2c",
+            var map_aac6e05a2d844150c39f65acc45c2778 = L.map(
+                "map_aac6e05a2d844150c39f65acc45c2778",
                 {
-                    center: [35.57237222222222, -113.09442777777778],
+                    center: [35.54229411764706, -112.97332941176471],
                     crs: L.CRS.EPSG3857,
                     ...{
   "zoom": 7,
@@ -101,13 +96,13 @@
 
                 }
             );
-            L.control.scale().addTo(map_219c5116992de61c704513df2df45c2c);
+            L.control.scale().addTo(map_aac6e05a2d844150c39f65acc45c2778);
 
             
 
         
     
-            var tile_layer_1d21b6abfb6d73f32c80a39075bfe565 = L.tileLayer(
+            var tile_layer_507ef6322600572a5800de2922d14275 = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -124,23 +119,17 @@
             );
         
     
-            tile_layer_1d21b6abfb6d73f32c80a39075bfe565.addTo(map_219c5116992de61c704513df2df45c2c);
+            tile_layer_507ef6322600572a5800de2922d14275.addTo(map_aac6e05a2d844150c39f65acc45c2778);
         
     
-            map_219c5116992de61c704513df2df45c2c.fitBounds(
-                [[34.8022, -115.1728], [36.1286, -111.734]],
-                {"padding": [40, 40]}
-            );
-        
-    
-            var marker_27c25e069954912da60b1d1c2d22469f = L.marker(
-                [36.057, -112.137],
+            var marker_a73e076516c3477d2fdee1b5ce59ec12 = L.marker(
+                [36.057, -112.1393],
                 {
 }
-            ).addTo(map_219c5116992de61c704513df2df45c2c);
+            ).addTo(map_aac6e05a2d844150c39f65acc45c2778);
         
     
-            var div_icon_c400507e8c623d7a0097cefe026dedd9 = L.divIcon({
+            var div_icon_5d7173c2863b0a50112b2b8f1b5821a6 = L.divIcon({
   "html": "\u003cdiv style=\"background:#1a9850; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003eH06\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -148,24 +137,24 @@
 });
         
     
-        var popup_3956000eab8f35489e45a108b5572711 = L.popup({
-  "maxWidth": 420,
+        var popup_bf8c61cdb18241b4ed59fc0f2c0a8056 = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_b985c3e303cfbaf1a15b9a12217174c4 = $(`<div id="html_b985c3e303cfbaf1a15b9a12217174c4" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>H06 Maswik Lodge / Grand Canyon Village泊 / 出発</h4><table><tr><th>Status</th><td>Hotel</td></tr><tr><th>Category</th><td>Hotel</td></tr><tr><th>Area</th><td>Grand Canyon Village, AZ</td></tr><tr><th>Plan</th><td>Grand Canyon Villageのロッジに宿泊。</td></tr><tr><th>Notes</th><td>Hotels.com予約メールでは最大5 guests/room-unit。部屋数・ベッド構成は要確認。ホテル住所は公式Maswik Lodge住所と一致。キャンセル/変更は8/3 16:00以降100% fee。</td></tr></table><p><a href="https://maps.apple.com/?q=202%20South%20Village%20Loop%2C%20Grand%20Canyon%2C%20AZ%2086023%2C%20USA" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Maswik%20Lodge%20/%20Grand%20Canyon%20Village%E6%B3%8A" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_3956000eab8f35489e45a108b5572711.setContent(html_b985c3e303cfbaf1a15b9a12217174c4);
+                var html_6fa6696a5e1dce27595e5eed62961b2a = $(`<div id="html_6fa6696a5e1dce27595e5eed62961b2a" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>H06 Maswik Lodge / Grand Canyon Village泊 / 出発</h4><table><tr><th>Status</th><td>Hotel</td></tr><tr><th>Category</th><td>Hotel</td></tr><tr><th>Area</th><td>Grand Canyon Village, AZ</td></tr><tr><th>Plan</th><td>Grand Canyon Villageのロッジに宿泊。</td></tr><tr><th>Notes</th><td>Hotels.com予約メールでは最大5 guests/room-unit。部屋数・ベッド構成は要確認。ホテル住所は公式Maswik Lodge住所と一致。キャンセル/変更は8/3 16:00以降100% fee。</td></tr></table><p><a href="https://maps.apple.com/?q=Maswik%20Lodge%20/%20Grand%20Canyon%20Village%E6%B3%8A" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Maswik%20Lodge%20/%20Grand%20Canyon%20Village%E6%B3%8A" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_bf8c61cdb18241b4ed59fc0f2c0a8056.setContent(html_6fa6696a5e1dce27595e5eed62961b2a);
             
         
 
-        marker_27c25e069954912da60b1d1c2d22469f.bindPopup(popup_3956000eab8f35489e45a108b5572711)
+        marker_a73e076516c3477d2fdee1b5ce59ec12.bindPopup(popup_bf8c61cdb18241b4ed59fc0f2c0a8056)
         ;
 
         
     
     
-            marker_27c25e069954912da60b1d1c2d22469f.bindTooltip(
+            marker_a73e076516c3477d2fdee1b5ce59ec12.bindTooltip(
                 `<div>
                      H06 Maswik Lodge / Grand Canyon Village泊 / 出発
                  </div>`,
@@ -175,17 +164,17 @@
             );
         
     
-                marker_27c25e069954912da60b1d1c2d22469f.setIcon(div_icon_c400507e8c623d7a0097cefe026dedd9);
+                marker_a73e076516c3477d2fdee1b5ce59ec12.setIcon(div_icon_5d7173c2863b0a50112b2b8f1b5821a6);
             
     
-            var marker_1bcab2a19e1e9620183402506c323f21 = L.marker(
-                [36.1286, -115.1728],
+            var marker_d236e961afc5e0cb5f3135402acbde1b = L.marker(
+                [36.1289, -115.1711],
                 {
 }
-            ).addTo(map_219c5116992de61c704513df2df45c2c);
+            ).addTo(map_aac6e05a2d844150c39f65acc45c2778);
         
     
-            var div_icon_11dcb0fd7d9d88b98f16cdd22c92dbb5 = L.divIcon({
+            var div_icon_92721c35e4240b08fde272c719416fb4 = L.divIcon({
   "html": "\u003cdiv style=\"background:#1a9850; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003eH07\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -193,24 +182,24 @@
 });
         
     
-        var popup_267a4ecc7fef64961022145b7bf67c7c = L.popup({
-  "maxWidth": 420,
+        var popup_2c572f44a321c480dac29bbe824edd28 = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_f8ee3c46a9f6258da18d947a0b9b7794 = $(`<div id="html_f8ee3c46a9f6258da18d947a0b9b7794" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>H07 Trump International Hotel Las Vegas</h4><table><tr><th>Status</th><td>Hotel</td></tr><tr><th>Category</th><td>Hotel</td></tr><tr><th>Area</th><td>Las Vegas, NV</td></tr><tr><th>Plan</th><td>Las Vegasで宿泊。</td></tr><tr><th>Notes</th><td>最大4 guests/room-unit。グループ8人なら2部屋以上が必要な条件。チェックイン時に予約カードと同名の写真IDが必要。Resort fee $44.22/accommodation/nightは現地徴収分に含まれる。</td></tr></table><p><a href="https://maps.apple.com/?q=2000%20Fashion%20Show%20Drive%2C%20Las%20Vegas%2C%20NV%2089109%2C%20USA" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Trump%20International%20Hotel%20Las%20Vegas" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_267a4ecc7fef64961022145b7bf67c7c.setContent(html_f8ee3c46a9f6258da18d947a0b9b7794);
+                var html_607179849f7834bc9790dd14a3ee2fab = $(`<div id="html_607179849f7834bc9790dd14a3ee2fab" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>H07 Trump International Hotel Las Vegas</h4><table><tr><th>Status</th><td>Hotel</td></tr><tr><th>Category</th><td>Hotel</td></tr><tr><th>Area</th><td>Las Vegas, NV</td></tr><tr><th>Plan</th><td>Las Vegasで宿泊。</td></tr><tr><th>Notes</th><td>最大4 guests/room-unit。グループ8人なら2部屋以上が必要な条件。チェックイン時に予約カードと同名の写真IDが必要。Resort fee $44.22/accommodation/nightは現地徴収分に含まれる。</td></tr></table><p><a href="https://maps.apple.com/?q=Trump%20International%20Hotel%20Las%20Vegas" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Trump%20International%20Hotel%20Las%20Vegas" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_2c572f44a321c480dac29bbe824edd28.setContent(html_607179849f7834bc9790dd14a3ee2fab);
             
         
 
-        marker_1bcab2a19e1e9620183402506c323f21.bindPopup(popup_267a4ecc7fef64961022145b7bf67c7c)
+        marker_d236e961afc5e0cb5f3135402acbde1b.bindPopup(popup_2c572f44a321c480dac29bbe824edd28)
         ;
 
         
     
     
-            marker_1bcab2a19e1e9620183402506c323f21.bindTooltip(
+            marker_d236e961afc5e0cb5f3135402acbde1b.bindTooltip(
                 `<div>
                      H07 Trump International Hotel Las Vegas
                  </div>`,
@@ -220,17 +209,17 @@
             );
         
     
-                marker_1bcab2a19e1e9620183402506c323f21.setIcon(div_icon_11dcb0fd7d9d88b98f16cdd22c92dbb5);
+                marker_d236e961afc5e0cb5f3135402acbde1b.setIcon(div_icon_92721c35e4240b08fde272c719416fb4);
             
     
-            var marker_f4bb8190751af51f4b053b47a5d9cb41 = L.marker(
+            var marker_d2610e9588bf6c13cbc64ca93e02b899 = L.marker(
                 [36.0613, -112.1092],
                 {
 }
-            ).addTo(map_219c5116992de61c704513df2df45c2c);
+            ).addTo(map_aac6e05a2d844150c39f65acc45c2778);
         
     
-            var div_icon_9f3d31b662641651faeea294af561e8f = L.divIcon({
+            var div_icon_9f6a6b58389c46668bd064d9bff69f3a = L.divIcon({
   "html": "\u003cdiv style=\"background:#d7191c; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e07-01\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -238,24 +227,24 @@
 });
         
     
-        var popup_80a178ea16058ec397f8e35ae19a8c31 = L.popup({
-  "maxWidth": 420,
+        var popup_c03fa5f099b5eccbc2c8ae82944c94dc = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_056c9b92415e1668849ff3834ca8dea6 = $(`<div id="html_056c9b92415e1668849ff3834ca8dea6" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>07-01 Mather Point sunrise</h4><table><tr><th>Status</th><td>行く予定</td></tr><tr><th>Category</th><td>Must</td></tr><tr><th>Area</th><td>Grand Canyon South Rim</td></tr><tr><th>Time</th><td>45–60 min</td></tr><tr><th>Effort</th><td>軽い。車に戻りやすい。朝は寒暖差に注意。</td></tr><tr><th>Plan</th><td>朝日を見て、短時間で出発準備をし、そのままSedonaへ向かう。</td></tr><tr><th>Skip rule</th><td>起床が遅れた場合は短時間展望だけ。Sedonaへの出発を優先。</td></tr><tr><th>Notes</th><td>朝日20–30分前到着を目安。</td></tr></table><p><a href="https://maps.apple.com/?q=Mather%20Point%20sunrise%20Grand%20Canyon%20South%20Rim" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Mather%20Point%20sunrise" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_80a178ea16058ec397f8e35ae19a8c31.setContent(html_056c9b92415e1668849ff3834ca8dea6);
+                var html_70f527cb08fa532e40518c837b71874c = $(`<div id="html_70f527cb08fa532e40518c837b71874c" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>07-01 Mather Point sunrise</h4><table><tr><th>Status</th><td>Must</td></tr><tr><th>Category</th><td>Must</td></tr><tr><th>Area</th><td>Grand Canyon South Rim</td></tr><tr><th>Time</th><td>45–60 min</td></tr><tr><th>Effort</th><td>軽い。車に戻りやすい。朝は寒暖差に注意。</td></tr><tr><th>Plan</th><td>朝日を見て、短時間で出発準備をし、そのままSedonaへ向かう。</td></tr><tr><th>Skip rule</th><td>起床が遅れた場合は短時間展望だけ。Sedonaへの出発を優先。</td></tr><tr><th>Guide</th><td>Mather Pointは、South Rimで朝日を見る定番地点の一つです。朝の低い光が峡谷の片側を照らし、反対側に影を残すため、昼間よりも谷の深さが分かりやすくなります。Grand Canyonは広すぎて距離感がつかみにくいので、朝の影を使って地形の凹凸を見るとよいです。子どもには「朝の光で、谷の深さが見えやすくなる場所」と説明できます。</td></tr><tr><th>Notes</th><td>朝日20–30分前到着を目安。</td></tr></table><p><a href="https://maps.apple.com/?q=Mather%20Point%20sunrise" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Mather+Point+sunrise+Grand+Canyon" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_c03fa5f099b5eccbc2c8ae82944c94dc.setContent(html_70f527cb08fa532e40518c837b71874c);
             
         
 
-        marker_f4bb8190751af51f4b053b47a5d9cb41.bindPopup(popup_80a178ea16058ec397f8e35ae19a8c31)
+        marker_d2610e9588bf6c13cbc64ca93e02b899.bindPopup(popup_c03fa5f099b5eccbc2c8ae82944c94dc)
         ;
 
         
     
     
-            marker_f4bb8190751af51f4b053b47a5d9cb41.bindTooltip(
+            marker_d2610e9588bf6c13cbc64ca93e02b899.bindTooltip(
                 `<div>
                      07-01 Mather Point sunrise
                  </div>`,
@@ -265,17 +254,17 @@
             );
         
     
-                marker_f4bb8190751af51f4b053b47a5d9cb41.setIcon(div_icon_9f3d31b662641651faeea294af561e8f);
+                marker_d2610e9588bf6c13cbc64ca93e02b899.setIcon(div_icon_9f6a6b58389c46668bd064d9bff69f3a);
             
     
-            var marker_78ae7c2d20cde9bff2a8323a39ee28ad = L.marker(
+            var marker_142d1df5f48a0d46d8c72b96bb30a62e = L.marker(
                 [36.0658, -112.1167],
                 {
 }
-            ).addTo(map_219c5116992de61c704513df2df45c2c);
+            ).addTo(map_aac6e05a2d844150c39f65acc45c2778);
         
     
-            var div_icon_ce499f337e6f1725d65b214e067be310 = L.divIcon({
+            var div_icon_6941ab9d72ccaea5c8ed58b49adabcfe = L.divIcon({
   "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e07-02\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -283,24 +272,24 @@
 });
         
     
-        var popup_91809101354db3f3c018f4704856a166 = L.popup({
-  "maxWidth": 420,
+        var popup_eea2a91ad90c6c0d85f0812eab65671a = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_84b586ad4a7d81ad6f0e83f9bad3f8e8 = $(`<div id="html_84b586ad4a7d81ad6f0e83f9bad3f8e8" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>07-02 Yavapai Point sunrise</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Grand Canyon South Rim</td></tr><tr><th>Time</th><td>45–60 min</td></tr><tr><th>Effort</th><td>軽い。Matherより少し落ち着く可能性。</td></tr><tr><th>Plan</th><td>前日にMatherを見た場合、朝はこちらで見る。</td></tr><tr><th>Skip rule</th><td>前日にYavapaiで夕方を見たなら、朝はMatherを優先。</td></tr><tr><th>Notes</th><td>Day 7朝の代替。</td></tr></table><p><a href="https://maps.apple.com/?q=Yavapai%20Point%20sunrise%20Grand%20Canyon%20South%20Rim" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Yavapai%20Point%20sunrise" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_91809101354db3f3c018f4704856a166.setContent(html_84b586ad4a7d81ad6f0e83f9bad3f8e8);
+                var html_02ed2c80e93c5c4fa4359691a75e1b81 = $(`<div id="html_02ed2c80e93c5c4fa4359691a75e1b81" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>07-02 Yavapai Point sunrise</h4><table><tr><th>Status</th><td>Possibly</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Grand Canyon South Rim</td></tr><tr><th>Time</th><td>45–60 min</td></tr><tr><th>Effort</th><td>軽い。Matherより少し落ち着く可能性。</td></tr><tr><th>Plan</th><td>前日にMatherを見た場合、朝はこちらで見る。</td></tr><tr><th>Skip rule</th><td>前日にYavapaiで夕方を見たなら、朝はMatherを優先。</td></tr><tr><th>Notes</th><td>Day 7朝の代替。</td></tr></table><p><a href="https://maps.apple.com/?q=Yavapai%20Point%20sunrise" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Yavapai+Point+sunrise+Grand+Canyon" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_eea2a91ad90c6c0d85f0812eab65671a.setContent(html_02ed2c80e93c5c4fa4359691a75e1b81);
             
         
 
-        marker_78ae7c2d20cde9bff2a8323a39ee28ad.bindPopup(popup_91809101354db3f3c018f4704856a166)
+        marker_142d1df5f48a0d46d8c72b96bb30a62e.bindPopup(popup_eea2a91ad90c6c0d85f0812eab65671a)
         ;
 
         
     
     
-            marker_78ae7c2d20cde9bff2a8323a39ee28ad.bindTooltip(
+            marker_142d1df5f48a0d46d8c72b96bb30a62e.bindTooltip(
                 `<div>
                      07-02 Yavapai Point sunrise
                  </div>`,
@@ -310,17 +299,17 @@
             );
         
     
-                marker_78ae7c2d20cde9bff2a8323a39ee28ad.setIcon(div_icon_ce499f337e6f1725d65b214e067be310);
+                marker_142d1df5f48a0d46d8c72b96bb30a62e.setIcon(div_icon_6941ab9d72ccaea5c8ed58b49adabcfe);
             
     
-            var marker_4a4fe7527af4aa105b9395b88316c9b8 = L.marker(
+            var marker_e54c8ea4232e3e64365ddc1bb6309ed2 = L.marker(
                 [36.0572, -112.0877],
                 {
 }
-            ).addTo(map_219c5116992de61c704513df2df45c2c);
+            ).addTo(map_aac6e05a2d844150c39f65acc45c2778);
         
     
-            var div_icon_ba41d0c5fc9b7dfdfb30e594274d3d23 = L.divIcon({
+            var div_icon_e71ed449506f3b1d7936b9bd572da697 = L.divIcon({
   "html": "\u003cdiv style=\"background:#7b3294; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e07-03\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -328,24 +317,24 @@
 });
         
     
-        var popup_8596eeec110ff794b5b520b4c684deb0 = L.popup({
-  "maxWidth": 420,
+        var popup_e6799c9275723dcf531b2b6e33b691ba = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_50780ab60bed6cac8d14e4c53fe837ee = $(`<div id="html_50780ab60bed6cac8d14e4c53fe837ee" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>07-03 Yaki Point sunrise</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Backup</td></tr><tr><th>Area</th><td>Grand Canyon South Rim</td></tr><tr><th>Time</th><td>60–90 min</td></tr><tr><th>Effort</th><td>朝はシャトル利用が絡むためやや複雑。</td></tr><tr><th>Plan</th><td>朝日スポットとしては良いが、通常計画では入れない。</td></tr><tr><th>Skip rule</th><td>Mather Pointで代替。シャトル待ちが発生するなら避ける。</td></tr><tr><th>Notes</th><td>Backup。朝出発優先。</td></tr></table><p><a href="https://maps.apple.com/?q=Yaki%20Point%20sunrise%20Grand%20Canyon%20South%20Rim" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Yaki%20Point%20sunrise" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_8596eeec110ff794b5b520b4c684deb0.setContent(html_50780ab60bed6cac8d14e4c53fe837ee);
+                var html_8c936a8711e9b16d51d65a799d81c67c = $(`<div id="html_8c936a8711e9b16d51d65a799d81c67c" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>07-03 Yaki Point sunrise</h4><table><tr><th>Status</th><td>Backup</td></tr><tr><th>Category</th><td>Backup</td></tr><tr><th>Area</th><td>Grand Canyon South Rim</td></tr><tr><th>Time</th><td>60–90 min</td></tr><tr><th>Effort</th><td>朝はシャトル利用が絡むためやや複雑。</td></tr><tr><th>Plan</th><td>朝日スポットとしては良いが、通常計画では入れない。</td></tr><tr><th>Skip rule</th><td>Mather Pointで代替。シャトル待ちが発生するなら避ける。</td></tr><tr><th>Notes</th><td>Backup。朝出発優先。</td></tr></table><p><a href="https://maps.apple.com/?q=Yaki%20Point%20sunrise" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Yaki+Point+sunrise+Grand+Canyon" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_e6799c9275723dcf531b2b6e33b691ba.setContent(html_8c936a8711e9b16d51d65a799d81c67c);
             
         
 
-        marker_4a4fe7527af4aa105b9395b88316c9b8.bindPopup(popup_8596eeec110ff794b5b520b4c684deb0)
+        marker_e54c8ea4232e3e64365ddc1bb6309ed2.bindPopup(popup_e6799c9275723dcf531b2b6e33b691ba)
         ;
 
         
     
     
-            marker_4a4fe7527af4aa105b9395b88316c9b8.bindTooltip(
+            marker_e54c8ea4232e3e64365ddc1bb6309ed2.bindTooltip(
                 `<div>
                      07-03 Yaki Point sunrise
                  </div>`,
@@ -355,17 +344,17 @@
             );
         
     
-                marker_4a4fe7527af4aa105b9395b88316c9b8.setIcon(div_icon_ba41d0c5fc9b7dfdfb30e594274d3d23);
+                marker_e54c8ea4232e3e64365ddc1bb6309ed2.setIcon(div_icon_e71ed449506f3b1d7936b9bd572da697);
             
     
-            var marker_5378260a20235b3462feb3798466d889 = L.marker(
+            var marker_e1f28539de2d5a5dd20af5eb1c29753f = L.marker(
                 [35.0275, -111.734],
                 {
 }
-            ).addTo(map_219c5116992de61c704513df2df45c2c);
+            ).addTo(map_aac6e05a2d844150c39f65acc45c2778);
         
     
-            var div_icon_273f83075071beb6cdb0d4c4ce2d358f = L.divIcon({
+            var div_icon_e256fb253b4b5fbca14c0b4e7da4f123 = L.divIcon({
   "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e07-04\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -373,24 +362,24 @@
 });
         
     
-        var popup_f52c694c504f6ac9fab670ae3151dd92 = L.popup({
-  "maxWidth": 420,
+        var popup_cb321f7512e0751264b6b01f9d8057dd = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_2d5341b19a5f1614cce02b236e71764a = $(`<div id="html_2d5341b19a5f1614cce02b236e71764a" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>07-04 Oak Creek Canyon / Scenic Drive</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Grand Canyon → Sedona</td></tr><tr><th>Time</th><td>車窓 + 10–20 min</td></tr><tr><th>Effort</th><td>車窓中心。カーブが多い。</td></tr><tr><th>Plan</th><td>Grand CanyonからSedonaへ入る道中で、景色が良い場所だけ短時間停車。</td></tr><tr><th>Skip rule</th><td>車酔い、時間遅れ、駐車困難なら通過。</td></tr><tr><th>Notes</th><td>道中の車窓候補。長居しない。</td></tr></table><p><a href="https://maps.apple.com/?q=Oak%20Creek%20Canyon%20/%20Scenic%20Drive%20Grand%20Canyon%20%E2%86%92%20Sedona" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Oak%20Creek%20Canyon%20/%20Scenic%20Drive" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_f52c694c504f6ac9fab670ae3151dd92.setContent(html_2d5341b19a5f1614cce02b236e71764a);
+                var html_a4f912623a82d90e7586420861d11308 = $(`<div id="html_a4f912623a82d90e7586420861d11308" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>07-04 Oak Creek Canyon / Scenic Drive</h4><table><tr><th>Status</th><td>Possibly</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Grand Canyon → Sedona</td></tr><tr><th>Time</th><td>車窓 + 10–20 min</td></tr><tr><th>Effort</th><td>車窓中心。カーブが多い。</td></tr><tr><th>Plan</th><td>Grand CanyonからSedonaへ入る道中で、景色が良い場所だけ短時間停車。</td></tr><tr><th>Skip rule</th><td>車酔い、時間遅れ、駐車困難なら通過。</td></tr><tr><th>Notes</th><td>道中の車窓候補。長居しない。</td></tr></table><p><a href="https://maps.apple.com/?q=Oak%20Creek%20Canyon%20/%20Scenic%20Drive" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Oak+Creek+Canyon+Sedona" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_cb321f7512e0751264b6b01f9d8057dd.setContent(html_a4f912623a82d90e7586420861d11308);
             
         
 
-        marker_5378260a20235b3462feb3798466d889.bindPopup(popup_f52c694c504f6ac9fab670ae3151dd92)
+        marker_e1f28539de2d5a5dd20af5eb1c29753f.bindPopup(popup_cb321f7512e0751264b6b01f9d8057dd)
         ;
 
         
     
     
-            marker_5378260a20235b3462feb3798466d889.bindTooltip(
+            marker_e1f28539de2d5a5dd20af5eb1c29753f.bindTooltip(
                 `<div>
                      07-04 Oak Creek Canyon / Scenic Drive
                  </div>`,
@@ -400,17 +389,17 @@
             );
         
     
-                marker_5378260a20235b3462feb3798466d889.setIcon(div_icon_273f83075071beb6cdb0d4c4ce2d358f);
+                marker_e1f28539de2d5a5dd20af5eb1c29753f.setIcon(div_icon_e256fb253b4b5fbca14c0b4e7da4f123);
             
     
-            var marker_b9a0f4029b53231eb766366d56cbd794 = L.marker(
+            var marker_a92ac17a46413121b9f6895e0331f118 = L.marker(
                 [34.8326, -111.7669],
                 {
 }
-            ).addTo(map_219c5116992de61c704513df2df45c2c);
+            ).addTo(map_aac6e05a2d844150c39f65acc45c2778);
         
     
-            var div_icon_0829b6d906f06175894a71e07deaa9fa = L.divIcon({
+            var div_icon_74db00453738afbbf71185f62a175c60 = L.divIcon({
   "html": "\u003cdiv style=\"background:#d7191c; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e07-05\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -418,24 +407,24 @@
 });
         
     
-        var popup_21dd7d7a98466ec453051425fab56b96 = L.popup({
-  "maxWidth": 420,
+        var popup_d673df7ffb380f3ff21275419deb50a4 = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_0b60e212905dfd820415c374f3cfc931 = $(`<div id="html_0b60e212905dfd820415c374f3cfc931" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>07-05 Chapel of the Holy Cross</h4><table><tr><th>Status</th><td>行く予定</td></tr><tr><th>Category</th><td>Must</td></tr><tr><th>Area</th><td>Sedona</td></tr><tr><th>Time</th><td>30–45 min</td></tr><tr><th>Effort</th><td>短い歩行。駐車場から坂あり。</td></tr><tr><th>Plan</th><td>赤岩の中に建つ礼拝堂と周囲の景色を見る。</td></tr><tr><th>Skip rule</th><td>駐車が難しい場合は短時間待ちまで。長く待つならBell Rockを優先。</td></tr><tr><th>Notes</th><td>Sedonaの主目的。昼の暑さに注意。</td></tr></table><p><a href="https://maps.apple.com/?q=Chapel%20of%20the%20Holy%20Cross%20Sedona" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Chapel%20of%20the%20Holy%20Cross" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_21dd7d7a98466ec453051425fab56b96.setContent(html_0b60e212905dfd820415c374f3cfc931);
+                var html_98404631af3d31c910b6ebfd8fb4c133 = $(`<div id="html_98404631af3d31c910b6ebfd8fb4c133" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>07-05 Chapel of the Holy Cross</h4><table><tr><th>Status</th><td>Must</td></tr><tr><th>Category</th><td>Must</td></tr><tr><th>Area</th><td>Sedona</td></tr><tr><th>Time</th><td>30–45 min</td></tr><tr><th>Effort</th><td>短い歩行。駐車場から坂あり。</td></tr><tr><th>Plan</th><td>赤岩の中に建つ礼拝堂と周囲の景色を見る。</td></tr><tr><th>Skip rule</th><td>駐車が難しい場合は短時間待ちまで。長く待つならBell Rockを優先。</td></tr><tr><th>Guide</th><td>Chapel of the Holy Crossは、Sedonaの赤い岩の中に組み込まれた礼拝堂です。Sedonaの赤い岩は鉄分を含む砂岩が酸化して赤く見えており、建物の直線と自然の岩の曲線が対照的に見えます。宗教施設であると同時に、Sedonaらしい岩山と建築を短時間で感じられる場所です。子どもには「赤い岩の中に作られた小さな教会」と説明できます。</td></tr><tr><th>Notes</th><td>Sedonaの主目的。昼の暑さに注意。</td></tr></table><p><a href="https://maps.apple.com/?q=Chapel%20of%20the%20Holy%20Cross" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Chapel+of+the+Holy+Cross+Sedona" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_d673df7ffb380f3ff21275419deb50a4.setContent(html_98404631af3d31c910b6ebfd8fb4c133);
             
         
 
-        marker_b9a0f4029b53231eb766366d56cbd794.bindPopup(popup_21dd7d7a98466ec453051425fab56b96)
+        marker_a92ac17a46413121b9f6895e0331f118.bindPopup(popup_d673df7ffb380f3ff21275419deb50a4)
         ;
 
         
     
     
-            marker_b9a0f4029b53231eb766366d56cbd794.bindTooltip(
+            marker_a92ac17a46413121b9f6895e0331f118.bindTooltip(
                 `<div>
                      07-05 Chapel of the Holy Cross
                  </div>`,
@@ -445,17 +434,17 @@
             );
         
     
-                marker_b9a0f4029b53231eb766366d56cbd794.setIcon(div_icon_0829b6d906f06175894a71e07deaa9fa);
+                marker_a92ac17a46413121b9f6895e0331f118.setIcon(div_icon_74db00453738afbbf71185f62a175c60);
             
     
-            var marker_cee01fd7a30a93c74207bd0faea718fb = L.marker(
+            var marker_034b3fa0dfcbe24b7ef8d2be5c6b62f6 = L.marker(
                 [34.8022, -111.7659],
                 {
 }
-            ).addTo(map_219c5116992de61c704513df2df45c2c);
+            ).addTo(map_aac6e05a2d844150c39f65acc45c2778);
         
     
-            var div_icon_fd70d3a84fc50bc8ace8ee43f710d491 = L.divIcon({
+            var div_icon_1a22fd7f26cdc6dc9e34cbaadb562c16 = L.divIcon({
   "html": "\u003cdiv style=\"background:#d7191c; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e07-06\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -463,24 +452,24 @@
 });
         
     
-        var popup_2838112da1241b79aad193552e10f383 = L.popup({
-  "maxWidth": 420,
+        var popup_cfee82af87a29d025270f64742fb1edf = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_7db8dec038dd954b56f6627e326fb293 = $(`<div id="html_7db8dec038dd954b56f6627e326fb293" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>07-06 Bell Rock / Courthouse Butte Viewpoint</h4><table><tr><th>Status</th><td>行く予定</td></tr><tr><th>Category</th><td>Must</td></tr><tr><th>Area</th><td>Sedona</td></tr><tr><th>Time</th><td>20–45 min</td></tr><tr><th>Effort</th><td>展望・短い歩行。長いハイクはしない。</td></tr><tr><th>Plan</th><td>赤岩の代表的景観を短時間で見る。写真休憩中心。</td></tr><tr><th>Skip rule</th><td>暑い、駐車困難、Hoover Dam到着が遅れそうなら短縮。</td></tr><tr><th>Notes</th><td>歩きすぎない。水を持つ。</td></tr></table><p><a href="https://maps.apple.com/?q=Bell%20Rock%20/%20Courthouse%20Butte%20Viewpoint%20Sedona" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Bell%20Rock%20/%20Courthouse%20Butte%20Viewpoint" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_2838112da1241b79aad193552e10f383.setContent(html_7db8dec038dd954b56f6627e326fb293);
+                var html_0024b7972cbac85d13120b7487b0c40c = $(`<div id="html_0024b7972cbac85d13120b7487b0c40c" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>07-06 Bell Rock / Courthouse Butte Viewpoint</h4><table><tr><th>Status</th><td>Must</td></tr><tr><th>Category</th><td>Must</td></tr><tr><th>Area</th><td>Sedona</td></tr><tr><th>Time</th><td>20–45 min</td></tr><tr><th>Effort</th><td>展望・短い歩行。長いハイクはしない。</td></tr><tr><th>Plan</th><td>赤岩の代表的景観を短時間で見る。写真休憩中心。</td></tr><tr><th>Skip rule</th><td>暑い、駐車困難、Hoover Dam到着が遅れそうなら短縮。</td></tr><tr><th>Guide</th><td>Bell RockとCourthouse Butteは、Sedonaを代表する赤い砂岩の地形です。水平に積もった砂岩の層が侵食され、ベルや裁判所の建物のように見える形だけが残りました。近くまで歩かなくても、形の違いと赤い岩の層がよく分かります。子どもには「岩がベルや大きな建物みたいな形に削られた場所」と説明できます。</td></tr><tr><th>Notes</th><td>歩きすぎない。水を持つ。</td></tr></table><p><a href="https://maps.apple.com/?q=Bell%20Rock%20/%20Courthouse%20Butte%20Viewpoint" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Bell+Rock+Courthouse+Butte+Sedona" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_cfee82af87a29d025270f64742fb1edf.setContent(html_0024b7972cbac85d13120b7487b0c40c);
             
         
 
-        marker_cee01fd7a30a93c74207bd0faea718fb.bindPopup(popup_2838112da1241b79aad193552e10f383)
+        marker_034b3fa0dfcbe24b7ef8d2be5c6b62f6.bindPopup(popup_cfee82af87a29d025270f64742fb1edf)
         ;
 
         
     
     
-            marker_cee01fd7a30a93c74207bd0faea718fb.bindTooltip(
+            marker_034b3fa0dfcbe24b7ef8d2be5c6b62f6.bindTooltip(
                 `<div>
                      07-06 Bell Rock / Courthouse Butte Viewpoint
                  </div>`,
@@ -490,17 +479,17 @@
             );
         
     
-                marker_cee01fd7a30a93c74207bd0faea718fb.setIcon(div_icon_fd70d3a84fc50bc8ace8ee43f710d491);
+                marker_034b3fa0dfcbe24b7ef8d2be5c6b62f6.setIcon(div_icon_1a22fd7f26cdc6dc9e34cbaadb562c16);
             
     
-            var marker_bf967a27efa5f15169d9e32e624264e7 = L.marker(
+            var marker_3fd2a0edd4565a65a62fee9d83c60fa3 = L.marker(
                 [34.8559, -111.7894],
                 {
 }
-            ).addTo(map_219c5116992de61c704513df2df45c2c);
+            ).addTo(map_aac6e05a2d844150c39f65acc45c2778);
         
     
-            var div_icon_7b231749544727728881af4b427f5362 = L.divIcon({
+            var div_icon_032537a04d223c08d4c1bbfa01f095e3 = L.divIcon({
   "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e07-07\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -508,24 +497,24 @@
 });
         
     
-        var popup_8ff26290d3f7c21040c2aa7f9238ae0b = L.popup({
-  "maxWidth": 420,
+        var popup_93765677515561496e47154a45f61dd5 = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_eadf9c60dc4caec9849b05eac37fe89d = $(`<div id="html_eadf9c60dc4caec9849b05eac37fe89d" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>07-07 Airport Mesa Overlook</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Sedona</td></tr><tr><th>Time</th><td>20–40 min</td></tr><tr><th>Effort</th><td>短い展望。駐車状況に注意。</td></tr><tr><th>Plan</th><td>Sedona全体を見渡す展望を短時間で見る。</td></tr><tr><th>Skip rule</th><td>駐車困難、時間不足、暑さが強い場合は省略。</td></tr><tr><th>Notes</th><td>時間が余った場合のみ。</td></tr></table><p><a href="https://maps.apple.com/?q=Airport%20Mesa%20Overlook%20Sedona" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Airport%20Mesa%20Overlook" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_8ff26290d3f7c21040c2aa7f9238ae0b.setContent(html_eadf9c60dc4caec9849b05eac37fe89d);
+                var html_63c576499da2f86e248c60a6b75e842d = $(`<div id="html_63c576499da2f86e248c60a6b75e842d" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>07-07 Airport Mesa Overlook</h4><table><tr><th>Status</th><td>Possibly</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Sedona</td></tr><tr><th>Time</th><td>20–40 min</td></tr><tr><th>Effort</th><td>短い展望。駐車状況に注意。</td></tr><tr><th>Plan</th><td>Sedona全体を見渡す展望を短時間で見る。</td></tr><tr><th>Skip rule</th><td>駐車困難、時間不足、暑さが強い場合は省略。</td></tr><tr><th>Notes</th><td>時間が余った場合のみ。</td></tr></table><p><a href="https://maps.apple.com/?q=Airport%20Mesa%20Overlook" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Airport+Mesa+Overlook+Sedona" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_93765677515561496e47154a45f61dd5.setContent(html_63c576499da2f86e248c60a6b75e842d);
             
         
 
-        marker_bf967a27efa5f15169d9e32e624264e7.bindPopup(popup_8ff26290d3f7c21040c2aa7f9238ae0b)
+        marker_3fd2a0edd4565a65a62fee9d83c60fa3.bindPopup(popup_93765677515561496e47154a45f61dd5)
         ;
 
         
     
     
-            marker_bf967a27efa5f15169d9e32e624264e7.bindTooltip(
+            marker_3fd2a0edd4565a65a62fee9d83c60fa3.bindTooltip(
                 `<div>
                      07-07 Airport Mesa Overlook
                  </div>`,
@@ -535,17 +524,17 @@
             );
         
     
-                marker_bf967a27efa5f15169d9e32e624264e7.setIcon(div_icon_7b231749544727728881af4b427f5362);
+                marker_3fd2a0edd4565a65a62fee9d83c60fa3.setIcon(div_icon_032537a04d223c08d4c1bbfa01f095e3);
             
     
-            var marker_6f36d1b4539293e71324b278c7890fa4 = L.marker(
+            var marker_e0d881704834e8d6e10ffacd1380af06 = L.marker(
                 [34.8649, -111.7639],
                 {
 }
-            ).addTo(map_219c5116992de61c704513df2df45c2c);
+            ).addTo(map_aac6e05a2d844150c39f65acc45c2778);
         
     
-            var div_icon_d6655ef10307032ee4875243c170b8cd = L.divIcon({
+            var div_icon_d372c1239961a79ca0d42159fe21f36c = L.divIcon({
   "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e07-08\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -553,24 +542,24 @@
 });
         
     
-        var popup_b0ed6ab3370e1df77b4f43bcd326efec = L.popup({
-  "maxWidth": 420,
+        var popup_6c4b935e292787cb53cb83c271ffd9a1 = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_44396e0b6387075f85e0403f8cedf4c6 = $(`<div id="html_44396e0b6387075f85e0403f8cedf4c6" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>07-08 Tlaquepaque / Uptown Sedona</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Sedona</td></tr><tr><th>Time</th><td>45–75 min</td></tr><tr><th>Effort</th><td>軽い。昼食・トイレ・日陰・買い物向き。</td></tr><tr><th>Plan</th><td>昼食と休憩を兼ねて立ち寄る。</td></tr><tr><th>Skip rule</th><td>食事を別で済ませる、または時間が押す場合は省略。</td></tr><tr><th>Notes</th><td>観光より休憩目的。</td></tr></table><p><a href="https://maps.apple.com/?q=Tlaquepaque%20/%20Uptown%20Sedona%20Sedona" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Tlaquepaque%20/%20Uptown%20Sedona" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_b0ed6ab3370e1df77b4f43bcd326efec.setContent(html_44396e0b6387075f85e0403f8cedf4c6);
+                var html_65b2ff925c6f4e186bc189e267ba92f5 = $(`<div id="html_65b2ff925c6f4e186bc189e267ba92f5" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>07-08 Tlaquepaque / Uptown Sedona</h4><table><tr><th>Status</th><td>Possibly</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Sedona</td></tr><tr><th>Time</th><td>45–75 min</td></tr><tr><th>Effort</th><td>軽い。昼食・トイレ・日陰・買い物向き。</td></tr><tr><th>Plan</th><td>昼食と休憩を兼ねて立ち寄る。</td></tr><tr><th>Skip rule</th><td>食事を別で済ませる、または時間が押す場合は省略。</td></tr><tr><th>Notes</th><td>観光より休憩目的。</td></tr></table><p><a href="https://maps.apple.com/?q=Tlaquepaque%20/%20Uptown%20Sedona" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Tlaquepaque+Uptown+Sedona" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_6c4b935e292787cb53cb83c271ffd9a1.setContent(html_65b2ff925c6f4e186bc189e267ba92f5);
             
         
 
-        marker_6f36d1b4539293e71324b278c7890fa4.bindPopup(popup_b0ed6ab3370e1df77b4f43bcd326efec)
+        marker_e0d881704834e8d6e10ffacd1380af06.bindPopup(popup_6c4b935e292787cb53cb83c271ffd9a1)
         ;
 
         
     
     
-            marker_6f36d1b4539293e71324b278c7890fa4.bindTooltip(
+            marker_e0d881704834e8d6e10ffacd1380af06.bindTooltip(
                 `<div>
                      07-08 Tlaquepaque / Uptown Sedona
                  </div>`,
@@ -580,17 +569,17 @@
             );
         
     
-                marker_6f36d1b4539293e71324b278c7890fa4.setIcon(div_icon_d6655ef10307032ee4875243c170b8cd);
+                marker_e0d881704834e8d6e10ffacd1380af06.setIcon(div_icon_d372c1239961a79ca0d42159fe21f36c);
             
     
-            var marker_bd568cbc4b01c93e17cd27b970bd652c = L.marker(
+            var marker_42072843875273fcebb2aa578a5fc35d = L.marker(
                 [34.8224, -111.8052],
                 {
 }
-            ).addTo(map_219c5116992de61c704513df2df45c2c);
+            ).addTo(map_aac6e05a2d844150c39f65acc45c2778);
         
     
-            var div_icon_81b2a9055868e5d5748dba79df5332c9 = L.divIcon({
+            var div_icon_09737e7230ac5eadfc388a74cf787a7e = L.divIcon({
   "html": "\u003cdiv style=\"background:#7b3294; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e07-09\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -598,24 +587,24 @@
 });
         
     
-        var popup_8be64de91ce4eb376955ee5ca2d2e33a = L.popup({
-  "maxWidth": 420,
+        var popup_e9e2546b879717a02c6ee277b54b8d62 = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_2c753a249e64bef81915b483e0aea071 = $(`<div id="html_2c753a249e64bef81915b483e0aea071" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>07-09 Cathedral Rock view / Red Rock Crossing</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Backup</td></tr><tr><th>Area</th><td>Sedona</td></tr><tr><th>Time</th><td>45–75 min</td></tr><tr><th>Effort</th><td>展望中心。駐車・暑さに注意。</td></tr><tr><th>Plan</th><td>時間に余裕があればCathedral Rockの景色を見る。</td></tr><tr><th>Skip rule</th><td>Hoover Dam到着が遅れそうなら省略。トレイルには入らない。</td></tr><tr><th>Notes</th><td>Backup。見るだけ。</td></tr></table><p><a href="https://maps.apple.com/?q=Cathedral%20Rock%20view%20/%20Red%20Rock%20Crossing%20Sedona" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Cathedral%20Rock%20view%20/%20Red%20Rock%20Crossing" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_8be64de91ce4eb376955ee5ca2d2e33a.setContent(html_2c753a249e64bef81915b483e0aea071);
+                var html_783e00da7359c4d9596a3dc62cc5492d = $(`<div id="html_783e00da7359c4d9596a3dc62cc5492d" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>07-09 Cathedral Rock view / Red Rock Crossing</h4><table><tr><th>Status</th><td>Backup</td></tr><tr><th>Category</th><td>Backup</td></tr><tr><th>Area</th><td>Sedona</td></tr><tr><th>Time</th><td>45–75 min</td></tr><tr><th>Effort</th><td>展望中心。駐車・暑さに注意。</td></tr><tr><th>Plan</th><td>時間に余裕があればCathedral Rockの景色を見る。</td></tr><tr><th>Skip rule</th><td>Hoover Dam到着が遅れそうなら省略。トレイルには入らない。</td></tr><tr><th>Notes</th><td>Backup。見るだけ。</td></tr></table><p><a href="https://maps.apple.com/?q=Cathedral%20Rock%20view%20/%20Red%20Rock%20Crossing" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Cathedral+Rock+Red+Rock+Crossing+Sedona" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_e9e2546b879717a02c6ee277b54b8d62.setContent(html_783e00da7359c4d9596a3dc62cc5492d);
             
         
 
-        marker_bd568cbc4b01c93e17cd27b970bd652c.bindPopup(popup_8be64de91ce4eb376955ee5ca2d2e33a)
+        marker_42072843875273fcebb2aa578a5fc35d.bindPopup(popup_e9e2546b879717a02c6ee277b54b8d62)
         ;
 
         
     
     
-            marker_bd568cbc4b01c93e17cd27b970bd652c.bindTooltip(
+            marker_42072843875273fcebb2aa578a5fc35d.bindTooltip(
                 `<div>
                      07-09 Cathedral Rock view / Red Rock Crossing
                  </div>`,
@@ -625,17 +614,17 @@
             );
         
     
-                marker_bd568cbc4b01c93e17cd27b970bd652c.setIcon(div_icon_81b2a9055868e5d5748dba79df5332c9);
+                marker_42072843875273fcebb2aa578a5fc35d.setIcon(div_icon_09737e7230ac5eadfc388a74cf787a7e);
             
     
-            var marker_5e5f4072c6d6c620d1724c9d232a4682 = L.marker(
+            var marker_e32542b839cf9385138140c83c318fda = L.marker(
                 [35.3256, -112.8742],
                 {
 }
-            ).addTo(map_219c5116992de61c704513df2df45c2c);
+            ).addTo(map_aac6e05a2d844150c39f65acc45c2778);
         
     
-            var div_icon_cd8a0b778111bb6667e1e9fe262c17fd = L.divIcon({
+            var div_icon_8beb10ec01017bd1b9d730d187ee62f3 = L.divIcon({
   "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e07-10\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -643,24 +632,24 @@
 });
         
     
-        var popup_25e687340295c27163e8c80528149776 = L.popup({
-  "maxWidth": 420,
+        var popup_086c3367c4964856f26d1f1e94163f39 = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_e1c55e98a09551b68236a7e3fe03629c = $(`<div id="html_e1c55e98a09551b68236a7e3fe03629c" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>07-10 Seligman / Historic Route 66</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Sedona → Hoover Dam</td></tr><tr><th>Time</th><td>20–40 min</td></tr><tr><th>Effort</th><td>軽い。写真・トイレ休憩向き。</td></tr><tr><th>Plan</th><td>Route 66の雰囲気を短時間で見る。</td></tr><tr><th>Skip rule</th><td>Hoover Dam到着を優先。時間が押す場合は通過。</td></tr><tr><th>Notes</th><td>写真と休憩だけ。長居しない。</td></tr></table><p><a href="https://maps.apple.com/?q=Seligman%20/%20Historic%20Route%2066%20Sedona%20%E2%86%92%20Hoover%20Dam" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Seligman%20/%20Historic%20Route%2066" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_25e687340295c27163e8c80528149776.setContent(html_e1c55e98a09551b68236a7e3fe03629c);
+                var html_a7aaf8794de8faacf3123fe0e0ace5c2 = $(`<div id="html_a7aaf8794de8faacf3123fe0e0ace5c2" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>07-10 Seligman / Historic Route 66</h4><table><tr><th>Status</th><td>Possibly</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Sedona → Hoover Dam</td></tr><tr><th>Time</th><td>20–40 min</td></tr><tr><th>Effort</th><td>軽い。写真・トイレ休憩向き。</td></tr><tr><th>Plan</th><td>Route 66の雰囲気を短時間で見る。</td></tr><tr><th>Skip rule</th><td>Hoover Dam到着を優先。時間が押す場合は通過。</td></tr><tr><th>Notes</th><td>写真と休憩だけ。長居しない。</td></tr></table><p><a href="https://maps.apple.com/?q=Seligman%20/%20Historic%20Route%2066" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Seligman+Historic+Route+66+Arizona" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_086c3367c4964856f26d1f1e94163f39.setContent(html_a7aaf8794de8faacf3123fe0e0ace5c2);
             
         
 
-        marker_5e5f4072c6d6c620d1724c9d232a4682.bindPopup(popup_25e687340295c27163e8c80528149776)
+        marker_e32542b839cf9385138140c83c318fda.bindPopup(popup_086c3367c4964856f26d1f1e94163f39)
         ;
 
         
     
     
-            marker_5e5f4072c6d6c620d1724c9d232a4682.bindTooltip(
+            marker_e32542b839cf9385138140c83c318fda.bindTooltip(
                 `<div>
                      07-10 Seligman / Historic Route 66
                  </div>`,
@@ -670,17 +659,17 @@
             );
         
     
-                marker_5e5f4072c6d6c620d1724c9d232a4682.setIcon(div_icon_cd8a0b778111bb6667e1e9fe262c17fd);
+                marker_e32542b839cf9385138140c83c318fda.setIcon(div_icon_8beb10ec01017bd1b9d730d187ee62f3);
             
     
-            var marker_4d38dc8b664c77789377d69fa2bd6fc2 = L.marker(
+            var marker_3806ad13751c85c6224b832d73280105 = L.marker(
                 [35.1894, -114.053],
                 {
 }
-            ).addTo(map_219c5116992de61c704513df2df45c2c);
+            ).addTo(map_aac6e05a2d844150c39f65acc45c2778);
         
     
-            var div_icon_fc696419f73ea979340ef8b69e1a6d57 = L.divIcon({
+            var div_icon_483dfba9c6ea40f386deb66a762edb37 = L.divIcon({
   "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e07-11\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -688,24 +677,24 @@
 });
         
     
-        var popup_54edbda8ade93bd4912d35234371891e = L.popup({
-  "maxWidth": 420,
+        var popup_7dbadd2df680fb6f0c4851fc72a1554d = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_dde02a5050906c79a771390bfdb54395 = $(`<div id="html_dde02a5050906c79a771390bfdb54395" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>07-11 Kingman / Route 66休憩</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Sedona → Hoover Dam</td></tr><tr><th>Time</th><td>20–40 min</td></tr><tr><th>Effort</th><td>軽い。給油・トイレ・軽食向き。</td></tr><tr><th>Plan</th><td>Hoover Dam前の補給・休憩として使う。時間があればRoute 66写真。</td></tr><tr><th>Skip rule</th><td>Seligmanに寄った場合や時間不足なら通過。</td></tr><tr><th>Notes</th><td>給油・トイレ優先。</td></tr></table><p><a href="https://maps.apple.com/?q=Kingman%20/%20Route%2066%E4%BC%91%E6%86%A9%20Sedona%20%E2%86%92%20Hoover%20Dam" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Kingman%20/%20Route%2066%E4%BC%91%E6%86%A9" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_54edbda8ade93bd4912d35234371891e.setContent(html_dde02a5050906c79a771390bfdb54395);
+                var html_ed266d72d5db7ca5f928d57006d2fb3c = $(`<div id="html_ed266d72d5db7ca5f928d57006d2fb3c" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>07-11 Kingman / Route 66休憩</h4><table><tr><th>Status</th><td>Possibly</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Sedona → Hoover Dam</td></tr><tr><th>Time</th><td>20–40 min</td></tr><tr><th>Effort</th><td>軽い。給油・トイレ・軽食向き。</td></tr><tr><th>Plan</th><td>Hoover Dam前の補給・休憩として使う。時間があればRoute 66写真。</td></tr><tr><th>Skip rule</th><td>Seligmanに寄った場合や時間不足なら通過。</td></tr><tr><th>Notes</th><td>給油・トイレ優先。</td></tr></table><p><a href="https://maps.apple.com/?q=Kingman%20/%20Route%2066%E4%BC%91%E6%86%A9" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Kingman+Arizona+Route+66" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_7dbadd2df680fb6f0c4851fc72a1554d.setContent(html_ed266d72d5db7ca5f928d57006d2fb3c);
             
         
 
-        marker_4d38dc8b664c77789377d69fa2bd6fc2.bindPopup(popup_54edbda8ade93bd4912d35234371891e)
+        marker_3806ad13751c85c6224b832d73280105.bindPopup(popup_7dbadd2df680fb6f0c4851fc72a1554d)
         ;
 
         
     
     
-            marker_4d38dc8b664c77789377d69fa2bd6fc2.bindTooltip(
+            marker_3806ad13751c85c6224b832d73280105.bindTooltip(
                 `<div>
                      07-11 Kingman / Route 66休憩
                  </div>`,
@@ -715,17 +704,17 @@
             );
         
     
-                marker_4d38dc8b664c77789377d69fa2bd6fc2.setIcon(div_icon_fc696419f73ea979340ef8b69e1a6d57);
+                marker_3806ad13751c85c6224b832d73280105.setIcon(div_icon_483dfba9c6ea40f386deb66a762edb37);
             
     
-            var marker_38bacd78d47b64557dee3df6ef04a6bf = L.marker(
+            var marker_b41eff80ad758b630b9f7d623702d07b = L.marker(
                 [36.0121, -114.741],
                 {
 }
-            ).addTo(map_219c5116992de61c704513df2df45c2c);
+            ).addTo(map_aac6e05a2d844150c39f65acc45c2778);
         
     
-            var div_icon_7800944c903bafd44da57c0068bad13f = L.divIcon({
+            var div_icon_4481defbeac19049f4d0323c1514d14f = L.divIcon({
   "html": "\u003cdiv style=\"background:#d7191c; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e07-12\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -733,24 +722,24 @@
 });
         
     
-        var popup_0732bef6440cb818c484285480d6046c = L.popup({
-  "maxWidth": 420,
+        var popup_efb33956af048bb12f6b5e6fcf8c2760 = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_f1a046124a8ebbe1b4566d5fed1ceb19 = $(`<div id="html_f1a046124a8ebbe1b4566d5fed1ceb19" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>07-12 Mike O’Callaghan–Pat Tillman Memorial Bridge Walkway</h4><table><tr><th>Status</th><td>行く予定</td></tr><tr><th>Category</th><td>Must</td></tr><tr><th>Area</th><td>Hoover Dam</td></tr><tr><th>Time</th><td>30–45 min</td></tr><tr><th>Effort</th><td>短い歩行。橋上は暑さ・風に注意。</td></tr><tr><th>Plan</th><td>Hoover Damを上から見下ろす。写真を短時間で撮る。</td></tr><tr><th>Skip rule</th><td>暑さが強い、駐車や歩行が難しい場合は短縮。</td></tr><tr><th>Notes</th><td>Hoover Damの主目的の一つ。水を持つ。</td></tr></table><p><a href="https://maps.apple.com/?q=Mike%20O%E2%80%99Callaghan%E2%80%93Pat%20Tillman%20Memorial%20Bridge%20Walkway%20Hoover%20Dam" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Mike%20O%E2%80%99Callaghan%E2%80%93Pat%20Tillman%20Memorial%20Bridge%20Walkway" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_0732bef6440cb818c484285480d6046c.setContent(html_f1a046124a8ebbe1b4566d5fed1ceb19);
+                var html_48121ded51b60ec6cf3142b4f13a9e9e = $(`<div id="html_48121ded51b60ec6cf3142b4f13a9e9e" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>07-12 Mike O’Callaghan–Pat Tillman Memorial Bridge Walkway</h4><table><tr><th>Status</th><td>Must</td></tr><tr><th>Category</th><td>Must</td></tr><tr><th>Area</th><td>Hoover Dam</td></tr><tr><th>Time</th><td>30–45 min</td></tr><tr><th>Effort</th><td>短い歩行。橋上は暑さ・風に注意。</td></tr><tr><th>Plan</th><td>Hoover Damを上から見下ろす。写真を短時間で撮る。</td></tr><tr><th>Skip rule</th><td>暑さが強い、駐車や歩行が難しい場合は短縮。</td></tr><tr><th>Guide</th><td>Mike O’Callaghan–Pat Tillman Memorial Bridgeは、Hoover Damの下流に架かる大きなアーチ橋です。車道としてはダムを迂回するために作られましたが、歩道からはHoover Dam全体を上から見ることができます。橋とダムを一緒に見ると、Colorado Riverを人間がどのように制御し、道路も作り替えたかが分かります。子どもには「ダムを上から見るための大きな橋」と説明できます。</td></tr><tr><th>Notes</th><td>Hoover Damの主目的の一つ。水を持つ。</td></tr></table><p><a href="https://maps.apple.com/?q=Mike%20O%E2%80%99Callaghan%E2%80%93Pat%20Tillman%20Memorial%20Bridge%20Walkway" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Mike+O%27Callaghan+Pat+Tillman+Memorial+Bridge+Hoover+Dam" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_efb33956af048bb12f6b5e6fcf8c2760.setContent(html_48121ded51b60ec6cf3142b4f13a9e9e);
             
         
 
-        marker_38bacd78d47b64557dee3df6ef04a6bf.bindPopup(popup_0732bef6440cb818c484285480d6046c)
+        marker_b41eff80ad758b630b9f7d623702d07b.bindPopup(popup_efb33956af048bb12f6b5e6fcf8c2760)
         ;
 
         
     
     
-            marker_38bacd78d47b64557dee3df6ef04a6bf.bindTooltip(
+            marker_b41eff80ad758b630b9f7d623702d07b.bindTooltip(
                 `<div>
                      07-12 Mike O’Callaghan–Pat Tillman Memorial Bridge Walkway
                  </div>`,
@@ -760,17 +749,17 @@
             );
         
     
-                marker_38bacd78d47b64557dee3df6ef04a6bf.setIcon(div_icon_7800944c903bafd44da57c0068bad13f);
+                marker_b41eff80ad758b630b9f7d623702d07b.setIcon(div_icon_4481defbeac19049f4d0323c1514d14f);
             
     
-            var marker_4f258c66491738473964b90afdab936a = L.marker(
+            var marker_d7a766bf784a885229a25adae33fda1c = L.marker(
                 [36.0161, -114.7377],
                 {
 }
-            ).addTo(map_219c5116992de61c704513df2df45c2c);
+            ).addTo(map_aac6e05a2d844150c39f65acc45c2778);
         
     
-            var div_icon_c744d5d853e0cf504ad2d91cff07ae92 = L.divIcon({
+            var div_icon_655dd9db061436c8bdf28697a16b8607 = L.divIcon({
   "html": "\u003cdiv style=\"background:#d7191c; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e07-13\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -778,24 +767,24 @@
 });
         
     
-        var popup_e5aa7fffe307c9ba1c908f088b243558 = L.popup({
-  "maxWidth": 420,
+        var popup_b2824bc8dc7cdbc352258d2408131a7e = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_00b9d7bc5e09a233576a9395554d519d = $(`<div id="html_00b9d7bc5e09a233576a9395554d519d" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>07-13 Hoover Dam上部 / Visitor Center周辺</h4><table><tr><th>Status</th><td>行く予定</td></tr><tr><th>Category</th><td>Must</td></tr><tr><th>Area</th><td>Hoover Dam</td></tr><tr><th>Time</th><td>45–90 min</td></tr><tr><th>Effort</th><td>軽い歩行。暑さとセキュリティに注意。</td></tr><tr><th>Plan</th><td>Hoover Dam本体を見て、到着時刻が間に合えばVisitor Center周辺も確認。</td></tr><tr><th>Skip rule</th><td>到着が遅い場合は屋内見学を諦め、外観と橋だけに短縮。</td></tr><tr><th>Notes</th><td>America the Beautiful Pass対象外。持ち込み制限に注意。</td></tr></table><p><a href="https://maps.apple.com/?q=Hoover%20Dam%E4%B8%8A%E9%83%A8%20/%20Visitor%20Center%E5%91%A8%E8%BE%BA%20Hoover%20Dam" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Hoover%20Dam%E4%B8%8A%E9%83%A8%20/%20Visitor%20Center%E5%91%A8%E8%BE%BA" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_e5aa7fffe307c9ba1c908f088b243558.setContent(html_00b9d7bc5e09a233576a9395554d519d);
+                var html_634c69047c5651d8361cfe42caec2b07 = $(`<div id="html_634c69047c5651d8361cfe42caec2b07" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>07-13 Hoover Dam上部 / Visitor Center周辺</h4><table><tr><th>Status</th><td>Must</td></tr><tr><th>Category</th><td>Must</td></tr><tr><th>Area</th><td>Hoover Dam</td></tr><tr><th>Time</th><td>45–90 min</td></tr><tr><th>Effort</th><td>軽い歩行。暑さとセキュリティに注意。</td></tr><tr><th>Plan</th><td>Hoover Dam本体を見て、到着時刻が間に合えばVisitor Center周辺も確認。</td></tr><tr><th>Skip rule</th><td>到着が遅い場合は屋内見学を諦め、外観と橋だけに短縮。</td></tr><tr><th>Guide</th><td>Hoover Damは、Colorado Riverをせき止めてLake Meadを作った巨大なダムです。1930年代の大規模公共事業として建設され、洪水制御、水の貯留、発電に大きな役割を果たしました。ここではコンクリートの大きさだけでなく、砂漠の都市や農地が川の水に依存していることを考えると理解が深まります。子どもには「川の水をためて、電気も作る巨大な壁」と説明できます。</td></tr><tr><th>Notes</th><td>America the Beautiful Pass対象外。持ち込み制限に注意。</td></tr></table><p><a href="https://maps.apple.com/?q=Hoover%20Dam%E4%B8%8A%E9%83%A8%20/%20Visitor%20Center%E5%91%A8%E8%BE%BA" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Hoover+Dam+Visitor+Center" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_b2824bc8dc7cdbc352258d2408131a7e.setContent(html_634c69047c5651d8361cfe42caec2b07);
             
         
 
-        marker_4f258c66491738473964b90afdab936a.bindPopup(popup_e5aa7fffe307c9ba1c908f088b243558)
+        marker_d7a766bf784a885229a25adae33fda1c.bindPopup(popup_b2824bc8dc7cdbc352258d2408131a7e)
         ;
 
         
     
     
-            marker_4f258c66491738473964b90afdab936a.bindTooltip(
+            marker_d7a766bf784a885229a25adae33fda1c.bindTooltip(
                 `<div>
                      07-13 Hoover Dam上部 / Visitor Center周辺
                  </div>`,
@@ -805,17 +794,17 @@
             );
         
     
-                marker_4f258c66491738473964b90afdab936a.setIcon(div_icon_c744d5d853e0cf504ad2d91cff07ae92);
+                marker_d7a766bf784a885229a25adae33fda1c.setIcon(div_icon_655dd9db061436c8bdf28697a16b8607);
             
     
-            var marker_9e5b274b88e300d38ebba1b3e73f4da6 = L.marker(
+            var marker_db25b6c6bfbcaae9136d887cc676dea4 = L.marker(
                 [36.0161, -114.7377],
                 {
 }
-            ).addTo(map_219c5116992de61c704513df2df45c2c);
+            ).addTo(map_aac6e05a2d844150c39f65acc45c2778);
         
     
-            var div_icon_ad5708f94f38bd6b11a0644d41a89be2 = L.divIcon({
+            var div_icon_be7ee464566e4301974375e96494455d = L.divIcon({
   "html": "\u003cdiv style=\"background:#7b3294; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e07-14\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -823,24 +812,24 @@
 });
         
     
-        var popup_ce2701c28224f313db2cd15253455958 = L.popup({
-  "maxWidth": 420,
+        var popup_26548f9731564286731e2994c3869255 = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_4c4bde9ac7de1a748b01dc1dc58f20c8 = $(`<div id="html_4c4bde9ac7de1a748b01dc1dc58f20c8" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>07-14 Hoover Dam Powerplant Tour / Visitor Center Tour</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Backup</td></tr><tr><th>Area</th><td>Hoover Dam</td></tr><tr><th>Time</th><td>1–2 hr</td></tr><tr><th>Effort</th><td>屋内ツアー。時間制約あり。</td></tr><tr><th>Plan</th><td>到着が早く、子供が元気ならツアーを検討。</td></tr><tr><th>Skip rule</th><td>16時台以降に到着、疲労が強い、Las Vegas到着を優先する場合は省略。</td></tr><tr><th>Notes</th><td>Backup。時間が合えば。</td></tr></table><p><a href="https://maps.apple.com/?q=Hoover%20Dam%20Powerplant%20Tour%20/%20Visitor%20Center%20Tour%20Hoover%20Dam" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Hoover%20Dam%20Powerplant%20Tour%20/%20Visitor%20Center%20Tour" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_ce2701c28224f313db2cd15253455958.setContent(html_4c4bde9ac7de1a748b01dc1dc58f20c8);
+                var html_c4c4a05769a874cc613f6ba322345315 = $(`<div id="html_c4c4a05769a874cc613f6ba322345315" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>07-14 Hoover Dam Powerplant Tour / Visitor Center Tour</h4><table><tr><th>Status</th><td>Backup</td></tr><tr><th>Category</th><td>Backup</td></tr><tr><th>Area</th><td>Hoover Dam</td></tr><tr><th>Time</th><td>1–2 hr</td></tr><tr><th>Effort</th><td>屋内ツアー。時間制約あり。</td></tr><tr><th>Plan</th><td>到着が早く、子供が元気ならツアーを検討。</td></tr><tr><th>Skip rule</th><td>16時台以降に到着、疲労が強い、Las Vegas到着を優先する場合は省略。</td></tr><tr><th>Notes</th><td>Backup。時間が合えば。</td></tr></table><p><a href="https://maps.apple.com/?q=Hoover%20Dam%20Powerplant%20Tour%20/%20Visitor%20Center%20Tour" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Hoover+Dam+Powerplant+Tour" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_26548f9731564286731e2994c3869255.setContent(html_c4c4a05769a874cc613f6ba322345315);
             
         
 
-        marker_9e5b274b88e300d38ebba1b3e73f4da6.bindPopup(popup_ce2701c28224f313db2cd15253455958)
+        marker_db25b6c6bfbcaae9136d887cc676dea4.bindPopup(popup_26548f9731564286731e2994c3869255)
         ;
 
         
     
     
-            marker_9e5b274b88e300d38ebba1b3e73f4da6.bindTooltip(
+            marker_db25b6c6bfbcaae9136d887cc676dea4.bindTooltip(
                 `<div>
                      07-14 Hoover Dam Powerplant Tour / Visitor Center Tour
                  </div>`,
@@ -850,17 +839,17 @@
             );
         
     
-                marker_9e5b274b88e300d38ebba1b3e73f4da6.setIcon(div_icon_ad5708f94f38bd6b11a0644d41a89be2);
+                marker_db25b6c6bfbcaae9136d887cc676dea4.setIcon(div_icon_be7ee464566e4301974375e96494455d);
             
     
-            var marker_e3fbb0a2951107544ce974769e0e44bf = L.marker(
+            var marker_2bf2eff49db920ad7b41c749aa16b17a = L.marker(
                 [36.084, -115.1537],
                 {
 }
-            ).addTo(map_219c5116992de61c704513df2df45c2c);
+            ).addTo(map_aac6e05a2d844150c39f65acc45c2778);
         
     
-            var div_icon_f2b3840c9fb08b247e47aa3121ef3fa4 = L.divIcon({
+            var div_icon_7e75107cf7d2686c201cf4e6a71581fa = L.divIcon({
   "html": "\u003cdiv style=\"background:#ff8c00; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003eLAS\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -868,26 +857,26 @@
 });
         
     
-        var popup_f928eaeb6fcca0d43453dda1babb4d46 = L.popup({
-  "maxWidth": 420,
+        var popup_6be48cddd24e3155cd823041e7a96d27 = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_5178bd41c2cc98536c0b58d0f79c8be8 = $(`<div id="html_5178bd41c2cc98536c0b58d0f79c8be8" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>LAS Grand Canyon Village → Sedona → Hoover Dam → Las Vegas</h4><table><tr><th>Status</th><td>Pickup / Need research</td></tr><tr><th>Category</th><td>Airport pickup</td></tr><tr><th>Area</th><td>AZ / NV</td></tr><tr><th>Time</th><td>約415 miles / 約7:15</td></tr><tr><th>Plan</th><td>Grand Canyon朝観光は軽めまたは省略。Sedona、Hoover Damを経由してLas Vegasへ移動。</td></tr><tr><th>Skip rule</th><td>便名・到着時刻・ターミナル確認後に待機時間を調整。</td></tr><tr><th>Notes</th><td>この日は長い。Grand Canyon朝を伸ばしすぎない。</td></tr></table><p><a href="https://maps.apple.com/?q=Grand%20Canyon%20Village%20%E2%86%92%20Sedona%20%E2%86%92%20Hoover%20Dam%20%E2%86%92%20Las%20Vegas" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Harry%20Reid%20International%20Airport%20Las%20Vegas" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_f928eaeb6fcca0d43453dda1babb4d46.setContent(html_5178bd41c2cc98536c0b58d0f79c8be8);
+                var html_aeff6e2bd847114bc7a6198ecc3908fb = $(`<div id="html_aeff6e2bd847114bc7a6198ecc3908fb" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>LAS Harry Reid International Airport pickup</h4><table><tr><th>Status</th><td>Airport pickup</td></tr><tr><th>Category</th><td>Airport pickup</td></tr><tr><th>Area</th><td>Las Vegas, NV / LAS</td></tr><tr><th>Time</th><td>約60–90 min + 往復移動</td></tr><tr><th>Plan</th><td>8/6夜に追加参加者をHarry Reid International Airport (LAS)でピックアップ。到着便・到着時刻・ターミナルは未確認。空港待機と荷物受け取り時間を見込む。</td></tr><tr><th>Skip rule</th><td>便名・到着時刻・ターミナル確認後に待機時間を調整。</td></tr><tr><th>Notes</th><td>Hoover Dam後にLas Vegas着。ホテルチェックインと空港迎えの順序は到着時刻で調整。StripからLASは短距離だが、渋滞・駐車・到着待機を見込む。</td></tr></table><p><a href="https://maps.apple.com/?q=Harry%20Reid%20International%20Airport%2C%20Las%20Vegas%2C%20NV" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Harry%20Reid%20International%20Airport%20Las%20Vegas" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_6be48cddd24e3155cd823041e7a96d27.setContent(html_aeff6e2bd847114bc7a6198ecc3908fb);
             
         
 
-        marker_e3fbb0a2951107544ce974769e0e44bf.bindPopup(popup_f928eaeb6fcca0d43453dda1babb4d46)
+        marker_2bf2eff49db920ad7b41c749aa16b17a.bindPopup(popup_6be48cddd24e3155cd823041e7a96d27)
         ;
 
         
     
     
-            marker_e3fbb0a2951107544ce974769e0e44bf.bindTooltip(
+            marker_2bf2eff49db920ad7b41c749aa16b17a.bindTooltip(
                 `<div>
-                     LAS Grand Canyon Village → Sedona → Hoover Dam → Las Vegas
+                     LAS Harry Reid International Airport pickup
                  </div>`,
                 {
   "sticky": true,
@@ -895,52 +884,13 @@
             );
         
     
-                marker_e3fbb0a2951107544ce974769e0e44bf.setIcon(div_icon_f2b3840c9fb08b247e47aa3121ef3fa4);
+                marker_2bf2eff49db920ad7b41c749aa16b17a.setIcon(div_icon_7e75107cf7d2686c201cf4e6a71581fa);
             
     
-            var marker_776672cfa13f441d416dd23211eb9b25 = L.marker(
-                [36.084, -115.1537],
-                {
-}
-            ).addTo(map_219c5116992de61c704513df2df45c2c);
-        
-    
-            var div_icon_ec172534681010d616eb4c532b5da948 = L.divIcon({
-  "html": "\u003cdiv style=\"background:#ff8c00; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003eLAS\u003c/div\u003e",
-  "iconSize": [56, 28],
-  "iconAnchor": [28, 14],
-  "className": "empty",
-});
-        
-    
-        var popup_d10f0d64c6119a82f2d7fbf74644e251 = L.popup({
-  "maxWidth": 420,
-});
-
-        
-            
-                var html_8f546734a04b46677acdd170b499ba25 = $(`<div id="html_8f546734a04b46677acdd170b499ba25" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>LAS Harry Reid International Airport (LAS) pickup</h4><table><tr><th>Status</th><td>Pickup / Need research</td></tr><tr><th>Category</th><td>Airport pickup</td></tr><tr><th>Area</th><td>Las Vegas, NV / LAS</td></tr><tr><th>Time</th><td>約60–90 min + 往復移動</td></tr><tr><th>Plan</th><td>8/6夜に追加参加者をHarry Reid International Airport (LAS)でピックアップ。到着便・到着時刻・ターミナルは未確認。空港待機と荷物受け取り時間を見込む。</td></tr><tr><th>Skip rule</th><td>便名・到着時刻・ターミナル確認後に待機時間を調整。</td></tr><tr><th>Notes</th><td>Hoover Dam後にLas Vegas着。ホテルチェックインと空港迎えの順序は到着時刻で調整。StripからLASは短距離だが、渋滞・駐車・到着待機を見込む。</td></tr></table><p><a href="https://maps.apple.com/?q=Harry%20Reid%20International%20Airport%2C%20Las%20Vegas%2C%20NV" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Harry%20Reid%20International%20Airport%20Las%20Vegas" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_d10f0d64c6119a82f2d7fbf74644e251.setContent(html_8f546734a04b46677acdd170b499ba25);
-            
-        
-
-        marker_776672cfa13f441d416dd23211eb9b25.bindPopup(popup_d10f0d64c6119a82f2d7fbf74644e251)
-        ;
-
-        
-    
-    
-            marker_776672cfa13f441d416dd23211eb9b25.bindTooltip(
-                `<div>
-                     LAS Harry Reid International Airport (LAS) pickup
-                 </div>`,
-                {
-  "sticky": true,
-}
+            map_aac6e05a2d844150c39f65acc45c2778.fitBounds(
+                [[34.8022, -115.1711], [36.1289, -111.734]],
+                {"padding": [40, 40]}
             );
         
-    
-                marker_776672cfa13f441d416dd23211eb9b25.setIcon(div_icon_ec172534681010d616eb4c532b5da948);
-            
 </script>
 </html>

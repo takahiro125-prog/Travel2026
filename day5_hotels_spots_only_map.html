@@ -3,10 +3,6 @@
 <head>
     
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    
-    <style>
-    .popup table{border-collapse:collapse;font-size:13px}.popup th{background:#f2f2f2;text-align:left;padding:4px 7px;border-bottom:1px solid #ddd;vertical-align:top;white-space:nowrap}.popup td{padding:4px 7px;border-bottom:1px solid #ddd;vertical-align:top}.popup h4{margin:0 0 8px;font-size:16px}.popup a{font-weight:700}.leaflet-popup-content{min-width:260px;max-width:420px}
-    </style>
     <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -21,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_f11aadbfe14c924b709fd27b88c53d1d {
+                #map_95012c80a8ab4e45d38eb43d563168c7 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -58,38 +54,37 @@
 <body>
     
     
-    <div style="position: fixed; top: 18px; left: 50%; transform: translateX(-50%); z-index: 9999;background: rgba(255,255,255,.94); border: 1px solid #aaa; border-radius: 10px;padding: 10px 16px; font-family: Arial, sans-serif; box-shadow: 0 1px 5px rgba(0,0,0,.25); text-align:center;">
+    <div style="position: fixed; top: 18px; left: 50%; transform: translateX(-50%); z-index:9999; background:rgba(255,255,255,.94); border:1px solid #aaa; border-radius:10px; padding:10px 16px; font-family:Arial,sans-serif; box-shadow:0 1px 5px rgba(0,0,0,.25); text-align:center;">
       <div style="font-size:18px;font-weight:700;">Day 5 Travel Map</div>
       <div style="font-size:12px;color:#444;">Blanding → Monument Valley → Page / 200 miles / 3:12</div>
     </div>
     
-    <div style="position: fixed; bottom: 28px; left: 28px; z-index: 9999; background: white;border: 1px solid #999; border-radius: 8px; padding: 12px 14px;font-family: Arial, sans-serif; font-size: 13px; box-shadow: 0 1px 5px rgba(0,0,0,.25);">
-      <div style="font-weight:700; margin-bottom:7px;">Legend</div><div><span style="background:#1a9850;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Hotel</div><div><span style="background:#d7191c;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Must</div><div><span style="background:#2c7bb6;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Possibly</div><div><span style="background:#7b3294;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Backup / heavy</div><div><span style="background:#ff8c00;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Airport pickup</div>
-      <div style="margin-top:7px;color:#555;max-width:270px;">Planning map. Use Apple Maps / Google Maps / official park information for final navigation.</div>
+    <div style="position: fixed; bottom: 28px; left: 28px; z-index:9999; background:white; border:1px solid #999; border-radius:8px; padding:12px 14px; font-family:Arial,sans-serif; font-size:13px; box-shadow:0 1px 5px rgba(0,0,0,.25);">
+      <div style="font-weight:700; margin-bottom:7px;">Legend</div><div><span style="background:#1a9850;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Hotel: 2</div><div><span style="background:#d7191c;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Must: 3</div><div><span style="background:#2c7bb6;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Possibly: 7</div><div><span style="background:#7b3294;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Backup: 1</div>
+      <div style="margin-top:7px;color:#555;max-width:260px;">Planning map. Use Apple Maps / Google Maps / NPS for final navigation.</div>
     </div>
     
-    <script>
-    window._spotMarkers = {"H04": marker_31fa2b11b3cc47147c6f3f02d34ba103, "H05": marker_3497e2fe2b37e9111a74cd803fdebfed, "05-01": marker_a6d0524e17c2b87b60df75c9a736cc86, "05-02": marker_8d8380cf31b9f85420e513c705f17bd6, "05-03": marker_f3b092cdd3709c8211a655b9a0dc5f0b, "05-04": marker_a7ecf26c9ce504b55c89272a78725fcd, "05-05": marker_53ca2fbf8819be98976e953a50d66be4, "05-06": marker_cff43e3e09d5f1fdf99b5bb0e2e999fd, "05-07": marker_affe62f0867ec4c107ad1397a44816ca, "05-10": marker_2aa2ada275cd7ab60ad49cf30e7bf4f0, "05-11": marker_b7ca4d40fe68b5924023e5c55faf9030, "05-12": marker_ac7249f7315c582ee4d7e08cf43166cd, "05-13": marker_53f7a5239b90fb6aae57d8a17137abff};
-    function openSpotFromHash() {
-      var id = decodeURIComponent((window.location.hash || '').replace('#',''));
-      if (!id || !window._spotMarkers || !window._spotMarkers[id]) return;
-      var marker = window._spotMarkers[id];
-      marker.openPopup();
-      map_f11aadbfe14c924b709fd27b88c53d1d.setView(marker.getLatLng(), Math.max(map_f11aadbfe14c924b709fd27b88c53d1d.getZoom(), 10));
-    }
-    setTimeout(openSpotFromHash, 600);
-    window.addEventListener('hashchange', openSpotFromHash);
-    </script>
+<script>
+window._spotMarkers = {"H04": marker_41f2bc9c8de9e5dd9945bcbfc0687380, "H05": marker_98d353f4b0d224c13a27514f6ffbe53a, "05-01": marker_4e0a946427a717e5331a5b07e5ce18a9, "05-02": marker_3e4e9aa890da3101cb6767744106436b, "05-03": marker_7c72ae80a283615e307d73d207422409, "05-04": marker_32c2340173d947e370032c1abfd14a18, "05-05": marker_93fa73c6d6c97b3a1c306be2f03022fb, "05-06": marker_cac44fbb376563d931ed4f5a4bc29f7d, "05-07": marker_684d9da6804cfc5bb8d2387e03030578, "05-10": marker_13f1e492da558874bb346acc0deb4eb9, "05-11": marker_b109ebff4fed27c7545de51572dc1a3a, "05-12": marker_ccb6104584ea41b54206f6e4501fb74a, "05-13": marker_050ed2f2adc64686222c1bcb831d8276};
+function openSpotFromHash() {
+  var id = decodeURIComponent((window.location.hash || '').replace('#',''));
+  if (!id || !window._spotMarkers || !window._spotMarkers[id]) return;
+  var marker = window._spotMarkers[id];
+  marker.openPopup();
+  map_95012c80a8ab4e45d38eb43d563168c7.setView(marker.getLatLng(), Math.max(map_95012c80a8ab4e45d38eb43d563168c7.getZoom(), 10));
+}
+setTimeout(openSpotFromHash, 600);
+window.addEventListener('hashchange', openSpotFromHash);
+</script>
     
-    
-            <div class="folium-map" id="map_f11aadbfe14c924b709fd27b88c53d1d" ></div>
+            <div class="folium-map" id="map_95012c80a8ab4e45d38eb43d563168c7" ></div>
         
 </body>
 <script>
     
     
-            var map_f11aadbfe14c924b709fd27b88c53d1d = L.map(
-                "map_f11aadbfe14c924b709fd27b88c53d1d",
+            var map_95012c80a8ab4e45d38eb43d563168c7 = L.map(
+                "map_95012c80a8ab4e45d38eb43d563168c7",
                 {
                     center: [37.058030676923075, -110.50346463846154],
                     crs: L.CRS.EPSG3857,
@@ -101,13 +96,13 @@
 
                 }
             );
-            L.control.scale().addTo(map_f11aadbfe14c924b709fd27b88c53d1d);
+            L.control.scale().addTo(map_95012c80a8ab4e45d38eb43d563168c7);
 
             
 
         
     
-            var tile_layer_3096e02e99f32d6d470dc4ed5a61c8e2 = L.tileLayer(
+            var tile_layer_9b63c29b752830bc6c7b8c8c17f5523d = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -124,23 +119,17 @@
             );
         
     
-            tile_layer_3096e02e99f32d6d470dc4ed5a61c8e2.addTo(map_f11aadbfe14c924b709fd27b88c53d1d);
+            tile_layer_9b63c29b752830bc6c7b8c8c17f5523d.addTo(map_95012c80a8ab4e45d38eb43d563168c7);
         
     
-            map_f11aadbfe14c924b709fd27b88c53d1d.fitBounds(
-                [[36.9027, -111.4972], [37.627754, -109.484741]],
-                {"padding": [40, 40]}
-            );
-        
-    
-            var marker_31fa2b11b3cc47147c6f3f02d34ba103 = L.marker(
+            var marker_41f2bc9c8de9e5dd9945bcbfc0687380 = L.marker(
                 [37.627754, -109.484741],
                 {
 }
-            ).addTo(map_f11aadbfe14c924b709fd27b88c53d1d);
+            ).addTo(map_95012c80a8ab4e45d38eb43d563168c7);
         
     
-            var div_icon_892d33eafdf0ac8763f079b497aba52c = L.divIcon({
+            var div_icon_700d753c1c6d8b28201b03b2e05ee97b = L.divIcon({
   "html": "\u003cdiv style=\"background:#1a9850; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003eH04\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -148,24 +137,24 @@
 });
         
     
-        var popup_328e62f9c1c74537db12eb4f90f6cb3a = L.popup({
-  "maxWidth": 420,
+        var popup_bfa62c514f5d3fd565be4e90cd152295 = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_965f389325580a2a816aaa6ae98dfd94 = $(`<div id="html_965f389325580a2a816aaa6ae98dfd94" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>H04 Blanding泊 / 出発</h4><table><tr><th>Status</th><td>Hotel</td></tr><tr><th>Category</th><td>Hotel</td></tr><tr><th>Area</th><td>Blanding, UT</td></tr><tr><th>Plan</th><td>Blandingで宿泊。</td></tr><tr><th>Notes</th><td>Host: Bailey. 注意: 一酸化炭素検知器の記載なし。プール/ジャクージはゲートやロックなし。携帯CO検知器検討。</td></tr></table><p><a href="https://maps.apple.com/?q=Blanding%2C%20UT%2084511%2C%20USA%20/%2037.627754%2C%20-109.484741" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Blanding%E6%B3%8A" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_328e62f9c1c74537db12eb4f90f6cb3a.setContent(html_965f389325580a2a816aaa6ae98dfd94);
+                var html_16b42cc04697e9d5d44381cddbae5dc8 = $(`<div id="html_16b42cc04697e9d5d44381cddbae5dc8" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>H04 Blanding泊 / 出発</h4><table><tr><th>Status</th><td>Hotel</td></tr><tr><th>Category</th><td>Hotel</td></tr><tr><th>Area</th><td>Blanding, UT</td></tr><tr><th>Plan</th><td>Blandingで宿泊。</td></tr><tr><th>Notes</th><td>Host: Bailey. 注意: 一酸化炭素検知器の記載なし。プール/ジャクージはゲートやロックなし。携帯CO検知器検討。</td></tr></table><p><a href="https://maps.apple.com/?q=Blanding%E6%B3%8A" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Blanding%E6%B3%8A" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_bfa62c514f5d3fd565be4e90cd152295.setContent(html_16b42cc04697e9d5d44381cddbae5dc8);
             
         
 
-        marker_31fa2b11b3cc47147c6f3f02d34ba103.bindPopup(popup_328e62f9c1c74537db12eb4f90f6cb3a)
+        marker_41f2bc9c8de9e5dd9945bcbfc0687380.bindPopup(popup_bfa62c514f5d3fd565be4e90cd152295)
         ;
 
         
     
     
-            marker_31fa2b11b3cc47147c6f3f02d34ba103.bindTooltip(
+            marker_41f2bc9c8de9e5dd9945bcbfc0687380.bindTooltip(
                 `<div>
                      H04 Blanding泊 / 出発
                  </div>`,
@@ -175,17 +164,17 @@
             );
         
     
-                marker_31fa2b11b3cc47147c6f3f02d34ba103.setIcon(div_icon_892d33eafdf0ac8763f079b497aba52c);
+                marker_41f2bc9c8de9e5dd9945bcbfc0687380.setIcon(div_icon_700d753c1c6d8b28201b03b2e05ee97b);
             
     
-            var marker_3497e2fe2b37e9111a74cd803fdebfed = L.marker(
+            var marker_98d353f4b0d224c13a27514f6ffbe53a = L.marker(
                 [36.9115448, -111.4636993],
                 {
 }
-            ).addTo(map_f11aadbfe14c924b709fd27b88c53d1d);
+            ).addTo(map_95012c80a8ab4e45d38eb43d563168c7);
         
     
-            var div_icon_54332b3dc9c54999239f42a662d90f38 = L.divIcon({
+            var div_icon_88a957da5f83e765fed644ccd8ce0b0c = L.divIcon({
   "html": "\u003cdiv style=\"background:#1a9850; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003eH05\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -193,24 +182,24 @@
 });
         
     
-        var popup_c30f23b9e33bd3a7c0d6b5097af456e3 = L.popup({
-  "maxWidth": 420,
+        var popup_e527c3fdb0d60407a6bc97f22b1ed907 = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_59ec62ce04cb813984d2a24ff5ab872c = $(`<div id="html_59ec62ce04cb813984d2a24ff5ab872c" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>H05 Page泊 / Sol Oasis - A sanctuary of comfortable space.</h4><table><tr><th>Status</th><td>Hotel</td></tr><tr><th>Category</th><td>Hotel</td></tr><tr><th>Area</th><td>Page, AZ</td></tr><tr><th>Plan</th><td>Pageで宿泊。チェックイン8/4 15:00以降、チェックアウト8/5 10:00まで。セルフチェックイン（キーパッド）。</td></tr><tr><th>Notes</th><td>Host: Rochelle. ゲスト定員7人。予約人数は大人3人・子ども4人。ペットOK。セルフチェックイン（キーパッド）。旧Page宿 HMYSBTSCJS はキャンセル済み、$199.87返金処理開始。追加参加者は8/6 Las Vegasから合流のため、Day 5 Page泊は7人で問題なし。</td></tr></table><p><a href="https://maps.apple.com/?q=373%20S%20Navajo%20Dr%2C%20Page%2C%20AZ%2086040" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Page%E6%B3%8A%20/%20Sol%20Oasis%20-%20A%20sanctuary%20of%20comfortable%20space." target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_c30f23b9e33bd3a7c0d6b5097af456e3.setContent(html_59ec62ce04cb813984d2a24ff5ab872c);
+                var html_7d66a39a71d79b21ea3fa8b179aae3ad = $(`<div id="html_7d66a39a71d79b21ea3fa8b179aae3ad" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>H05 Page泊 / Sol Oasis - A sanctuary of comfortable space.</h4><table><tr><th>Status</th><td>Hotel</td></tr><tr><th>Category</th><td>Hotel</td></tr><tr><th>Area</th><td>Page, AZ</td></tr><tr><th>Plan</th><td>Pageで宿泊。チェックイン8/4 15:00以降、チェックアウト8/5 10:00まで。セルフチェックイン（キーパッド）。</td></tr><tr><th>Notes</th><td>Host: Rochelle. ゲスト定員7人。予約人数は大人3人・子ども4人。ペットOK。セルフチェックイン（キーパッド）。旧Page宿 HMYSBTSCJS はキャンセル済み、$199.87返金処理開始。追加参加者は8/6 Las Vegasから合流のため、Day 5 Page泊は7人で問題なし。</td></tr></table><p><a href="https://maps.apple.com/?q=373%20S%20Navajo%20Dr%2C%20Page%2C%20AZ%2086040" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Page%E6%B3%8A%20/%20Sol%20Oasis%20-%20A%20sanctuary%20of%20comfortable%20space." target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_e527c3fdb0d60407a6bc97f22b1ed907.setContent(html_7d66a39a71d79b21ea3fa8b179aae3ad);
             
         
 
-        marker_3497e2fe2b37e9111a74cd803fdebfed.bindPopup(popup_c30f23b9e33bd3a7c0d6b5097af456e3)
+        marker_98d353f4b0d224c13a27514f6ffbe53a.bindPopup(popup_e527c3fdb0d60407a6bc97f22b1ed907)
         ;
 
         
     
     
-            marker_3497e2fe2b37e9111a74cd803fdebfed.bindTooltip(
+            marker_98d353f4b0d224c13a27514f6ffbe53a.bindTooltip(
                 `<div>
                      H05 Page泊 / Sol Oasis - A sanctuary of comfortable space.
                  </div>`,
@@ -220,17 +209,17 @@
             );
         
     
-                marker_3497e2fe2b37e9111a74cd803fdebfed.setIcon(div_icon_54332b3dc9c54999239f42a662d90f38);
+                marker_98d353f4b0d224c13a27514f6ffbe53a.setIcon(div_icon_88a957da5f83e765fed644ccd8ce0b0c);
             
     
-            var marker_a6d0524e17c2b87b60df75c9a736cc86 = L.marker(
+            var marker_4e0a946427a717e5331a5b07e5ce18a9 = L.marker(
                 [37.2844, -109.5516],
                 {
 }
-            ).addTo(map_f11aadbfe14c924b709fd27b88c53d1d);
+            ).addTo(map_95012c80a8ab4e45d38eb43d563168c7);
         
     
-            var div_icon_8b58949362bd3d3df4cf2b44da01341a = L.divIcon({
+            var div_icon_e0803b7831fa5ae45cda92c4c376ec9d = L.divIcon({
   "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e05-01\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -238,24 +227,24 @@
 });
         
     
-        var popup_7f1ad38da6ed932d51e58ff7255ecd4b = L.popup({
-  "maxWidth": 420,
+        var popup_3f6f52cee6641cf208e15b9cb52c9168 = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_9515e410afa4202bf26a1d5a52148e18 = $(`<div id="html_9515e410afa4202bf26a1d5a52148e18" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>05-01 Bluff / Twin Rocks周辺</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Blanding → Monument Valley</td></tr><tr><th>Time</th><td>10–20 min</td></tr><tr><th>Effort</th><td>ほぼ停車のみ。トイレ・補給向き。</td></tr><tr><th>Plan</th><td>Blanding出発後の短時間ストップ。必要なら写真・トイレ・補給。</td></tr><tr><th>Skip rule</th><td>出発が遅い、補給不要、Monument Valley時間を優先する場合は通過。</td></tr><tr><th>Notes</th><td>観光というより機能的ストップ。長居しない。</td></tr></table><p><a href="https://maps.apple.com/?q=Bluff%20/%20Twin%20Rocks%E5%91%A8%E8%BE%BA%20Blanding%20%E2%86%92%20Monument%20Valley" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Bluff%20/%20Twin%20Rocks%E5%91%A8%E8%BE%BA" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_7f1ad38da6ed932d51e58ff7255ecd4b.setContent(html_9515e410afa4202bf26a1d5a52148e18);
+                var html_a8c2e3bd616fcf2863203b96d420ca4f = $(`<div id="html_a8c2e3bd616fcf2863203b96d420ca4f" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>05-01 Bluff / Twin Rocks周辺</h4><table><tr><th>Status</th><td>Possibly</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Blanding → Monument Valley</td></tr><tr><th>Time</th><td>10–20 min</td></tr><tr><th>Effort</th><td>ほぼ停車のみ。トイレ・補給向き。</td></tr><tr><th>Plan</th><td>Blanding出発後の短時間ストップ。必要なら写真・トイレ・補給。</td></tr><tr><th>Skip rule</th><td>出発が遅い、補給不要、Monument Valley時間を優先する場合は通過。</td></tr><tr><th>Guide</th><td>BluffとTwin Rocks周辺は、San Juan River沿いの小さな町と砂岩の景観を感じられる場所です。Twin Rocksのような岩は、硬い部分が残り、柔らかい周囲が削られてできた侵食地形です。BlandingからMonument Valleyへ向かう途中で、Colorado Plateauの赤い岩の連続性を短時間で確認できます。子どもには「町の近くに、双子みたいな赤い岩が立っている場所」と説明できます。</td></tr><tr><th>Notes</th><td>観光というより機能的ストップ。長居しない。</td></tr></table><p><a href="https://maps.apple.com/?q=Bluff%20/%20Twin%20Rocks%E5%91%A8%E8%BE%BA" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Bluff+Utah+Twin+Rocks" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_3f6f52cee6641cf208e15b9cb52c9168.setContent(html_a8c2e3bd616fcf2863203b96d420ca4f);
             
         
 
-        marker_a6d0524e17c2b87b60df75c9a736cc86.bindPopup(popup_7f1ad38da6ed932d51e58ff7255ecd4b)
+        marker_4e0a946427a717e5331a5b07e5ce18a9.bindPopup(popup_3f6f52cee6641cf208e15b9cb52c9168)
         ;
 
         
     
     
-            marker_a6d0524e17c2b87b60df75c9a736cc86.bindTooltip(
+            marker_4e0a946427a717e5331a5b07e5ce18a9.bindTooltip(
                 `<div>
                      05-01 Bluff / Twin Rocks周辺
                  </div>`,
@@ -265,17 +254,17 @@
             );
         
     
-                marker_a6d0524e17c2b87b60df75c9a736cc86.setIcon(div_icon_8b58949362bd3d3df4cf2b44da01341a);
+                marker_4e0a946427a717e5331a5b07e5ce18a9.setIcon(div_icon_e0803b7831fa5ae45cda92c4c376ec9d);
             
     
-            var marker_8d8380cf31b9f85420e513c705f17bd6 = L.marker(
+            var marker_3e4e9aa890da3101cb6767744106436b = L.marker(
                 [37.1736, -109.8478],
                 {
 }
-            ).addTo(map_f11aadbfe14c924b709fd27b88c53d1d);
+            ).addTo(map_95012c80a8ab4e45d38eb43d563168c7);
         
     
-            var div_icon_e5074c6041fd080188318fcca02121c8 = L.divIcon({
+            var div_icon_250e2ab3dfbd8685b7ac5d0ef28c1d03 = L.divIcon({
   "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e05-02\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -283,24 +272,24 @@
 });
         
     
-        var popup_95a21f108add78a319fe4f24d2848424 = L.popup({
-  "maxWidth": 420,
+        var popup_c282b7e7c33721fc954dcac4e742e532 = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_81fdf02d02b98ef0fbb5f90f098050fe = $(`<div id="html_81fdf02d02b98ef0fbb5f90f098050fe" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>05-02 Mexican Hat Rock</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Blanding → Monument Valley</td></tr><tr><th>Time</th><td>5–10 min</td></tr><tr><th>Effort</th><td>ほぼ停車のみ。暑ければ車窓でも可。</td></tr><tr><th>Plan</th><td>道中の変わった岩を短時間で写真。</td></tr><tr><th>Skip rule</th><td>駐車しづらい、時間が押す、暑さが強い場合は車窓または通過。</td></tr><tr><th>Notes</th><td>5–10分以上かけない。</td></tr></table><p><a href="https://maps.apple.com/?q=Mexican%20Hat%20Rock%20Blanding%20%E2%86%92%20Monument%20Valley" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Mexican%20Hat%20Rock" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_95a21f108add78a319fe4f24d2848424.setContent(html_81fdf02d02b98ef0fbb5f90f098050fe);
+                var html_61134f171c9ab79a7ee8da583680dbd9 = $(`<div id="html_61134f171c9ab79a7ee8da583680dbd9" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>05-02 Mexican Hat Rock</h4><table><tr><th>Status</th><td>Possibly</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Blanding → Monument Valley</td></tr><tr><th>Time</th><td>5–10 min</td></tr><tr><th>Effort</th><td>ほぼ停車のみ。暑ければ車窓でも可。</td></tr><tr><th>Plan</th><td>道中の変わった岩を短時間で写真。</td></tr><tr><th>Skip rule</th><td>駐車しづらい、時間が押す、暑さが強い場合は車窓または通過。</td></tr><tr><th>Guide</th><td>Mexican Hat Rockは、細い台座の上に平たい岩が乗った帽子のような形の岩です。これは上の硬いcaprockが残り、下の柔らかい岩がより速く削られたことでできた侵食地形です。短時間で見られますが、Balanced Rockと似た「残った岩」の考え方をもう一度確認できます。子どもには「帽子みたいな岩が、細い首の上に残っている場所」と説明できます。</td></tr><tr><th>Notes</th><td>5–10分以上かけない。</td></tr></table><p><a href="https://maps.apple.com/?q=Mexican%20Hat%20Rock" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Mexican+Hat+Rock+Utah" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_c282b7e7c33721fc954dcac4e742e532.setContent(html_61134f171c9ab79a7ee8da583680dbd9);
             
         
 
-        marker_8d8380cf31b9f85420e513c705f17bd6.bindPopup(popup_95a21f108add78a319fe4f24d2848424)
+        marker_3e4e9aa890da3101cb6767744106436b.bindPopup(popup_c282b7e7c33721fc954dcac4e742e532)
         ;
 
         
     
     
-            marker_8d8380cf31b9f85420e513c705f17bd6.bindTooltip(
+            marker_3e4e9aa890da3101cb6767744106436b.bindTooltip(
                 `<div>
                      05-02 Mexican Hat Rock
                  </div>`,
@@ -310,17 +299,17 @@
             );
         
     
-                marker_8d8380cf31b9f85420e513c705f17bd6.setIcon(div_icon_e5074c6041fd080188318fcca02121c8);
+                marker_3e4e9aa890da3101cb6767744106436b.setIcon(div_icon_250e2ab3dfbd8685b7ac5d0ef28c1d03);
             
     
-            var marker_f3b092cdd3709c8211a655b9a0dc5f0b = L.marker(
+            var marker_7c72ae80a283615e307d73d207422409 = L.marker(
                 [37.1014, -109.9905],
                 {
 }
-            ).addTo(map_f11aadbfe14c924b709fd27b88c53d1d);
+            ).addTo(map_95012c80a8ab4e45d38eb43d563168c7);
         
     
-            var div_icon_72ab52cf6375e1042c7dabecf19f5888 = L.divIcon({
+            var div_icon_b088dbbcc696608de089ced0d2383ba6 = L.divIcon({
   "html": "\u003cdiv style=\"background:#d7191c; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e05-03\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -328,24 +317,24 @@
 });
         
     
-        var popup_69b7892e1f11ce959283fcb5865b06fe = L.popup({
-  "maxWidth": 420,
+        var popup_ba9395b65f9bee135e1d0cae6f462556 = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_3e3487707bee4436c5f94f5087eb1b5e = $(`<div id="html_3e3487707bee4436c5f94f5087eb1b5e" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>05-03 Forrest Gump Point / US-163</h4><table><tr><th>Status</th><td>行く予定</td></tr><tr><th>Category</th><td>Must</td></tr><tr><th>Area</th><td>US-163 / Monument Valley approach</td></tr><tr><th>Time</th><td>10–20 min</td></tr><tr><th>Effort</th><td>路肩停車。道路上での撮影は安全最優先。</td></tr><tr><th>Plan</th><td>Monument Valleyを背景にUS-163の直線道路写真を撮る。</td></tr><tr><th>Skip rule</th><td>交通量が多い、路肩が危険、子供管理が難しい場合は短時間写真だけ。車道中央で粘らない。</td></tr><tr><th>Notes</th><td>安全最優先。車は路肩へ。撮影は短時間。</td></tr></table><p><a href="https://maps.apple.com/?q=Forrest%20Gump%20Point%20/%20US-163%20US-163%20/%20Monument%20Valley%20approach" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Forrest%20Gump%20Point%20/%20US-163" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_69b7892e1f11ce959283fcb5865b06fe.setContent(html_3e3487707bee4436c5f94f5087eb1b5e);
+                var html_1ad47c67ad7f473349623333a36dfc51 = $(`<div id="html_1ad47c67ad7f473349623333a36dfc51" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>05-03 Forrest Gump Point / US-163</h4><table><tr><th>Status</th><td>Must</td></tr><tr><th>Category</th><td>Must</td></tr><tr><th>Area</th><td>US-163 / Monument Valley approach</td></tr><tr><th>Time</th><td>10–20 min</td></tr><tr><th>Effort</th><td>路肩停車。道路上での撮影は安全最優先。</td></tr><tr><th>Plan</th><td>Monument Valleyを背景にUS-163の直線道路写真を撮る。</td></tr><tr><th>Skip rule</th><td>交通量が多い、路肩が危険、子供管理が難しい場合は短時間写真だけ。車道中央で粘らない。</td></tr><tr><th>Guide</th><td>Forrest Gump Pointは、Monument Valleyへ向かうUS-163の直線道路と赤いビュートが重なる有名な眺めです。映画『Forrest Gump』の場面で知られますが、実際には道路、砂漠、遠くの岩山が作る奥行きが主役です。ここから見るMonument Valleyは、近くで見る前の導入として非常に分かりやすい景色です。子どもには「まっすぐな道の先に、映画みたいな岩山が見える場所」と説明できます。</td></tr><tr><th>Notes</th><td>安全最優先。車は路肩へ。撮影は短時間。</td></tr></table><p><a href="https://maps.apple.com/?q=Forrest%20Gump%20Point%20/%20US-163" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Forrest+Gump+Point+US+163+Monument+Valley" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_ba9395b65f9bee135e1d0cae6f462556.setContent(html_1ad47c67ad7f473349623333a36dfc51);
             
         
 
-        marker_f3b092cdd3709c8211a655b9a0dc5f0b.bindPopup(popup_69b7892e1f11ce959283fcb5865b06fe)
+        marker_7c72ae80a283615e307d73d207422409.bindPopup(popup_ba9395b65f9bee135e1d0cae6f462556)
         ;
 
         
     
     
-            marker_f3b092cdd3709c8211a655b9a0dc5f0b.bindTooltip(
+            marker_7c72ae80a283615e307d73d207422409.bindTooltip(
                 `<div>
                      05-03 Forrest Gump Point / US-163
                  </div>`,
@@ -355,17 +344,17 @@
             );
         
     
-                marker_f3b092cdd3709c8211a655b9a0dc5f0b.setIcon(div_icon_72ab52cf6375e1042c7dabecf19f5888);
+                marker_7c72ae80a283615e307d73d207422409.setIcon(div_icon_b088dbbcc696608de089ced0d2383ba6);
             
     
-            var marker_a7ecf26c9ce504b55c89272a78725fcd = L.marker(
+            var marker_32c2340173d947e370032c1abfd14a18 = L.marker(
                 [36.9828, -110.1114],
                 {
 }
-            ).addTo(map_f11aadbfe14c924b709fd27b88c53d1d);
+            ).addTo(map_95012c80a8ab4e45d38eb43d563168c7);
         
     
-            var div_icon_fe56386039082d9b96b3ca8ba6711964 = L.divIcon({
+            var div_icon_9143a8d63ae9676970234edb3923b675 = L.divIcon({
   "html": "\u003cdiv style=\"background:#d7191c; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e05-04\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -373,24 +362,24 @@
 });
         
     
-        var popup_f183d1969b07bef92996dc52c23a745c = L.popup({
-  "maxWidth": 420,
+        var popup_bb1ad3faf9657a283937a87d74b31e2d = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_4076f0619c92a7f09e57269c62ee86df = $(`<div id="html_4076f0619c92a7f09e57269c62ee86df" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>05-04 Monument Valley Visitor Center / The View側展望</h4><table><tr><th>Status</th><td>行く予定</td></tr><tr><th>Category</th><td>Must</td></tr><tr><th>Area</th><td>Monument Valley Navajo Tribal Park</td></tr><tr><th>Time</th><td>30–60 min</td></tr><tr><th>Effort</th><td>軽い。展望・トイレ・買い物・写真。</td></tr><tr><th>Plan</th><td>MittensとMerrick Butteの王道ビューを見る。Scenic Driveに入らない場合でもここは見る。</td></tr><tr><th>Skip rule</th><td>時間が押す場合は展望写真とトイレだけに短縮。</td></tr><tr><th>Notes</th><td>America the Beautiful Pass対象外の前提。</td></tr></table><p><a href="https://maps.apple.com/?q=Monument%20Valley%20Visitor%20Center%20/%20The%20View%E5%81%B4%E5%B1%95%E6%9C%9B%20Monument%20Valley%20Navajo%20Tribal%20Park" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Monument%20Valley%20Visitor%20Center%20/%20The%20View%E5%81%B4%E5%B1%95%E6%9C%9B" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_f183d1969b07bef92996dc52c23a745c.setContent(html_4076f0619c92a7f09e57269c62ee86df);
+                var html_1ead3a41c3f22cc8bb105fcaa11e34a8 = $(`<div id="html_1ead3a41c3f22cc8bb105fcaa11e34a8" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>05-04 Monument Valley Visitor Center / The View側展望</h4><table><tr><th>Status</th><td>Must</td></tr><tr><th>Category</th><td>Must</td></tr><tr><th>Area</th><td>Monument Valley Navajo Tribal Park</td></tr><tr><th>Time</th><td>30–60 min</td></tr><tr><th>Effort</th><td>軽い。展望・トイレ・買い物・写真。</td></tr><tr><th>Plan</th><td>MittensとMerrick Butteの王道ビューを見る。Scenic Driveに入らない場合でもここは見る。</td></tr><tr><th>Skip rule</th><td>時間が押す場合は展望写真とトイレだけに短縮。</td></tr><tr><th>Guide</th><td>Monument Valleyは国立公園ではなく、Navajo Nationの土地にあるNavajo Tribal Parkです。MittensやMerrick Butteのような砂岩のビュートは、かつて広がっていた岩の層が削られ、硬い部分だけが塔のように残ったものです。ここでは景色だけでなく、現在もナバホの人々の生活と文化の場であることを意識するとよいです。子どもには「大きな岩の塔が残った砂漠で、ナバホの人たちの土地を訪れている」と説明できます。</td></tr><tr><th>Notes</th><td>America the Beautiful Pass対象外の前提。</td></tr></table><p><a href="https://maps.apple.com/?q=Monument%20Valley%20Visitor%20Center%20/%20The%20View%E5%81%B4%E5%B1%95%E6%9C%9B" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Monument+Valley+Visitor+Center+The+View+Mittens" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_bb1ad3faf9657a283937a87d74b31e2d.setContent(html_1ead3a41c3f22cc8bb105fcaa11e34a8);
             
         
 
-        marker_a7ecf26c9ce504b55c89272a78725fcd.bindPopup(popup_f183d1969b07bef92996dc52c23a745c)
+        marker_32c2340173d947e370032c1abfd14a18.bindPopup(popup_bb1ad3faf9657a283937a87d74b31e2d)
         ;
 
         
     
     
-            marker_a7ecf26c9ce504b55c89272a78725fcd.bindTooltip(
+            marker_32c2340173d947e370032c1abfd14a18.bindTooltip(
                 `<div>
                      05-04 Monument Valley Visitor Center / The View側展望
                  </div>`,
@@ -400,17 +389,17 @@
             );
         
     
-                marker_a7ecf26c9ce504b55c89272a78725fcd.setIcon(div_icon_fe56386039082d9b96b3ca8ba6711964);
+                marker_32c2340173d947e370032c1abfd14a18.setIcon(div_icon_9143a8d63ae9676970234edb3923b675);
             
     
-            var marker_53ca2fbf8819be98976e953a50d66be4 = L.marker(
+            var marker_93fa73c6d6c97b3a1c306be2f03022fb = L.marker(
                 [36.968, -110.098],
                 {
 }
-            ).addTo(map_f11aadbfe14c924b709fd27b88c53d1d);
+            ).addTo(map_95012c80a8ab4e45d38eb43d563168c7);
         
     
-            var div_icon_29b887a967e92f546d7b42f3aa46d301 = L.divIcon({
+            var div_icon_c9619afdaeba88e951fdc4680eeda8bb = L.divIcon({
   "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e05-05\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -418,24 +407,24 @@
 });
         
     
-        var popup_03d0aef82232f69c8e875be744adbf81 = L.popup({
-  "maxWidth": 420,
+        var popup_54a7fd0a548f835c583414cc32bb49ee = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_f34559376565f5b27a9b0aff59339840 = $(`<div id="html_f34559376565f5b27a9b0aff59339840" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>05-05 Valley Drive / 17-mile loop</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Monument Valley Navajo Tribal Park</td></tr><tr><th>Time</th><td>1.5–3 hr</td></tr><tr><th>Effort</th><td>未舗装・でこぼこ・砂地あり。車と天候で判断。</td></tr><tr><th>Plan</th><td>条件がよければValley Driveを走り、Monument Valley内部の景観を近くで見る。</td></tr><tr><th>Skip rule</th><td>天候不良、路面不安、車両条件不安、Page到着が遅れそうな場合は入らない。</td></tr><tr><th>Notes</th><td>当日入口で路面状況を確認。無理ならVisitor Center展望だけで十分。</td></tr></table><p><a href="https://maps.apple.com/?q=Valley%20Drive%20/%2017-mile%20loop%20Monument%20Valley%20Navajo%20Tribal%20Park" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Valley%20Drive%20/%2017-mile%20loop" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_03d0aef82232f69c8e875be744adbf81.setContent(html_f34559376565f5b27a9b0aff59339840);
+                var html_9f1065d3cb605f27f164333b5376c4f2 = $(`<div id="html_9f1065d3cb605f27f164333b5376c4f2" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>05-05 Valley Drive / 17-mile loop</h4><table><tr><th>Status</th><td>Possibly</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Monument Valley Navajo Tribal Park</td></tr><tr><th>Time</th><td>1.5–3 hr</td></tr><tr><th>Effort</th><td>未舗装・でこぼこ・砂地あり。車と天候で判断。</td></tr><tr><th>Plan</th><td>条件がよければValley Driveを走り、Monument Valley内部の景観を近くで見る。</td></tr><tr><th>Skip rule</th><td>天候不良、路面不安、車両条件不安、Page到着が遅れそうな場合は入らない。</td></tr><tr><th>Guide</th><td>Valley Driveは、Monument Valleyのビュートやメサの間を走る未舗装の周回道路です。Visitor Centerからの遠景だけではなく、岩の近くまで入ることで、それぞれの岩が孤立して立っていることがよく分かります。ただしここはNavajo Tribal Park内であり、単なる公園道路ではなくナバホの土地を通る道です。子どもには「大きな岩の塔の間を車で進む道」と説明できます。</td></tr><tr><th>Notes</th><td>当日入口で路面状況を確認。無理ならVisitor Center展望だけで十分。</td></tr></table><p><a href="https://maps.apple.com/?q=Valley%20Drive%20/%2017-mile%20loop" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Monument+Valley+Valley+Drive+17+Mile+Loop" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_54a7fd0a548f835c583414cc32bb49ee.setContent(html_9f1065d3cb605f27f164333b5376c4f2);
             
         
 
-        marker_53ca2fbf8819be98976e953a50d66be4.bindPopup(popup_03d0aef82232f69c8e875be744adbf81)
+        marker_93fa73c6d6c97b3a1c306be2f03022fb.bindPopup(popup_54a7fd0a548f835c583414cc32bb49ee)
         ;
 
         
     
     
-            marker_53ca2fbf8819be98976e953a50d66be4.bindTooltip(
+            marker_93fa73c6d6c97b3a1c306be2f03022fb.bindTooltip(
                 `<div>
                      05-05 Valley Drive / 17-mile loop
                  </div>`,
@@ -445,17 +434,17 @@
             );
         
     
-                marker_53ca2fbf8819be98976e953a50d66be4.setIcon(div_icon_29b887a967e92f546d7b42f3aa46d301);
+                marker_93fa73c6d6c97b3a1c306be2f03022fb.setIcon(div_icon_c9619afdaeba88e951fdc4680eeda8bb);
             
     
-            var marker_cff43e3e09d5f1fdf99b5bb0e2e999fd = L.marker(
+            var marker_cac44fbb376563d931ed4f5a4bc29f7d = L.marker(
                 [36.9474, -110.0844],
                 {
 }
-            ).addTo(map_f11aadbfe14c924b709fd27b88c53d1d);
+            ).addTo(map_95012c80a8ab4e45d38eb43d563168c7);
         
     
-            var div_icon_6977bd507cc1d6ad9c8ec1bae2dbec11 = L.divIcon({
+            var div_icon_ef11ee449ceb5a05c8de0213879afcf9 = L.divIcon({
   "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e05-06\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -463,24 +452,24 @@
 });
         
     
-        var popup_a6d5141ff7256e0693ddc1c678417b0f = L.popup({
-  "maxWidth": 420,
+        var popup_c609618c94a201566eb869fb2d0baf7e = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_c13756a8e015cb45cdf1810d470627dd = $(`<div id="html_c13756a8e015cb45cdf1810d470627dd" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>05-06 John Ford Point</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Monument Valley Navajo Tribal Park / Valley Drive</td></tr><tr><th>Time</th><td>20–40 min</td></tr><tr><th>Effort</th><td>Valley Drive内。路面・駐車・混雑次第。</td></tr><tr><th>Plan</th><td>Valley Driveに入るなら主目的として写真を撮る。</td></tr><tr><th>Skip rule</th><td>Valley Driveに入らない場合は省略。時間が押す場合は写真だけ。</td></tr><tr><th>Notes</th><td>Valley Driveを走る場合のみ。</td></tr></table><p><a href="https://maps.apple.com/?q=John%20Ford%20Point%20Monument%20Valley%20Navajo%20Tribal%20Park%20/%20Valley%20Drive" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=John%20Ford%20Point" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_a6d5141ff7256e0693ddc1c678417b0f.setContent(html_c13756a8e015cb45cdf1810d470627dd);
+                var html_256c352961945e5dc4cec90571741e98 = $(`<div id="html_256c352961945e5dc4cec90571741e98" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>05-06 John Ford Point</h4><table><tr><th>Status</th><td>Possibly</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Monument Valley Navajo Tribal Park / Valley Drive</td></tr><tr><th>Time</th><td>20–40 min</td></tr><tr><th>Effort</th><td>Valley Drive内。路面・駐車・混雑次第。</td></tr><tr><th>Plan</th><td>Valley Driveに入るなら主目的として写真を撮る。</td></tr><tr><th>Skip rule</th><td>Valley Driveに入らない場合は省略。時間が押す場合は写真だけ。</td></tr><tr><th>Guide</th><td>John Ford Pointは、Monument Valleyの中でも西部劇のイメージと強く結びついた展望地です。映画監督John Fordの作品を通じて、この風景は「アメリカ西部」の象徴として世界中に広まりました。ただし現在もNavajo Nationの土地であり、映画の背景ではなく生活と文化のある場所です。子どもには「映画で有名になったけれど、今もナバホの人たちの土地にある展望地」と説明できます。</td></tr><tr><th>Notes</th><td>Valley Driveを走る場合のみ。</td></tr></table><p><a href="https://maps.apple.com/?q=John%20Ford%20Point" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=John+Ford+Point+Monument+Valley" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_c609618c94a201566eb869fb2d0baf7e.setContent(html_256c352961945e5dc4cec90571741e98);
             
         
 
-        marker_cff43e3e09d5f1fdf99b5bb0e2e999fd.bindPopup(popup_a6d5141ff7256e0693ddc1c678417b0f)
+        marker_cac44fbb376563d931ed4f5a4bc29f7d.bindPopup(popup_c609618c94a201566eb869fb2d0baf7e)
         ;
 
         
     
     
-            marker_cff43e3e09d5f1fdf99b5bb0e2e999fd.bindTooltip(
+            marker_cac44fbb376563d931ed4f5a4bc29f7d.bindTooltip(
                 `<div>
                      05-06 John Ford Point
                  </div>`,
@@ -490,17 +479,17 @@
             );
         
     
-                marker_cff43e3e09d5f1fdf99b5bb0e2e999fd.setIcon(div_icon_6977bd507cc1d6ad9c8ec1bae2dbec11);
+                marker_cac44fbb376563d931ed4f5a4bc29f7d.setIcon(div_icon_ef11ee449ceb5a05c8de0213879afcf9);
             
     
-            var marker_affe62f0867ec4c107ad1397a44816ca = L.marker(
+            var marker_684d9da6804cfc5bb8d2387e03030578 = L.marker(
                 [36.9615, -110.092],
                 {
 }
-            ).addTo(map_f11aadbfe14c924b709fd27b88c53d1d);
+            ).addTo(map_95012c80a8ab4e45d38eb43d563168c7);
         
     
-            var div_icon_7958dc5f46846abfdf065deba63b8e0d = L.divIcon({
+            var div_icon_86a700b364f97d995cb38f48f0ac7201 = L.divIcon({
   "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e05-07\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -508,24 +497,24 @@
 });
         
     
-        var popup_0eb9c53e59ed69a57d8883aa9b2128a8 = L.popup({
-  "maxWidth": 420,
+        var popup_d623adcfd08e7eca214358be5a76385f = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_931935a255752f86dc1e5089fbb6015c = $(`<div id="html_931935a255752f86dc1e5089fbb6015c" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>05-07 Three Sisters / Elephant Butte / North Window周辺</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Monument Valley Navajo Tribal Park / Valley Drive</td></tr><tr><th>Time</th><td>30–60 min</td></tr><tr><th>Effort</th><td>Valley Drive内。車中心。</td></tr><tr><th>Plan</th><td>Valley Drive内で時間があれば、代表的なビューポイントを追加で見る。</td></tr><tr><th>Skip rule</th><td>Page到着が遅れそう、子供が疲れている、路面が悪い場合はJohn Ford Pointまでで切り上げる。</td></tr><tr><th>Notes</th><td>Valley Driveを完走する場合の追加候補。</td></tr></table><p><a href="https://maps.apple.com/?q=Three%20Sisters%20/%20Elephant%20Butte%20/%20North%20Window%E5%91%A8%E8%BE%BA%20Monument%20Valley%20Navajo%20Tribal%20Park%20/%20Valley%20Drive" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Three%20Sisters%20/%20Elephant%20Butte%20/%20North%20Window%E5%91%A8%E8%BE%BA" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_0eb9c53e59ed69a57d8883aa9b2128a8.setContent(html_931935a255752f86dc1e5089fbb6015c);
+                var html_d51e31477552f83cafd61e83ffb57e9e = $(`<div id="html_d51e31477552f83cafd61e83ffb57e9e" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>05-07 Three Sisters / Elephant Butte / North Window周辺</h4><table><tr><th>Status</th><td>Possibly</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Monument Valley Navajo Tribal Park / Valley Drive</td></tr><tr><th>Time</th><td>30–60 min</td></tr><tr><th>Effort</th><td>Valley Drive内。車中心。</td></tr><tr><th>Plan</th><td>Valley Drive内で時間があれば、代表的なビューポイントを追加で見る。</td></tr><tr><th>Skip rule</th><td>Page到着が遅れそう、子供が疲れている、路面が悪い場合はJohn Ford Pointまでで切り上げる。</td></tr><tr><th>Guide</th><td>Three Sisters、Elephant Butte、North Window周辺では、同じMonument Valleyの中でも岩の形の違いを比べられます。細い塔、象のような大きな岩、窓のように開けた地形は、岩の硬さ、割れ目、水と風の働きの違いで形が変わって残ったものです。名前を覚えるより、何に似て見えるかを家族で話すと楽しめます。子どもには「岩が人や動物や窓みたいに見える場所を探す」と説明できます。</td></tr><tr><th>Notes</th><td>Valley Driveを完走する場合の追加候補。</td></tr></table><p><a href="https://maps.apple.com/?q=Three%20Sisters%20/%20Elephant%20Butte%20/%20North%20Window%E5%91%A8%E8%BE%BA" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Three+Sisters+Elephant+Butte+North+Window+Monument+Valley" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_d623adcfd08e7eca214358be5a76385f.setContent(html_d51e31477552f83cafd61e83ffb57e9e);
             
         
 
-        marker_affe62f0867ec4c107ad1397a44816ca.bindPopup(popup_0eb9c53e59ed69a57d8883aa9b2128a8)
+        marker_684d9da6804cfc5bb8d2387e03030578.bindPopup(popup_d623adcfd08e7eca214358be5a76385f)
         ;
 
         
     
     
-            marker_affe62f0867ec4c107ad1397a44816ca.bindTooltip(
+            marker_684d9da6804cfc5bb8d2387e03030578.bindTooltip(
                 `<div>
                      05-07 Three Sisters / Elephant Butte / North Window周辺
                  </div>`,
@@ -535,17 +524,17 @@
             );
         
     
-                marker_affe62f0867ec4c107ad1397a44816ca.setIcon(div_icon_7958dc5f46846abfdf065deba63b8e0d);
+                marker_684d9da6804cfc5bb8d2387e03030578.setIcon(div_icon_86a700b364f97d995cb38f48f0ac7201);
             
     
-            var marker_2aa2ada275cd7ab60ad49cf30e7bf4f0 = L.marker(
+            var marker_13f1e492da558874bb346acc0deb4eb9 = L.marker(
                 [36.9027, -111.4116],
                 {
 }
-            ).addTo(map_f11aadbfe14c924b709fd27b88c53d1d);
+            ).addTo(map_95012c80a8ab4e45d38eb43d563168c7);
         
     
-            var div_icon_f58a258febd19a4681930922b7d57541 = L.divIcon({
+            var div_icon_3beba6bbea55056f2a2ba36ca457a9cb = L.divIcon({
   "html": "\u003cdiv style=\"background:#d7191c; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e05-10\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -553,24 +542,24 @@
 });
         
     
-        var popup_583ea9e94ae2acc22a67059c2b4c84d4 = L.popup({
-  "maxWidth": 420,
+        var popup_9d54a973c6a4f5341fa1e283e465ab9e = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_9a7cde405716a7d0db2e6ed7155c8205 = $(`<div id="html_9a7cde405716a7d0db2e6ed7155c8205" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>05-10 Antelope Canyon系ツアー</h4><table><tr><th>Status</th><td>行く予定</td></tr><tr><th>Category</th><td>Must</td></tr><tr><th>Area</th><td>Page / Antelope Canyon</td></tr><tr><th>Time</th><td>1–1.5 hr + 集合余裕</td></tr><tr><th>Effort</th><td>ツアーにより階段・狭所あり。子供の歩行負荷を確認。</td></tr><tr><th>Plan</th><td>Canyon X / Lower / Upper のどれか1つに参加するか判断。Day 5夕方またはDay 6朝の候補。</td></tr><tr><th>Skip rule</th><td>費用が重い、集合時刻が合わない、子供が疲れている場合は参加しない。</td></tr><tr><th>Notes</th><td>DecisionはTask_List ID 7で管理。参加しない場合はHorseshoe BendとGlen Canyon Dam周辺で代替。</td></tr></table><p><a href="https://maps.apple.com/?q=Antelope%20Canyon%E7%B3%BB%E3%83%84%E3%82%A2%E3%83%BC%20Page%20/%20Antelope%20Canyon" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Antelope%20Canyon%E7%B3%BB%E3%83%84%E3%82%A2%E3%83%BC" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_583ea9e94ae2acc22a67059c2b4c84d4.setContent(html_9a7cde405716a7d0db2e6ed7155c8205);
+                var html_c348886a49fc6d3ca0b7fbfd82a39232 = $(`<div id="html_c348886a49fc6d3ca0b7fbfd82a39232" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>05-10 Antelope Canyon系ツアー</h4><table><tr><th>Status</th><td>Must</td></tr><tr><th>Category</th><td>Must</td></tr><tr><th>Area</th><td>Page / Antelope Canyon</td></tr><tr><th>Time</th><td>1–1.5 hr + 集合余裕</td></tr><tr><th>Effort</th><td>ツアーにより階段・狭所あり。子供の歩行負荷を確認。</td></tr><tr><th>Plan</th><td>Canyon X / Lower / Upper のどれか1つに参加するか判断。Day 5夕方またはDay 6朝の候補。</td></tr><tr><th>Skip rule</th><td>費用が重い、集合時刻が合わない、子供が疲れている場合は参加しない。</td></tr><tr><th>Guide</th><td>Antelope Canyonは、鉄砲水が砂岩を削ってできたslot canyonです。狭い通路に水と砂が強い力で流れ、壁がなめらかな曲線状に磨かれました。光が上から差し込むと、壁の色と影が大きく変わるため、同じ場所でも見え方が変化します。子どもには「水が岩の中に細い道を掘って、壁をつるつるにした場所」と説明できます。</td></tr><tr><th>Notes</th><td>DecisionはTask_List ID 7で管理。参加しない場合はHorseshoe BendとGlen Canyon Dam周辺で代替。</td></tr></table><p><a href="https://maps.apple.com/?q=Antelope%20Canyon%E7%B3%BB%E3%83%84%E3%82%A2%E3%83%BC" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Antelope+Canyon+Page+Arizona" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_9d54a973c6a4f5341fa1e283e465ab9e.setContent(html_c348886a49fc6d3ca0b7fbfd82a39232);
             
         
 
-        marker_2aa2ada275cd7ab60ad49cf30e7bf4f0.bindPopup(popup_583ea9e94ae2acc22a67059c2b4c84d4)
+        marker_13f1e492da558874bb346acc0deb4eb9.bindPopup(popup_9d54a973c6a4f5341fa1e283e465ab9e)
         ;
 
         
     
     
-            marker_2aa2ada275cd7ab60ad49cf30e7bf4f0.bindTooltip(
+            marker_13f1e492da558874bb346acc0deb4eb9.bindTooltip(
                 `<div>
                      05-10 Antelope Canyon系ツアー
                  </div>`,
@@ -580,17 +569,17 @@
             );
         
     
-                marker_2aa2ada275cd7ab60ad49cf30e7bf4f0.setIcon(div_icon_f58a258febd19a4681930922b7d57541);
+                marker_13f1e492da558874bb346acc0deb4eb9.setIcon(div_icon_3beba6bbea55056f2a2ba36ca457a9cb);
             
     
-            var marker_b7ca4d40fe68b5924023e5c55faf9030 = L.marker(
+            var marker_b109ebff4fed27c7545de51572dc1a3a = L.marker(
                 [36.9369, -111.4835],
                 {
 }
-            ).addTo(map_f11aadbfe14c924b709fd27b88c53d1d);
+            ).addTo(map_95012c80a8ab4e45d38eb43d563168c7);
         
     
-            var div_icon_7a36c5c7777a71426312694ab959dd89 = L.divIcon({
+            var div_icon_a683dd749479bd97baac231f798da5a1 = L.divIcon({
   "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e05-11\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -598,24 +587,24 @@
 });
         
     
-        var popup_7590f52c584f050230d35a8cff53cfba = L.popup({
-  "maxWidth": 420,
+        var popup_352559efac3f18ea105d34e244060b00 = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_1efc70e3f92a97abf305c30627542e83 = $(`<div id="html_1efc70e3f92a97abf305c30627542e83" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>05-11 Glen Canyon Dam Overlook</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Page / Glen Canyon</td></tr><tr><th>Time</th><td>20–30 min</td></tr><tr><th>Effort</th><td>短い歩行。岩場・段差に注意。</td></tr><tr><th>Plan</th><td>Page到着後またはAntelope Canyon後に、峡谷とダム周辺の景観を見る。</td></tr><tr><th>Skip rule</th><td>日没が近い、疲れている、夕食やチェックインを優先する場合は省略。</td></tr><tr><th>Notes</th><td>子供は柵・岩場で注意。長居しない。</td></tr></table><p><a href="https://maps.apple.com/?q=Glen%20Canyon%20Dam%20Overlook%20Page%20/%20Glen%20Canyon" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Glen%20Canyon%20Dam%20Overlook" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_7590f52c584f050230d35a8cff53cfba.setContent(html_1efc70e3f92a97abf305c30627542e83);
+                var html_4f49c91b7b66352a71d318ecb25e855b = $(`<div id="html_4f49c91b7b66352a71d318ecb25e855b" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>05-11 Glen Canyon Dam Overlook</h4><table><tr><th>Status</th><td>Possibly</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Page / Glen Canyon</td></tr><tr><th>Time</th><td>20–30 min</td></tr><tr><th>Effort</th><td>短い歩行。岩場・段差に注意。</td></tr><tr><th>Plan</th><td>Page到着後またはAntelope Canyon後に、峡谷とダム周辺の景観を見る。</td></tr><tr><th>Skip rule</th><td>日没が近い、疲れている、夕食やチェックインを優先する場合は省略。</td></tr><tr><th>Guide</th><td>Glen Canyon Dam Overlookでは、Colorado Riverが作った峡谷と、人間が作ったGlen Canyon Damの影響を近くで考えられます。ダムができたことでLake Powellが生まれ、川の流れ、水の利用、景観は大きく変わりました。Grand Canyonへ向かう前に、同じColorado Riverが自然の力と人間の技術の両方に関わっていることを確認できます。子どもには「川が作った谷と、人が川をせき止めたダムを考える場所」と説明できます。</td></tr><tr><th>Notes</th><td>子供は柵・岩場で注意。長居しない。</td></tr></table><p><a href="https://maps.apple.com/?q=Glen%20Canyon%20Dam%20Overlook" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Glen+Canyon+Dam+Overlook+Page+Arizona" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_352559efac3f18ea105d34e244060b00.setContent(html_4f49c91b7b66352a71d318ecb25e855b);
             
         
 
-        marker_b7ca4d40fe68b5924023e5c55faf9030.bindPopup(popup_7590f52c584f050230d35a8cff53cfba)
+        marker_b109ebff4fed27c7545de51572dc1a3a.bindPopup(popup_352559efac3f18ea105d34e244060b00)
         ;
 
         
     
     
-            marker_b7ca4d40fe68b5924023e5c55faf9030.bindTooltip(
+            marker_b109ebff4fed27c7545de51572dc1a3a.bindTooltip(
                 `<div>
                      05-11 Glen Canyon Dam Overlook
                  </div>`,
@@ -625,17 +614,17 @@
             );
         
     
-                marker_b7ca4d40fe68b5924023e5c55faf9030.setIcon(div_icon_7a36c5c7777a71426312694ab959dd89);
+                marker_b109ebff4fed27c7545de51572dc1a3a.setIcon(div_icon_a683dd749479bd97baac231f798da5a1);
             
     
-            var marker_ac7249f7315c582ee4d7e08cf43166cd = L.marker(
+            var marker_ccb6104584ea41b54206f6e4501fb74a = L.marker(
                 [36.9926, -111.4972],
                 {
 }
-            ).addTo(map_f11aadbfe14c924b709fd27b88c53d1d);
+            ).addTo(map_95012c80a8ab4e45d38eb43d563168c7);
         
     
-            var div_icon_911c9623c2a7eba5d87da78eb2af0f02 = L.divIcon({
+            var div_icon_4f3e84563a85c884000efee57f4fc66e = L.divIcon({
   "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e05-12\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -643,24 +632,24 @@
 });
         
     
-        var popup_52601eb99d9652814310295b7a022de4 = L.popup({
-  "maxWidth": 420,
+        var popup_66e3b61ac9f2a9d919512ae08fb75582 = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_746930639b0fa3c18e0f5c6ef7bc75db = $(`<div id="html_746930639b0fa3c18e0f5c6ef7bc75db" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>05-12 Lake Powell / Wahweap Overlook</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Page / Lake Powell</td></tr><tr><th>Time</th><td>15–30 min</td></tr><tr><th>Effort</th><td>軽い展望。車移動中心。</td></tr><tr><th>Plan</th><td>夕方にLake Powellと赤い岩の景色を見る。</td></tr><tr><th>Skip rule</th><td>Antelope Canyon後に時間がなければ省略。</td></tr><tr><th>Notes</th><td>入場地点によりfee条件が変わる可能性。</td></tr></table><p><a href="https://maps.apple.com/?q=Lake%20Powell%20/%20Wahweap%20Overlook%20Page%20/%20Lake%20Powell" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Lake%20Powell%20/%20Wahweap%20Overlook" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_52601eb99d9652814310295b7a022de4.setContent(html_746930639b0fa3c18e0f5c6ef7bc75db);
+                var html_7db8cfcedb2e27a27c2e9ceb3280ed68 = $(`<div id="html_7db8cfcedb2e27a27c2e9ceb3280ed68" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>05-12 Lake Powell / Wahweap Overlook</h4><table><tr><th>Status</th><td>Possibly</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Page / Lake Powell</td></tr><tr><th>Time</th><td>15–30 min</td></tr><tr><th>Effort</th><td>軽い展望。車移動中心。</td></tr><tr><th>Plan</th><td>夕方にLake Powellと赤い岩の景色を見る。</td></tr><tr><th>Skip rule</th><td>Antelope Canyon後に時間がなければ省略。</td></tr><tr><th>Guide</th><td>Lake PowellとWahweap Overlookでは、赤い砂岩の谷に水がたまった景色を見ます。Lake Powellは自然湖ではなく、Glen Canyon DamによってColorado Riverがせき止められてできた貯水池です。水位によって湖岸の白い“bathtub ring”が見えることがあり、水利用と干ばつの影響も読み取れます。子どもには「ダムでできた大きな湖が、赤い岩の谷に水をためている」と説明できます。</td></tr><tr><th>Notes</th><td>入場地点によりfee条件が変わる可能性。</td></tr></table><p><a href="https://maps.apple.com/?q=Lake%20Powell%20/%20Wahweap%20Overlook" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Wahweap+Overlook+Lake+Powell+Page+Arizona" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_66e3b61ac9f2a9d919512ae08fb75582.setContent(html_7db8cfcedb2e27a27c2e9ceb3280ed68);
             
         
 
-        marker_ac7249f7315c582ee4d7e08cf43166cd.bindPopup(popup_52601eb99d9652814310295b7a022de4)
+        marker_ccb6104584ea41b54206f6e4501fb74a.bindPopup(popup_66e3b61ac9f2a9d919512ae08fb75582)
         ;
 
         
     
     
-            marker_ac7249f7315c582ee4d7e08cf43166cd.bindTooltip(
+            marker_ccb6104584ea41b54206f6e4501fb74a.bindTooltip(
                 `<div>
                      05-12 Lake Powell / Wahweap Overlook
                  </div>`,
@@ -670,17 +659,17 @@
             );
         
     
-                marker_ac7249f7315c582ee4d7e08cf43166cd.setIcon(div_icon_911c9623c2a7eba5d87da78eb2af0f02);
+                marker_ccb6104584ea41b54206f6e4501fb74a.setIcon(div_icon_4f3e84563a85c884000efee57f4fc66e);
             
     
-            var marker_53f7a5239b90fb6aae57d8a17137abff = L.marker(
+            var marker_050ed2f2adc64686222c1bcb831d8276 = L.marker(
                 [36.9638, -111.4286],
                 {
 }
-            ).addTo(map_f11aadbfe14c924b709fd27b88c53d1d);
+            ).addTo(map_95012c80a8ab4e45d38eb43d563168c7);
         
     
-            var div_icon_396b0bda63f11e9a795670a1f85abf84 = L.divIcon({
+            var div_icon_2f7f0edbc014638315ca2b899c11134e = L.divIcon({
   "html": "\u003cdiv style=\"background:#7b3294; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e05-13\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -688,24 +677,24 @@
 });
         
     
-        var popup_086029d2629ae945897248590be2f260 = L.popup({
-  "maxWidth": 420,
+        var popup_0957d7bb8a8e0c57879c995012af3fd8 = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_f314185f807c84ede194adfcb24806a7 = $(`<div id="html_f314185f807c84ede194adfcb24806a7" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>05-13 Antelope Point Marina / Lake Powell近辺</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Backup</td></tr><tr><th>Area</th><td>Page / Lake Powell</td></tr><tr><th>Time</th><td>30–60 min</td></tr><tr><th>Effort</th><td>軽い散策。水辺。</td></tr><tr><th>Plan</th><td>水辺を少し見たい場合に追加。</td></tr><tr><th>Skip rule</th><td>夕方の主目的を圧迫する場合は省略。</td></tr><tr><th>Notes</th><td>Backup。泳ぐ計画ではなく短時間の見学。</td></tr></table><p><a href="https://maps.apple.com/?q=Antelope%20Point%20Marina%20/%20Lake%20Powell%E8%BF%91%E8%BE%BA%20Page%20/%20Lake%20Powell" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Antelope%20Point%20Marina%20/%20Lake%20Powell%E8%BF%91%E8%BE%BA" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_086029d2629ae945897248590be2f260.setContent(html_f314185f807c84ede194adfcb24806a7);
+                var html_2207ed2758b28fd9d97248ef1339c869 = $(`<div id="html_2207ed2758b28fd9d97248ef1339c869" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>05-13 Antelope Point Marina / Lake Powell近辺</h4><table><tr><th>Status</th><td>Backup</td></tr><tr><th>Category</th><td>Backup</td></tr><tr><th>Area</th><td>Page / Lake Powell</td></tr><tr><th>Time</th><td>30–60 min</td></tr><tr><th>Effort</th><td>軽い散策。水辺。</td></tr><tr><th>Plan</th><td>水辺を少し見たい場合に追加。</td></tr><tr><th>Skip rule</th><td>夕方の主目的を圧迫する場合は省略。</td></tr><tr><th>Notes</th><td>Backup。泳ぐ計画ではなく短時間の見学。</td></tr></table><p><a href="https://maps.apple.com/?q=Antelope%20Point%20Marina%20/%20Lake%20Powell%E8%BF%91%E8%BE%BA" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Antelope+Point+Marina+Lake+Powell" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_0957d7bb8a8e0c57879c995012af3fd8.setContent(html_2207ed2758b28fd9d97248ef1339c869);
             
         
 
-        marker_53f7a5239b90fb6aae57d8a17137abff.bindPopup(popup_086029d2629ae945897248590be2f260)
+        marker_050ed2f2adc64686222c1bcb831d8276.bindPopup(popup_0957d7bb8a8e0c57879c995012af3fd8)
         ;
 
         
     
     
-            marker_53f7a5239b90fb6aae57d8a17137abff.bindTooltip(
+            marker_050ed2f2adc64686222c1bcb831d8276.bindTooltip(
                 `<div>
                      05-13 Antelope Point Marina / Lake Powell近辺
                  </div>`,
@@ -715,7 +704,13 @@
             );
         
     
-                marker_53f7a5239b90fb6aae57d8a17137abff.setIcon(div_icon_396b0bda63f11e9a795670a1f85abf84);
+                marker_050ed2f2adc64686222c1bcb831d8276.setIcon(div_icon_2f7f0edbc014638315ca2b899c11134e);
             
+    
+            map_95012c80a8ab4e45d38eb43d563168c7.fitBounds(
+                [[36.9027, -111.4972], [37.627754, -109.484741]],
+                {"padding": [40, 40]}
+            );
+        
 </script>
 </html>

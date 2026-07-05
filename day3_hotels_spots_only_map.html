@@ -3,10 +3,6 @@
 <head>
     
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    
-    <style>
-    .popup table{border-collapse:collapse;font-size:13px}.popup th{background:#f2f2f2;text-align:left;padding:4px 7px;border-bottom:1px solid #ddd;vertical-align:top;white-space:nowrap}.popup td{padding:4px 7px;border-bottom:1px solid #ddd;vertical-align:top}.popup h4{margin:0 0 8px;font-size:16px}.popup a{font-weight:700}.leaflet-popup-content{min-width:260px;max-width:420px}
-    </style>
     <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -21,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_288b0f54b1a5ff91d158ae49d13e4347 {
+                #map_e4e0593538d7c054efa3f8bf2765164e {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -58,38 +54,37 @@
 <body>
     
     
-    <div style="position: fixed; top: 18px; left: 50%; transform: translateX(-50%); z-index: 9999;background: rgba(255,255,255,.94); border: 1px solid #aaa; border-radius: 10px;padding: 10px 16px; font-family: Arial, sans-serif; box-shadow: 0 1px 5px rgba(0,0,0,.25); text-align:center;">
+    <div style="position: fixed; top: 18px; left: 50%; transform: translateX(-50%); z-index:9999; background:rgba(255,255,255,.94); border:1px solid #aaa; border-radius:10px; padding:10px 16px; font-family:Arial,sans-serif; box-shadow:0 1px 5px rgba(0,0,0,.25); text-align:center;">
       <div style="font-size:18px;font-weight:700;">Day 3 Travel Map</div>
       <div style="font-size:12px;color:#444;">Sandy → Moab / 257 miles / 4:34</div>
     </div>
     
-    <div style="position: fixed; bottom: 28px; left: 28px; z-index: 9999; background: white;border: 1px solid #999; border-radius: 8px; padding: 12px 14px;font-family: Arial, sans-serif; font-size: 13px; box-shadow: 0 1px 5px rgba(0,0,0,.25);">
-      <div style="font-weight:700; margin-bottom:7px;">Legend</div><div><span style="background:#1a9850;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Hotel</div><div><span style="background:#d7191c;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Must</div><div><span style="background:#2c7bb6;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Possibly</div><div><span style="background:#7b3294;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Backup / heavy</div><div><span style="background:#ff8c00;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Airport pickup</div>
-      <div style="margin-top:7px;color:#555;max-width:270px;">Planning map. Use Apple Maps / Google Maps / official park information for final navigation.</div>
+    <div style="position: fixed; bottom: 28px; left: 28px; z-index:9999; background:white; border:1px solid #999; border-radius:8px; padding:12px 14px; font-family:Arial,sans-serif; font-size:13px; box-shadow:0 1px 5px rgba(0,0,0,.25);">
+      <div style="font-weight:700; margin-bottom:7px;">Legend</div><div><span style="background:#1a9850;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Hotel: 2</div><div><span style="background:#d7191c;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Must: 5</div><div><span style="background:#2c7bb6;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Possibly: 7</div>
+      <div style="margin-top:7px;color:#555;max-width:260px;">Planning map. Use Apple Maps / Google Maps / NPS for final navigation.</div>
     </div>
     
-    <script>
-    window._spotMarkers = {"H02": marker_8d922279ebe6912826b2137784d3b620, "H03": marker_92a142d554614d771a8d63953af4220a, "03-02": marker_02a43e8148ce6bdd8be4afa07319ec51, "03-03": marker_9423585d624cd67fb432590ef28baeff, "03-06": marker_c5c3a610d0ed19f814bb93b2ba2c5be7, "03-07": marker_f79b47471a765db819dec59bc3cf7be4, "03-08": marker_d909473c6c082c2d3ef6ac33941aac88, "03-09": marker_f9c3b8bb2fc7606d2b1632af4dbbcbda, "03-10": marker_7c11fef451388a5f9109ead83b43818f, "03-11": marker_1da2b7deb9b7528302e5e8cada39b5e9, "03-12": marker_77d9657a596627744be930e5b489d15e, "03-13": marker_c9f724e31ba181f95292507235e751fb, "03-14": marker_87b37c8a4e6b2c14512200b3d57ec28e, "03-15": marker_1fcb57b3b9a56ecd7989d7d427fc8aa9};
-    function openSpotFromHash() {
-      var id = decodeURIComponent((window.location.hash || '').replace('#',''));
-      if (!id || !window._spotMarkers || !window._spotMarkers[id]) return;
-      var marker = window._spotMarkers[id];
-      marker.openPopup();
-      map_288b0f54b1a5ff91d158ae49d13e4347.setView(marker.getLatLng(), Math.max(map_288b0f54b1a5ff91d158ae49d13e4347.getZoom(), 10));
-    }
-    setTimeout(openSpotFromHash, 600);
-    window.addEventListener('hashchange', openSpotFromHash);
-    </script>
+<script>
+window._spotMarkers = {"H02": marker_06a363706cde5776a5da9b64220f7c8d, "H03": marker_d005ecfddf039d56ed618dc5dd303e78, "03-02": marker_ac3183079487c008348ce210f0643fb7, "03-03": marker_9f613dba93f7bc4798fc862df301717d, "03-06": marker_76c8ac6df5493cbeb05d0fbe195c2f3d, "03-07": marker_3d8d0b569ba80bf5f8e072b525c4e0c2, "03-08": marker_87cdb9f9f264c0d2a0cf14893b853f80, "03-09": marker_1b7630b46db73443881a49dd426fdb12, "03-10": marker_c7b0bb30499464f2736f7679297f209c, "03-11": marker_cf675b2cdd6739d22f50313b8de422f4, "03-12": marker_7737eaa95b4c7d9f2e83ce46e51e1222, "03-13": marker_5d6b0cb83dbb96dcbccd7e1dc9c5fb5b, "03-14": marker_ea8b230a7fc56cbf04be4857bfc3dd9c, "03-15": marker_a7bc9d17b0958ee49028b8c1ccf4150d};
+function openSpotFromHash() {
+  var id = decodeURIComponent((window.location.hash || '').replace('#',''));
+  if (!id || !window._spotMarkers || !window._spotMarkers[id]) return;
+  var marker = window._spotMarkers[id];
+  marker.openPopup();
+  map_e4e0593538d7c054efa3f8bf2765164e.setView(marker.getLatLng(), Math.max(map_e4e0593538d7c054efa3f8bf2765164e.getZoom(), 10));
+}
+setTimeout(openSpotFromHash, 600);
+window.addEventListener('hashchange', openSpotFromHash);
+</script>
     
-    
-            <div class="folium-map" id="map_288b0f54b1a5ff91d158ae49d13e4347" ></div>
+            <div class="folium-map" id="map_e4e0593538d7c054efa3f8bf2765164e" ></div>
         
 </body>
 <script>
     
     
-            var map_288b0f54b1a5ff91d158ae49d13e4347 = L.map(
-                "map_288b0f54b1a5ff91d158ae49d13e4347",
+            var map_e4e0593538d7c054efa3f8bf2765164e = L.map(
+                "map_e4e0593538d7c054efa3f8bf2765164e",
                 {
                     center: [38.95740714285714, -109.90600714285713],
                     crs: L.CRS.EPSG3857,
@@ -101,13 +96,13 @@
 
                 }
             );
-            L.control.scale().addTo(map_288b0f54b1a5ff91d158ae49d13e4347);
+            L.control.scale().addTo(map_e4e0593538d7c054efa3f8bf2765164e);
 
             
 
         
     
-            var tile_layer_cfb87b3f830fd2a980866a8c334d11b0 = L.tileLayer(
+            var tile_layer_211cdf226ca0e84a3c323eb2fe299fb1 = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -124,23 +119,17 @@
             );
         
     
-            tile_layer_cfb87b3f830fd2a980866a8c334d11b0.addTo(map_288b0f54b1a5ff91d158ae49d13e4347);
+            tile_layer_211cdf226ca0e84a3c323eb2fe299fb1.addTo(map_e4e0593538d7c054efa3f8bf2765164e);
         
     
-            map_288b0f54b1a5ff91d158ae49d13e4347.fitBounds(
-                [[38.5364, -111.833], [40.589, -109.4993]],
-                {"padding": [40, 40]}
-            );
-        
-    
-            var marker_8d922279ebe6912826b2137784d3b620 = L.marker(
+            var marker_06a363706cde5776a5da9b64220f7c8d = L.marker(
                 [40.589, -111.833],
                 {
 }
-            ).addTo(map_288b0f54b1a5ff91d158ae49d13e4347);
+            ).addTo(map_e4e0593538d7c054efa3f8bf2765164e);
         
     
-            var div_icon_91260e7fb388db57e8b8aaecd8a0f31c = L.divIcon({
+            var div_icon_68d19096706cc0b88a21599e00235cc4 = L.divIcon({
   "html": "\u003cdiv style=\"background:#1a9850; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003eH02\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -148,24 +137,24 @@
 });
         
     
-        var popup_9a8163a056d070e509875cb4dda496af = L.popup({
-  "maxWidth": 420,
+        var popup_0b9e5c27616ee723d0c5b30de211b6db = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_3574b1538f494d3424ac984022dc6b2e = $(`<div id="html_3574b1538f494d3424ac984022dc6b2e" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>H02 Sandy泊 / 出発</h4><table><tr><th>Status</th><td>Hotel</td></tr><tr><th>Category</th><td>Hotel</td></tr><tr><th>Area</th><td>Sandy, UT</td></tr><tr><th>Plan</th><td>Sandyで宿泊。</td></tr><tr><th>Notes</th><td>Host: Andreanne &amp; Daniel. 敷地内屋外カメラあり。ペット不可。</td></tr></table><p><a href="https://maps.apple.com/?q=8558%20E%20Johnsonway%20Dr%2C%20Sandy%2C%20UT%2084094" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Sandy%E6%B3%8A" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_9a8163a056d070e509875cb4dda496af.setContent(html_3574b1538f494d3424ac984022dc6b2e);
+                var html_969bb580999720aefc776158be34ccd6 = $(`<div id="html_969bb580999720aefc776158be34ccd6" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>H02 Sandy泊 / 出発</h4><table><tr><th>Status</th><td>Hotel</td></tr><tr><th>Category</th><td>Hotel</td></tr><tr><th>Area</th><td>Sandy, UT</td></tr><tr><th>Plan</th><td>Sandyで宿泊。</td></tr><tr><th>Notes</th><td>Host: Andreanne &amp; Daniel. 敷地内屋外カメラあり。ペット不可。</td></tr></table><p><a href="https://maps.apple.com/?q=8558%20E%20Johnsonway%20Dr%2C%20Sandy%2C%20UT%2084094" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Sandy%E6%B3%8A" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_0b9e5c27616ee723d0c5b30de211b6db.setContent(html_969bb580999720aefc776158be34ccd6);
             
         
 
-        marker_8d922279ebe6912826b2137784d3b620.bindPopup(popup_9a8163a056d070e509875cb4dda496af)
+        marker_06a363706cde5776a5da9b64220f7c8d.bindPopup(popup_0b9e5c27616ee723d0c5b30de211b6db)
         ;
 
         
     
     
-            marker_8d922279ebe6912826b2137784d3b620.bindTooltip(
+            marker_06a363706cde5776a5da9b64220f7c8d.bindTooltip(
                 `<div>
                      H02 Sandy泊 / 出発
                  </div>`,
@@ -175,17 +164,17 @@
             );
         
     
-                marker_8d922279ebe6912826b2137784d3b620.setIcon(div_icon_91260e7fb388db57e8b8aaecd8a0f31c);
+                marker_06a363706cde5776a5da9b64220f7c8d.setIcon(div_icon_68d19096706cc0b88a21599e00235cc4);
             
     
-            var marker_92a142d554614d771a8d63953af4220a = L.marker(
+            var marker_d005ecfddf039d56ed618dc5dd303e78 = L.marker(
                 [38.5364, -109.5088],
                 {
 }
-            ).addTo(map_288b0f54b1a5ff91d158ae49d13e4347);
+            ).addTo(map_e4e0593538d7c054efa3f8bf2765164e);
         
     
-            var div_icon_4ada09a3adc53ed8482668e91a3c70de = L.divIcon({
+            var div_icon_fa4ff1fcace795bbe100eb4334cfb952 = L.divIcon({
   "html": "\u003cdiv style=\"background:#1a9850; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003eH03\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -193,24 +182,24 @@
 });
         
     
-        var popup_d5482f44c06474ee96b973edf8b73691 = L.popup({
-  "maxWidth": 420,
+        var popup_62616bbd68b931932a83c9a3f63a370d = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_515b6290ac7890c4ef98cd4eaa00bbcb = $(`<div id="html_515b6290ac7890c4ef98cd4eaa00bbcb" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>H03 Moab泊</h4><table><tr><th>Status</th><td>Hotel</td></tr><tr><th>Category</th><td>Hotel</td></tr><tr><th>Area</th><td>Moab, UT</td></tr><tr><th>Plan</th><td>Moabで宿泊。</td></tr><tr><th>Notes</th><td>Host: Haley @ Copper Ridge Property Management. セルフチェックイン（スマートロック）。</td></tr></table><p><a href="https://maps.apple.com/?q=2511%20Redcliff%20Rd%2C%20Moab%2C%20UT%2084532%2C%20USA" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Moab%E6%B3%8A" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_d5482f44c06474ee96b973edf8b73691.setContent(html_515b6290ac7890c4ef98cd4eaa00bbcb);
+                var html_13c25734c266e1e35647b9d19454c9cb = $(`<div id="html_13c25734c266e1e35647b9d19454c9cb" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>H03 Moab泊</h4><table><tr><th>Status</th><td>Hotel</td></tr><tr><th>Category</th><td>Hotel</td></tr><tr><th>Area</th><td>Moab, UT</td></tr><tr><th>Plan</th><td>Moabで宿泊。</td></tr><tr><th>Notes</th><td>Host: Haley @ Copper Ridge Property Management. セルフチェックイン（スマートロック）。</td></tr></table><p><a href="https://maps.apple.com/?q=Moab%E6%B3%8A" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Moab%E6%B3%8A" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_62616bbd68b931932a83c9a3f63a370d.setContent(html_13c25734c266e1e35647b9d19454c9cb);
             
         
 
-        marker_92a142d554614d771a8d63953af4220a.bindPopup(popup_d5482f44c06474ee96b973edf8b73691)
+        marker_d005ecfddf039d56ed618dc5dd303e78.bindPopup(popup_62616bbd68b931932a83c9a3f63a370d)
         ;
 
         
     
     
-            marker_92a142d554614d771a8d63953af4220a.bindTooltip(
+            marker_d005ecfddf039d56ed618dc5dd303e78.bindTooltip(
                 `<div>
                      H03 Moab泊
                  </div>`,
@@ -220,17 +209,17 @@
             );
         
     
-                marker_92a142d554614d771a8d63953af4220a.setIcon(div_icon_4ada09a3adc53ed8482668e91a3c70de);
+                marker_d005ecfddf039d56ed618dc5dd303e78.setIcon(div_icon_fa4ff1fcace795bbe100eb4334cfb952);
             
     
-            var marker_02a43e8148ce6bdd8be4afa07319ec51 = L.marker(
+            var marker_ac3183079487c008348ce210f0643fb7 = L.marker(
                 [39.6841, -110.8546],
                 {
 }
-            ).addTo(map_288b0f54b1a5ff91d158ae49d13e4347);
+            ).addTo(map_e4e0593538d7c054efa3f8bf2765164e);
         
     
-            var div_icon_e08a15c6165bd1492d2d6fb55c1e5207 = L.divIcon({
+            var div_icon_41c30b9af0de08daa37aca54ac6de66b = L.divIcon({
   "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e03-02\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -238,24 +227,24 @@
 });
         
     
-        var popup_089e2902dda3cf6948d8c27bcb2b119b = L.popup({
-  "maxWidth": 420,
+        var popup_2251eee76d1305f44dcb6a3e48ca429c = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_7511c008103bd0fbdfb3dda3eaea1aaf = $(`<div id="html_7511c008103bd0fbdfb3dda3eaea1aaf" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>03-02 Helper Historic Main Street</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Road to Arches / UT</td></tr><tr><th>Time</th><td>20–40 min</td></tr><tr><th>Effort</th><td>短い街歩き。暑ければ車窓でも可。</td></tr><tr><th>Plan</th><td>休憩を兼ねて小さな歴史的町を歩く。</td></tr><tr><th>Skip rule</th><td>暑い、駐車しづらい、Arches到着が遅れそうなら通過。</td></tr><tr><th>Notes</th><td>写真・カフェ休憩向き。長居しない。</td></tr></table><p><a href="https://maps.apple.com/?q=Helper%20Historic%20Main%20Street%20Road%20to%20Arches%20/%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Helper%20Historic%20Main%20Street" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_089e2902dda3cf6948d8c27bcb2b119b.setContent(html_7511c008103bd0fbdfb3dda3eaea1aaf);
+                var html_fc2ac028ceef89292d56a05ec1bcba1f = $(`<div id="html_fc2ac028ceef89292d56a05ec1bcba1f" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>03-02 Helper Historic Main Street</h4><table><tr><th>Status</th><td>Possibly</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Road to Arches / UT</td></tr><tr><th>Time</th><td>20–40 min</td></tr><tr><th>Effort</th><td>短い街歩き。暑ければ車窓でも可。</td></tr><tr><th>Plan</th><td>休憩を兼ねて小さな歴史的町を歩く。</td></tr><tr><th>Skip rule</th><td>暑い、駐車しづらい、Arches到着が遅れそうなら通過。</td></tr><tr><th>Guide</th><td>Helperは、かつて鉄道と炭鉱で栄えた小さな町です。町の名前は、急な坂を越える列車を後ろから助ける“helper engine”に由来します。Historic Main Streetを見ると、観光地化された国立公園とは違う、Utah内陸部の労働と交通の歴史が感じられます。子どもには「重い列車を助ける機関車から名前がついた町」と説明できます。</td></tr><tr><th>Notes</th><td>写真・カフェ休憩向き。長居しない。</td></tr></table><p><a href="https://maps.apple.com/?q=Helper%20Historic%20Main%20Street" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Helper+Utah+Historic+Main+Street" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_2251eee76d1305f44dcb6a3e48ca429c.setContent(html_fc2ac028ceef89292d56a05ec1bcba1f);
             
         
 
-        marker_02a43e8148ce6bdd8be4afa07319ec51.bindPopup(popup_089e2902dda3cf6948d8c27bcb2b119b)
+        marker_ac3183079487c008348ce210f0643fb7.bindPopup(popup_2251eee76d1305f44dcb6a3e48ca429c)
         ;
 
         
     
     
-            marker_02a43e8148ce6bdd8be4afa07319ec51.bindTooltip(
+            marker_ac3183079487c008348ce210f0643fb7.bindTooltip(
                 `<div>
                      03-02 Helper Historic Main Street
                  </div>`,
@@ -265,17 +254,17 @@
             );
         
     
-                marker_02a43e8148ce6bdd8be4afa07319ec51.setIcon(div_icon_e08a15c6165bd1492d2d6fb55c1e5207);
+                marker_ac3183079487c008348ce210f0643fb7.setIcon(div_icon_41c30b9af0de08daa37aca54ac6de66b);
             
     
-            var marker_9423585d624cd67fb432590ef28baeff = L.marker(
+            var marker_9f613dba93f7bc4798fc862df301717d = L.marker(
                 [39.5996, -110.8102],
                 {
 }
-            ).addTo(map_288b0f54b1a5ff91d158ae49d13e4347);
+            ).addTo(map_e4e0593538d7c054efa3f8bf2765164e);
         
     
-            var div_icon_18a36c2c2e1fb9651c22e3cb080c7bb6 = L.divIcon({
+            var div_icon_aa385683888c6d7431c8e20513f2df33 = L.divIcon({
   "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e03-03\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -283,24 +272,24 @@
 });
         
     
-        var popup_fe9e3c14430fea67838190b8db104e0a = L.popup({
-  "maxWidth": 420,
+        var popup_ce48bc9856abd044da5bdd4c089c4724 = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_ecc39d9af1881687de10ce1d692d5740 = $(`<div id="html_ecc39d9af1881687de10ce1d692d5740" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>03-03 Prehistoric Museum, Price</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Road to Arches / UT</td></tr><tr><th>Time</th><td>60–90 min</td></tr><tr><th>Effort</th><td>屋内。子供向き。入館料あり。</td></tr><tr><th>Plan</th><td>暑さ回避と子供向け休憩として、恐竜・化石展示を見る。</td></tr><tr><th>Skip rule</th><td>Moab到着が遅くなるなら省略。</td></tr><tr><th>Notes</th><td>早く出られた場合の屋内休憩候補。長居しない。</td></tr></table><p><a href="https://maps.apple.com/?q=Prehistoric%20Museum%2C%20Price%20Road%20to%20Arches%20/%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Prehistoric%20Museum%2C%20Price" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_fe9e3c14430fea67838190b8db104e0a.setContent(html_ecc39d9af1881687de10ce1d692d5740);
+                var html_fca33b4640c50f289f86d496e3e561f1 = $(`<div id="html_fca33b4640c50f289f86d496e3e561f1" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>03-03 Prehistoric Museum, Price</h4><table><tr><th>Status</th><td>Possibly</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Road to Arches / UT</td></tr><tr><th>Time</th><td>60–90 min</td></tr><tr><th>Effort</th><td>屋内。子供向き。入館料あり。</td></tr><tr><th>Plan</th><td>暑さ回避と子供向け休憩として、恐竜・化石展示を見る。</td></tr><tr><th>Skip rule</th><td>Moab到着が遅くなるなら省略。</td></tr><tr><th>Guide</th><td>Prehistoric Museum in Priceは、Utah東部の恐竜化石と先住民文化を学べる屋内スポットです。この地域はMorrison Formationなど恐竜化石で有名な地層に近く、骨格や化石を見ると、赤い岩の景色がただの岩ではなく古い環境の記録だと分かります。暑い日の休憩としても使いやすい場所です。子どもには「恐竜の骨を見て、昔このあたりにどんな生き物がいたかを知る場所」と説明できます。</td></tr><tr><th>Notes</th><td>早く出られた場合の屋内休憩候補。長居しない。</td></tr></table><p><a href="https://maps.apple.com/?q=Prehistoric%20Museum%2C%20Price" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Prehistoric+Museum+Price+Utah" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_ce48bc9856abd044da5bdd4c089c4724.setContent(html_fca33b4640c50f289f86d496e3e561f1);
             
         
 
-        marker_9423585d624cd67fb432590ef28baeff.bindPopup(popup_fe9e3c14430fea67838190b8db104e0a)
+        marker_9f613dba93f7bc4798fc862df301717d.bindPopup(popup_ce48bc9856abd044da5bdd4c089c4724)
         ;
 
         
     
     
-            marker_9423585d624cd67fb432590ef28baeff.bindTooltip(
+            marker_9f613dba93f7bc4798fc862df301717d.bindTooltip(
                 `<div>
                      03-03 Prehistoric Museum, Price
                  </div>`,
@@ -310,17 +299,17 @@
             );
         
     
-                marker_9423585d624cd67fb432590ef28baeff.setIcon(div_icon_18a36c2c2e1fb9651c22e3cb080c7bb6);
+                marker_9f613dba93f7bc4798fc862df301717d.setIcon(div_icon_aa385683888c6d7431c8e20513f2df33);
             
     
-            var marker_c5c3a610d0ed19f814bb93b2ba2c5be7 = L.marker(
+            var marker_76c8ac6df5493cbeb05d0fbe195c2f3d = L.marker(
                 [38.6164, -109.6207],
                 {
 }
-            ).addTo(map_288b0f54b1a5ff91d158ae49d13e4347);
+            ).addTo(map_e4e0593538d7c054efa3f8bf2765164e);
         
     
-            var div_icon_eeeb8db4240aa13122bf45e601a5ca2d = L.divIcon({
+            var div_icon_97e710afaa7fa26709529233141e2da7 = L.divIcon({
   "html": "\u003cdiv style=\"background:#d7191c; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e03-06\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -328,24 +317,24 @@
 });
         
     
-        var popup_cba31534237fb41dcd4cbabe68d5ba35 = L.popup({
-  "maxWidth": 420,
+        var popup_75812f084ad2f708ccddc3beda81677f = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_12a4fcbdac69894e348e4152893fe1a9 = $(`<div id="html_12a4fcbdac69894e348e4152893fe1a9" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>03-06 Arches Visitor Center</h4><table><tr><th>Status</th><td>行く予定</td></tr><tr><th>Category</th><td>Must</td></tr><tr><th>Area</th><td>Arches National Park</td></tr><tr><th>Time</th><td>15–30 min</td></tr><tr><th>Effort</th><td>軽い。トイレ・水・地図・Junior Ranger向き。</td></tr><tr><th>Plan</th><td>入園時または観光前に、トイレ・水・地図・Junior Ranger bookletを確認する。</td></tr><tr><th>Skip rule</th><td>到着が遅い場合はトイレ・水だけ。閉館後なら園内観光を優先。</td></tr><tr><th>Notes</th><td>Junior Ranger対象。必要ならここでbookletを入手。</td></tr></table><p><a href="https://maps.apple.com/?q=Arches%20Visitor%20Center%20Moab%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Arches%20Visitor%20Center" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_cba31534237fb41dcd4cbabe68d5ba35.setContent(html_12a4fcbdac69894e348e4152893fe1a9);
+                var html_fe08293b0615c519505b660d0f4719fb = $(`<div id="html_fe08293b0615c519505b660d0f4719fb" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>03-06 Arches Visitor Center</h4><table><tr><th>Status</th><td>Must</td></tr><tr><th>Category</th><td>Must</td></tr><tr><th>Area</th><td>Arches National Park</td></tr><tr><th>Time</th><td>15–30 min</td></tr><tr><th>Effort</th><td>軽い。トイレ・水・地図・Junior Ranger向き。</td></tr><tr><th>Plan</th><td>入園時または観光前に、トイレ・水・地図・Junior Ranger bookletを確認する。</td></tr><tr><th>Skip rule</th><td>到着が遅い場合はトイレ・水だけ。閉館後なら園内観光を優先。</td></tr><tr><th>Guide</th><td>Arches National Parkは、自然の石のアーチが非常に高密度で集まる公園です。地下の塩の層が岩を押し上げ、割れ目に水が入り、砂岩の壁が少しずつ削られてアーチができます。Visitor Centerでは、これから見るアーチが単なる穴ではなく、長い時間をかけてできた壊れやすい地形だと理解しておくとよいです。子どもには「岩がゆっくり割れて、削られて、窓みたいな形になった」と説明できます。</td></tr><tr><th>Notes</th><td>Junior Ranger対象。必要ならここでbookletを入手。</td></tr></table><p><a href="https://maps.apple.com/?q=Arches%20Visitor%20Center%20Moab%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Arches+Visitor+Center" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_75812f084ad2f708ccddc3beda81677f.setContent(html_fe08293b0615c519505b660d0f4719fb);
             
         
 
-        marker_c5c3a610d0ed19f814bb93b2ba2c5be7.bindPopup(popup_cba31534237fb41dcd4cbabe68d5ba35)
+        marker_76c8ac6df5493cbeb05d0fbe195c2f3d.bindPopup(popup_75812f084ad2f708ccddc3beda81677f)
         ;
 
         
     
     
-            marker_c5c3a610d0ed19f814bb93b2ba2c5be7.bindTooltip(
+            marker_76c8ac6df5493cbeb05d0fbe195c2f3d.bindTooltip(
                 `<div>
                      03-06 Arches Visitor Center
                  </div>`,
@@ -355,17 +344,17 @@
             );
         
     
-                marker_c5c3a610d0ed19f814bb93b2ba2c5be7.setIcon(div_icon_eeeb8db4240aa13122bf45e601a5ca2d);
+                marker_76c8ac6df5493cbeb05d0fbe195c2f3d.setIcon(div_icon_97e710afaa7fa26709529233141e2da7);
             
     
-            var marker_f79b47471a765db819dec59bc3cf7be4 = L.marker(
+            var marker_3d8d0b569ba80bf5f8e072b525c4e0c2 = L.marker(
                 [38.6877, -109.5369],
                 {
 }
-            ).addTo(map_288b0f54b1a5ff91d158ae49d13e4347);
+            ).addTo(map_e4e0593538d7c054efa3f8bf2765164e);
         
     
-            var div_icon_473604fd0be1518924c4e7d646acf665 = L.divIcon({
+            var div_icon_5f78efe189c1ade92bcf3a774905e0f4 = L.divIcon({
   "html": "\u003cdiv style=\"background:#d7191c; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e03-07\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -373,24 +362,24 @@
 });
         
     
-        var popup_2384d1a2c6a2b1bcfa1283246c70f119 = L.popup({
-  "maxWidth": 420,
+        var popup_a26973093eb14bdae45f06b5377dfde4 = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_fb8b052164a94a9cb6d78ca219bb5dcf = $(`<div id="html_fb8b052164a94a9cb6d78ca219bb5dcf" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>03-07 The Windows Section</h4><table><tr><th>Status</th><td>行く予定</td></tr><tr><th>Category</th><td>Must</td></tr><tr><th>Area</th><td>Arches National Park</td></tr><tr><th>Time</th><td>45–75 min</td></tr><tr><th>Effort</th><td>短い歩行。家族向き。</td></tr><tr><th>Plan</th><td>North Window, South Window, Turret Archを短時間で見る。</td></tr><tr><th>Skip rule</th><td>ここだけは優先。到着が遅くても可能な範囲で見る。</td></tr><tr><th>Notes</th><td>夕方の光で赤い岩が見やすい。</td></tr></table><p><a href="https://maps.apple.com/?q=The%20Windows%20Section%20Arches%20National%20Park" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=The%20Windows%20Section" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_2384d1a2c6a2b1bcfa1283246c70f119.setContent(html_fb8b052164a94a9cb6d78ca219bb5dcf);
+                var html_5369de11ee014327c69d0b7898136827 = $(`<div id="html_5369de11ee014327c69d0b7898136827" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>03-07 The Windows Section</h4><table><tr><th>Status</th><td>Must</td></tr><tr><th>Category</th><td>Must</td></tr><tr><th>Area</th><td>Arches National Park</td></tr><tr><th>Time</th><td>45–75 min</td></tr><tr><th>Effort</th><td>短い歩行。家族向き。</td></tr><tr><th>Plan</th><td>North Window, South Window, Turret Archを短時間で見る。</td></tr><tr><th>Skip rule</th><td>ここだけは優先。到着が遅くても可能な範囲で見る。</td></tr><tr><th>Guide</th><td>The Windows Sectionは、Archesの中でも短い範囲に複数の大きなアーチが集まる場所です。North Window、South Window、Turret Archを一度に見られるため、初めてArchesを訪れる家族に向いています。ここではアーチそのものだけでなく、アーチが風景を額縁のように切り取る見え方を見ると面白いです。子どもには「岩にあいた大きな窓から、別の景色をのぞく場所」と説明できます。</td></tr><tr><th>Notes</th><td>夕方の光で赤い岩が見やすい。</td></tr></table><p><a href="https://maps.apple.com/?q=The%20Windows%20Section" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=The+Windows+Section+Arches+National+Park" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_a26973093eb14bdae45f06b5377dfde4.setContent(html_5369de11ee014327c69d0b7898136827);
             
         
 
-        marker_f79b47471a765db819dec59bc3cf7be4.bindPopup(popup_2384d1a2c6a2b1bcfa1283246c70f119)
+        marker_3d8d0b569ba80bf5f8e072b525c4e0c2.bindPopup(popup_a26973093eb14bdae45f06b5377dfde4)
         ;
 
         
     
     
-            marker_f79b47471a765db819dec59bc3cf7be4.bindTooltip(
+            marker_3d8d0b569ba80bf5f8e072b525c4e0c2.bindTooltip(
                 `<div>
                      03-07 The Windows Section
                  </div>`,
@@ -400,17 +389,17 @@
             );
         
     
-                marker_f79b47471a765db819dec59bc3cf7be4.setIcon(div_icon_473604fd0be1518924c4e7d646acf665);
+                marker_3d8d0b569ba80bf5f8e072b525c4e0c2.setIcon(div_icon_5f78efe189c1ade92bcf3a774905e0f4);
             
     
-            var marker_d909473c6c082c2d3ef6ac33941aac88 = L.marker(
+            var marker_87cdb9f9f264c0d2a0cf14893b853f80 = L.marker(
                 [38.6911, -109.5429],
                 {
 }
-            ).addTo(map_288b0f54b1a5ff91d158ae49d13e4347);
+            ).addTo(map_e4e0593538d7c054efa3f8bf2765164e);
         
     
-            var div_icon_4a70dc87e496357d3a0adebe0135e3a3 = L.divIcon({
+            var div_icon_d60a73941f1852f72df63c117dc37c36 = L.divIcon({
   "html": "\u003cdiv style=\"background:#d7191c; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e03-08\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -418,24 +407,24 @@
 });
         
     
-        var popup_5ef5b3001c6f362375083bc287c2c8ea = L.popup({
-  "maxWidth": 420,
+        var popup_030e09bd4ed55e6c04c30acdbecaed5b = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_600b5ef4da6443380bfbdb76b2af9ec3 = $(`<div id="html_600b5ef4da6443380bfbdb76b2af9ec3" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>03-08 Double Arch</h4><table><tr><th>Status</th><td>行く予定</td></tr><tr><th>Category</th><td>Must</td></tr><tr><th>Area</th><td>Arches National Park</td></tr><tr><th>Time</th><td>30–45 min</td></tr><tr><th>Effort</th><td>短い歩行。子供連れでも比較的行きやすい。</td></tr><tr><th>Plan</th><td>The Windows周辺と同じ流れで見る。アーチ上には登らない。</td></tr><tr><th>Skip rule</th><td>時間が極端に押す場合だけ省略。</td></tr><tr><th>Notes</th><td>写真向き。砂地・岩場で足元注意。</td></tr></table><p><a href="https://maps.apple.com/?q=Double%20Arch%20Arches%20National%20Park" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Double%20Arch" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_5ef5b3001c6f362375083bc287c2c8ea.setContent(html_600b5ef4da6443380bfbdb76b2af9ec3);
+                var html_03e86553dec9b00d270265f8beabe073 = $(`<div id="html_03e86553dec9b00d270265f8beabe073" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>03-08 Double Arch</h4><table><tr><th>Status</th><td>Must</td></tr><tr><th>Category</th><td>Must</td></tr><tr><th>Area</th><td>Arches National Park</td></tr><tr><th>Time</th><td>30–45 min</td></tr><tr><th>Effort</th><td>短い歩行。子供連れでも比較的行きやすい。</td></tr><tr><th>Plan</th><td>The Windows周辺と同じ流れで見る。アーチ上には登らない。</td></tr><tr><th>Skip rule</th><td>時間が極端に押す場合だけ省略。</td></tr><tr><th>Guide</th><td>Double Archは、2つのアーチが同じ岩の塊から開いている迫力のある場所です。壁が横から削られたというより、岩の天井が下から抜けていったように見える点が特徴です。近づいて見上げると、砂岩の厚さと、重い岩が今も崩れずに残っていることがよく分かります。子どもには「天井に2つの大きな穴が開いた岩のドーム」と説明すると分かりやすいです。</td></tr><tr><th>Notes</th><td>写真向き。砂地・岩場で足元注意。</td></tr></table><p><a href="https://maps.apple.com/?q=Double%20Arch" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Double+Arch+Arches+National+Park" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_030e09bd4ed55e6c04c30acdbecaed5b.setContent(html_03e86553dec9b00d270265f8beabe073);
             
         
 
-        marker_d909473c6c082c2d3ef6ac33941aac88.bindPopup(popup_5ef5b3001c6f362375083bc287c2c8ea)
+        marker_87cdb9f9f264c0d2a0cf14893b853f80.bindPopup(popup_030e09bd4ed55e6c04c30acdbecaed5b)
         ;
 
         
     
     
-            marker_d909473c6c082c2d3ef6ac33941aac88.bindTooltip(
+            marker_87cdb9f9f264c0d2a0cf14893b853f80.bindTooltip(
                 `<div>
                      03-08 Double Arch
                  </div>`,
@@ -445,17 +434,17 @@
             );
         
     
-                marker_d909473c6c082c2d3ef6ac33941aac88.setIcon(div_icon_4a70dc87e496357d3a0adebe0135e3a3);
+                marker_87cdb9f9f264c0d2a0cf14893b853f80.setIcon(div_icon_d60a73941f1852f72df63c117dc37c36);
             
     
-            var marker_f9c3b8bb2fc7606d2b1632af4dbbcbda = L.marker(
+            var marker_1b7630b46db73443881a49dd426fdb12 = L.marker(
                 [38.7017, -109.5663],
                 {
 }
-            ).addTo(map_288b0f54b1a5ff91d158ae49d13e4347);
+            ).addTo(map_e4e0593538d7c054efa3f8bf2765164e);
         
     
-            var div_icon_7760dd88fddf39c47335b02c2456e8e4 = L.divIcon({
+            var div_icon_ab14ff3cf081a5baa9459ce0c1ff43ee = L.divIcon({
   "html": "\u003cdiv style=\"background:#d7191c; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e03-09\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -463,24 +452,24 @@
 });
         
     
-        var popup_397c036991146d903aedddcba349a7f9 = L.popup({
-  "maxWidth": 420,
+        var popup_104696754903f2d7f1dc31699cb17665 = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_77cde401616f6bc2bed440d853dfd35d = $(`<div id="html_77cde401616f6bc2bed440d853dfd35d" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>03-09 Balanced Rock</h4><table><tr><th>Status</th><td>行く予定</td></tr><tr><th>Category</th><td>Must</td></tr><tr><th>Area</th><td>Arches National Park</td></tr><tr><th>Time</th><td>10–20 min</td></tr><tr><th>Effort</th><td>車窓でも可。短いループは体力次第。</td></tr><tr><th>Plan</th><td>入園後または帰りに短時間で写真休憩。</td></tr><tr><th>Skip rule</th><td>疲れていれば車窓または展望だけでよい。</td></tr><tr><th>Notes</th><td>夕方は色がよい。長居しない。</td></tr></table><p><a href="https://maps.apple.com/?q=Balanced%20Rock%20Arches%20National%20Park" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Balanced%20Rock" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_397c036991146d903aedddcba349a7f9.setContent(html_77cde401616f6bc2bed440d853dfd35d);
+                var html_80be8993ab86aacd4faaceceee641ad3 = $(`<div id="html_80be8993ab86aacd4faaceceee641ad3" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>03-09 Balanced Rock</h4><table><tr><th>Status</th><td>Must</td></tr><tr><th>Category</th><td>Must</td></tr><tr><th>Area</th><td>Arches National Park</td></tr><tr><th>Time</th><td>10–20 min</td></tr><tr><th>Effort</th><td>車窓でも可。短いループは体力次第。</td></tr><tr><th>Plan</th><td>入園後または帰りに短時間で写真休憩。</td></tr><tr><th>Skip rule</th><td>疲れていれば車窓または展望だけでよい。</td></tr><tr><th>Guide</th><td>Balanced Rockは、硬い岩が柔らかい岩の上に残ったことで、巨大な岩が台座の上に乗っているように見える地形です。実際には完全に別の岩が置かれているわけではなく、下の層が速く削られ、上の層が残った結果です。いつかは崩れるため、今の形は地質学的には一時的な状態です。子どもには「下だけ先に削られて、上の大きな岩が残った」と説明できます。</td></tr><tr><th>Notes</th><td>夕方は色がよい。長居しない。</td></tr></table><p><a href="https://maps.apple.com/?q=Balanced%20Rock" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Balanced+Rock+Arches+National+Park" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_104696754903f2d7f1dc31699cb17665.setContent(html_80be8993ab86aacd4faaceceee641ad3);
             
         
 
-        marker_f9c3b8bb2fc7606d2b1632af4dbbcbda.bindPopup(popup_397c036991146d903aedddcba349a7f9)
+        marker_1b7630b46db73443881a49dd426fdb12.bindPopup(popup_104696754903f2d7f1dc31699cb17665)
         ;
 
         
     
     
-            marker_f9c3b8bb2fc7606d2b1632af4dbbcbda.bindTooltip(
+            marker_1b7630b46db73443881a49dd426fdb12.bindTooltip(
                 `<div>
                      03-09 Balanced Rock
                  </div>`,
@@ -490,17 +479,17 @@
             );
         
     
-                marker_f9c3b8bb2fc7606d2b1632af4dbbcbda.setIcon(div_icon_7760dd88fddf39c47335b02c2456e8e4);
+                marker_1b7630b46db73443881a49dd426fdb12.setIcon(div_icon_ab14ff3cf081a5baa9459ce0c1ff43ee);
             
     
-            var marker_7c11fef451388a5f9109ead83b43818f = L.marker(
+            var marker_c7b0bb30499464f2736f7679297f209c = L.marker(
                 [38.7359, -109.5201],
                 {
 }
-            ).addTo(map_288b0f54b1a5ff91d158ae49d13e4347);
+            ).addTo(map_e4e0593538d7c054efa3f8bf2765164e);
         
     
-            var div_icon_e779a69e1bd8340283d25663a090eee0 = L.divIcon({
+            var div_icon_3c6758a586ef525f6beb8c9cd8591e79 = L.divIcon({
   "html": "\u003cdiv style=\"background:#d7191c; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e03-10\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -508,24 +497,24 @@
 });
         
     
-        var popup_68f33a261bbd040c406ed87d6a15385b = L.popup({
-  "maxWidth": 420,
+        var popup_21d1db3f0f340217a73c132d4ed09b12 = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_d4c14d830c6c536b27dcc55ead7fc2dc = $(`<div id="html_d4c14d830c6c536b27dcc55ead7fc2dc" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>03-10 Lower Delicate Arch Viewpoint</h4><table><tr><th>Status</th><td>行く予定</td></tr><tr><th>Category</th><td>Must</td></tr><tr><th>Area</th><td>Arches National Park</td></tr><tr><th>Time</th><td>15–30 min</td></tr><tr><th>Effort</th><td>短い平坦歩行。Upper Viewpointは余力があれば。</td></tr><tr><th>Plan</th><td>Delicate Archを遠景で確認する。本体トレイルはしない。</td></tr><tr><th>Skip rule</th><td>日没・疲労が強ければLowerだけ。Upperは省略。</td></tr><tr><th>Notes</th><td>本体トレイルは3 milesで登りあり。今回は避ける。</td></tr></table><p><a href="https://maps.apple.com/?q=Lower%20Delicate%20Arch%20Viewpoint%20Arches%20National%20Park" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Lower%20Delicate%20Arch%20Viewpoint" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_68f33a261bbd040c406ed87d6a15385b.setContent(html_d4c14d830c6c536b27dcc55ead7fc2dc);
+                var html_4a9122099ffa99af18d26964f7039fcb = $(`<div id="html_4a9122099ffa99af18d26964f7039fcb" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>03-10 Lower Delicate Arch Viewpoint</h4><table><tr><th>Status</th><td>Must</td></tr><tr><th>Category</th><td>Must</td></tr><tr><th>Area</th><td>Arches National Park</td></tr><tr><th>Time</th><td>15–30 min</td></tr><tr><th>Effort</th><td>短い平坦歩行。Upper Viewpointは余力があれば。</td></tr><tr><th>Plan</th><td>Delicate Archを遠景で確認する。本体トレイルはしない。</td></tr><tr><th>Skip rule</th><td>日没・疲労が強ければLowerだけ。Upperは省略。</td></tr><tr><th>Guide</th><td>Delicate ArchはArches National Parkの象徴で、Utahのナンバープレートにも使われるほど有名です。Lower Viewpointからは遠景になりますが、フルハイクをしなくても、孤立したアーチが広い岩の上に立っている形を確認できます。見るポイントは、周囲の岩壁から切り離されたように見える独立性です。子どもには「Utahで一番有名な岩のアーチを遠くから見る場所」と説明できます。</td></tr><tr><th>Notes</th><td>本体トレイルは3 milesで登りあり。今回は避ける。</td></tr></table><p><a href="https://maps.apple.com/?q=Lower%20Delicate%20Arch%20Viewpoint" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Lower+Delicate+Arch+Viewpoint+Arches+National+Park" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_21d1db3f0f340217a73c132d4ed09b12.setContent(html_4a9122099ffa99af18d26964f7039fcb);
             
         
 
-        marker_7c11fef451388a5f9109ead83b43818f.bindPopup(popup_68f33a261bbd040c406ed87d6a15385b)
+        marker_c7b0bb30499464f2736f7679297f209c.bindPopup(popup_21d1db3f0f340217a73c132d4ed09b12)
         ;
 
         
     
     
-            marker_7c11fef451388a5f9109ead83b43818f.bindTooltip(
+            marker_c7b0bb30499464f2736f7679297f209c.bindTooltip(
                 `<div>
                      03-10 Lower Delicate Arch Viewpoint
                  </div>`,
@@ -535,17 +524,17 @@
             );
         
     
-                marker_7c11fef451388a5f9109ead83b43818f.setIcon(div_icon_e779a69e1bd8340283d25663a090eee0);
+                marker_c7b0bb30499464f2736f7679297f209c.setIcon(div_icon_3c6758a586ef525f6beb8c9cd8591e79);
             
     
-            var marker_1da2b7deb9b7528302e5e8cada39b5e9 = L.marker(
+            var marker_cf675b2cdd6739d22f50313b8de422f4 = L.marker(
                 [38.6252, -109.6196],
                 {
 }
-            ).addTo(map_288b0f54b1a5ff91d158ae49d13e4347);
+            ).addTo(map_e4e0593538d7c054efa3f8bf2765164e);
         
     
-            var div_icon_702d2942565a6da5a6884c0fec694852 = L.divIcon({
+            var div_icon_ed578f90939ce57165908b401f85544c = L.divIcon({
   "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e03-11\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -553,24 +542,24 @@
 });
         
     
-        var popup_d771c3bb9f7df671584e7b56a79a70fb = L.popup({
-  "maxWidth": 420,
+        var popup_2a38309541d0c54322aa12e9db2c1c15 = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_cb4dd686ab0de7a6072d0e3a2e23dc67 = $(`<div id="html_cb4dd686ab0de7a6072d0e3a2e23dc67" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>03-11 Park Avenue Viewpoint</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Arches National Park</td></tr><tr><th>Time</th><td>10–20 min</td></tr><tr><th>Effort</th><td>展望台だけなら軽い。谷底ハイクはしない。</td></tr><tr><th>Plan</th><td>入園直後に光が良ければ写真休憩。</td></tr><tr><th>Skip rule</th><td>Mustを削るくらいなら省略。</td></tr><tr><th>Notes</th><td>到着直後の体力確認にも使える。</td></tr></table><p><a href="https://maps.apple.com/?q=Park%20Avenue%20Viewpoint%20Arches%20National%20Park" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Park%20Avenue%20Viewpoint" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_d771c3bb9f7df671584e7b56a79a70fb.setContent(html_cb4dd686ab0de7a6072d0e3a2e23dc67);
+                var html_486d4cd514f266a046ffba9db747022d = $(`<div id="html_486d4cd514f266a046ffba9db747022d" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>03-11 Park Avenue Viewpoint</h4><table><tr><th>Status</th><td>Possibly</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Arches National Park</td></tr><tr><th>Time</th><td>10–20 min</td></tr><tr><th>Effort</th><td>展望台だけなら軽い。谷底ハイクはしない。</td></tr><tr><th>Plan</th><td>入園直後に光が良ければ写真休憩。</td></tr><tr><th>Skip rule</th><td>Mustを削るくらいなら省略。</td></tr><tr><th>Guide</th><td>Park Avenue Viewpointは、背の高い砂岩の壁が通りの両側に立つように見える場所です。New YorkのPark Avenueにたとえて名付けられていますが、実際には砂岩のfinや塔状の岩が侵食で残った景観です。歩かなくても、Archesの入口近くで縦に切り立つ岩の迫力を感じられます。子どもには「ビルの通りみたいに、岩の壁が両側に立っている場所」と説明できます。</td></tr><tr><th>Notes</th><td>到着直後の体力確認にも使える。</td></tr></table><p><a href="https://maps.apple.com/?q=Park%20Avenue%20Viewpoint" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Park+Avenue+Viewpoint+Arches+National+Park" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_2a38309541d0c54322aa12e9db2c1c15.setContent(html_486d4cd514f266a046ffba9db747022d);
             
         
 
-        marker_1da2b7deb9b7528302e5e8cada39b5e9.bindPopup(popup_d771c3bb9f7df671584e7b56a79a70fb)
+        marker_cf675b2cdd6739d22f50313b8de422f4.bindPopup(popup_2a38309541d0c54322aa12e9db2c1c15)
         ;
 
         
     
     
-            marker_1da2b7deb9b7528302e5e8cada39b5e9.bindTooltip(
+            marker_cf675b2cdd6739d22f50313b8de422f4.bindTooltip(
                 `<div>
                      03-11 Park Avenue Viewpoint
                  </div>`,
@@ -580,17 +569,17 @@
             );
         
     
-                marker_1da2b7deb9b7528302e5e8cada39b5e9.setIcon(div_icon_702d2942565a6da5a6884c0fec694852);
+                marker_cf675b2cdd6739d22f50313b8de422f4.setIcon(div_icon_ed578f90939ce57165908b401f85544c);
             
     
-            var marker_77d9657a596627744be930e5b489d15e = L.marker(
+            var marker_7737eaa95b4c7d9f2e83ce46e51e1222 = L.marker(
                 [38.6507, -109.6031],
                 {
 }
-            ).addTo(map_288b0f54b1a5ff91d158ae49d13e4347);
+            ).addTo(map_e4e0593538d7c054efa3f8bf2765164e);
         
     
-            var div_icon_86fc9ba8c2af5f6bb3d78e10c667a7f4 = L.divIcon({
+            var div_icon_b2380f209e1c8a8cefbaac6699af52c4 = L.divIcon({
   "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e03-12\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -598,24 +587,24 @@
 });
         
     
-        var popup_83ed5588587d045fdcd303c84e0e156d = L.popup({
-  "maxWidth": 420,
+        var popup_f557e7735e5fb38963f0f17c5f5f72d5 = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_4baf6d256185ac94ec1637691e75682c = $(`<div id="html_4baf6d256185ac94ec1637691e75682c" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>03-12 La Sal Mountains Viewpoint</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Arches National Park</td></tr><tr><th>Time</th><td>5–10 min</td></tr><tr><th>Effort</th><td>ほぼ停車のみ。</td></tr><tr><th>Plan</th><td>移動中に光が良ければ短時間で停車。</td></tr><tr><th>Skip rule</th><td>時間が押したら省略。</td></tr><tr><th>Notes</th><td>写真休憩以上にしない。</td></tr></table><p><a href="https://maps.apple.com/?q=La%20Sal%20Mountains%20Viewpoint%20Arches%20National%20Park" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=La%20Sal%20Mountains%20Viewpoint" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_83ed5588587d045fdcd303c84e0e156d.setContent(html_4baf6d256185ac94ec1637691e75682c);
+                var html_1c07090541b428fde989154be2f50183 = $(`<div id="html_1c07090541b428fde989154be2f50183" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>03-12 La Sal Mountains Viewpoint</h4><table><tr><th>Status</th><td>Possibly</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Arches National Park</td></tr><tr><th>Time</th><td>5–10 min</td></tr><tr><th>Effort</th><td>ほぼ停車のみ。</td></tr><tr><th>Plan</th><td>移動中に光が良ければ短時間で停車。</td></tr><tr><th>Skip rule</th><td>時間が押したら省略。</td></tr><tr><th>Guide</th><td>La Sal Mountains Viewpointでは、赤い砂岩の公園と、遠くの高い山を同時に見ます。Archesは乾いた砂岩の景観が中心ですが、La Sal Mountainsは標高が高く、季節によって雪が残ることもあります。この対比を見ると、同じ地域でも標高と地質で景色が大きく変わることが分かります。子どもには「赤い砂漠の向こうに、全然違う高い山が見える場所」と説明できます。</td></tr><tr><th>Notes</th><td>写真休憩以上にしない。</td></tr></table><p><a href="https://maps.apple.com/?q=La%20Sal%20Mountains%20Viewpoint" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=La+Sal+Mountains+Viewpoint+Arches+National+Park" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_f557e7735e5fb38963f0f17c5f5f72d5.setContent(html_1c07090541b428fde989154be2f50183);
             
         
 
-        marker_77d9657a596627744be930e5b489d15e.bindPopup(popup_83ed5588587d045fdcd303c84e0e156d)
+        marker_7737eaa95b4c7d9f2e83ce46e51e1222.bindPopup(popup_f557e7735e5fb38963f0f17c5f5f72d5)
         ;
 
         
     
     
-            marker_77d9657a596627744be930e5b489d15e.bindTooltip(
+            marker_7737eaa95b4c7d9f2e83ce46e51e1222.bindTooltip(
                 `<div>
                      03-12 La Sal Mountains Viewpoint
                  </div>`,
@@ -625,17 +614,17 @@
             );
         
     
-                marker_77d9657a596627744be930e5b489d15e.setIcon(div_icon_86fc9ba8c2af5f6bb3d78e10c667a7f4);
+                marker_7737eaa95b4c7d9f2e83ce46e51e1222.setIcon(div_icon_b2380f209e1c8a8cefbaac6699af52c4);
             
     
-            var marker_c9f724e31ba181f95292507235e751fb = L.marker(
+            var marker_5d6b0cb83dbb96dcbccd7e1dc9c5fb5b = L.marker(
                 [38.764, -109.5806],
                 {
 }
-            ).addTo(map_288b0f54b1a5ff91d158ae49d13e4347);
+            ).addTo(map_e4e0593538d7c054efa3f8bf2765164e);
         
     
-            var div_icon_ffb1f894e400e5835214c4fff3deff50 = L.divIcon({
+            var div_icon_64a313b7f29e651db5bb484401ab792f = L.divIcon({
   "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e03-13\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -643,24 +632,24 @@
 });
         
     
-        var popup_58005525cde89a0002adff7139d962b7 = L.popup({
-  "maxWidth": 420,
+        var popup_9c8b64cd664213c31c2ed1a82961a640 = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_ec1f1b56857025fdbdd992b05ff3f844 = $(`<div id="html_ec1f1b56857025fdbdd992b05ff3f844" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>03-13 Sand Dune Arch</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Arches National Park</td></tr><tr><th>Time</th><td>30–45 min</td></tr><tr><th>Effort</th><td>砂地。子供向きだが北側まで進む。</td></tr><tr><th>Plan</th><td>Mustを見た後、子供がまだ歩けるなら追加。</td></tr><tr><th>Skip rule</th><td>日没が近い、またはMust未完了なら省略。</td></tr><tr><th>Notes</th><td>靴に砂が入る可能性。水を持つ。</td></tr></table><p><a href="https://maps.apple.com/?q=Sand%20Dune%20Arch%20Arches%20National%20Park" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Sand%20Dune%20Arch" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_58005525cde89a0002adff7139d962b7.setContent(html_ec1f1b56857025fdbdd992b05ff3f844);
+                var html_a5c71fdc6a738c269274b00dba115cb2 = $(`<div id="html_a5c71fdc6a738c269274b00dba115cb2" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>03-13 Sand Dune Arch</h4><table><tr><th>Status</th><td>Possibly</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Arches National Park</td></tr><tr><th>Time</th><td>30–45 min</td></tr><tr><th>Effort</th><td>砂地。子供向きだが北側まで進む。</td></tr><tr><th>Plan</th><td>Mustを見た後、子供がまだ歩けるなら追加。</td></tr><tr><th>Skip rule</th><td>日没が近い、またはMust未完了なら省略。</td></tr><tr><th>Guide</th><td>Sand Dune Archは、狭い砂岩のfinの間に隠れるようにある小さめのアーチです。足元に砂が多く、他の開けたアーチよりも囲まれた空間の印象が強い場所です。日陰ができやすく、子どもには岩の迷路に入るような楽しさがあります。子どもには「岩のすき間に入ると、砂の上に小さなアーチが隠れている場所」と説明できます。</td></tr><tr><th>Notes</th><td>靴に砂が入る可能性。水を持つ。</td></tr></table><p><a href="https://maps.apple.com/?q=Sand%20Dune%20Arch" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Sand+Dune+Arch+Arches+National+Park" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_9c8b64cd664213c31c2ed1a82961a640.setContent(html_a5c71fdc6a738c269274b00dba115cb2);
             
         
 
-        marker_c9f724e31ba181f95292507235e751fb.bindPopup(popup_58005525cde89a0002adff7139d962b7)
+        marker_5d6b0cb83dbb96dcbccd7e1dc9c5fb5b.bindPopup(popup_9c8b64cd664213c31c2ed1a82961a640)
         ;
 
         
     
     
-            marker_c9f724e31ba181f95292507235e751fb.bindTooltip(
+            marker_5d6b0cb83dbb96dcbccd7e1dc9c5fb5b.bindTooltip(
                 `<div>
                      03-13 Sand Dune Arch
                  </div>`,
@@ -670,17 +659,17 @@
             );
         
     
-                marker_c9f724e31ba181f95292507235e751fb.setIcon(div_icon_ffb1f894e400e5835214c4fff3deff50);
+                marker_5d6b0cb83dbb96dcbccd7e1dc9c5fb5b.setIcon(div_icon_64a313b7f29e651db5bb484401ab792f);
             
     
-            var marker_87b37c8a4e6b2c14512200b3d57ec28e = L.marker(
+            var marker_ea8b230a7fc56cbf04be4857bfc3dd9c = L.marker(
                 [38.7783, -109.588],
                 {
 }
-            ).addTo(map_288b0f54b1a5ff91d158ae49d13e4347);
+            ).addTo(map_e4e0593538d7c054efa3f8bf2765164e);
         
     
-            var div_icon_afa99fee9c13856da4f75382aac85319 = L.divIcon({
+            var div_icon_6f7eb2d50da8ee3e6ab47a22f37d1c42 = L.divIcon({
   "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e03-14\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -688,24 +677,24 @@
 });
         
     
-        var popup_48186e308acffd67e26c04dfc3f29722 = L.popup({
-  "maxWidth": 420,
+        var popup_dd6817614c548f62cf258dd083ddb3d1 = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_a93ba9c7bbbe1053130081f64f6ba04e = $(`<div id="html_a93ba9c7bbbe1053130081f64f6ba04e" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>03-14 Skyline Arch</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Arches National Park</td></tr><tr><th>Time</th><td>20–30 min</td></tr><tr><th>Effort</th><td>短い歩行。北側まで進む場合のみ。</td></tr><tr><th>Plan</th><td>Devils Garden方面まで行けた場合の追加候補。</td></tr><tr><th>Skip rule</th><td>The Windows周辺で満足できたら省略。</td></tr><tr><th>Notes</th><td>移動距離が増えるため無理しない。</td></tr></table><p><a href="https://maps.apple.com/?q=Skyline%20Arch%20Arches%20National%20Park" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Skyline%20Arch" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_48186e308acffd67e26c04dfc3f29722.setContent(html_a93ba9c7bbbe1053130081f64f6ba04e);
+                var html_44d46d25bbb3d4283e7b948e9dc8d1d7 = $(`<div id="html_44d46d25bbb3d4283e7b948e9dc8d1d7" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>03-14 Skyline Arch</h4><table><tr><th>Status</th><td>Possibly</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Arches National Park</td></tr><tr><th>Time</th><td>20–30 min</td></tr><tr><th>Effort</th><td>短い歩行。北側まで進む場合のみ。</td></tr><tr><th>Plan</th><td>Devils Garden方面まで行けた場合の追加候補。</td></tr><tr><th>Skip rule</th><td>The Windows周辺で満足できたら省略。</td></tr><tr><th>Guide</th><td>Skyline Archは、遠くから見ると地平線の上に穴が開いているように見えるアーチです。1940年に大きな岩が落ちて開口部が広がったことで知られ、アーチが今も変化し続けていることを示す分かりやすい例です。足元の落石を見ると、アーチは永遠に同じ形ではないことが実感できます。子どもには「昔より穴が大きくなった、今も変わり続けるアーチ」と説明できます。</td></tr><tr><th>Notes</th><td>移動距離が増えるため無理しない。</td></tr></table><p><a href="https://maps.apple.com/?q=Skyline%20Arch" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Skyline+Arch+Arches+National+Park" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_dd6817614c548f62cf258dd083ddb3d1.setContent(html_44d46d25bbb3d4283e7b948e9dc8d1d7);
             
         
 
-        marker_87b37c8a4e6b2c14512200b3d57ec28e.bindPopup(popup_48186e308acffd67e26c04dfc3f29722)
+        marker_ea8b230a7fc56cbf04be4857bfc3dd9c.bindPopup(popup_dd6817614c548f62cf258dd083ddb3d1)
         ;
 
         
     
     
-            marker_87b37c8a4e6b2c14512200b3d57ec28e.bindTooltip(
+            marker_ea8b230a7fc56cbf04be4857bfc3dd9c.bindTooltip(
                 `<div>
                      03-14 Skyline Arch
                  </div>`,
@@ -715,42 +704,42 @@
             );
         
     
-                marker_87b37c8a4e6b2c14512200b3d57ec28e.setIcon(div_icon_afa99fee9c13856da4f75382aac85319);
+                marker_ea8b230a7fc56cbf04be4857bfc3dd9c.setIcon(div_icon_6f7eb2d50da8ee3e6ab47a22f37d1c42);
             
     
-            var marker_1fcb57b3b9a56ecd7989d7d427fc8aa9 = L.marker(
+            var marker_a7bc9d17b0958ee49028b8c1ccf4150d = L.marker(
                 [38.7436, -109.4993],
                 {
 }
-            ).addTo(map_288b0f54b1a5ff91d158ae49d13e4347);
+            ).addTo(map_e4e0593538d7c054efa3f8bf2765164e);
         
     
-            var div_icon_658d53f294ea59ec3988bbc7b268f006 = L.divIcon({
-  "html": "\u003cdiv style=\"background:#7b3294; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e03-15\u003c/div\u003e",
+            var div_icon_c9f3152de89fafcaf915d84e450ba755 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e03-15\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
   "className": "empty",
 });
         
     
-        var popup_598543c708c1458acca9ba6eb354622e = L.popup({
-  "maxWidth": 420,
+        var popup_6519d7aed3cb0a85b57100519002cd56 = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_332459ccc0767dee1c93b291dcb3867e = $(`<div id="html_332459ccc0767dee1c93b291dcb3867e" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>03-15 Delicate Arch full trail</h4><table><tr><th>Status</th><td>候補（重い）</td></tr><tr><th>Category</th><td>Heavy possible</td></tr><tr><th>Area</th><td>Arches National Park</td></tr><tr><th>Time</th><td>2–3 hr以上</td></tr><tr><th>Effort</th><td>3 miles、登りあり。暑さと日没リスクあり。</td></tr><tr><th>Plan</th><td>原則やらない。旅程が大幅に前倒し、全員の体力・気温・日没に余裕がある場合のみ検討。</td></tr><tr><th>Skip rule</th><td>通常計画ではLower Viewpointで代替する。</td></tr><tr><th>Notes</th><td>家族移動後の夕方には原則不向き。</td></tr></table><p><a href="https://maps.apple.com/?q=Delicate%20Arch%20full%20trail%20Arches%20National%20Park" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Delicate%20Arch%20full%20trail" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_598543c708c1458acca9ba6eb354622e.setContent(html_332459ccc0767dee1c93b291dcb3867e);
+                var html_e5940fed371895d6c239ef5e008b44bd = $(`<div id="html_e5940fed371895d6c239ef5e008b44bd" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>03-15 Delicate Arch full trail</h4><table><tr><th>Status</th><td>Possibly</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Arches National Park</td></tr><tr><th>Time</th><td>2–3 hr以上</td></tr><tr><th>Effort</th><td>3 miles、登りあり。暑さと日没リスクあり。</td></tr><tr><th>Plan</th><td>原則やらない。旅程が大幅に前倒し、全員の体力・気温・日没に余裕がある場合のみ検討。</td></tr><tr><th>Skip rule</th><td>通常計画ではLower Viewpointで代替する。</td></tr><tr><th>Guide</th><td>Delicate Arch full trailは、Utahの象徴的なアーチを近くで見るための本格的な往復トレイルです。近くで見ると、アーチが崖から独立して立つ不安定さと、周囲の広い岩盤のスケールが分かります。ただし日陰が少なく、夏は暑さと日没時間の管理が重要です。子どもには「有名なアーチを近くで見る道だけれど、暑くて長いので体力が必要」と説明できます。</td></tr><tr><th>Notes</th><td>家族移動後の夕方には原則不向き。</td></tr></table><p><a href="https://maps.apple.com/?q=Delicate%20Arch%20full%20trail" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Delicate+Arch+Trail+Arches+National+Park" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_6519d7aed3cb0a85b57100519002cd56.setContent(html_e5940fed371895d6c239ef5e008b44bd);
             
         
 
-        marker_1fcb57b3b9a56ecd7989d7d427fc8aa9.bindPopup(popup_598543c708c1458acca9ba6eb354622e)
+        marker_a7bc9d17b0958ee49028b8c1ccf4150d.bindPopup(popup_6519d7aed3cb0a85b57100519002cd56)
         ;
 
         
     
     
-            marker_1fcb57b3b9a56ecd7989d7d427fc8aa9.bindTooltip(
+            marker_a7bc9d17b0958ee49028b8c1ccf4150d.bindTooltip(
                 `<div>
                      03-15 Delicate Arch full trail
                  </div>`,
@@ -760,7 +749,13 @@
             );
         
     
-                marker_1fcb57b3b9a56ecd7989d7d427fc8aa9.setIcon(div_icon_658d53f294ea59ec3988bbc7b268f006);
+                marker_a7bc9d17b0958ee49028b8c1ccf4150d.setIcon(div_icon_c9f3152de89fafcaf915d84e450ba755);
             
+    
+            map_e4e0593538d7c054efa3f8bf2765164e.fitBounds(
+                [[38.5364, -111.833], [40.589, -109.4993]],
+                {"padding": [40, 40]}
+            );
+        
 </script>
 </html>

@@ -3,10 +3,6 @@
 <head>
     
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    
-    <style>
-    .popup table{border-collapse:collapse;font-size:13px}.popup th{background:#f2f2f2;text-align:left;padding:4px 7px;border-bottom:1px solid #ddd;vertical-align:top;white-space:nowrap}.popup td{padding:4px 7px;border-bottom:1px solid #ddd;vertical-align:top}.popup h4{margin:0 0 8px;font-size:16px}.popup a{font-weight:700}.leaflet-popup-content{min-width:260px;max-width:420px}
-    </style>
     <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -21,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_c6fc9eaeaf99df99c564131bbd81a418 {
+                #map_cdd05547b1de816f90ab4c31dfc45332 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -58,38 +54,37 @@
 <body>
     
     
-    <div style="position: fixed; top: 18px; left: 50%; transform: translateX(-50%); z-index: 9999;background: rgba(255,255,255,.94); border: 1px solid #aaa; border-radius: 10px;padding: 10px 16px; font-family: Arial, sans-serif; box-shadow: 0 1px 5px rgba(0,0,0,.25); text-align:center;">
+    <div style="position: fixed; top: 18px; left: 50%; transform: translateX(-50%); z-index:9999; background:rgba(255,255,255,.94); border:1px solid #aaa; border-radius:10px; padding:10px 16px; font-family:Arial,sans-serif; box-shadow:0 1px 5px rgba(0,0,0,.25); text-align:center;">
       <div style="font-size:18px;font-weight:700;">Day 10 Travel Map</div>
       <div style="font-size:12px;color:#444;">Meadow → Nampa / 約470–500 miles / 約7:00–7:30</div>
     </div>
     
-    <div style="position: fixed; bottom: 28px; left: 28px; z-index: 9999; background: white;border: 1px solid #999; border-radius: 8px; padding: 12px 14px;font-family: Arial, sans-serif; font-size: 13px; box-shadow: 0 1px 5px rgba(0,0,0,.25);">
-      <div style="font-weight:700; margin-bottom:7px;">Legend</div><div><span style="background:#1a9850;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Hotel</div><div><span style="background:#d7191c;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Must</div><div><span style="background:#2c7bb6;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Possibly</div><div><span style="background:#7b3294;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Backup / heavy</div><div><span style="background:#ff8c00;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Airport pickup</div>
-      <div style="margin-top:7px;color:#555;max-width:270px;">Planning map. Use Apple Maps / Google Maps / official park information for final navigation.</div>
+    <div style="position: fixed; bottom: 28px; left: 28px; z-index:9999; background:white; border:1px solid #999; border-radius:8px; padding:12px 14px; font-family:Arial,sans-serif; font-size:13px; box-shadow:0 1px 5px rgba(0,0,0,.25);">
+      <div style="font-weight:700; margin-bottom:7px;">Legend</div><div><span style="background:#1a9850;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Hotel: 2</div><div><span style="background:#d7191c;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Must: 1</div><div><span style="background:#2c7bb6;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Possibly: 1</div><div><span style="background:#7b3294;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Backup: 4</div>
+      <div style="margin-top:7px;color:#555;max-width:260px;">Planning map. Use Apple Maps / Google Maps / NPS for final navigation.</div>
     </div>
     
-    <script>
-    window._spotMarkers = {"H09": marker_3e8bf838015950ab3f69715011aef86a, "H10": marker_2815de7f5bcac3128bb60563d2c66c1d, "10-02": marker_c2d6ae9d05a32ee00d24b46ec5af3bb5, "10-03": marker_f9c3f171aafe36296d7096ff1c9c1c21, "10-04": marker_9b916d4026e1109164afe145111da23f, "10-05": marker_ad7cb397456e9f20f0cf227b5ac49181, "10-06": marker_ca79f3d37bdd8d1f5b1b73d922ce637f, "10-07": marker_af3e25cd9120a9e3140c46725d201848};
-    function openSpotFromHash() {
-      var id = decodeURIComponent((window.location.hash || '').replace('#',''));
-      if (!id || !window._spotMarkers || !window._spotMarkers[id]) return;
-      var marker = window._spotMarkers[id];
-      marker.openPopup();
-      map_c6fc9eaeaf99df99c564131bbd81a418.setView(marker.getLatLng(), Math.max(map_c6fc9eaeaf99df99c564131bbd81a418.getZoom(), 10));
-    }
-    setTimeout(openSpotFromHash, 600);
-    window.addEventListener('hashchange', openSpotFromHash);
-    </script>
+<script>
+window._spotMarkers = {"H09": marker_0212db4ce51ac35d456404d83dbe3b93, "H10": marker_3c3f6a77ecdb802fab6656f006062495, "10-02": marker_39cb63de1d34d0cfbce4be8a82297344, "10-03": marker_2ca166468467fc2b6e21134c765420f4, "10-04": marker_54b3108ef7e760f5209106d601176fac, "10-05": marker_de8b439a72c7927848fc2aeee8dc2767, "10-06": marker_4858b02619e6ffba16c07ec350fec67c, "10-07": marker_ef686c5be84f2f911ec4c7158e416885};
+function openSpotFromHash() {
+  var id = decodeURIComponent((window.location.hash || '').replace('#',''));
+  if (!id || !window._spotMarkers || !window._spotMarkers[id]) return;
+  var marker = window._spotMarkers[id];
+  marker.openPopup();
+  map_cdd05547b1de816f90ab4c31dfc45332.setView(marker.getLatLng(), Math.max(map_cdd05547b1de816f90ab4c31dfc45332.getZoom(), 10));
+}
+setTimeout(openSpotFromHash, 600);
+window.addEventListener('hashchange', openSpotFromHash);
+</script>
     
-    
-            <div class="folium-map" id="map_c6fc9eaeaf99df99c564131bbd81a418" ></div>
+            <div class="folium-map" id="map_cdd05547b1de816f90ab4c31dfc45332" ></div>
         
 </body>
 <script>
     
     
-            var map_c6fc9eaeaf99df99c564131bbd81a418 = L.map(
-                "map_c6fc9eaeaf99df99c564131bbd81a418",
+            var map_cdd05547b1de816f90ab4c31dfc45332 = L.map(
+                "map_cdd05547b1de816f90ab4c31dfc45332",
                 {
                     center: [41.46983349826404, -113.78468136361568],
                     crs: L.CRS.EPSG3857,
@@ -101,13 +96,13 @@
 
                 }
             );
-            L.control.scale().addTo(map_c6fc9eaeaf99df99c564131bbd81a418);
+            L.control.scale().addTo(map_cdd05547b1de816f90ab4c31dfc45332);
 
             
 
         
     
-            var tile_layer_b980439fc6c674274c7a8ced54438d15 = L.tileLayer(
+            var tile_layer_9a3d9fab5622decf21e7261540aad356 = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -124,23 +119,17 @@
             );
         
     
-            tile_layer_b980439fc6c674274c7a8ced54438d15.addTo(map_c6fc9eaeaf99df99c564131bbd81a418);
+            tile_layer_9a3d9fab5622decf21e7261540aad356.addTo(map_cdd05547b1de816f90ab4c31dfc45332);
         
     
-            map_c6fc9eaeaf99df99c564131bbd81a418.fitBounds(
-                [[38.6267, -116.53156600892544], [43.54239708611229, -112.2122]],
-                {"padding": [40, 40]}
-            );
-        
-    
-            var marker_3e8bf838015950ab3f69715011aef86a = L.marker(
+            var marker_0212db4ce51ac35d456404d83dbe3b93 = L.marker(
                 [38.8851709, -112.4084849],
                 {
 }
-            ).addTo(map_c6fc9eaeaf99df99c564131bbd81a418);
+            ).addTo(map_cdd05547b1de816f90ab4c31dfc45332);
         
     
-            var div_icon_ffc4ab08e1be4698d3c239921d9308d1 = L.divIcon({
+            var div_icon_2cc467b7c3578aec2cadc93e4b6400f4 = L.divIcon({
   "html": "\u003cdiv style=\"background:#1a9850; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003eH09\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -148,24 +137,24 @@
 });
         
     
-        var popup_63c3ece267863c01c037b76de67f0470 = L.popup({
-  "maxWidth": 420,
+        var popup_01231d13cc68016bdb80ef2f1e237331 = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_f3ae200d76bf9eed6bcc56c05896f2af = $(`<div id="html_f3ae200d76bf9eed6bcc56c05896f2af" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>H09 Meadow泊 / Healing Hot Springs Hideaway / 出発</h4><table><tr><th>Status</th><td>Hotel</td></tr><tr><th>Category</th><td>Hotel</td></tr><tr><th>Area</th><td>Meadow, UT</td></tr><tr><th>Plan</th><td>Healing Hot Springs Hideawayに宿泊。チェックイン8/8 15:00以降、チェックアウト8/9 11:00まで。セルフチェックイン（キーパッド）。</td></tr><tr><th>Notes</th><td>Host: Kyle Thurman. ゲスト定員8人。ペット不可。セルフチェックイン（キーパッド）。キャンセル無料は8/7 15:00前まで。それ以降は返金不可。</td></tr></table><p><a href="https://maps.apple.com/?q=40%20S%20100%20E%20Rd%2C%20Meadow%2C%20UT%2084644" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Meadow%E6%B3%8A%20/%20Healing%20Hot%20Springs%20Hideaway" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_63c3ece267863c01c037b76de67f0470.setContent(html_f3ae200d76bf9eed6bcc56c05896f2af);
+                var html_00bf9b17c59c829c669bc1485f594016 = $(`<div id="html_00bf9b17c59c829c669bc1485f594016" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>H09 Meadow泊 / Healing Hot Springs Hideaway / 出発</h4><table><tr><th>Status</th><td>Hotel</td></tr><tr><th>Category</th><td>Hotel</td></tr><tr><th>Area</th><td>Meadow, UT</td></tr><tr><th>Plan</th><td>Healing Hot Springs Hideawayに宿泊。チェックイン8/8 15:00以降、チェックアウト8/9 11:00まで。セルフチェックイン（キーパッド）。</td></tr><tr><th>Notes</th><td>Host: Kyle Thurman. ゲスト定員8人。ペット不可。セルフチェックイン（キーパッド）。キャンセル無料は8/7 15:00前まで。それ以降は返金不可。</td></tr></table><p><a href="https://maps.apple.com/?q=40%20S%20100%20E%20Rd%2C%20Meadow%2C%20UT%2084644" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Meadow%E6%B3%8A%20/%20Healing%20Hot%20Springs%20Hideaway" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_01231d13cc68016bdb80ef2f1e237331.setContent(html_00bf9b17c59c829c669bc1485f594016);
             
         
 
-        marker_3e8bf838015950ab3f69715011aef86a.bindPopup(popup_63c3ece267863c01c037b76de67f0470)
+        marker_0212db4ce51ac35d456404d83dbe3b93.bindPopup(popup_01231d13cc68016bdb80ef2f1e237331)
         ;
 
         
     
     
-            marker_3e8bf838015950ab3f69715011aef86a.bindTooltip(
+            marker_0212db4ce51ac35d456404d83dbe3b93.bindTooltip(
                 `<div>
                      H09 Meadow泊 / Healing Hot Springs Hideaway / 出発
                  </div>`,
@@ -175,17 +164,17 @@
             );
         
     
-                marker_3e8bf838015950ab3f69715011aef86a.setIcon(div_icon_ffc4ab08e1be4698d3c239921d9308d1);
+                marker_0212db4ce51ac35d456404d83dbe3b93.setIcon(div_icon_2cc467b7c3578aec2cadc93e4b6400f4);
             
     
-            var marker_2815de7f5bcac3128bb60563d2c66c1d = L.marker(
+            var marker_3c3f6a77ecdb802fab6656f006062495 = L.marker(
                 [43.54239708611229, -116.53156600892544],
                 {
 }
-            ).addTo(map_c6fc9eaeaf99df99c564131bbd81a418);
+            ).addTo(map_cdd05547b1de816f90ab4c31dfc45332);
         
     
-            var div_icon_f9797cf74b5fecc062010ec375c05bca = L.divIcon({
+            var div_icon_902a5ece9622752216503e8dfc9da88c = L.divIcon({
   "html": "\u003cdiv style=\"background:#1a9850; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003eH10\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -193,24 +182,24 @@
 });
         
     
-        var popup_0bcc64730dc580eeb0cfee29b3a11d75 = L.popup({
-  "maxWidth": 420,
+        var popup_301397a89d5634fe9955f07b836ee0cd = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_e6878ced39168461dfbad2525d63f103 = $(`<div id="html_e6878ced39168461dfbad2525d63f103" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>H10 Nampa泊 / 4 Bedrooms!/$0 Cleaning Fee!/Sleeps 8/New/Quiet!</h4><table><tr><th>Status</th><td>Hotel</td></tr><tr><th>Category</th><td>Hotel</td></tr><tr><th>Area</th><td>Nampa, ID</td></tr><tr><th>Plan</th><td>Nampaで宿泊。チェックイン8/9 15:00以降、チェックアウト8/10 11:00まで。</td></tr><tr><th>Notes</th><td>Host: Justin. ゲスト定員8人。ペット不可。騒音禁止23:00–9:00。敷地内の屋外に防犯・監視カメラあり。</td></tr></table><p><a href="https://maps.apple.com/?q=2834%20S%20Mossy%20Frst%20Ave%2C%20Nampa%2C%20ID%2083686" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Nampa%E6%B3%8A%20/%204%20Bedrooms%21/%240%20Cleaning%20Fee%21/Sleeps%208/New/Quiet%21" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_0bcc64730dc580eeb0cfee29b3a11d75.setContent(html_e6878ced39168461dfbad2525d63f103);
+                var html_1846311da421e40695b035a47b3fe249 = $(`<div id="html_1846311da421e40695b035a47b3fe249" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>H10 Nampa泊 / 4 Bedrooms!/$0 Cleaning Fee!/Sleeps 8/New/Quiet!</h4><table><tr><th>Status</th><td>Hotel</td></tr><tr><th>Category</th><td>Hotel</td></tr><tr><th>Area</th><td>Nampa, ID</td></tr><tr><th>Plan</th><td>Nampaで宿泊。チェックイン8/9 15:00以降、チェックアウト8/10 11:00まで。</td></tr><tr><th>Notes</th><td>Host: Justin. ゲスト定員8人。ペット不可。騒音禁止23:00–9:00。敷地内の屋外に防犯・監視カメラあり。</td></tr></table><p><a href="https://maps.apple.com/?q=2834%20S%20Mossy%20Frst%20Ave%2C%20Nampa%2C%20ID%2083686" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Nampa%E6%B3%8A%20/%204%20Bedrooms%21/%240%20Cleaning%20Fee%21/Sleeps%208/New/Quiet%21" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_301397a89d5634fe9955f07b836ee0cd.setContent(html_1846311da421e40695b035a47b3fe249);
             
         
 
-        marker_2815de7f5bcac3128bb60563d2c66c1d.bindPopup(popup_0bcc64730dc580eeb0cfee29b3a11d75)
+        marker_3c3f6a77ecdb802fab6656f006062495.bindPopup(popup_301397a89d5634fe9955f07b836ee0cd)
         ;
 
         
     
     
-            marker_2815de7f5bcac3128bb60563d2c66c1d.bindTooltip(
+            marker_3c3f6a77ecdb802fab6656f006062495.bindTooltip(
                 `<div>
                      H10 Nampa泊 / 4 Bedrooms!/$0 Cleaning Fee!/Sleeps 8/New/Quiet!
                  </div>`,
@@ -220,17 +209,17 @@
             );
         
     
-                marker_2815de7f5bcac3128bb60563d2c66c1d.setIcon(div_icon_f9797cf74b5fecc062010ec375c05bca);
+                marker_3c3f6a77ecdb802fab6656f006062495.setIcon(div_icon_902a5ece9622752216503e8dfc9da88c);
             
     
-            var marker_c2d6ae9d05a32ee00d24b46ec5af3bb5 = L.marker(
+            var marker_39cb63de1d34d0cfbce4be8a82297344 = L.marker(
                 [38.6267, -112.578],
                 {
 }
-            ).addTo(map_c6fc9eaeaf99df99c564131bbd81a418);
+            ).addTo(map_cdd05547b1de816f90ab4c31dfc45332);
         
     
-            var div_icon_ac3a88d2f44d60d0dd188d23cb274ff2 = L.divIcon({
+            var div_icon_a5129649f92a44d43628a87be850d6ed = L.divIcon({
   "html": "\u003cdiv style=\"background:#7b3294; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e10-02\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -238,24 +227,24 @@
 });
         
     
-        var popup_ab012a0b59c971dd41dcc63216866cdf = L.popup({
-  "maxWidth": 420,
+        var popup_4dcf253fff72b8d00308c0773b4b4674 = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_f6768f447eb11056f737d0f5ce405405 = $(`<div id="html_f6768f447eb11056f737d0f5ce405405" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>10-02 Cove Fort Historic Site</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Backup</td></tr><tr><th>Area</th><td>Meadow → Boise</td></tr><tr><th>Time</th><td>20–45 min</td></tr><tr><th>Effort</th><td>軽い。歴史スポット。</td></tr><tr><th>Plan</th><td>時間に余裕があれば短時間で歴史スポットを見る。</td></tr><tr><th>Skip rule</th><td>Minidoka/HagermanやBoise到着を優先する場合は省略。</td></tr><tr><th>Notes</th><td>Backup。</td></tr></table><p><a href="https://maps.apple.com/?q=Cove%20Fort%20Historic%20Site%20Meadow%20%E2%86%92%20Boise" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Cove%20Fort%20Historic%20Site" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_ab012a0b59c971dd41dcc63216866cdf.setContent(html_f6768f447eb11056f737d0f5ce405405);
+                var html_c9eebff64e58a10068a592ebb3c3b210 = $(`<div id="html_c9eebff64e58a10068a592ebb3c3b210" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>10-02 Cove Fort Historic Site</h4><table><tr><th>Status</th><td>Backup</td></tr><tr><th>Category</th><td>Backup</td></tr><tr><th>Area</th><td>Meadow → Boise</td></tr><tr><th>Time</th><td>20–45 min</td></tr><tr><th>Effort</th><td>軽い。歴史スポット。</td></tr><tr><th>Plan</th><td>時間に余裕があれば短時間で歴史スポットを見る。</td></tr><tr><th>Skip rule</th><td>Minidoka/HagermanやBoise到着を優先する場合は省略。</td></tr><tr><th>Notes</th><td>Backup。</td></tr></table><p><a href="https://maps.apple.com/?q=Cove%20Fort%20Historic%20Site" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Cove+Fort+Historic+Site+Utah" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_4dcf253fff72b8d00308c0773b4b4674.setContent(html_c9eebff64e58a10068a592ebb3c3b210);
             
         
 
-        marker_c2d6ae9d05a32ee00d24b46ec5af3bb5.bindPopup(popup_ab012a0b59c971dd41dcc63216866cdf)
+        marker_39cb63de1d34d0cfbce4be8a82297344.bindPopup(popup_4dcf253fff72b8d00308c0773b4b4674)
         ;
 
         
     
     
-            marker_c2d6ae9d05a32ee00d24b46ec5af3bb5.bindTooltip(
+            marker_39cb63de1d34d0cfbce4be8a82297344.bindTooltip(
                 `<div>
                      10-02 Cove Fort Historic Site
                  </div>`,
@@ -265,17 +254,17 @@
             );
         
     
-                marker_c2d6ae9d05a32ee00d24b46ec5af3bb5.setIcon(div_icon_ac3a88d2f44d60d0dd188d23cb274ff2);
+                marker_39cb63de1d34d0cfbce4be8a82297344.setIcon(div_icon_a5129649f92a44d43628a87be850d6ed);
             
     
-            var marker_f9c3f171aafe36296d7096ff1c9c1c21 = L.marker(
+            var marker_2ca166468467fc2b6e21134c765420f4 = L.marker(
                 [40.7345, -112.2122],
                 {
 }
-            ).addTo(map_c6fc9eaeaf99df99c564131bbd81a418);
+            ).addTo(map_cdd05547b1de816f90ab4c31dfc45332);
         
     
-            var div_icon_fee75114dc2e5037ea89a1e2a3de73fd = L.divIcon({
+            var div_icon_9b1a702ac1704beafbc21f6cad97296a = L.divIcon({
   "html": "\u003cdiv style=\"background:#7b3294; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e10-03\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -283,24 +272,24 @@
 });
         
     
-        var popup_64cfece80405f8c152ca24f66743d563 = L.popup({
-  "maxWidth": 420,
+        var popup_19ebd59f8a6e67d918ca2bbb992d5339 = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_32904d19d80f0ecc00b5868cae88350f = $(`<div id="html_32904d19d80f0ecc00b5868cae88350f" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>10-03 Salt Lake City周辺 / Great Salt Lake短時間</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Backup</td></tr><tr><th>Area</th><td>Utah / Salt Lake City周辺</td></tr><tr><th>Time</th><td>30–90 min</td></tr><tr><th>Effort</th><td>車移動中心。都市部・暑さ・渋滞に注意。</td></tr><tr><th>Plan</th><td>時間に余裕がある場合のみ、Great Salt Lake方面を短時間見る。</td></tr><tr><th>Skip rule</th><td>原則通過。Day 10後半の目的地を優先。</td></tr><tr><th>Notes</th><td>Backup。都市部渋滞に注意。</td></tr></table><p><a href="https://maps.apple.com/?q=Salt%20Lake%20City%E5%91%A8%E8%BE%BA%20/%20Great%20Salt%20Lake%E7%9F%AD%E6%99%82%E9%96%93%20Utah%20/%20Salt%20Lake%20City%E5%91%A8%E8%BE%BA" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Salt%20Lake%20City%E5%91%A8%E8%BE%BA%20/%20Great%20Salt%20Lake%E7%9F%AD%E6%99%82%E9%96%93" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_64cfece80405f8c152ca24f66743d563.setContent(html_32904d19d80f0ecc00b5868cae88350f);
+                var html_ebe54ab9f9139faa3e6d94bd3a1f16c4 = $(`<div id="html_ebe54ab9f9139faa3e6d94bd3a1f16c4" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>10-03 Salt Lake City周辺 / Great Salt Lake短時間</h4><table><tr><th>Status</th><td>Backup</td></tr><tr><th>Category</th><td>Backup</td></tr><tr><th>Area</th><td>Utah / Salt Lake City周辺</td></tr><tr><th>Time</th><td>30–90 min</td></tr><tr><th>Effort</th><td>車移動中心。都市部・暑さ・渋滞に注意。</td></tr><tr><th>Plan</th><td>時間に余裕がある場合のみ、Great Salt Lake方面を短時間見る。</td></tr><tr><th>Skip rule</th><td>原則通過。Day 10後半の目的地を優先。</td></tr><tr><th>Notes</th><td>Backup。都市部渋滞に注意。</td></tr></table><p><a href="https://maps.apple.com/?q=Salt%20Lake%20City%E5%91%A8%E8%BE%BA%20/%20Great%20Salt%20Lake%E7%9F%AD%E6%99%82%E9%96%93" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Great+Salt+Lake+Utah" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_19ebd59f8a6e67d918ca2bbb992d5339.setContent(html_ebe54ab9f9139faa3e6d94bd3a1f16c4);
             
         
 
-        marker_f9c3f171aafe36296d7096ff1c9c1c21.bindPopup(popup_64cfece80405f8c152ca24f66743d563)
+        marker_2ca166468467fc2b6e21134c765420f4.bindPopup(popup_19ebd59f8a6e67d918ca2bbb992d5339)
         ;
 
         
     
     
-            marker_f9c3f171aafe36296d7096ff1c9c1c21.bindTooltip(
+            marker_2ca166468467fc2b6e21134c765420f4.bindTooltip(
                 `<div>
                      10-03 Salt Lake City周辺 / Great Salt Lake短時間
                  </div>`,
@@ -310,17 +299,17 @@
             );
         
     
-                marker_f9c3f171aafe36296d7096ff1c9c1c21.setIcon(div_icon_fee75114dc2e5037ea89a1e2a3de73fd);
+                marker_2ca166468467fc2b6e21134c765420f4.setIcon(div_icon_9b1a702ac1704beafbc21f6cad97296a);
             
     
-            var marker_9b916d4026e1109164afe145111da23f = L.marker(
+            var marker_54b3108ef7e760f5209106d601176fac = L.marker(
                 [41.6179, -112.5504],
                 {
 }
-            ).addTo(map_c6fc9eaeaf99df99c564131bbd81a418);
+            ).addTo(map_cdd05547b1de816f90ab4c31dfc45332);
         
     
-            var div_icon_c4d3d1b2fa2e9264fb49a292879e56fa = L.divIcon({
+            var div_icon_e061b239d841bb3c27de81144adbb6e1 = L.divIcon({
   "html": "\u003cdiv style=\"background:#7b3294; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e10-04\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -328,24 +317,24 @@
 });
         
     
-        var popup_31a786ac76fd81b19f32a81a98bc81e1 = L.popup({
-  "maxWidth": 420,
+        var popup_54762b0e52f28f1d499bda1d5cdb9417 = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_72219ef5adad1590d69b139b987c4e0e = $(`<div id="html_72219ef5adad1590d69b139b987c4e0e" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>10-04 Golden Spike National Historical Park</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Backup</td></tr><tr><th>Area</th><td>Utah / Idaho</td></tr><tr><th>Time</th><td>1.5–2.5 hr</td></tr><tr><th>Effort</th><td>軽い歩行。寄り道が長め。</td></tr><tr><th>Plan</th><td>大陸横断鉄道の歴史を学ぶ。</td></tr><tr><th>Skip rule</th><td>Day 10の主目的を優先し、通常は省略。</td></tr><tr><th>Notes</th><td>Backup。</td></tr></table><p><a href="https://maps.apple.com/?q=Golden%20Spike%20National%20Historical%20Park%20Utah%20/%20Idaho" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Golden%20Spike%20National%20Historical%20Park" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_31a786ac76fd81b19f32a81a98bc81e1.setContent(html_72219ef5adad1590d69b139b987c4e0e);
+                var html_dfd4b7ea1391495171dd06e1ddae8ef0 = $(`<div id="html_dfd4b7ea1391495171dd06e1ddae8ef0" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>10-04 Golden Spike National Historical Park</h4><table><tr><th>Status</th><td>Backup</td></tr><tr><th>Category</th><td>Backup</td></tr><tr><th>Area</th><td>Utah / Idaho</td></tr><tr><th>Time</th><td>1.5–2.5 hr</td></tr><tr><th>Effort</th><td>軽い歩行。寄り道が長め。</td></tr><tr><th>Plan</th><td>大陸横断鉄道の歴史を学ぶ。</td></tr><tr><th>Skip rule</th><td>Day 10の主目的を優先し、通常は省略。</td></tr><tr><th>Notes</th><td>Backup。</td></tr></table><p><a href="https://maps.apple.com/?q=Golden%20Spike%20National%20Historical%20Park" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Golden+Spike+National+Historical+Park" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_54762b0e52f28f1d499bda1d5cdb9417.setContent(html_dfd4b7ea1391495171dd06e1ddae8ef0);
             
         
 
-        marker_9b916d4026e1109164afe145111da23f.bindPopup(popup_31a786ac76fd81b19f32a81a98bc81e1)
+        marker_54b3108ef7e760f5209106d601176fac.bindPopup(popup_54762b0e52f28f1d499bda1d5cdb9417)
         ;
 
         
     
     
-            marker_9b916d4026e1109164afe145111da23f.bindTooltip(
+            marker_54b3108ef7e760f5209106d601176fac.bindTooltip(
                 `<div>
                      10-04 Golden Spike National Historical Park
                  </div>`,
@@ -355,17 +344,17 @@
             );
         
     
-                marker_9b916d4026e1109164afe145111da23f.setIcon(div_icon_c4d3d1b2fa2e9264fb49a292879e56fa);
+                marker_54b3108ef7e760f5209106d601176fac.setIcon(div_icon_e061b239d841bb3c27de81144adbb6e1);
             
     
-            var marker_ad7cb397456e9f20f0cf227b5ac49181 = L.marker(
+            var marker_de8b439a72c7927848fc2aeee8dc2767 = L.marker(
                 [42.6777, -114.2468],
                 {
 }
-            ).addTo(map_c6fc9eaeaf99df99c564131bbd81a418);
+            ).addTo(map_cdd05547b1de816f90ab4c31dfc45332);
         
     
-            var div_icon_8fa18f58bfb8840091d51da87af7fb97 = L.divIcon({
+            var div_icon_8177f2c8158089469f894a2b3a299fce = L.divIcon({
   "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e10-05\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -373,24 +362,24 @@
 });
         
     
-        var popup_83d6520a3845e1ff87d7fc54fcc09086 = L.popup({
-  "maxWidth": 420,
+        var popup_7cc335564299786dee1e9bc7ac84a805 = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_794a8049a7717cbb7324fdaf7e128e83 = $(`<div id="html_794a8049a7717cbb7324fdaf7e128e83" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>10-05 Minidoka National Historic Site</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Minidoka National Historic Site</td></tr><tr><th>Time</th><td>1–1.5 hr</td></tr><tr><th>Effort</th><td>軽い歩行。歴史学習。Junior Ranger候補。</td></tr><tr><th>Plan</th><td>第二次世界大戦中の日系人強制収容の歴史を学ぶ。</td></tr><tr><th>Skip rule</th><td>疲労が強い、到着が遅い、子供向けを優先する場合はHagermanへ切替。</td></tr><tr><th>Notes</th><td>Hagermanとの二択。Junior Rangerあり。</td></tr></table><p><a href="https://maps.apple.com/?q=Minidoka%20National%20Historic%20Site%20Minidoka%20National%20Historic%20Site" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Minidoka%20National%20Historic%20Site" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_83d6520a3845e1ff87d7fc54fcc09086.setContent(html_794a8049a7717cbb7324fdaf7e128e83);
+                var html_4479f0ef4b1f1e4d7757a3379e2f87ae = $(`<div id="html_4479f0ef4b1f1e4d7757a3379e2f87ae" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>10-05 Minidoka National Historic Site</h4><table><tr><th>Status</th><td>Possibly</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Minidoka National Historic Site</td></tr><tr><th>Time</th><td>1–1.5 hr</td></tr><tr><th>Effort</th><td>軽い歩行。歴史学習。Junior Ranger候補。</td></tr><tr><th>Plan</th><td>第二次世界大戦中の日系人強制収容の歴史を学ぶ。</td></tr><tr><th>Skip rule</th><td>疲労が強い、到着が遅い、子供向けを優先する場合はHagermanへ切替。</td></tr><tr><th>Notes</th><td>Hagermanとの二択。Junior Rangerあり。</td></tr></table><p><a href="https://maps.apple.com/?q=Minidoka%20National%20Historic%20Site" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Minidoka+National+Historic+Site" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_7cc335564299786dee1e9bc7ac84a805.setContent(html_4479f0ef4b1f1e4d7757a3379e2f87ae);
             
         
 
-        marker_ad7cb397456e9f20f0cf227b5ac49181.bindPopup(popup_83d6520a3845e1ff87d7fc54fcc09086)
+        marker_de8b439a72c7927848fc2aeee8dc2767.bindPopup(popup_7cc335564299786dee1e9bc7ac84a805)
         ;
 
         
     
     
-            marker_ad7cb397456e9f20f0cf227b5ac49181.bindTooltip(
+            marker_de8b439a72c7927848fc2aeee8dc2767.bindTooltip(
                 `<div>
                      10-05 Minidoka National Historic Site
                  </div>`,
@@ -400,17 +389,17 @@
             );
         
     
-                marker_ad7cb397456e9f20f0cf227b5ac49181.setIcon(div_icon_8fa18f58bfb8840091d51da87af7fb97);
+                marker_de8b439a72c7927848fc2aeee8dc2767.setIcon(div_icon_8177f2c8158089469f894a2b3a299fce);
             
     
-            var marker_ca79f3d37bdd8d1f5b1b73d922ce637f = L.marker(
+            var marker_4858b02619e6ffba16c07ec350fec67c = L.marker(
                 [42.817, -114.8995],
                 {
 }
-            ).addTo(map_c6fc9eaeaf99df99c564131bbd81a418);
+            ).addTo(map_cdd05547b1de816f90ab4c31dfc45332);
         
     
-            var div_icon_4ffdcabee179433210edc4945340fa0b = L.divIcon({
+            var div_icon_730326a93ac4b3fa4416f81624266679 = L.divIcon({
   "html": "\u003cdiv style=\"background:#d7191c; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e10-06\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -418,24 +407,24 @@
 });
         
     
-        var popup_b09b9823b48b7e480651731d32f20895 = L.popup({
-  "maxWidth": 420,
+        var popup_35dd73d2b154a44cd4af6483c0beeb88 = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_58138067724541d3e10b848dbf6acfac = $(`<div id="html_58138067724541d3e10b848dbf6acfac" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>10-06 Hagerman Fossil Beds National Monument / Thousand Springs Visitor Center</h4><table><tr><th>Status</th><td>行く予定</td></tr><tr><th>Category</th><td>Must</td></tr><tr><th>Area</th><td>Hagerman Fossil Beds National Monument</td></tr><tr><th>Time</th><td>45–90 min</td></tr><tr><th>Effort</th><td>軽い。屋内展示中心。子供向き。</td></tr><tr><th>Plan</th><td>化石・古生物・Hagerman horseについて学ぶ。</td></tr><tr><th>Skip rule</th><td>Minidokaを優先する場合、または時間不足なら省略。</td></tr><tr><th>Notes</th><td>Minidokaとの二択。Junior Rangerは現地確認。</td></tr></table><p><a href="https://maps.apple.com/?q=Hagerman%20Fossil%20Beds%20National%20Monument%20/%20Thousand%20Springs%20Visitor%20Center%20Hagerman%20Fossil%20Beds%20National%20Monument" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Hagerman%20Fossil%20Beds%20National%20Monument%20/%20Thousand%20Springs%20Visitor%20Center" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_b09b9823b48b7e480651731d32f20895.setContent(html_58138067724541d3e10b848dbf6acfac);
+                var html_1f2399c32685a50f904edb5d761134e5 = $(`<div id="html_1f2399c32685a50f904edb5d761134e5" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>10-06 Hagerman Fossil Beds National Monument / Thousand Springs Visitor Center</h4><table><tr><th>Status</th><td>Must</td></tr><tr><th>Category</th><td>Must</td></tr><tr><th>Area</th><td>Hagerman Fossil Beds National Monument</td></tr><tr><th>Time</th><td>45–90 min</td></tr><tr><th>Effort</th><td>軽い。屋内展示中心。子供向き。</td></tr><tr><th>Plan</th><td>化石・古生物・Hagerman horseについて学ぶ。</td></tr><tr><th>Skip rule</th><td>Minidokaを優先する場合、または時間不足なら省略。</td></tr><tr><th>Guide</th><td>Hagerman Fossil Bedsは、約400万〜300万年前のPlioceneの化石を多く保存する場所です。現在の乾いたIdahoの景色とは違い、当時は湿地、森林、草地が広がり、馬、ビーバー、鳥、mastodon、saber-toothed catなど多様な動物がいました。特にHagerman Horseの化石で有名で、現代の馬の歴史を考える入口になります。子どもには「昔のIdahoには、今と違う動物がたくさんいたことを化石で見る場所」と説明できます。</td></tr><tr><th>Notes</th><td>Minidokaとの二択。Junior Rangerは現地確認。</td></tr></table><p><a href="https://maps.apple.com/?q=Hagerman%20Fossil%20Beds%20National%20Monument%20/%20Thousand%20Springs%20Visitor%20Center" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Hagerman+Fossil+Beds+National+Monument" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_35dd73d2b154a44cd4af6483c0beeb88.setContent(html_1f2399c32685a50f904edb5d761134e5);
             
         
 
-        marker_ca79f3d37bdd8d1f5b1b73d922ce637f.bindPopup(popup_b09b9823b48b7e480651731d32f20895)
+        marker_4858b02619e6ffba16c07ec350fec67c.bindPopup(popup_35dd73d2b154a44cd4af6483c0beeb88)
         ;
 
         
     
     
-            marker_ca79f3d37bdd8d1f5b1b73d922ce637f.bindTooltip(
+            marker_4858b02619e6ffba16c07ec350fec67c.bindTooltip(
                 `<div>
                      10-06 Hagerman Fossil Beds National Monument / Thousand Springs Visitor Center
                  </div>`,
@@ -445,17 +434,17 @@
             );
         
     
-                marker_ca79f3d37bdd8d1f5b1b73d922ce637f.setIcon(div_icon_4ffdcabee179433210edc4945340fa0b);
+                marker_4858b02619e6ffba16c07ec350fec67c.setIcon(div_icon_730326a93ac4b3fa4416f81624266679);
             
     
-            var marker_af3e25cd9120a9e3140c46725d201848 = L.marker(
+            var marker_ef686c5be84f2f911ec4c7158e416885 = L.marker(
                 [42.8573, -114.8505],
                 {
 }
-            ).addTo(map_c6fc9eaeaf99df99c564131bbd81a418);
+            ).addTo(map_cdd05547b1de816f90ab4c31dfc45332);
         
     
-            var div_icon_c0d361c745c02ad6ac5a03700a3b3bf5 = L.divIcon({
+            var div_icon_81b9e40af382fdd190ab2a5baef2bb9c = L.divIcon({
   "html": "\u003cdiv style=\"background:#7b3294; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e10-07\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -463,24 +452,24 @@
 });
         
     
-        var popup_2af7a55a5581e24567f15153516a4967 = L.popup({
-  "maxWidth": 420,
+        var popup_49343709824e16d63d2ada3cd2fd9656 = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_712de92b50e85573895e2cba4593a13d = $(`<div id="html_712de92b50e85573895e2cba4593a13d" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>10-07 Thousand Springs State Park / Malad Gorge / Box Canyon周辺</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Backup</td></tr><tr><th>Area</th><td>Hagerman / Thousand Springs</td></tr><tr><th>Time</th><td>45–90 min</td></tr><tr><th>Effort</th><td>短い展望・散策。暑さに注意。</td></tr><tr><th>Plan</th><td>Hagermanを選んだ場合に、近くの渓谷・湧水景観を追加する。</td></tr><tr><th>Skip rule</th><td>Minidokaを選んだ場合、またはBoise到着を優先する場合は省略。</td></tr><tr><th>Notes</th><td>Backup。</td></tr></table><p><a href="https://maps.apple.com/?q=Thousand%20Springs%20State%20Park%20/%20Malad%20Gorge%20/%20Box%20Canyon%E5%91%A8%E8%BE%BA%20Hagerman%20/%20Thousand%20Springs" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Thousand%20Springs%20State%20Park%20/%20Malad%20Gorge%20/%20Box%20Canyon%E5%91%A8%E8%BE%BA" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_2af7a55a5581e24567f15153516a4967.setContent(html_712de92b50e85573895e2cba4593a13d);
+                var html_2830b14e1dabc30a99a9ed9f1cc54b6a = $(`<div id="html_2830b14e1dabc30a99a9ed9f1cc54b6a" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>10-07 Thousand Springs State Park / Malad Gorge / Box Canyon周辺</h4><table><tr><th>Status</th><td>Backup</td></tr><tr><th>Category</th><td>Backup</td></tr><tr><th>Area</th><td>Hagerman / Thousand Springs</td></tr><tr><th>Time</th><td>45–90 min</td></tr><tr><th>Effort</th><td>短い展望・散策。暑さに注意。</td></tr><tr><th>Plan</th><td>Hagermanを選んだ場合に、近くの渓谷・湧水景観を追加する。</td></tr><tr><th>Skip rule</th><td>Minidokaを選んだ場合、またはBoise到着を優先する場合は省略。</td></tr><tr><th>Notes</th><td>Backup。</td></tr></table><p><a href="https://maps.apple.com/?q=Thousand%20Springs%20State%20Park%20/%20Malad%20Gorge%20/%20Box%20Canyon%E5%91%A8%E8%BE%BA" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Thousand+Springs+State+Park+Malad+Gorge+Box+Canyon" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_49343709824e16d63d2ada3cd2fd9656.setContent(html_2830b14e1dabc30a99a9ed9f1cc54b6a);
             
         
 
-        marker_af3e25cd9120a9e3140c46725d201848.bindPopup(popup_2af7a55a5581e24567f15153516a4967)
+        marker_ef686c5be84f2f911ec4c7158e416885.bindPopup(popup_49343709824e16d63d2ada3cd2fd9656)
         ;
 
         
     
     
-            marker_af3e25cd9120a9e3140c46725d201848.bindTooltip(
+            marker_ef686c5be84f2f911ec4c7158e416885.bindTooltip(
                 `<div>
                      10-07 Thousand Springs State Park / Malad Gorge / Box Canyon周辺
                  </div>`,
@@ -490,7 +479,13 @@
             );
         
     
-                marker_af3e25cd9120a9e3140c46725d201848.setIcon(div_icon_c0d361c745c02ad6ac5a03700a3b3bf5);
+                marker_ef686c5be84f2f911ec4c7158e416885.setIcon(div_icon_81b9e40af382fdd190ab2a5baef2bb9c);
             
+    
+            map_cdd05547b1de816f90ab4c31dfc45332.fitBounds(
+                [[38.6267, -116.53156600892544], [43.54239708611229, -112.2122]],
+                {"padding": [40, 40]}
+            );
+        
 </script>
 </html>

@@ -3,10 +3,6 @@
 <head>
     
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    
-    <style>
-    .popup table{border-collapse:collapse;font-size:13px}.popup th{background:#f2f2f2;text-align:left;padding:4px 7px;border-bottom:1px solid #ddd;vertical-align:top;white-space:nowrap}.popup td{padding:4px 7px;border-bottom:1px solid #ddd;vertical-align:top}.popup h4{margin:0 0 8px;font-size:16px}.popup a{font-weight:700}.leaflet-popup-content{min-width:260px;max-width:420px}
-    </style>
     <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -21,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_4cf286f32269d8d16896f05e72e47a5a {
+                #map_2f37b313fb247dcc8defbaad51cf02bf {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -58,38 +54,37 @@
 <body>
     
     
-    <div style="position: fixed; top: 18px; left: 50%; transform: translateX(-50%); z-index: 9999;background: rgba(255,255,255,.94); border: 1px solid #aaa; border-radius: 10px;padding: 10px 16px; font-family: Arial, sans-serif; box-shadow: 0 1px 5px rgba(0,0,0,.25); text-align:center;">
+    <div style="position: fixed; top: 18px; left: 50%; transform: translateX(-50%); z-index:9999; background:rgba(255,255,255,.94); border:1px solid #aaa; border-radius:10px; padding:10px 16px; font-family:Arial,sans-serif; box-shadow:0 1px 5px rgba(0,0,0,.25); text-align:center;">
       <div style="font-size:18px;font-weight:700;">Day 4 Travel Map</div>
       <div style="font-size:12px;color:#444;">Moab → Canyonlands → Mesa Verde → Blanding / 327 miles / 5:27</div>
     </div>
     
-    <div style="position: fixed; bottom: 28px; left: 28px; z-index: 9999; background: white;border: 1px solid #999; border-radius: 8px; padding: 12px 14px;font-family: Arial, sans-serif; font-size: 13px; box-shadow: 0 1px 5px rgba(0,0,0,.25);">
-      <div style="font-weight:700; margin-bottom:7px;">Legend</div><div><span style="background:#1a9850;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Hotel</div><div><span style="background:#d7191c;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Must</div><div><span style="background:#2c7bb6;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Possibly</div><div><span style="background:#7b3294;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Backup / heavy</div><div><span style="background:#ff8c00;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Airport pickup</div>
-      <div style="margin-top:7px;color:#555;max-width:270px;">Planning map. Use Apple Maps / Google Maps / official park information for final navigation.</div>
+    <div style="position: fixed; bottom: 28px; left: 28px; z-index:9999; background:white; border:1px solid #999; border-radius:8px; padding:12px 14px; font-family:Arial,sans-serif; font-size:13px; box-shadow:0 1px 5px rgba(0,0,0,.25);">
+      <div style="font-weight:700; margin-bottom:7px;">Legend</div><div><span style="background:#1a9850;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Hotel: 2</div><div><span style="background:#d7191c;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Must: 7</div><div><span style="background:#2c7bb6;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Possibly: 7</div><div><span style="background:#7b3294;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Backup: 3</div>
+      <div style="margin-top:7px;color:#555;max-width:260px;">Planning map. Use Apple Maps / Google Maps / NPS for final navigation.</div>
     </div>
     
-    <script>
-    window._spotMarkers = {"H03": marker_ef2d67d8262e477143bc69961c246b5e, "H04": marker_0ae1595daf01fb3d3bf8550aeadda8b2, "04-01": marker_8565c0ad585fd162e64016b79ec87f80, "04-02": marker_e9b970ac8621bdbc21463a43092b7bc9, "04-03": marker_c4eaf65ad902dc9bd6edad844b22dd42, "04-04": marker_cf05a82f22a77fe83827503e48069cce, "04-05": marker_e6b8f6a009e74b9635f635e8b16c6f10, "04-06": marker_c2ac0b51a82d674616f70b2cba09340f, "04-07": marker_7ecf62aa15f3af8aa63163665567c3d5, "04-10": marker_ccd8e63fcb03182c0aa2fd1d1cc25d50, "04-11": marker_2225fc59815ed4803d4166a6633261b6, "04-12": marker_c5e8d470507dcfc266e7b15a65fa1cb9, "04-13": marker_154143a9ef65ee8b0df31ca5a6713841, "04-14": marker_aaa1c77fbac4c9a2733dc465f0b702d1, "04-15": marker_021e2278c07ad7b6c1d53653de4bf308, "04-16": marker_0253d5677e531ae7bd30043e97bbe23c, "04-17": marker_952996c825f90affd05a8f703b1afa67, "04-18": marker_dea7fec21bbb3753d16d4a82efad745f, "04-19": marker_f8f1c03d65b9e67086cce9b348dc67c8};
-    function openSpotFromHash() {
-      var id = decodeURIComponent((window.location.hash || '').replace('#',''));
-      if (!id || !window._spotMarkers || !window._spotMarkers[id]) return;
-      var marker = window._spotMarkers[id];
-      marker.openPopup();
-      map_4cf286f32269d8d16896f05e72e47a5a.setView(marker.getLatLng(), Math.max(map_4cf286f32269d8d16896f05e72e47a5a.getZoom(), 10));
-    }
-    setTimeout(openSpotFromHash, 600);
-    window.addEventListener('hashchange', openSpotFromHash);
-    </script>
+<script>
+window._spotMarkers = {"H03": marker_572d658a50aca4a5ee5890e391eebb24, "H04": marker_209bb38e3f303d81e24b8bdfc2fa04c1, "04-01": marker_a191a7c75a6b1ed37f1fc50e94705bc1, "04-02": marker_de872def6d8012fe1aac5decd46d40d0, "04-03": marker_0f3e55a840d7d3e9c3a1a0a38d0b5f35, "04-04": marker_4d73f01542f08d0fda0e801f3aafb69a, "04-05": marker_38a4020cdd791bb4a152d9e0da4382e2, "04-06": marker_23505a5d22ae2a433adb27d2c9187676, "04-07": marker_3a0b0f11e243d2da14449abf9467c8f7, "04-10": marker_a3fea8d2028fa73ad0eed445e4ca2271, "04-11": marker_108748b454e702c9b86d8c8c0b2009fd, "04-12": marker_dbb786eb05185b1b77c3926a8974387d, "04-13": marker_1dd87b5013d286c1bc0e0126d2c3f29a, "04-14": marker_9ab2aaf7b3011daf1c84fc0048c907a4, "04-15": marker_0a3095a39c64f36735ecd562d4e3c933, "04-16": marker_d6ea8b6c27978904c31a5b28d1a7cde7, "04-17": marker_46a2aac33e71eebe89044be613ea05c4, "04-18": marker_b513b94188339a33df00185f65c43f02, "04-19": marker_a51afc40964faacb4ee60b7190b83ed2};
+function openSpotFromHash() {
+  var id = decodeURIComponent((window.location.hash || '').replace('#',''));
+  if (!id || !window._spotMarkers || !window._spotMarkers[id]) return;
+  var marker = window._spotMarkers[id];
+  marker.openPopup();
+  map_2f37b313fb247dcc8defbaad51cf02bf.setView(marker.getLatLng(), Math.max(map_2f37b313fb247dcc8defbaad51cf02bf.getZoom(), 10));
+}
+setTimeout(openSpotFromHash, 600);
+window.addEventListener('hashchange', openSpotFromHash);
+</script>
     
-    
-            <div class="folium-map" id="map_4cf286f32269d8d16896f05e72e47a5a" ></div>
+            <div class="folium-map" id="map_2f37b313fb247dcc8defbaad51cf02bf" ></div>
         
 </body>
 <script>
     
     
-            var map_4cf286f32269d8d16896f05e72e47a5a = L.map(
-                "map_4cf286f32269d8d16896f05e72e47a5a",
+            var map_2f37b313fb247dcc8defbaad51cf02bf = L.map(
+                "map_2f37b313fb247dcc8defbaad51cf02bf",
                 {
                     center: [37.732866, -109.08643373684211],
                     crs: L.CRS.EPSG3857,
@@ -101,13 +96,13 @@
 
                 }
             );
-            L.control.scale().addTo(map_4cf286f32269d8d16896f05e72e47a5a);
+            L.control.scale().addTo(map_2f37b313fb247dcc8defbaad51cf02bf);
 
             
 
         
     
-            var tile_layer_41edb15c7a041521e44349e3e095897c = L.tileLayer(
+            var tile_layer_7204a421843997b714d5c67585f3882a = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -124,23 +119,17 @@
             );
         
     
-            tile_layer_41edb15c7a041521e44349e3e095897c.addTo(map_4cf286f32269d8d16896f05e72e47a5a);
+            tile_layer_7204a421843997b714d5c67585f3882a.addTo(map_2f37b313fb247dcc8defbaad51cf02bf);
         
     
-            map_4cf286f32269d8d16896f05e72e47a5a.fitBounds(
-                [[37.1601, -109.8883], [38.5364, -108.4085]],
-                {"padding": [40, 40]}
-            );
-        
-    
-            var marker_ef2d67d8262e477143bc69961c246b5e = L.marker(
+            var marker_572d658a50aca4a5ee5890e391eebb24 = L.marker(
                 [38.5364, -109.5088],
                 {
 }
-            ).addTo(map_4cf286f32269d8d16896f05e72e47a5a);
+            ).addTo(map_2f37b313fb247dcc8defbaad51cf02bf);
         
     
-            var div_icon_fe0bcd9ec790efddc68fd3935a2aacaf = L.divIcon({
+            var div_icon_706044ff9a53c4972cf325498db4dc60 = L.divIcon({
   "html": "\u003cdiv style=\"background:#1a9850; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003eH03\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -148,24 +137,24 @@
 });
         
     
-        var popup_939fa1a7fd166f932796090c4e847563 = L.popup({
-  "maxWidth": 420,
+        var popup_bf64dda044e093a760bf15895cfd962f = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_67a9833395681733819977181df6f983 = $(`<div id="html_67a9833395681733819977181df6f983" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>H03 Moab泊 / 出発</h4><table><tr><th>Status</th><td>Hotel</td></tr><tr><th>Category</th><td>Hotel</td></tr><tr><th>Area</th><td>Moab, UT</td></tr><tr><th>Plan</th><td>Moabで宿泊。</td></tr><tr><th>Notes</th><td>Host: Haley @ Copper Ridge Property Management. セルフチェックイン（スマートロック）。</td></tr></table><p><a href="https://maps.apple.com/?q=2511%20Redcliff%20Rd%2C%20Moab%2C%20UT%2084532%2C%20USA" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Moab%E6%B3%8A" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_939fa1a7fd166f932796090c4e847563.setContent(html_67a9833395681733819977181df6f983);
+                var html_4ee4dd36034eea2eab99b993d8c78d47 = $(`<div id="html_4ee4dd36034eea2eab99b993d8c78d47" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>H03 Moab泊 / 出発</h4><table><tr><th>Status</th><td>Hotel</td></tr><tr><th>Category</th><td>Hotel</td></tr><tr><th>Area</th><td>Moab, UT</td></tr><tr><th>Plan</th><td>Moabで宿泊。</td></tr><tr><th>Notes</th><td>Host: Haley @ Copper Ridge Property Management. セルフチェックイン（スマートロック）。</td></tr></table><p><a href="https://maps.apple.com/?q=Moab%E6%B3%8A" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Moab%E6%B3%8A" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_bf64dda044e093a760bf15895cfd962f.setContent(html_4ee4dd36034eea2eab99b993d8c78d47);
             
         
 
-        marker_ef2d67d8262e477143bc69961c246b5e.bindPopup(popup_939fa1a7fd166f932796090c4e847563)
+        marker_572d658a50aca4a5ee5890e391eebb24.bindPopup(popup_bf64dda044e093a760bf15895cfd962f)
         ;
 
         
     
     
-            marker_ef2d67d8262e477143bc69961c246b5e.bindTooltip(
+            marker_572d658a50aca4a5ee5890e391eebb24.bindTooltip(
                 `<div>
                      H03 Moab泊 / 出発
                  </div>`,
@@ -175,17 +164,17 @@
             );
         
     
-                marker_ef2d67d8262e477143bc69961c246b5e.setIcon(div_icon_fe0bcd9ec790efddc68fd3935a2aacaf);
+                marker_572d658a50aca4a5ee5890e391eebb24.setIcon(div_icon_706044ff9a53c4972cf325498db4dc60);
             
     
-            var marker_0ae1595daf01fb3d3bf8550aeadda8b2 = L.marker(
+            var marker_209bb38e3f303d81e24b8bdfc2fa04c1 = L.marker(
                 [37.627754, -109.484741],
                 {
 }
-            ).addTo(map_4cf286f32269d8d16896f05e72e47a5a);
+            ).addTo(map_2f37b313fb247dcc8defbaad51cf02bf);
         
     
-            var div_icon_19484bb545ae7216f87c11400812c1ef = L.divIcon({
+            var div_icon_ff4d145820d1a266c83e209978392d17 = L.divIcon({
   "html": "\u003cdiv style=\"background:#1a9850; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003eH04\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -193,24 +182,24 @@
 });
         
     
-        var popup_105816ccb74390e849d3208dcbb2c5c7 = L.popup({
-  "maxWidth": 420,
+        var popup_75d0351831fd463f4edc9998eb674761 = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_2e7de9124d9253fe955fc7ba1b27b83a = $(`<div id="html_2e7de9124d9253fe955fc7ba1b27b83a" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>H04 Blanding泊</h4><table><tr><th>Status</th><td>Hotel</td></tr><tr><th>Category</th><td>Hotel</td></tr><tr><th>Area</th><td>Blanding, UT</td></tr><tr><th>Plan</th><td>Blandingで宿泊。</td></tr><tr><th>Notes</th><td>Host: Bailey. 注意: 一酸化炭素検知器の記載なし。プール/ジャクージはゲートやロックなし。携帯CO検知器検討。</td></tr></table><p><a href="https://maps.apple.com/?q=Blanding%2C%20UT%2084511%2C%20USA%20/%2037.627754%2C%20-109.484741" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Blanding%E6%B3%8A" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_105816ccb74390e849d3208dcbb2c5c7.setContent(html_2e7de9124d9253fe955fc7ba1b27b83a);
+                var html_e16ed195cf7f4e0cc1b23c67f84e34be = $(`<div id="html_e16ed195cf7f4e0cc1b23c67f84e34be" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>H04 Blanding泊</h4><table><tr><th>Status</th><td>Hotel</td></tr><tr><th>Category</th><td>Hotel</td></tr><tr><th>Area</th><td>Blanding, UT</td></tr><tr><th>Plan</th><td>Blandingで宿泊。</td></tr><tr><th>Notes</th><td>Host: Bailey. 注意: 一酸化炭素検知器の記載なし。プール/ジャクージはゲートやロックなし。携帯CO検知器検討。</td></tr></table><p><a href="https://maps.apple.com/?q=Blanding%E6%B3%8A" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Blanding%E6%B3%8A" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_75d0351831fd463f4edc9998eb674761.setContent(html_e16ed195cf7f4e0cc1b23c67f84e34be);
             
         
 
-        marker_0ae1595daf01fb3d3bf8550aeadda8b2.bindPopup(popup_105816ccb74390e849d3208dcbb2c5c7)
+        marker_209bb38e3f303d81e24b8bdfc2fa04c1.bindPopup(popup_75d0351831fd463f4edc9998eb674761)
         ;
 
         
     
     
-            marker_0ae1595daf01fb3d3bf8550aeadda8b2.bindTooltip(
+            marker_209bb38e3f303d81e24b8bdfc2fa04c1.bindTooltip(
                 `<div>
                      H04 Blanding泊
                  </div>`,
@@ -220,17 +209,17 @@
             );
         
     
-                marker_0ae1595daf01fb3d3bf8550aeadda8b2.setIcon(div_icon_19484bb545ae7216f87c11400812c1ef);
+                marker_209bb38e3f303d81e24b8bdfc2fa04c1.setIcon(div_icon_ff4d145820d1a266c83e209978392d17);
             
     
-            var marker_8565c0ad585fd162e64016b79ec87f80 = L.marker(
+            var marker_a191a7c75a6b1ed37f1fc50e94705bc1 = L.marker(
                 [38.4597, -109.821],
                 {
 }
-            ).addTo(map_4cf286f32269d8d16896f05e72e47a5a);
+            ).addTo(map_2f37b313fb247dcc8defbaad51cf02bf);
         
     
-            var div_icon_48d79bbf5386d75068792dce271831b4 = L.divIcon({
+            var div_icon_5ff0856f7da9d6216bc7cc89b5bc4c8e = L.divIcon({
   "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e04-01\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -238,24 +227,24 @@
 });
         
     
-        var popup_3844b0ff879f495a7643c79d7d2e043c = L.popup({
-  "maxWidth": 420,
+        var popup_043e66fd0a20eabbfad7b2048ea4e096 = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_e91bafd9a22df67d3bf5f6cea4a2277c = $(`<div id="html_e91bafd9a22df67d3bf5f6cea4a2277c" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>04-01 Island in the Sky Visitor Center</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Canyonlands National Park</td></tr><tr><th>Time</th><td>10–20 min</td></tr><tr><th>Effort</th><td>軽い。トイレ・水・地図・Junior Ranger向き。</td></tr><tr><th>Plan</th><td>入園直後に地図・水・トイレを確認し、必要ならJunior Ranger bookletを入手する。</td></tr><tr><th>Skip rule</th><td>Mesa Verdeへの移動時間が押していれば水・トイレだけに短縮。</td></tr><tr><th>Notes</th><td>Junior Ranger対象。Shafer Canyon Overlookとは別行に分離。</td></tr></table><p><a href="https://maps.apple.com/?q=Island%20in%20the%20Sky%20Visitor%20Center%20Canyonlands" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Island%20in%20the%20Sky%20Visitor%20Center" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_3844b0ff879f495a7643c79d7d2e043c.setContent(html_e91bafd9a22df67d3bf5f6cea4a2277c);
+                var html_94f079e47a18daf28b951acca4fa0d0c = $(`<div id="html_94f079e47a18daf28b951acca4fa0d0c" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>04-01 Island in the Sky Visitor Center</h4><table><tr><th>Status</th><td>Possibly</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Canyonlands National Park</td></tr><tr><th>Time</th><td>10–20 min</td></tr><tr><th>Effort</th><td>軽い。トイレ・水・地図・Junior Ranger向き。</td></tr><tr><th>Plan</th><td>入園直後に地図・水・トイレを確認し、必要ならJunior Ranger bookletを入手する。</td></tr><tr><th>Skip rule</th><td>Mesa Verdeへの移動時間が押していれば水・トイレだけに短縮。</td></tr><tr><th>Guide</th><td>Island in the Sky Visitor Centerは、CanyonlandsのIsland in the Sky地区を理解する入口です。この地区は、Colorado RiverとGreen Riverの間に残った高い台地で、周囲の峡谷を上から見下ろします。Grand Canyonのように一つの大きな谷を見るというより、台地が川に切り刻まれた広い地形を読む場所です。子どもには「高い島のような台地の上から、周りの谷を見る公園」と説明できます。</td></tr><tr><th>Notes</th><td>Junior Ranger対象。Shafer Canyon Overlookとは別行に分離。</td></tr></table><p><a href="https://maps.apple.com/?q=Island%20in%20the%20Sky%20Visitor%20Center%20Canyonlands" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Island+in+the+Sky+Visitor+Center+Canyonlands" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_043e66fd0a20eabbfad7b2048ea4e096.setContent(html_94f079e47a18daf28b951acca4fa0d0c);
             
         
 
-        marker_8565c0ad585fd162e64016b79ec87f80.bindPopup(popup_3844b0ff879f495a7643c79d7d2e043c)
+        marker_a191a7c75a6b1ed37f1fc50e94705bc1.bindPopup(popup_043e66fd0a20eabbfad7b2048ea4e096)
         ;
 
         
     
     
-            marker_8565c0ad585fd162e64016b79ec87f80.bindTooltip(
+            marker_a191a7c75a6b1ed37f1fc50e94705bc1.bindTooltip(
                 `<div>
                      04-01 Island in the Sky Visitor Center
                  </div>`,
@@ -265,17 +254,17 @@
             );
         
     
-                marker_8565c0ad585fd162e64016b79ec87f80.setIcon(div_icon_48d79bbf5386d75068792dce271831b4);
+                marker_a191a7c75a6b1ed37f1fc50e94705bc1.setIcon(div_icon_5ff0856f7da9d6216bc7cc89b5bc4c8e);
             
     
-            var marker_e9b970ac8621bdbc21463a43092b7bc9 = L.marker(
+            var marker_de872def6d8012fe1aac5decd46d40d0 = L.marker(
                 [38.4567, -109.818],
                 {
 }
-            ).addTo(map_4cf286f32269d8d16896f05e72e47a5a);
+            ).addTo(map_2f37b313fb247dcc8defbaad51cf02bf);
         
     
-            var div_icon_8400fdc160078af29ef51d799a4742d2 = L.divIcon({
+            var div_icon_894510bcb12878c5ecf2d0a18bc0090e = L.divIcon({
   "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e04-02\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -283,24 +272,24 @@
 });
         
     
-        var popup_98c60951b13e4998c1e26fcbac7776f3 = L.popup({
-  "maxWidth": 420,
+        var popup_6ea3c423d894afcee816d8aa1618f134 = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_4ee3f45e7e50b4aac09e72b601ab7b2f = $(`<div id="html_4ee3f45e7e50b4aac09e72b601ab7b2f" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>04-02 Shafer Canyon Overlook</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Canyonlands National Park</td></tr><tr><th>Time</th><td>10–20 min</td></tr><tr><th>Effort</th><td>ほぼ停車のみ。</td></tr><tr><th>Plan</th><td>短時間で展望を見る。</td></tr><tr><th>Skip rule</th><td>時間が押せば通過。</td></tr><tr><th>Notes</th><td>Visitor Centerは別行。</td></tr></table><p><a href="https://maps.apple.com/?q=Shafer%20Canyon%20Overlook%20Canyonlands" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Shafer%20Canyon%20Overlook" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_98c60951b13e4998c1e26fcbac7776f3.setContent(html_4ee3f45e7e50b4aac09e72b601ab7b2f);
+                var html_b3c4bbc9d4b86153d9a723e88058ec19 = $(`<div id="html_b3c4bbc9d4b86153d9a723e88058ec19" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>04-02 Shafer Canyon Overlook</h4><table><tr><th>Status</th><td>Possibly</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Canyonlands National Park</td></tr><tr><th>Time</th><td>10–20 min</td></tr><tr><th>Effort</th><td>ほぼ停車のみ。</td></tr><tr><th>Plan</th><td>短時間で展望を見る。</td></tr><tr><th>Skip rule</th><td>時間が押せば通過。</td></tr><tr><th>Guide</th><td>Shafer Canyon Overlookでは、台地の縁から急な峡谷とスイッチバック道路を見下ろします。Shafer Trailは、かつて牧畜や鉱山利用とも関係した道で、現在は四輪駆動車向けの道として知られます。ここでは、台地の上と下の標高差が大きく、道路を通すこと自体が難しい地形だと分かります。子どもには「崖の下へ降りていくジグザグ道を上から見る場所」と説明できます。</td></tr><tr><th>Notes</th><td>Visitor Centerは別行。</td></tr></table><p><a href="https://maps.apple.com/?q=Shafer%20Canyon%20Overlook%20Canyonlands" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Shafer+Canyon+Overlook+Canyonlands+National+Park" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_6ea3c423d894afcee816d8aa1618f134.setContent(html_b3c4bbc9d4b86153d9a723e88058ec19);
             
         
 
-        marker_e9b970ac8621bdbc21463a43092b7bc9.bindPopup(popup_98c60951b13e4998c1e26fcbac7776f3)
+        marker_de872def6d8012fe1aac5decd46d40d0.bindPopup(popup_6ea3c423d894afcee816d8aa1618f134)
         ;
 
         
     
     
-            marker_e9b970ac8621bdbc21463a43092b7bc9.bindTooltip(
+            marker_de872def6d8012fe1aac5decd46d40d0.bindTooltip(
                 `<div>
                      04-02 Shafer Canyon Overlook
                  </div>`,
@@ -310,17 +299,17 @@
             );
         
     
-                marker_e9b970ac8621bdbc21463a43092b7bc9.setIcon(div_icon_8400fdc160078af29ef51d799a4742d2);
+                marker_de872def6d8012fe1aac5decd46d40d0.setIcon(div_icon_894510bcb12878c5ecf2d0a18bc0090e);
             
     
-            var marker_c4eaf65ad902dc9bd6edad844b22dd42 = L.marker(
+            var marker_0f3e55a840d7d3e9c3a1a0a38d0b5f35 = L.marker(
                 [38.3892, -109.8687],
                 {
 }
-            ).addTo(map_4cf286f32269d8d16896f05e72e47a5a);
+            ).addTo(map_2f37b313fb247dcc8defbaad51cf02bf);
         
     
-            var div_icon_ce9a7166b3d2164f81626d81e0b1dbb9 = L.divIcon({
+            var div_icon_d0357a9c19f3e11319b7eefcf656e3cd = L.divIcon({
   "html": "\u003cdiv style=\"background:#d7191c; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e04-03\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -328,24 +317,24 @@
 });
         
     
-        var popup_c155f168a05752d3668ea9d6ca4db8b2 = L.popup({
-  "maxWidth": 420,
+        var popup_08a831783c474be033738aa0c3f91bb0 = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_97820719dde6a53df4d949ae101216a9 = $(`<div id="html_97820719dde6a53df4d949ae101216a9" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>04-03 Mesa Arch</h4><table><tr><th>Status</th><td>行く予定</td></tr><tr><th>Category</th><td>Must</td></tr><tr><th>Area</th><td>Canyonlands National Park</td></tr><tr><th>Time</th><td>30 min</td></tr><tr><th>Effort</th><td>0.6 mile程度の短い歩行。家族向き。</td></tr><tr><th>Plan</th><td>Mesa Arch越しに峡谷とLa Sal Mountains方向の景色を見る。</td></tr><tr><th>Skip rule</th><td>駐車が厳しければ短時間待ちまで。</td></tr><tr><th>Notes</th><td>朝は人気が高い。日の出狙いではないので無理しない。</td></tr></table><p><a href="https://maps.apple.com/?q=Mesa%20Arch%20Canyonlands%20National%20Park" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Mesa%20Arch" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_c155f168a05752d3668ea9d6ca4db8b2.setContent(html_97820719dde6a53df4d949ae101216a9);
+                var html_9e888cdee9539e3d73e2640e48d13eb2 = $(`<div id="html_9e888cdee9539e3d73e2640e48d13eb2" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>04-03 Mesa Arch</h4><table><tr><th>Status</th><td>Must</td></tr><tr><th>Category</th><td>Must</td></tr><tr><th>Area</th><td>Canyonlands National Park</td></tr><tr><th>Time</th><td>30 min</td></tr><tr><th>Effort</th><td>0.6 mile程度の短い歩行。家族向き。</td></tr><tr><th>Plan</th><td>Mesa Arch越しに峡谷とLa Sal Mountains方向の景色を見る。</td></tr><tr><th>Skip rule</th><td>駐車が厳しければ短時間待ちまで。</td></tr><tr><th>Guide</th><td>Mesa Archは、CanyonlandsのIsland in the Sky地区の崖の縁にある小さなアーチです。アーチそのものより、アーチの向こうに広がる峡谷、塔状の岩、La Sal Mountainsの遠景が主役です。足元のすぐ先が大きな地形の落ち込みになっているため、Canyonlandsを上から見ている感覚がつかみやすい場所です。子どもには「窓の向こうに巨大な峡谷が見える場所」と説明できます。</td></tr><tr><th>Notes</th><td>朝は人気が高い。日の出狙いではないので無理しない。</td></tr></table><p><a href="https://maps.apple.com/?q=Mesa%20Arch" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Mesa+Arch+Canyonlands+National+Park" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_08a831783c474be033738aa0c3f91bb0.setContent(html_9e888cdee9539e3d73e2640e48d13eb2);
             
         
 
-        marker_c4eaf65ad902dc9bd6edad844b22dd42.bindPopup(popup_c155f168a05752d3668ea9d6ca4db8b2)
+        marker_0f3e55a840d7d3e9c3a1a0a38d0b5f35.bindPopup(popup_08a831783c474be033738aa0c3f91bb0)
         ;
 
         
     
     
-            marker_c4eaf65ad902dc9bd6edad844b22dd42.bindTooltip(
+            marker_0f3e55a840d7d3e9c3a1a0a38d0b5f35.bindTooltip(
                 `<div>
                      04-03 Mesa Arch
                  </div>`,
@@ -355,17 +344,17 @@
             );
         
     
-                marker_c4eaf65ad902dc9bd6edad844b22dd42.setIcon(div_icon_ce9a7166b3d2164f81626d81e0b1dbb9);
+                marker_0f3e55a840d7d3e9c3a1a0a38d0b5f35.setIcon(div_icon_d0357a9c19f3e11319b7eefcf656e3cd);
             
     
-            var marker_cf05a82f22a77fe83827503e48069cce = L.marker(
+            var marker_4d73f01542f08d0fda0e801f3aafb69a = L.marker(
                 [38.3793, -109.8883],
                 {
 }
-            ).addTo(map_4cf286f32269d8d16896f05e72e47a5a);
+            ).addTo(map_2f37b313fb247dcc8defbaad51cf02bf);
         
     
-            var div_icon_fa6cd394ef8687b2869a18ce9268ca28 = L.divIcon({
+            var div_icon_d126f2837d09f97c5c529a1e988907b6 = L.divIcon({
   "html": "\u003cdiv style=\"background:#d7191c; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e04-04\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -373,24 +362,24 @@
 });
         
     
-        var popup_fdfe492c7ac14e1b03ca8ffffabfa2cf = L.popup({
-  "maxWidth": 420,
+        var popup_be79d13bfa405a11cb18339d66bb2909 = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_8d86f100f7d9239d57d21e2f446fabc2 = $(`<div id="html_8d86f100f7d9239d57d21e2f446fabc2" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>04-04 Green River Overlook</h4><table><tr><th>Status</th><td>行く予定</td></tr><tr><th>Category</th><td>Must</td></tr><tr><th>Area</th><td>Canyonlands National Park</td></tr><tr><th>Time</th><td>15–25 min</td></tr><tr><th>Effort</th><td>ほぼ停車のみ。歩行負荷は低い。</td></tr><tr><th>Plan</th><td>Green Riverが削った峡谷と広い台地を展望する。</td></tr><tr><th>Skip rule</th><td>時間が押す場合は写真だけで短縮。駐車困難なら省略可。</td></tr><tr><th>Notes</th><td>Mustだが滞在時間は短め。</td></tr></table><p><a href="https://maps.apple.com/?q=Green%20River%20Overlook%20Canyonlands%20National%20Park" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Green%20River%20Overlook" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_fdfe492c7ac14e1b03ca8ffffabfa2cf.setContent(html_8d86f100f7d9239d57d21e2f446fabc2);
+                var html_eefdba9ab75d0747f8153894b171dbd0 = $(`<div id="html_eefdba9ab75d0747f8153894b171dbd0" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>04-04 Green River Overlook</h4><table><tr><th>Status</th><td>Must</td></tr><tr><th>Category</th><td>Must</td></tr><tr><th>Area</th><td>Canyonlands National Park</td></tr><tr><th>Time</th><td>15–25 min</td></tr><tr><th>Effort</th><td>ほぼ停車のみ。歩行負荷は低い。</td></tr><tr><th>Plan</th><td>Green Riverが削った峡谷と広い台地を展望する。</td></tr><tr><th>Skip rule</th><td>時間が押す場合は写真だけで短縮。駐車困難なら省略可。</td></tr><tr><th>Guide</th><td>Green River Overlookでは、Green Riverが深い峡谷を刻んできた地形を上から見ます。CanyonlandsはColorado RiverとGreen Riverが大地を削ってできた公園で、ここではその一方の川の働きが分かります。川は小さく見えますが、長い時間をかけて台地を切り下げ、広い峡谷を作りました。子どもには「細く見える川が、長い時間をかけて大きな谷を作った」と説明できます。</td></tr><tr><th>Notes</th><td>Mustだが滞在時間は短め。</td></tr></table><p><a href="https://maps.apple.com/?q=Green%20River%20Overlook" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Green+River+Overlook+Canyonlands+National+Park" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_be79d13bfa405a11cb18339d66bb2909.setContent(html_eefdba9ab75d0747f8153894b171dbd0);
             
         
 
-        marker_cf05a82f22a77fe83827503e48069cce.bindPopup(popup_fdfe492c7ac14e1b03ca8ffffabfa2cf)
+        marker_4d73f01542f08d0fda0e801f3aafb69a.bindPopup(popup_be79d13bfa405a11cb18339d66bb2909)
         ;
 
         
     
     
-            marker_cf05a82f22a77fe83827503e48069cce.bindTooltip(
+            marker_4d73f01542f08d0fda0e801f3aafb69a.bindTooltip(
                 `<div>
                      04-04 Green River Overlook
                  </div>`,
@@ -400,17 +389,17 @@
             );
         
     
-                marker_cf05a82f22a77fe83827503e48069cce.setIcon(div_icon_fa6cd394ef8687b2869a18ce9268ca28);
+                marker_4d73f01542f08d0fda0e801f3aafb69a.setIcon(div_icon_d126f2837d09f97c5c529a1e988907b6);
             
     
-            var marker_e6b8f6a009e74b9635f635e8b16c6f10 = L.marker(
+            var marker_38a4020cdd791bb4a152d9e0da4382e2 = L.marker(
                 [38.3675, -109.8562],
                 {
 }
-            ).addTo(map_4cf286f32269d8d16896f05e72e47a5a);
+            ).addTo(map_2f37b313fb247dcc8defbaad51cf02bf);
         
     
-            var div_icon_8ff0478b9258cd34a3596269eb97125d = L.divIcon({
+            var div_icon_de34572c74cbc7fc0a2920b4957ce043 = L.divIcon({
   "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e04-05\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -418,24 +407,24 @@
 });
         
     
-        var popup_160b88a72129e43455783ddec44c7963 = L.popup({
-  "maxWidth": 420,
+        var popup_a570f205310bc1aa33d38e80474e0eda = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_f51394116e2e06314c9808ef2bb55291 = $(`<div id="html_f51394116e2e06314c9808ef2bb55291" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>04-05 Buck Canyon Overlook</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Canyonlands National Park</td></tr><tr><th>Time</th><td>5–10 min</td></tr><tr><th>Effort</th><td>ほぼ停車のみ。</td></tr><tr><th>Plan</th><td>駐車できれば短時間で展望・写真。混雑時は通過。</td></tr><tr><th>Skip rule</th><td>駐車できない、またはMesa Verdeへの移動時間が押していれば省略。</td></tr><tr><th>Notes</th><td>Mustではない。5–10分以上かけない。</td></tr></table><p><a href="https://maps.apple.com/?q=Buck%20Canyon%20Overlook%20Canyonlands%20National%20Park" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Buck%20Canyon%20Overlook" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_160b88a72129e43455783ddec44c7963.setContent(html_f51394116e2e06314c9808ef2bb55291);
+                var html_d3569624281a8664b07031cefd9193bc = $(`<div id="html_d3569624281a8664b07031cefd9193bc" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>04-05 Buck Canyon Overlook</h4><table><tr><th>Status</th><td>Possibly</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Canyonlands National Park</td></tr><tr><th>Time</th><td>5–10 min</td></tr><tr><th>Effort</th><td>ほぼ停車のみ。</td></tr><tr><th>Plan</th><td>駐車できれば短時間で展望・写真。混雑時は通過。</td></tr><tr><th>Skip rule</th><td>駐車できない、またはMesa Verdeへの移動時間が押していれば省略。</td></tr><tr><th>Guide</th><td>Buck Canyon Overlookは、Grand View Pointへ向かう途中で短時間に峡谷の奥行きを見られる展望地です。Canyonlandsでは、川本流だけでなく小さな支流の谷が台地を何度も切り込み、複雑な地形を作っています。ここでは、近くの崖と遠くのLa Sal Mountainsを一緒に見ると、台地と山地の違いが分かります。子どもには「大きな谷の横に、さらに小さな谷が枝分かれしている場所」と説明できます。</td></tr><tr><th>Notes</th><td>Mustではない。5–10分以上かけない。</td></tr></table><p><a href="https://maps.apple.com/?q=Buck%20Canyon%20Overlook" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Buck+Canyon+Overlook+Canyonlands+National+Park" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_a570f205310bc1aa33d38e80474e0eda.setContent(html_d3569624281a8664b07031cefd9193bc);
             
         
 
-        marker_e6b8f6a009e74b9635f635e8b16c6f10.bindPopup(popup_160b88a72129e43455783ddec44c7963)
+        marker_38a4020cdd791bb4a152d9e0da4382e2.bindPopup(popup_a570f205310bc1aa33d38e80474e0eda)
         ;
 
         
     
     
-            marker_e6b8f6a009e74b9635f635e8b16c6f10.bindTooltip(
+            marker_38a4020cdd791bb4a152d9e0da4382e2.bindTooltip(
                 `<div>
                      04-05 Buck Canyon Overlook
                  </div>`,
@@ -445,17 +434,17 @@
             );
         
     
-                marker_e6b8f6a009e74b9635f635e8b16c6f10.setIcon(div_icon_8ff0478b9258cd34a3596269eb97125d);
+                marker_38a4020cdd791bb4a152d9e0da4382e2.setIcon(div_icon_de34572c74cbc7fc0a2920b4957ce043);
             
     
-            var marker_c2ac0b51a82d674616f70b2cba09340f = L.marker(
+            var marker_23505a5d22ae2a433adb27d2c9187676 = L.marker(
                 [38.3106, -109.8566],
                 {
 }
-            ).addTo(map_4cf286f32269d8d16896f05e72e47a5a);
+            ).addTo(map_2f37b313fb247dcc8defbaad51cf02bf);
         
     
-            var div_icon_eaa14d612cede54a0890e179ffe709e8 = L.divIcon({
+            var div_icon_3f6c21c27c63726f8beb6d56173f386c = L.divIcon({
   "html": "\u003cdiv style=\"background:#d7191c; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e04-06\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -463,24 +452,24 @@
 });
         
     
-        var popup_52383e77c3ee93b1646625f585a59f6f = L.popup({
-  "maxWidth": 420,
+        var popup_52c1cd924cb0608db0ad3bd2b2d573ea = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_0bc4e03552db003c7acdafc28a31eecd = $(`<div id="html_0bc4e03552db003c7acdafc28a31eecd" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>04-06 Grand View Point Overlook</h4><table><tr><th>Status</th><td>行く予定</td></tr><tr><th>Category</th><td>Must</td></tr><tr><th>Area</th><td>Canyonlands National Park</td></tr><tr><th>Time</th><td>20–45 min</td></tr><tr><th>Effort</th><td>展望台中心なら軽い。Trailを歩くと長くなる。</td></tr><tr><th>Plan</th><td>展望台からCanyonlandsの広大な台地・峡谷を確認する。時間があれば少しだけrim沿いを歩く。</td></tr><tr><th>Skip rule</th><td>フルトレイルはしない。時間が押す場合は展望台だけで終了。</td></tr><tr><th>Notes</th><td>この日の中心候補。短時間で切り上げる。</td></tr></table><p><a href="https://maps.apple.com/?q=Grand%20View%20Point%20Overlook%20Canyonlands%20National%20Park" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Grand%20View%20Point%20Overlook" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_52383e77c3ee93b1646625f585a59f6f.setContent(html_0bc4e03552db003c7acdafc28a31eecd);
+                var html_bbcb3263b2ace8d55d2679555fc9d2aa = $(`<div id="html_bbcb3263b2ace8d55d2679555fc9d2aa" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>04-06 Grand View Point Overlook</h4><table><tr><th>Status</th><td>Must</td></tr><tr><th>Category</th><td>Must</td></tr><tr><th>Area</th><td>Canyonlands National Park</td></tr><tr><th>Time</th><td>20–45 min</td></tr><tr><th>Effort</th><td>展望台中心なら軽い。Trailを歩くと長くなる。</td></tr><tr><th>Plan</th><td>展望台からCanyonlandsの広大な台地・峡谷を確認する。時間があれば少しだけrim沿いを歩く。</td></tr><tr><th>Skip rule</th><td>フルトレイルはしない。時間が押す場合は展望台だけで終了。</td></tr><tr><th>Guide</th><td>Grand View Point Overlookは、Island in the Sky地区の代表的な展望地点です。ここでは近くの岩だけでなく、台地、崖、遠くの峡谷が何層にも重なって見えます。Canyonlandsという名前の通り、一つの谷ではなく、川と支流が作った多数の峡谷の集合だと理解できます。子どもには「地面がひび割れたみたいに、たくさんの谷に分かれている場所」と説明すると分かりやすいです。</td></tr><tr><th>Notes</th><td>この日の中心候補。短時間で切り上げる。</td></tr></table><p><a href="https://maps.apple.com/?q=Grand%20View%20Point%20Overlook" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Grand+View+Point+Overlook+Canyonlands+National+Park" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_52c1cd924cb0608db0ad3bd2b2d573ea.setContent(html_bbcb3263b2ace8d55d2679555fc9d2aa);
             
         
 
-        marker_c2ac0b51a82d674616f70b2cba09340f.bindPopup(popup_52383e77c3ee93b1646625f585a59f6f)
+        marker_23505a5d22ae2a433adb27d2c9187676.bindPopup(popup_52c1cd924cb0608db0ad3bd2b2d573ea)
         ;
 
         
     
     
-            marker_c2ac0b51a82d674616f70b2cba09340f.bindTooltip(
+            marker_23505a5d22ae2a433adb27d2c9187676.bindTooltip(
                 `<div>
                      04-06 Grand View Point Overlook
                  </div>`,
@@ -490,17 +479,17 @@
             );
         
     
-                marker_c2ac0b51a82d674616f70b2cba09340f.setIcon(div_icon_eaa14d612cede54a0890e179ffe709e8);
+                marker_23505a5d22ae2a433adb27d2c9187676.setIcon(div_icon_3f6c21c27c63726f8beb6d56173f386c);
             
     
-            var marker_7ecf62aa15f3af8aa63163665567c3d5 = L.marker(
+            var marker_3a0b0f11e243d2da14449abf9467c8f7 = L.marker(
                 [38.3199, -109.846],
                 {
 }
-            ).addTo(map_4cf286f32269d8d16896f05e72e47a5a);
+            ).addTo(map_2f37b313fb247dcc8defbaad51cf02bf);
         
     
-            var div_icon_a45121b6b005ebba9ba99792d7495eb1 = L.divIcon({
+            var div_icon_9a8e436b1a02f1b797e48fe5356ee852 = L.divIcon({
   "html": "\u003cdiv style=\"background:#7b3294; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e04-07\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -508,24 +497,24 @@
 });
         
     
-        var popup_f55b76521ac984552d65a3babea79dc1 = L.popup({
-  "maxWidth": 420,
+        var popup_303952921d5d3efb7e1670f7fc7aeb81 = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_8141b8e841e4e44d52771fa29bdc8f97 = $(`<div id="html_8141b8e841e4e44d52771fa29bdc8f97" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>04-07 White Rim Overlook Trail</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Backup</td></tr><tr><th>Area</th><td>Canyonlands National Park</td></tr><tr><th>Time</th><td>1.5 hr</td></tr><tr><th>Effort</th><td>1.8 miles程度。歩行負荷あり。</td></tr><tr><th>Plan</th><td>時間・気温・体力に大きな余裕がある場合だけ歩く。</td></tr><tr><th>Skip rule</th><td>通常は入れない。Mesa Verdeへ向かう時間を優先。</td></tr><tr><th>Notes</th><td>Backup。朝の進行が非常によい場合のみ。</td></tr></table><p><a href="https://maps.apple.com/?q=White%20Rim%20Overlook%20Trail%20Canyonlands%20National%20Park" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=White%20Rim%20Overlook%20Trail" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_f55b76521ac984552d65a3babea79dc1.setContent(html_8141b8e841e4e44d52771fa29bdc8f97);
+                var html_8ec66b9363f9fd8fbc1a9840650cead4 = $(`<div id="html_8ec66b9363f9fd8fbc1a9840650cead4" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>04-07 White Rim Overlook Trail</h4><table><tr><th>Status</th><td>Backup</td></tr><tr><th>Category</th><td>Backup</td></tr><tr><th>Area</th><td>Canyonlands National Park</td></tr><tr><th>Time</th><td>1.5 hr</td></tr><tr><th>Effort</th><td>1.8 miles程度。歩行負荷あり。</td></tr><tr><th>Plan</th><td>時間・気温・体力に大きな余裕がある場合だけ歩く。</td></tr><tr><th>Skip rule</th><td>通常は入れない。Mesa Verdeへ向かう時間を優先。</td></tr><tr><th>Notes</th><td>Backup。朝の進行が非常によい場合のみ。</td></tr></table><p><a href="https://maps.apple.com/?q=White%20Rim%20Overlook%20Trail" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=White+Rim+Overlook+Trail+Canyonlands+National+Park" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_303952921d5d3efb7e1670f7fc7aeb81.setContent(html_8ec66b9363f9fd8fbc1a9840650cead4);
             
         
 
-        marker_7ecf62aa15f3af8aa63163665567c3d5.bindPopup(popup_f55b76521ac984552d65a3babea79dc1)
+        marker_3a0b0f11e243d2da14449abf9467c8f7.bindPopup(popup_303952921d5d3efb7e1670f7fc7aeb81)
         ;
 
         
     
     
-            marker_7ecf62aa15f3af8aa63163665567c3d5.bindTooltip(
+            marker_3a0b0f11e243d2da14449abf9467c8f7.bindTooltip(
                 `<div>
                      04-07 White Rim Overlook Trail
                  </div>`,
@@ -535,17 +524,17 @@
             );
         
     
-                marker_7ecf62aa15f3af8aa63163665567c3d5.setIcon(div_icon_a45121b6b005ebba9ba99792d7495eb1);
+                marker_3a0b0f11e243d2da14449abf9467c8f7.setIcon(div_icon_9a8e436b1a02f1b797e48fe5356ee852);
             
     
-            var marker_ccd8e63fcb03182c0aa2fd1d1cc25d50 = L.marker(
+            var marker_a3fea8d2028fa73ad0eed445e4ca2271 = L.marker(
                 [37.3313, -108.4085],
                 {
 }
-            ).addTo(map_4cf286f32269d8d16896f05e72e47a5a);
+            ).addTo(map_2f37b313fb247dcc8defbaad51cf02bf);
         
     
-            var div_icon_542d23b9a60c6b14464875707c79c17b = L.divIcon({
+            var div_icon_f29f3dbff47bdd2c3b4345348e91f571 = L.divIcon({
   "html": "\u003cdiv style=\"background:#d7191c; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e04-10\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -553,24 +542,24 @@
 });
         
     
-        var popup_e0febdfb481a78b955357ab962a416f4 = L.popup({
-  "maxWidth": 420,
+        var popup_206a2b2ca3eca4888eb0602e6135ca8b = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_b2fba2bdee14d759b3f355b40206f857 = $(`<div id="html_b2fba2bdee14d759b3f355b40206f857" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>04-10 Mesa Verde Visitor and Research Center</h4><table><tr><th>Status</th><td>行く予定</td></tr><tr><th>Category</th><td>Must</td></tr><tr><th>Area</th><td>Mesa Verde National Park</td></tr><tr><th>Time</th><td>10–20 min</td></tr><tr><th>Effort</th><td>軽い。トイレ・水・地図・Junior Ranger向き。</td></tr><tr><th>Plan</th><td>入園前後に短時間で情報確認。必要ならJunior Ranger bookletを入手。</td></tr><tr><th>Skip rule</th><td>時間が押していればトイレ・水だけに短縮。</td></tr><tr><th>Notes</th><td>Day 4は長いので長居しない。</td></tr></table><p><a href="https://maps.apple.com/?q=Mesa%20Verde%20Visitor%20and%20Research%20Center%20Mesa%20Verde%20National%20Park" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Mesa%20Verde%20Visitor%20and%20Research%20Center" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_e0febdfb481a78b955357ab962a416f4.setContent(html_b2fba2bdee14d759b3f355b40206f857);
+                var html_166e639d2ec78917405822c7e7a5ee64 = $(`<div id="html_166e639d2ec78917405822c7e7a5ee64" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>04-10 Mesa Verde Visitor and Research Center</h4><table><tr><th>Status</th><td>Must</td></tr><tr><th>Category</th><td>Must</td></tr><tr><th>Area</th><td>Mesa Verde National Park</td></tr><tr><th>Time</th><td>10–20 min</td></tr><tr><th>Effort</th><td>軽い。トイレ・水・地図・Junior Ranger向き。</td></tr><tr><th>Plan</th><td>入園前後に短時間で情報確認。必要ならJunior Ranger bookletを入手。</td></tr><tr><th>Skip rule</th><td>時間が押していればトイレ・水だけに短縮。</td></tr><tr><th>Guide</th><td>Mesa Verdeは、自然景観を見る国立公園というより、Ancestral Puebloの人々が暮らした場所を学ぶ公園です。1906年に文化遺産を守る目的で国立公園になり、多数の遺跡とcliff dwellingを保護しています。Visitor and Research Centerでは、これから見る建物が廃墟ではなく、乾燥地で水、食料、日陰、防御を考えながら作られた生活空間だったと理解しておくとよいです。子どもには「昔の人が崖の下に町を作った理由を考える場所」と説明できます。</td></tr><tr><th>Notes</th><td>Day 4は長いので長居しない。</td></tr></table><p><a href="https://maps.apple.com/?q=Mesa%20Verde%20Visitor%20and%20Research%20Center" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Mesa+Verde+Visitor+and+Research+Center" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_206a2b2ca3eca4888eb0602e6135ca8b.setContent(html_166e639d2ec78917405822c7e7a5ee64);
             
         
 
-        marker_ccd8e63fcb03182c0aa2fd1d1cc25d50.bindPopup(popup_e0febdfb481a78b955357ab962a416f4)
+        marker_a3fea8d2028fa73ad0eed445e4ca2271.bindPopup(popup_206a2b2ca3eca4888eb0602e6135ca8b)
         ;
 
         
     
     
-            marker_ccd8e63fcb03182c0aa2fd1d1cc25d50.bindTooltip(
+            marker_a3fea8d2028fa73ad0eed445e4ca2271.bindTooltip(
                 `<div>
                      04-10 Mesa Verde Visitor and Research Center
                  </div>`,
@@ -580,17 +569,17 @@
             );
         
     
-                marker_ccd8e63fcb03182c0aa2fd1d1cc25d50.setIcon(div_icon_542d23b9a60c6b14464875707c79c17b);
+                marker_a3fea8d2028fa73ad0eed445e4ca2271.setIcon(div_icon_f29f3dbff47bdd2c3b4345348e91f571);
             
     
-            var marker_2225fc59815ed4803d4166a6633261b6 = L.marker(
+            var marker_108748b454e702c9b86d8c8c0b2009fd = L.marker(
                 [37.1931, -108.4882],
                 {
 }
-            ).addTo(map_4cf286f32269d8d16896f05e72e47a5a);
+            ).addTo(map_2f37b313fb247dcc8defbaad51cf02bf);
         
     
-            var div_icon_d6b818cc8ffb284468c203bd913cb408 = L.divIcon({
+            var div_icon_ec1ae6dd0d17799de24f2311fbc2ffc3 = L.divIcon({
   "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e04-11\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -598,24 +587,24 @@
 });
         
     
-        var popup_57438ab5e60963660cc6a30c82660bb0 = L.popup({
-  "maxWidth": 420,
+        var popup_257ac87916754c0a51fb69b85219e78a = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_b5a7d7abbfe0f25965eecc39b6f14279 = $(`<div id="html_b5a7d7abbfe0f25965eecc39b6f14279" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>04-11 Mesa Verde Museum / Chapin Mesa Archeological Museum</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Mesa Verde National Park / Chapin Mesa</td></tr><tr><th>Time</th><td>20–40 min</td></tr><tr><th>Effort</th><td>屋内展示中心。park filmは17分。</td></tr><tr><th>Plan</th><td>Mesa Verdeの展示を見て、17分のpark filmでAncestral Puebloの背景を確認する。</td></tr><tr><th>Skip rule</th><td>到着が遅い場合は展示を短縮。Mesa Top Loopの時間を優先。</td></tr><tr><th>Notes</th><td>NPSはMesa Verde Museumで展示と17分filmを案内。Day 4は長居しない。</td></tr></table><p><a href="https://maps.apple.com/?q=Mesa%20Verde%20Museum%20Mesa%20Verde%20National%20Park" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Mesa%20Verde%20Museum%20/%20Chapin%20Mesa%20Archeological%20Museum" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_57438ab5e60963660cc6a30c82660bb0.setContent(html_b5a7d7abbfe0f25965eecc39b6f14279);
+                var html_f45e9e52225418bf69de2de996fb1b31 = $(`<div id="html_f45e9e52225418bf69de2de996fb1b31" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>04-11 Mesa Verde Museum / Chapin Mesa Archeological Museum</h4><table><tr><th>Status</th><td>Possibly</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Mesa Verde National Park / Chapin Mesa</td></tr><tr><th>Time</th><td>20–40 min</td></tr><tr><th>Effort</th><td>屋内展示中心。park filmは17分。</td></tr><tr><th>Plan</th><td>Mesa Verdeの展示を見て、17分のpark filmでAncestral Puebloの背景を確認する。</td></tr><tr><th>Skip rule</th><td>到着が遅い場合は展示を短縮。Mesa Top Loopの時間を優先。</td></tr><tr><th>Guide</th><td>Mesa Verde Museumは、cliff dwellingを見る前にAncestral Puebloの生活を理解するための場所です。土器、道具、住居の模型、短いfilmを見ると、崖の中の建物が単なる観光名所ではなく、食料、儀礼、家族、共同体の生活空間だったと分かります。遺跡を先に見るより、ここで背景を入れてから見る方が意味をつかみやすくなります。子どもには「崖の家を見る前に、そこに住んでいた人たちの暮らしを予習する場所」と説明できます。</td></tr><tr><th>Notes</th><td>NPSはMesa Verde Museumで展示と17分filmを案内。Day 4は長居しない。</td></tr></table><p><a href="https://maps.apple.com/?q=Mesa%20Verde%20Museum%20Mesa%20Verde%20National%20Park" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Mesa+Verde+Museum+Chapin+Mesa+Archeological+Museum" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_257ac87916754c0a51fb69b85219e78a.setContent(html_f45e9e52225418bf69de2de996fb1b31);
             
         
 
-        marker_2225fc59815ed4803d4166a6633261b6.bindPopup(popup_57438ab5e60963660cc6a30c82660bb0)
+        marker_108748b454e702c9b86d8c8c0b2009fd.bindPopup(popup_257ac87916754c0a51fb69b85219e78a)
         ;
 
         
     
     
-            marker_2225fc59815ed4803d4166a6633261b6.bindTooltip(
+            marker_108748b454e702c9b86d8c8c0b2009fd.bindTooltip(
                 `<div>
                      04-11 Mesa Verde Museum / Chapin Mesa Archeological Museum
                  </div>`,
@@ -625,17 +614,17 @@
             );
         
     
-                marker_2225fc59815ed4803d4166a6633261b6.setIcon(div_icon_d6b818cc8ffb284468c203bd913cb408);
+                marker_108748b454e702c9b86d8c8c0b2009fd.setIcon(div_icon_ec1ae6dd0d17799de24f2311fbc2ffc3);
             
     
-            var marker_c5e8d470507dcfc266e7b15a65fa1cb9 = L.marker(
+            var marker_dbb786eb05185b1b77c3926a8974387d = L.marker(
                 [37.1923, -108.4874],
                 {
 }
-            ).addTo(map_4cf286f32269d8d16896f05e72e47a5a);
+            ).addTo(map_2f37b313fb247dcc8defbaad51cf02bf);
         
     
-            var div_icon_759206cfa760849a1cfc06f2c182bcc9 = L.divIcon({
+            var div_icon_160b5331299b4ae196d8e4b815a2c12f = L.divIcon({
   "html": "\u003cdiv style=\"background:#d7191c; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e04-12\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -643,24 +632,24 @@
 });
         
     
-        var popup_9ce49284163fd5d1b8e1175b6563496a = L.popup({
-  "maxWidth": 420,
+        var popup_f6339c322cf0b6063ac86630e07bb15a = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_06d8c2a3f83d6b8297cee9b2ea1bb7a5 = $(`<div id="html_06d8c2a3f83d6b8297cee9b2ea1bb7a5" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>04-12 Spruce Tree House Overlook</h4><table><tr><th>Status</th><td>行く予定</td></tr><tr><th>Category</th><td>Must</td></tr><tr><th>Area</th><td>Mesa Verde National Park / Chapin Mesa</td></tr><tr><th>Time</th><td>10–20 min</td></tr><tr><th>Effort</th><td>短い展望。中には入らずoverlookから見る。</td></tr><tr><th>Plan</th><td>Spruce Tree Houseをoverlookから見る。写真と説明のみ。</td></tr><tr><th>Skip rule</th><td>Museum周辺で時間が押していれば写真だけ。</td></tr><tr><th>Notes</th><td>NPSではSpruce Tree Houseはthird largest and best preserved、Museum近くの2つのoverlookから見られると案内。</td></tr></table><p><a href="https://maps.apple.com/?q=Spruce%20Tree%20House%20Overlook%20Mesa%20Verde%20National%20Park" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Spruce%20Tree%20House%20Overlook" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_9ce49284163fd5d1b8e1175b6563496a.setContent(html_06d8c2a3f83d6b8297cee9b2ea1bb7a5);
+                var html_a456fb1b505c03f086a4d0cd983fffc3 = $(`<div id="html_a456fb1b505c03f086a4d0cd983fffc3" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>04-12 Spruce Tree House Overlook</h4><table><tr><th>Status</th><td>Must</td></tr><tr><th>Category</th><td>Must</td></tr><tr><th>Area</th><td>Mesa Verde National Park / Chapin Mesa</td></tr><tr><th>Time</th><td>10–20 min</td></tr><tr><th>Effort</th><td>短い展望。中には入らずoverlookから見る。</td></tr><tr><th>Plan</th><td>Spruce Tree Houseをoverlookから見る。写真と説明のみ。</td></tr><tr><th>Skip rule</th><td>Museum周辺で時間が押していれば写真だけ。</td></tr><tr><th>Guide</th><td>Spruce Tree Houseは、Mesa Verdeを代表する大きなcliff dwellingの一つです。崖のくぼみは日差しや雨から建物を守り、乾燥した環境も保存に役立ちました。Overlookから見るだけでも、部屋、広場、kivaが密集していることが分かります。子どもには「崖のへこみに作られた昔の集合住宅」と説明すると分かりやすいです。</td></tr><tr><th>Notes</th><td>NPSではSpruce Tree Houseはthird largest and best preserved、Museum近くの2つのoverlookから見られると案内。</td></tr></table><p><a href="https://maps.apple.com/?q=Spruce%20Tree%20House%20Overlook%20Mesa%20Verde%20National%20Park" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Spruce+Tree+House+Overlook+Mesa+Verde" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_f6339c322cf0b6063ac86630e07bb15a.setContent(html_a456fb1b505c03f086a4d0cd983fffc3);
             
         
 
-        marker_c5e8d470507dcfc266e7b15a65fa1cb9.bindPopup(popup_9ce49284163fd5d1b8e1175b6563496a)
+        marker_dbb786eb05185b1b77c3926a8974387d.bindPopup(popup_f6339c322cf0b6063ac86630e07bb15a)
         ;
 
         
     
     
-            marker_c5e8d470507dcfc266e7b15a65fa1cb9.bindTooltip(
+            marker_dbb786eb05185b1b77c3926a8974387d.bindTooltip(
                 `<div>
                      04-12 Spruce Tree House Overlook
                  </div>`,
@@ -670,17 +659,17 @@
             );
         
     
-                marker_c5e8d470507dcfc266e7b15a65fa1cb9.setIcon(div_icon_759206cfa760849a1cfc06f2c182bcc9);
+                marker_dbb786eb05185b1b77c3926a8974387d.setIcon(div_icon_160b5331299b4ae196d8e4b815a2c12f);
             
     
-            var marker_154143a9ef65ee8b0df31ca5a6713841 = L.marker(
+            var marker_1dd87b5013d286c1bc0e0126d2c3f29a = L.marker(
                 [37.222, -108.476],
                 {
 }
-            ).addTo(map_4cf286f32269d8d16896f05e72e47a5a);
+            ).addTo(map_2f37b313fb247dcc8defbaad51cf02bf);
         
     
-            var div_icon_1ae2ebef150c16a8140d0f108cb8ab49 = L.divIcon({
+            var div_icon_481798b745f2789842857af66439bbe4 = L.divIcon({
   "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e04-13\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -688,24 +677,24 @@
 });
         
     
-        var popup_93b21552f5f50ec8d2a648906baa603b = L.popup({
-  "maxWidth": 420,
+        var popup_7e57923135d7553636be6cfc11649273 = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_ddc40784509dcdc828a87745d0fbca4b = $(`<div id="html_ddc40784509dcdc828a87745d0fbca4b" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>04-13 Mesa Top Loop Road</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Mesa Verde National Park / Mesa Top Loop</td></tr><tr><th>Time</th><td>60–90 min</td></tr><tr><th>Effort</th><td>6-mile loop。短い舗装路・展望が中心。</td></tr><tr><th>Plan</th><td>pithouse→pueblo→cliff dwellingへの住居様式の変化を、車移動と短い停車で見る。</td></tr><tr><th>Skip rule</th><td>Mesa Verde到着が遅い場合は、Square Tower House、Sun Point View、Sun Templeに絞る。</td></tr><tr><th>Notes</th><td>NPS: 6-mile loop、12の遺跡、8:00–sunset。音声ツアーあり。</td></tr></table><p><a href="https://maps.apple.com/?q=Mesa%20Top%20Loop%20Road%20Mesa%20Verde%20National%20Park" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Mesa%20Top%20Loop%20Road" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_93b21552f5f50ec8d2a648906baa603b.setContent(html_ddc40784509dcdc828a87745d0fbca4b);
+                var html_f94cd284a969107d42462f1c7ba5cd6a = $(`<div id="html_f94cd284a969107d42462f1c7ba5cd6a" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>04-13 Mesa Top Loop Road</h4><table><tr><th>Status</th><td>Possibly</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Mesa Verde National Park / Mesa Top Loop</td></tr><tr><th>Time</th><td>60–90 min</td></tr><tr><th>Effort</th><td>6-mile loop。短い舗装路・展望が中心。</td></tr><tr><th>Plan</th><td>pithouse→pueblo→cliff dwellingへの住居様式の変化を、車移動と短い停車で見る。</td></tr><tr><th>Skip rule</th><td>Mesa Verde到着が遅い場合は、Square Tower House、Sun Point View、Sun Templeに絞る。</td></tr><tr><th>Guide</th><td>Mesa Top Loop Roadは、Mesa Verdeの住居の変化を車でたどれるループです。pithouseから地上のpueblo、さらにcliff dwellingへと、人々の住まい方が時代とともに変わる流れを見られます。単に古い建物を点で見るのではなく、住居の形が変化した理由を考えると面白いです。子どもには「昔の家が、穴の家から村、崖の家へ変わっていく順番を見る道」と説明できます。</td></tr><tr><th>Notes</th><td>NPS: 6-mile loop、12の遺跡、8:00–sunset。音声ツアーあり。</td></tr></table><p><a href="https://maps.apple.com/?q=Mesa%20Top%20Loop%20Road%20Mesa%20Verde%20National%20Park" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Mesa+Top+Loop+Road+Mesa+Verde" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_7e57923135d7553636be6cfc11649273.setContent(html_f94cd284a969107d42462f1c7ba5cd6a);
             
         
 
-        marker_154143a9ef65ee8b0df31ca5a6713841.bindPopup(popup_93b21552f5f50ec8d2a648906baa603b)
+        marker_1dd87b5013d286c1bc0e0126d2c3f29a.bindPopup(popup_7e57923135d7553636be6cfc11649273)
         ;
 
         
     
     
-            marker_154143a9ef65ee8b0df31ca5a6713841.bindTooltip(
+            marker_1dd87b5013d286c1bc0e0126d2c3f29a.bindTooltip(
                 `<div>
                      04-13 Mesa Top Loop Road
                  </div>`,
@@ -715,17 +704,17 @@
             );
         
     
-                marker_154143a9ef65ee8b0df31ca5a6713841.setIcon(div_icon_1ae2ebef150c16a8140d0f108cb8ab49);
+                marker_1dd87b5013d286c1bc0e0126d2c3f29a.setIcon(div_icon_481798b745f2789842857af66439bbe4);
             
     
-            var marker_aaa1c77fbac4c9a2733dc465f0b702d1 = L.marker(
+            var marker_9ab2aaf7b3011daf1c84fc0048c907a4 = L.marker(
                 [37.2289, -108.4628],
                 {
 }
-            ).addTo(map_4cf286f32269d8d16896f05e72e47a5a);
+            ).addTo(map_2f37b313fb247dcc8defbaad51cf02bf);
         
     
-            var div_icon_8cb3919ddb74a860bae2e5be985ef445 = L.divIcon({
+            var div_icon_13d0dfa2ef3a4741c6dab06d7e46436e = L.divIcon({
   "html": "\u003cdiv style=\"background:#d7191c; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e04-14\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -733,24 +722,24 @@
 });
         
     
-        var popup_856d56c7083d66b4cc34a5af06f9894e = L.popup({
-  "maxWidth": 420,
+        var popup_8a5bf272b4d686fd7e60e71eb272574b = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_f227a00c11aa019eb66d399d383a165f = $(`<div id="html_f227a00c11aa019eb66d399d383a165f" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>04-14 Square Tower House Overlook</h4><table><tr><th>Status</th><td>行く予定</td></tr><tr><th>Category</th><td>Must</td></tr><tr><th>Area</th><td>Mesa Verde National Park / Mesa Top Loop</td></tr><tr><th>Time</th><td>10–15 min</td></tr><tr><th>Effort</th><td>短い展望。歩行負荷は低い。</td></tr><tr><th>Plan</th><td>Square Tower Houseをoverlookから見る。</td></tr><tr><th>Skip rule</th><td>Mesa Top Loop全体を短縮する場合も、可能ならここは残す。</td></tr><tr><th>Notes</th><td>NPSはMesa Top LoopのハイライトにSquare Tower House Overlookを挙げている。</td></tr></table><p><a href="https://maps.apple.com/?q=Square%20Tower%20House%20Overlook%20Mesa%20Verde" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Square%20Tower%20House%20Overlook" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_856d56c7083d66b4cc34a5af06f9894e.setContent(html_f227a00c11aa019eb66d399d383a165f);
+                var html_504eb1d06348ee66290c7dbcf45ceb86 = $(`<div id="html_504eb1d06348ee66290c7dbcf45ceb86" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>04-14 Square Tower House Overlook</h4><table><tr><th>Status</th><td>Must</td></tr><tr><th>Category</th><td>Must</td></tr><tr><th>Area</th><td>Mesa Verde National Park / Mesa Top Loop</td></tr><tr><th>Time</th><td>10–15 min</td></tr><tr><th>Effort</th><td>短い展望。歩行負荷は低い。</td></tr><tr><th>Plan</th><td>Square Tower Houseをoverlookから見る。</td></tr><tr><th>Skip rule</th><td>Mesa Top Loop全体を短縮する場合も、可能ならここは残す。</td></tr><tr><th>Guide</th><td>Square Tower Houseは、Mesa Verdeのcliff dwellingの中でも高い塔が目立つ場所です。塔は単なる飾りではなく、空間の使い方、儀礼、見張り、共同体の象徴として考えられてきました。遠くから見ると、限られた崖のくぼみに複数階の建物を組み込んだ技術が分かります。子どもには「崖の中に作られた高い塔のある町」と説明できます。</td></tr><tr><th>Notes</th><td>NPSはMesa Top LoopのハイライトにSquare Tower House Overlookを挙げている。</td></tr></table><p><a href="https://maps.apple.com/?q=Square%20Tower%20House%20Overlook%20Mesa%20Verde" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Square+Tower+House+Overlook+Mesa+Verde" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_8a5bf272b4d686fd7e60e71eb272574b.setContent(html_504eb1d06348ee66290c7dbcf45ceb86);
             
         
 
-        marker_aaa1c77fbac4c9a2733dc465f0b702d1.bindPopup(popup_856d56c7083d66b4cc34a5af06f9894e)
+        marker_9ab2aaf7b3011daf1c84fc0048c907a4.bindPopup(popup_8a5bf272b4d686fd7e60e71eb272574b)
         ;
 
         
     
     
-            marker_aaa1c77fbac4c9a2733dc465f0b702d1.bindTooltip(
+            marker_9ab2aaf7b3011daf1c84fc0048c907a4.bindTooltip(
                 `<div>
                      04-14 Square Tower House Overlook
                  </div>`,
@@ -760,17 +749,17 @@
             );
         
     
-                marker_aaa1c77fbac4c9a2733dc465f0b702d1.setIcon(div_icon_8cb3919ddb74a860bae2e5be985ef445);
+                marker_9ab2aaf7b3011daf1c84fc0048c907a4.setIcon(div_icon_13d0dfa2ef3a4741c6dab06d7e46436e);
             
     
-            var marker_021e2278c07ad7b6c1d53653de4bf308 = L.marker(
+            var marker_0a3095a39c64f36735ecd562d4e3c933 = L.marker(
                 [37.2133, -108.4835],
                 {
 }
-            ).addTo(map_4cf286f32269d8d16896f05e72e47a5a);
+            ).addTo(map_2f37b313fb247dcc8defbaad51cf02bf);
         
     
-            var div_icon_3b0770d9b7c4befb66c7a68557838d9b = L.divIcon({
+            var div_icon_f11ce17d1fdd0b89a19f393b4cf0ce5b = L.divIcon({
   "html": "\u003cdiv style=\"background:#d7191c; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e04-15\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -778,24 +767,24 @@
 });
         
     
-        var popup_e56c5930c19f7faf2484821287f1965f = L.popup({
-  "maxWidth": 420,
+        var popup_fc3bdee887e540afc788814f0f29f3bd = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_62437efdd5703e86e34f7c48256e8102 = $(`<div id="html_62437efdd5703e86e34f7c48256e8102" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>04-15 Sun Point View</h4><table><tr><th>Status</th><td>行く予定</td></tr><tr><th>Category</th><td>Must</td></tr><tr><th>Area</th><td>Mesa Verde National Park / Mesa Top Loop</td></tr><tr><th>Time</th><td>10–20 min</td></tr><tr><th>Effort</th><td>短い展望。写真中心。</td></tr><tr><th>Plan</th><td>Cliff Palaceを遠望し、Mesa Verdeのcliff dwellingの全体像を把握する。</td></tr><tr><th>Skip rule</th><td>霧・日没・疲労が強い場合は短時間写真だけ。</td></tr><tr><th>Notes</th><td>NPSはCliff PalaceをSun Point ViewとSun Templeから見られると案内。</td></tr></table><p><a href="https://maps.apple.com/?q=Sun%20Point%20View%20Mesa%20Verde%20National%20Park" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Sun%20Point%20View" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_e56c5930c19f7faf2484821287f1965f.setContent(html_62437efdd5703e86e34f7c48256e8102);
+                var html_1d7a237a69d223f0e1fe21c2b9014deb = $(`<div id="html_1d7a237a69d223f0e1fe21c2b9014deb" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>04-15 Sun Point View</h4><table><tr><th>Status</th><td>Must</td></tr><tr><th>Category</th><td>Must</td></tr><tr><th>Area</th><td>Mesa Verde National Park / Mesa Top Loop</td></tr><tr><th>Time</th><td>10–20 min</td></tr><tr><th>Effort</th><td>短い展望。写真中心。</td></tr><tr><th>Plan</th><td>Cliff Palaceを遠望し、Mesa Verdeのcliff dwellingの全体像を把握する。</td></tr><tr><th>Skip rule</th><td>霧・日没・疲労が強い場合は短時間写真だけ。</td></tr><tr><th>Guide</th><td>Sun Point Viewは、Cliff Palaceを遠くから見るための重要な展望地点です。Cliff PalaceはMesa Verdeを象徴する巨大なcliff dwellingで、内部ツアーに入らなくても全体の形を理解できます。ここでは、建物そのものだけでなく、なぜ崖のくぼみが住居に選ばれたのかを考えると面白いです。子どもには「崖の中に大きな町が隠れているのを見つける場所」と説明できます。</td></tr><tr><th>Notes</th><td>NPSはCliff PalaceをSun Point ViewとSun Templeから見られると案内。</td></tr></table><p><a href="https://maps.apple.com/?q=Sun%20Point%20View%20Mesa%20Verde%20National%20Park" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Sun+Point+View+Mesa+Verde+Cliff+Palace" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_fc3bdee887e540afc788814f0f29f3bd.setContent(html_1d7a237a69d223f0e1fe21c2b9014deb);
             
         
 
-        marker_021e2278c07ad7b6c1d53653de4bf308.bindPopup(popup_e56c5930c19f7faf2484821287f1965f)
+        marker_0a3095a39c64f36735ecd562d4e3c933.bindPopup(popup_fc3bdee887e540afc788814f0f29f3bd)
         ;
 
         
     
     
-            marker_021e2278c07ad7b6c1d53653de4bf308.bindTooltip(
+            marker_0a3095a39c64f36735ecd562d4e3c933.bindTooltip(
                 `<div>
                      04-15 Sun Point View
                  </div>`,
@@ -805,17 +794,17 @@
             );
         
     
-                marker_021e2278c07ad7b6c1d53653de4bf308.setIcon(div_icon_3b0770d9b7c4befb66c7a68557838d9b);
+                marker_0a3095a39c64f36735ecd562d4e3c933.setIcon(div_icon_f11ce17d1fdd0b89a19f393b4cf0ce5b);
             
     
-            var marker_0253d5677e531ae7bd30043e97bbe23c = L.marker(
+            var marker_d6ea8b6c27978904c31a5b28d1a7cde7 = L.marker(
                 [37.201, -108.4866],
                 {
 }
-            ).addTo(map_4cf286f32269d8d16896f05e72e47a5a);
+            ).addTo(map_2f37b313fb247dcc8defbaad51cf02bf);
         
     
-            var div_icon_316d890f4a2ed70f2b40d6d0f53e72d2 = L.divIcon({
+            var div_icon_7e33ad6f990a86294c4472f0f6e6eaed = L.divIcon({
   "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e04-16\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -823,24 +812,24 @@
 });
         
     
-        var popup_9a8f6fe8c3c719a4bf36dc8a999b2cec = L.popup({
-  "maxWidth": 420,
+        var popup_36ec343c09d45b22b9dc413d86cb29be = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_767364413f155d6d97d6c23390d59934 = $(`<div id="html_767364413f155d6d97d6c23390d59934" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>04-16 Sun Temple</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Mesa Verde National Park / Mesa Top Loop</td></tr><tr><th>Time</th><td>10–20 min</td></tr><tr><th>Effort</th><td>短い歩行・展望。</td></tr><tr><th>Plan</th><td>Sun Templeの遺構を見て、Cliff Palace側の眺めも確認する。</td></tr><tr><th>Skip rule</th><td>時間が押す場合はSun Point Viewを優先し、Sun Templeは短縮または省略。</td></tr><tr><th>Notes</th><td>Sun Point Viewと合わせてCliff Palace遠望に使う。</td></tr></table><p><a href="https://maps.apple.com/?q=Sun%20Temple%20Mesa%20Verde%20National%20Park" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Sun%20Temple" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_9a8f6fe8c3c719a4bf36dc8a999b2cec.setContent(html_767364413f155d6d97d6c23390d59934);
+                var html_4b7c0f6570c742648cc54484b577cbaf = $(`<div id="html_4b7c0f6570c742648cc54484b577cbaf" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>04-16 Sun Temple</h4><table><tr><th>Status</th><td>Possibly</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Mesa Verde National Park / Mesa Top Loop</td></tr><tr><th>Time</th><td>10–20 min</td></tr><tr><th>Effort</th><td>短い歩行・展望。</td></tr><tr><th>Plan</th><td>Sun Templeの遺構を見て、Cliff Palace側の眺めも確認する。</td></tr><tr><th>Skip rule</th><td>時間が押す場合はSun Point Viewを優先し、Sun Templeは短縮または省略。</td></tr><tr><th>Guide</th><td>Sun Templeは、Mesa Top Loop上にある大きな石造りの遺構です。住居というより、儀礼や共同体の集まりに関係した場所だった可能性が考えられています。屋根が残っていないため想像力が必要ですが、石積みの配置と大きさを見ると、日常住居とは違う意味を持つ建物だったことが分かります。子どもには「住むためではなく、みんなで大事なことをするために作ったかもしれない建物」と説明できます。</td></tr><tr><th>Notes</th><td>Sun Point Viewと合わせてCliff Palace遠望に使う。</td></tr></table><p><a href="https://maps.apple.com/?q=Sun%20Temple%20Mesa%20Verde%20National%20Park" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Sun+Temple+Mesa+Verde" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_36ec343c09d45b22b9dc413d86cb29be.setContent(html_4b7c0f6570c742648cc54484b577cbaf);
             
         
 
-        marker_0253d5677e531ae7bd30043e97bbe23c.bindPopup(popup_9a8f6fe8c3c719a4bf36dc8a999b2cec)
+        marker_d6ea8b6c27978904c31a5b28d1a7cde7.bindPopup(popup_36ec343c09d45b22b9dc413d86cb29be)
         ;
 
         
     
     
-            marker_0253d5677e531ae7bd30043e97bbe23c.bindTooltip(
+            marker_d6ea8b6c27978904c31a5b28d1a7cde7.bindTooltip(
                 `<div>
                      04-16 Sun Temple
                  </div>`,
@@ -850,17 +839,17 @@
             );
         
     
-                marker_0253d5677e531ae7bd30043e97bbe23c.setIcon(div_icon_316d890f4a2ed70f2b40d6d0f53e72d2);
+                marker_d6ea8b6c27978904c31a5b28d1a7cde7.setIcon(div_icon_7e33ad6f990a86294c4472f0f6e6eaed);
             
     
-            var marker_952996c825f90affd05a8f703b1afa67 = L.marker(
+            var marker_46a2aac33e71eebe89044be613ea05c4 = L.marker(
                 [37.1677, -108.4733],
                 {
 }
-            ).addTo(map_4cf286f32269d8d16896f05e72e47a5a);
+            ).addTo(map_2f37b313fb247dcc8defbaad51cf02bf);
         
     
-            var div_icon_39a9524c49ae1d966222b9e42a3fcd13 = L.divIcon({
+            var div_icon_c97d476ac3692f43a0f9600529440623 = L.divIcon({
   "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e04-17\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -868,24 +857,24 @@
 });
         
     
-        var popup_7062864e7b0c94ce575c9c7387cc95be = L.popup({
-  "maxWidth": 420,
+        var popup_3a641de506bb7f8b7c789c151c912561 = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_d230477e23cc3f3ed4ee9a35d35d844d = $(`<div id="html_d230477e23cc3f3ed4ee9a35d35d844d" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>04-17 Cliff Palace Overlook</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Mesa Verde National Park / Cliff Palace Loop</td></tr><tr><th>Time</th><td>15–30 min</td></tr><tr><th>Effort</th><td>展望中心。ツアーなし。</td></tr><tr><th>Plan</th><td>Cliff Palaceをoverlookから見る。ツアーに入らない場合の代替。</td></tr><tr><th>Skip rule</th><td>Cliff Palace Loop Roadの開通状況・時間が厳しい場合は、Sun Point View / Sun Templeで代替。</td></tr><tr><th>Notes</th><td>NPSはCliff Palace Loop Road開通時にoverlookから見られると案内。</td></tr></table><p><a href="https://maps.apple.com/?q=Cliff%20Palace%20Overlook%20Mesa%20Verde%20National%20Park" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Cliff%20Palace%20Overlook" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_7062864e7b0c94ce575c9c7387cc95be.setContent(html_d230477e23cc3f3ed4ee9a35d35d844d);
+                var html_8faf2cf140d17643e5832cd9c68d7a93 = $(`<div id="html_8faf2cf140d17643e5832cd9c68d7a93" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>04-17 Cliff Palace Overlook</h4><table><tr><th>Status</th><td>Possibly</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Mesa Verde National Park / Cliff Palace Loop</td></tr><tr><th>Time</th><td>15–30 min</td></tr><tr><th>Effort</th><td>展望中心。ツアーなし。</td></tr><tr><th>Plan</th><td>Cliff Palaceをoverlookから見る。ツアーに入らない場合の代替。</td></tr><tr><th>Skip rule</th><td>Cliff Palace Loop Roadの開通状況・時間が厳しい場合は、Sun Point View / Sun Templeで代替。</td></tr><tr><th>Guide</th><td>Cliff Palaceは、Mesa Verdeを代表する最大級のcliff dwellingです。多数の部屋とkivaが崖のくぼみに密集しており、単独の家ではなく共同体の一部だったことが分かります。Overlookからでも、建物の密度、崖の深い日陰、下の谷との位置関係を観察できます。子どもには「崖の下に作られた大きな昔の町」と説明できます。</td></tr><tr><th>Notes</th><td>NPSはCliff Palace Loop Road開通時にoverlookから見られると案内。</td></tr></table><p><a href="https://maps.apple.com/?q=Cliff%20Palace%20Overlook%20Mesa%20Verde%20National%20Park" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Cliff+Palace+Overlook+Mesa+Verde" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_3a641de506bb7f8b7c789c151c912561.setContent(html_8faf2cf140d17643e5832cd9c68d7a93);
             
         
 
-        marker_952996c825f90affd05a8f703b1afa67.bindPopup(popup_7062864e7b0c94ce575c9c7387cc95be)
+        marker_46a2aac33e71eebe89044be613ea05c4.bindPopup(popup_3a641de506bb7f8b7c789c151c912561)
         ;
 
         
     
     
-            marker_952996c825f90affd05a8f703b1afa67.bindTooltip(
+            marker_46a2aac33e71eebe89044be613ea05c4.bindTooltip(
                 `<div>
                      04-17 Cliff Palace Overlook
                  </div>`,
@@ -895,17 +884,17 @@
             );
         
     
-                marker_952996c825f90affd05a8f703b1afa67.setIcon(div_icon_39a9524c49ae1d966222b9e42a3fcd13);
+                marker_46a2aac33e71eebe89044be613ea05c4.setIcon(div_icon_c97d476ac3692f43a0f9600529440623);
             
     
-            var marker_dea7fec21bbb3753d16d4a82efad745f = L.marker(
+            var marker_b513b94188339a33df00185f65c43f02 = L.marker(
                 [37.1677, -108.4733],
                 {
 }
-            ).addTo(map_4cf286f32269d8d16896f05e72e47a5a);
+            ).addTo(map_2f37b313fb247dcc8defbaad51cf02bf);
         
     
-            var div_icon_212e5b4737d4deec807ab8d9b2b06bfe = L.divIcon({
+            var div_icon_8b27e260e77e6a1a299f93ae3f147268 = L.divIcon({
   "html": "\u003cdiv style=\"background:#7b3294; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e04-18\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -913,24 +902,24 @@
 });
         
     
-        var popup_637fc19f10432660788a0c8420d219ca = L.popup({
-  "maxWidth": 420,
+        var popup_65cf387b58e555f41269768560c1c90a = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_b2b63ee6a87393a8b7fe01fdf0fe64c3 = $(`<div id="html_b2b63ee6a87393a8b7fe01fdf0fe64c3" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>04-18 Cliff Palace ranger-led tour</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Backup</td></tr><tr><th>Area</th><td>Mesa Verde National Park / Tour option</td></tr><tr><th>Time</th><td>45 min + 集合余裕</td></tr><tr><th>Effort</th><td>階段・4つの梯子・100 ft高低差。子供も自力で梯子を登る必要あり。</td></tr><tr><th>Plan</th><td>予約が取れ、時刻が合えばCliff Palace内部をレンジャーツアーで見学する。</td></tr><tr><th>Skip rule</th><td>予約なし、時刻不一致、疲労、梯子が難しい場合はoverlookで代替。</td></tr><tr><th>Notes</th><td>2026 season May 4–Oct 21。予約はrecreation.govで14日前から。</td></tr></table><p><a href="https://maps.apple.com/?q=Cliff%20Palace%20Mesa%20Verde%20National%20Park" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Cliff%20Palace%20ranger-led%20tour" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_637fc19f10432660788a0c8420d219ca.setContent(html_b2b63ee6a87393a8b7fe01fdf0fe64c3);
+                var html_e2a0101ba7f13b258adb62c5f4e306d5 = $(`<div id="html_e2a0101ba7f13b258adb62c5f4e306d5" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>04-18 Cliff Palace ranger-led tour</h4><table><tr><th>Status</th><td>Backup</td></tr><tr><th>Category</th><td>Backup</td></tr><tr><th>Area</th><td>Mesa Verde National Park / Tour option</td></tr><tr><th>Time</th><td>45 min + 集合余裕</td></tr><tr><th>Effort</th><td>階段・4つの梯子・100 ft高低差。子供も自力で梯子を登る必要あり。</td></tr><tr><th>Plan</th><td>予約が取れ、時刻が合えばCliff Palace内部をレンジャーツアーで見学する。</td></tr><tr><th>Skip rule</th><td>予約なし、時刻不一致、疲労、梯子が難しい場合はoverlookで代替。</td></tr><tr><th>Notes</th><td>2026 season May 4–Oct 21。予約はrecreation.govで14日前から。</td></tr></table><p><a href="https://maps.apple.com/?q=Cliff%20Palace%20Mesa%20Verde%20National%20Park" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Cliff+Palace+ranger+led+tour+Mesa+Verde" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_65cf387b58e555f41269768560c1c90a.setContent(html_e2a0101ba7f13b258adb62c5f4e306d5);
             
         
 
-        marker_dea7fec21bbb3753d16d4a82efad745f.bindPopup(popup_637fc19f10432660788a0c8420d219ca)
+        marker_b513b94188339a33df00185f65c43f02.bindPopup(popup_65cf387b58e555f41269768560c1c90a)
         ;
 
         
     
     
-            marker_dea7fec21bbb3753d16d4a82efad745f.bindTooltip(
+            marker_b513b94188339a33df00185f65c43f02.bindTooltip(
                 `<div>
                      04-18 Cliff Palace ranger-led tour
                  </div>`,
@@ -940,17 +929,17 @@
             );
         
     
-                marker_dea7fec21bbb3753d16d4a82efad745f.setIcon(div_icon_212e5b4737d4deec807ab8d9b2b06bfe);
+                marker_b513b94188339a33df00185f65c43f02.setIcon(div_icon_8b27e260e77e6a1a299f93ae3f147268);
             
     
-            var marker_f8f1c03d65b9e67086cce9b348dc67c8 = L.marker(
+            var marker_a51afc40964faacb4ee60b7190b83ed2 = L.marker(
                 [37.1601, -108.4543],
                 {
 }
-            ).addTo(map_4cf286f32269d8d16896f05e72e47a5a);
+            ).addTo(map_2f37b313fb247dcc8defbaad51cf02bf);
         
     
-            var div_icon_2a9e2dd7fc3c1a9caa78318f1f70bde4 = L.divIcon({
+            var div_icon_f88b18185a333ed816b1f6ee62a5f09f = L.divIcon({
   "html": "\u003cdiv style=\"background:#7b3294; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e04-19\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -958,24 +947,24 @@
 });
         
     
-        var popup_c1dbe399064bf49d442980b2bf9529b0 = L.popup({
-  "maxWidth": 420,
+        var popup_5d64d0ebda791718e2de4d25041bbae3 = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_cc427a0c3f0c0127b47aaea4765ef288 = $(`<div id="html_cc427a0c3f0c0127b47aaea4765ef288" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>04-19 Balcony House ranger-led tour</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Backup</td></tr><tr><th>Area</th><td>Mesa Verde National Park / Tour option</td></tr><tr><th>Time</th><td>60 min + 集合余裕</td></tr><tr><th>Effort</th><td>32 ft梯子、狭いトンネル、崖沿い出口。子供連れでは慎重判断。</td></tr><tr><th>Plan</th><td>冒険要素の強いcliff dwelling tourとして検討する。</td></tr><tr><th>Skip rule</th><td>予約なし、疲労、子供が梯子や狭所に不安がある場合は入れない。</td></tr><tr><th>Notes</th><td>2026 season May 4–Oct 21。Cliff Palaceより冒険寄り。</td></tr></table><p><a href="https://maps.apple.com/?q=Balcony%20House%20Mesa%20Verde%20National%20Park" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Balcony%20House%20ranger-led%20tour" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_c1dbe399064bf49d442980b2bf9529b0.setContent(html_cc427a0c3f0c0127b47aaea4765ef288);
+                var html_ecd4242de793ceb055b8782860423873 = $(`<div id="html_ecd4242de793ceb055b8782860423873" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>04-19 Balcony House ranger-led tour</h4><table><tr><th>Status</th><td>Backup</td></tr><tr><th>Category</th><td>Backup</td></tr><tr><th>Area</th><td>Mesa Verde National Park / Tour option</td></tr><tr><th>Time</th><td>60 min + 集合余裕</td></tr><tr><th>Effort</th><td>32 ft梯子、狭いトンネル、崖沿い出口。子供連れでは慎重判断。</td></tr><tr><th>Plan</th><td>冒険要素の強いcliff dwelling tourとして検討する。</td></tr><tr><th>Skip rule</th><td>予約なし、疲労、子供が梯子や狭所に不安がある場合は入れない。</td></tr><tr><th>Notes</th><td>2026 season May 4–Oct 21。Cliff Palaceより冒険寄り。</td></tr></table><p><a href="https://maps.apple.com/?q=Balcony%20House%20Mesa%20Verde%20National%20Park" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Balcony+House+tour+Mesa+Verde" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_5d64d0ebda791718e2de4d25041bbae3.setContent(html_ecd4242de793ceb055b8782860423873);
             
         
 
-        marker_f8f1c03d65b9e67086cce9b348dc67c8.bindPopup(popup_c1dbe399064bf49d442980b2bf9529b0)
+        marker_a51afc40964faacb4ee60b7190b83ed2.bindPopup(popup_5d64d0ebda791718e2de4d25041bbae3)
         ;
 
         
     
     
-            marker_f8f1c03d65b9e67086cce9b348dc67c8.bindTooltip(
+            marker_a51afc40964faacb4ee60b7190b83ed2.bindTooltip(
                 `<div>
                      04-19 Balcony House ranger-led tour
                  </div>`,
@@ -985,7 +974,13 @@
             );
         
     
-                marker_f8f1c03d65b9e67086cce9b348dc67c8.setIcon(div_icon_2a9e2dd7fc3c1a9caa78318f1f70bde4);
+                marker_a51afc40964faacb4ee60b7190b83ed2.setIcon(div_icon_f88b18185a333ed816b1f6ee62a5f09f);
             
+    
+            map_2f37b313fb247dcc8defbaad51cf02bf.fitBounds(
+                [[37.1601, -109.8883], [38.5364, -108.4085]],
+                {"padding": [40, 40]}
+            );
+        
 </script>
 </html>

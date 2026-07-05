@@ -3,10 +3,6 @@
 <head>
     
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    
-    <style>
-    .popup table{border-collapse:collapse;font-size:13px}.popup th{background:#f2f2f2;text-align:left;padding:4px 7px;border-bottom:1px solid #ddd;vertical-align:top;white-space:nowrap}.popup td{padding:4px 7px;border-bottom:1px solid #ddd;vertical-align:top}.popup h4{margin:0 0 8px;font-size:16px}.popup a{font-weight:700}.leaflet-popup-content{min-width:260px;max-width:420px}
-    </style>
     <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -21,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_79f50f1ee66641c0d40b75aa1bc0dbec {
+                #map_9d5f89c129ccba60c188f615e9c4d498 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -58,40 +54,39 @@
 <body>
     
     
-    <div style="position: fixed; top: 18px; left: 50%; transform: translateX(-50%); z-index: 9999;background: rgba(255,255,255,.94); border: 1px solid #aaa; border-radius: 10px;padding: 10px 16px; font-family: Arial, sans-serif; box-shadow: 0 1px 5px rgba(0,0,0,.25); text-align:center;">
+    <div style="position: fixed; top: 18px; left: 50%; transform: translateX(-50%); z-index:9999; background:rgba(255,255,255,.94); border:1px solid #aaa; border-radius:10px; padding:10px 16px; font-family:Arial,sans-serif; box-shadow:0 1px 5px rgba(0,0,0,.25); text-align:center;">
       <div style="font-size:18px;font-weight:700;">Day 2 Travel Map</div>
       <div style="font-size:12px;color:#444;">Baker City → Sandy / 478 miles / 約6:30–7:00 + 観光1–2h</div>
     </div>
     
-    <div style="position: fixed; bottom: 28px; left: 28px; z-index: 9999; background: white;border: 1px solid #999; border-radius: 8px; padding: 12px 14px;font-family: Arial, sans-serif; font-size: 13px; box-shadow: 0 1px 5px rgba(0,0,0,.25);">
-      <div style="font-weight:700; margin-bottom:7px;">Legend</div><div><span style="background:#1a9850;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Hotel</div><div><span style="background:#d7191c;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Must</div><div><span style="background:#2c7bb6;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Possibly</div><div><span style="background:#7b3294;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Backup / heavy</div><div><span style="background:#ff8c00;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Airport pickup</div>
-      <div style="margin-top:7px;color:#555;max-width:270px;">Planning map. Use Apple Maps / Google Maps / official park information for final navigation.</div>
+    <div style="position: fixed; bottom: 28px; left: 28px; z-index:9999; background:white; border:1px solid #999; border-radius:8px; padding:12px 14px; font-family:Arial,sans-serif; font-size:13px; box-shadow:0 1px 5px rgba(0,0,0,.25);">
+      <div style="font-weight:700; margin-bottom:7px;">Legend</div><div><span style="background:#1a9850;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Hotel: 2</div><div><span style="background:#2c7bb6;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Possibly: 7</div>
+      <div style="margin-top:7px;color:#555;max-width:260px;">Planning map. Use Apple Maps / Google Maps / NPS for final navigation.</div>
     </div>
     
-    <script>
-    window._spotMarkers = {"H01": marker_f0223ef8ebbd2caa4806802aa8c94bbe, "H02": marker_3f9351c794a3de383966090eb34ee132, "02-01": marker_e6d75b5580073fa4d70975dc7fbfd32d, "02-03": marker_dcfd619affd7a82ca77f0db3084df2ce, "02-05": marker_f8a67fb118e28c5dc3714d1395d8acad, "02-06": marker_1defc09d815611b6746acb9f348d8fa6, "02-07": marker_8dd9ad81177f47b321295327ad86f819, "02-08": marker_999c9087d944974f7ca6a5c513a962f3};
-    function openSpotFromHash() {
-      var id = decodeURIComponent((window.location.hash || '').replace('#',''));
-      if (!id || !window._spotMarkers || !window._spotMarkers[id]) return;
-      var marker = window._spotMarkers[id];
-      marker.openPopup();
-      map_79f50f1ee66641c0d40b75aa1bc0dbec.setView(marker.getLatLng(), Math.max(map_79f50f1ee66641c0d40b75aa1bc0dbec.getZoom(), 10));
-    }
-    setTimeout(openSpotFromHash, 600);
-    window.addEventListener('hashchange', openSpotFromHash);
-    </script>
+<script>
+window._spotMarkers = {"H01": marker_0f33d6e9bfb2c84bde8b0ed23cf49b45, "H02": marker_83ae32d25538febb38ab87d84e3300cb, "02-01": marker_e2ff7b61b8925331f28abdc654f106ea, "02-03": marker_f89262e2d6aac557c3cd6967c51455a3, "02-05": marker_cfe10786b91c44f48a508ed19c86bad0, "02-06": marker_43e94d5ce5d52df193d2f7e361694f8b, "02-07": marker_86aada8c443335063ec1c410276c98f7, "02-08": marker_cc5155f835cbafc64dbbc45a86a7f56a, "02-09": marker_248e0567e1b6fb2acefb913daa4da3ca};
+function openSpotFromHash() {
+  var id = decodeURIComponent((window.location.hash || '').replace('#',''));
+  if (!id || !window._spotMarkers || !window._spotMarkers[id]) return;
+  var marker = window._spotMarkers[id];
+  marker.openPopup();
+  map_9d5f89c129ccba60c188f615e9c4d498.setView(marker.getLatLng(), Math.max(map_9d5f89c129ccba60c188f615e9c4d498.getZoom(), 10));
+}
+setTimeout(openSpotFromHash, 600);
+window.addEventListener('hashchange', openSpotFromHash);
+</script>
     
-    
-            <div class="folium-map" id="map_79f50f1ee66641c0d40b75aa1bc0dbec" ></div>
+            <div class="folium-map" id="map_9d5f89c129ccba60c188f615e9c4d498" ></div>
         
 </body>
 <script>
     
     
-            var map_79f50f1ee66641c0d40b75aa1bc0dbec = L.map(
-                "map_79f50f1ee66641c0d40b75aa1bc0dbec",
+            var map_9d5f89c129ccba60c188f615e9c4d498 = L.map(
+                "map_9d5f89c129ccba60c188f615e9c4d498",
                 {
-                    center: [42.180725, -114.0298625],
+                    center: [42.01551111111112, -114.01194444444445],
                     crs: L.CRS.EPSG3857,
                     ...{
   "zoom": 7,
@@ -101,13 +96,13 @@
 
                 }
             );
-            L.control.scale().addTo(map_79f50f1ee66641c0d40b75aa1bc0dbec);
+            L.control.scale().addTo(map_9d5f89c129ccba60c188f615e9c4d498);
 
             
 
         
     
-            var tile_layer_5637a3c6ac81118c8b424f6b4b266303 = L.tileLayer(
+            var tile_layer_8b89ebf1eedaae2d5789a7afc6a5c511 = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -124,23 +119,17 @@
             );
         
     
-            tile_layer_5637a3c6ac81118c8b424f6b4b266303.addTo(map_79f50f1ee66641c0d40b75aa1bc0dbec);
+            tile_layer_8b89ebf1eedaae2d5789a7afc6a5c511.addTo(map_9d5f89c129ccba60c188f615e9c4d498);
         
     
-            map_79f50f1ee66641c0d40b75aa1bc0dbec.fitBounds(
-                [[40.589, -117.8344], [44.783, -111.8222]],
-                {"padding": [40, 40]}
-            );
-        
-    
-            var marker_f0223ef8ebbd2caa4806802aa8c94bbe = L.marker(
-                [44.7749, -117.8344],
+            var marker_0f33d6e9bfb2c84bde8b0ed23cf49b45 = L.marker(
+                [44.773, -117.834],
                 {
 }
-            ).addTo(map_79f50f1ee66641c0d40b75aa1bc0dbec);
+            ).addTo(map_9d5f89c129ccba60c188f615e9c4d498);
         
     
-            var div_icon_08cf22378ac0202782c818014a3663ad = L.divIcon({
+            var div_icon_e8801cdf7a542c8c59150fa049a9f061 = L.divIcon({
   "html": "\u003cdiv style=\"background:#1a9850; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003eH01\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -148,24 +137,24 @@
 });
         
     
-        var popup_c9907726836094d972b7a5e51f304fce = L.popup({
-  "maxWidth": 420,
+        var popup_d03e473b9ebe06316790cefac7f9ffa3 = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_c0b7565dd8010605979dcf696817a01d = $(`<div id="html_c0b7565dd8010605979dcf696817a01d" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>H01 Baker City泊 / 出発</h4><table><tr><th>Status</th><td>Hotel</td></tr><tr><th>Category</th><td>Hotel</td></tr><tr><th>Area</th><td>Baker City, OR</td></tr><tr><th>Plan</th><td>Baker Cityで宿泊。</td></tr><tr><th>Notes</th><td>Host: Troy. 騒音禁止 22:00–7:00。ペット不可。</td></tr></table><p><a href="https://maps.apple.com/?q=2621%20Grove%20St%2C%20Baker%20City%2C%20OR%2097814" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Baker%20City%E6%B3%8A" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_c9907726836094d972b7a5e51f304fce.setContent(html_c0b7565dd8010605979dcf696817a01d);
+                var html_79f61f793922b21e8bec4e84882888f2 = $(`<div id="html_79f61f793922b21e8bec4e84882888f2" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>H01 Baker City泊 / 出発</h4><table><tr><th>Status</th><td>Hotel</td></tr><tr><th>Category</th><td>Hotel</td></tr><tr><th>Area</th><td>Baker City, OR</td></tr><tr><th>Plan</th><td>Baker Cityで宿泊。</td></tr><tr><th>Notes</th><td>Host: Troy. 騒音禁止 22:00–7:00。ペット不可。</td></tr></table><p><a href="https://maps.apple.com/?q=2621%20Grove%20St%2C%20Baker%20City%2C%20OR%2097814" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Baker%20City%E6%B3%8A" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_d03e473b9ebe06316790cefac7f9ffa3.setContent(html_79f61f793922b21e8bec4e84882888f2);
             
         
 
-        marker_f0223ef8ebbd2caa4806802aa8c94bbe.bindPopup(popup_c9907726836094d972b7a5e51f304fce)
+        marker_0f33d6e9bfb2c84bde8b0ed23cf49b45.bindPopup(popup_d03e473b9ebe06316790cefac7f9ffa3)
         ;
 
         
     
     
-            marker_f0223ef8ebbd2caa4806802aa8c94bbe.bindTooltip(
+            marker_0f33d6e9bfb2c84bde8b0ed23cf49b45.bindTooltip(
                 `<div>
                      H01 Baker City泊 / 出発
                  </div>`,
@@ -175,17 +164,17 @@
             );
         
     
-                marker_f0223ef8ebbd2caa4806802aa8c94bbe.setIcon(div_icon_08cf22378ac0202782c818014a3663ad);
+                marker_0f33d6e9bfb2c84bde8b0ed23cf49b45.setIcon(div_icon_e8801cdf7a542c8c59150fa049a9f061);
             
     
-            var marker_3f9351c794a3de383966090eb34ee132 = L.marker(
+            var marker_83ae32d25538febb38ab87d84e3300cb = L.marker(
                 [40.589, -111.833],
                 {
 }
-            ).addTo(map_79f50f1ee66641c0d40b75aa1bc0dbec);
+            ).addTo(map_9d5f89c129ccba60c188f615e9c4d498);
         
     
-            var div_icon_46534a8ca32913f136f15e7ce30341bd = L.divIcon({
+            var div_icon_610241c361f47955e53f8814c3bfcb06 = L.divIcon({
   "html": "\u003cdiv style=\"background:#1a9850; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003eH02\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -193,24 +182,24 @@
 });
         
     
-        var popup_b1491a5465c46364b93c7d06de30bebc = L.popup({
-  "maxWidth": 420,
+        var popup_b1109486e97a0410f2a3ba7e9cc792ed = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_2137fe2babec122f814f29bbbce8ba98 = $(`<div id="html_2137fe2babec122f814f29bbbce8ba98" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>H02 Sandy泊</h4><table><tr><th>Status</th><td>Hotel</td></tr><tr><th>Category</th><td>Hotel</td></tr><tr><th>Area</th><td>Sandy, UT</td></tr><tr><th>Plan</th><td>Sandyで宿泊。</td></tr><tr><th>Notes</th><td>Host: Andreanne &amp; Daniel. 敷地内屋外カメラあり。ペット不可。</td></tr></table><p><a href="https://maps.apple.com/?q=8558%20E%20Johnsonway%20Dr%2C%20Sandy%2C%20UT%2084094" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Sandy%E6%B3%8A" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_b1491a5465c46364b93c7d06de30bebc.setContent(html_2137fe2babec122f814f29bbbce8ba98);
+                var html_24088bba98d3f3f29ae952ae1c28b698 = $(`<div id="html_24088bba98d3f3f29ae952ae1c28b698" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>H02 Sandy泊</h4><table><tr><th>Status</th><td>Hotel</td></tr><tr><th>Category</th><td>Hotel</td></tr><tr><th>Area</th><td>Sandy, UT</td></tr><tr><th>Plan</th><td>Sandyで宿泊。</td></tr><tr><th>Notes</th><td>Host: Andreanne &amp; Daniel. 敷地内屋外カメラあり。ペット不可。</td></tr></table><p><a href="https://maps.apple.com/?q=8558%20E%20Johnsonway%20Dr%2C%20Sandy%2C%20UT%2084094" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Sandy%E6%B3%8A" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_b1109486e97a0410f2a3ba7e9cc792ed.setContent(html_24088bba98d3f3f29ae952ae1c28b698);
             
         
 
-        marker_3f9351c794a3de383966090eb34ee132.bindPopup(popup_b1491a5465c46364b93c7d06de30bebc)
+        marker_83ae32d25538febb38ab87d84e3300cb.bindPopup(popup_b1109486e97a0410f2a3ba7e9cc792ed)
         ;
 
         
     
     
-            marker_3f9351c794a3de383966090eb34ee132.bindTooltip(
+            marker_83ae32d25538febb38ab87d84e3300cb.bindTooltip(
                 `<div>
                      H02 Sandy泊
                  </div>`,
@@ -220,17 +209,17 @@
             );
         
     
-                marker_3f9351c794a3de383966090eb34ee132.setIcon(div_icon_46534a8ca32913f136f15e7ce30341bd);
+                marker_83ae32d25538febb38ab87d84e3300cb.setIcon(div_icon_610241c361f47955e53f8814c3bfcb06);
             
     
-            var marker_e6d75b5580073fa4d70975dc7fbfd32d = L.marker(
-                [44.783, -117.747],
+            var marker_e2ff7b61b8925331f28abdc654f106ea = L.marker(
+                [44.8087, -117.7414],
                 {
 }
-            ).addTo(map_79f50f1ee66641c0d40b75aa1bc0dbec);
+            ).addTo(map_9d5f89c129ccba60c188f615e9c4d498);
         
     
-            var div_icon_dc0fc3fbdd959d5b3a55134a2ef6eeaa = L.divIcon({
+            var div_icon_6e0497ad2d2d45ba57650fc747d346fc = L.divIcon({
   "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e02-01\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -238,24 +227,24 @@
 });
         
     
-        var popup_0551ee7e486a03b2d7b6c2c71f6a8fda = L.popup({
-  "maxWidth": 420,
+        var popup_9aa47141e1198833f02bcafe36a83f5b = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_29cad127a2fdc348c556f7227994d768 = $(`<div id="html_29cad127a2fdc348c556f7227994d768" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>02-01 National Historic Oregon Trail Interpretive Center</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Road to Sandy / Baker City, OR</td></tr><tr><th>Time</th><td>60–120 min</td></tr><tr><th>Effort</th><td>屋内展示＋短い屋外。朝の開館時刻に注意。</td></tr><tr><th>Plan</th><td>Oregon Trailの開拓史、幌馬車、屋外の景色を見学する。</td></tr><tr><th>Skip rule</th><td>9時開館待ちで出発が遅れる、またはSandy到着を優先する場合は省略。</td></tr><tr><th>Notes</th><td>公式: 夏期9:00–17:00毎日。Day 2の主候補にすると朝の出発は遅れる。</td></tr></table><p><a href="https://maps.apple.com/?q=National%20Historic%20Oregon%20Trail%20Interpretive%20Center%20Baker%20City%20OR" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=National%20Historic%20Oregon%20Trail%20Interpretive%20Center" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_0551ee7e486a03b2d7b6c2c71f6a8fda.setContent(html_29cad127a2fdc348c556f7227994d768);
+                var html_5d789d9a0cebf3fecaf686980e39711f = $(`<div id="html_5d789d9a0cebf3fecaf686980e39711f" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>02-01 National Historic Oregon Trail Interpretive Center</h4><table><tr><th>Status</th><td>Possibly</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Road to Sandy / Baker City, OR</td></tr><tr><th>Time</th><td>60–120 min</td></tr><tr><th>Effort</th><td>屋内展示＋短い屋外。朝の開館時刻に注意。</td></tr><tr><th>Plan</th><td>Oregon Trailの開拓史、幌馬車、屋外の景色を見学する。</td></tr><tr><th>Skip rule</th><td>9時開館待ちで出発が遅れる、またはSandy到着を優先する場合は省略。</td></tr><tr><th>Guide</th><td>National Historic Oregon Trail Interpretive Centerは、19世紀に多くの移民が西へ向かったOregon Trailを学ぶ場所です。幌馬車での移動は、冒険というより、病気、天候、水、家畜、食料を管理する長い移住でした。ここでは道具や展示だけでなく、人々がなぜ危険を承知で西へ向かったのかを考えると理解が深まります。子どもには「昔の人が車なしで何か月もかけて西へ移動した道を学ぶ場所」と説明できます。</td></tr><tr><th>Notes</th><td>公式: 夏期9:00–17:00毎日。Day 2の主候補にすると朝の出発は遅れる。</td></tr></table><p><a href="https://maps.apple.com/?q=National%20Historic%20Oregon%20Trail%20Interpretive%20Center%20Baker%20City%20OR" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=National+Historic+Oregon+Trail+Interpretive+Center+Baker+City" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_9aa47141e1198833f02bcafe36a83f5b.setContent(html_5d789d9a0cebf3fecaf686980e39711f);
             
         
 
-        marker_e6d75b5580073fa4d70975dc7fbfd32d.bindPopup(popup_0551ee7e486a03b2d7b6c2c71f6a8fda)
+        marker_e2ff7b61b8925331f28abdc654f106ea.bindPopup(popup_9aa47141e1198833f02bcafe36a83f5b)
         ;
 
         
     
     
-            marker_e6d75b5580073fa4d70975dc7fbfd32d.bindTooltip(
+            marker_e2ff7b61b8925331f28abdc654f106ea.bindTooltip(
                 `<div>
                      02-01 National Historic Oregon Trail Interpretive Center
                  </div>`,
@@ -265,17 +254,17 @@
             );
         
     
-                marker_e6d75b5580073fa4d70975dc7fbfd32d.setIcon(div_icon_dc0fc3fbdd959d5b3a55134a2ef6eeaa);
+                marker_e2ff7b61b8925331f28abdc654f106ea.setIcon(div_icon_6e0497ad2d2d45ba57650fc747d346fc);
             
     
-            var marker_dcfd619affd7a82ca77f0db3084df2ce = L.marker(
-                [43.5811, -116.5239],
+            var marker_f89262e2d6aac557c3cd6967c51455a3 = L.marker(
+                [43.5893, -116.5342],
                 {
 }
-            ).addTo(map_79f50f1ee66641c0d40b75aa1bc0dbec);
+            ).addTo(map_9d5f89c129ccba60c188f615e9c4d498);
         
     
-            var div_icon_6be7163e6a65aa11568d6b0eeddbd22f = L.divIcon({
+            var div_icon_21126a4f671665d35b402e726eeafbd4 = L.divIcon({
   "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e02-03\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -283,24 +272,24 @@
 });
         
     
-        var popup_09e46e807897166a0fe885903762a517 = L.popup({
-  "maxWidth": 420,
+        var popup_31a03db637f39442734320f8d428faf9 = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_d2d6ab6cceaf3d4aafafb72b9e49ce94 = $(`<div id="html_d2d6ab6cceaf3d4aafafb72b9e49ce94" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>02-03 Warhawk Air Museum</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Road to Sandy / Nampa, ID</td></tr><tr><th>Time</th><td>60–90 min</td></tr><tr><th>Effort</th><td>屋内中心。実機展示・軍事史。子供にも分かりやすい。</td></tr><tr><th>Plan</th><td>飛行機・戦争史・退役軍人の展示を見る。昼食休憩と組み合わせる。</td></tr><tr><th>Skip rule</th><td>到着が遅い、航空系が続きすぎる、Sandy到着を優先する場合は省略。</td></tr><tr><th>Notes</th><td>公式ページにTue–Sat 10:00–17:00、同ページ下部に9:00–17:00表記あり。8/1は土曜。直前確認。</td></tr></table><p><a href="https://maps.apple.com/?q=Warhawk%20Air%20Museum%20Nampa%20ID" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Warhawk%20Air%20Museum" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_09e46e807897166a0fe885903762a517.setContent(html_d2d6ab6cceaf3d4aafafb72b9e49ce94);
+                var html_a519c545ffcd8ab57fc3a5bffdd69b95 = $(`<div id="html_a519c545ffcd8ab57fc3a5bffdd69b95" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>02-03 Warhawk Air Museum</h4><table><tr><th>Status</th><td>Possibly</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Road to Sandy / Nampa, ID</td></tr><tr><th>Time</th><td>60–90 min</td></tr><tr><th>Effort</th><td>屋内中心。実機展示・軍事史。子供にも分かりやすい。</td></tr><tr><th>Plan</th><td>飛行機・戦争史・退役軍人の展示を見る。昼食休憩と組み合わせる。</td></tr><tr><th>Skip rule</th><td>到着が遅い、航空系が続きすぎる、Sandy到着を優先する場合は省略。</td></tr><tr><th>Guide</th><td>Warhawk Air Museumは、航空機そのものだけでなく、戦争と個人の記憶を展示する軍事航空博物館です。第二次世界大戦から冷戦期にかけて、飛行機は戦争、偵察、輸送、救助の中心的な技術になりました。実機を見ると、写真や本だけでは分からない大きさ、金属感、操縦席の狭さが分かります。子どもには「昔の飛行機を見ながら、戦争の時代に人がどう飛んでいたかを知る場所」と説明できます。</td></tr><tr><th>Notes</th><td>公式ページにTue–Sat 10:00–17:00、同ページ下部に9:00–17:00表記あり。8/1は土曜。直前確認。</td></tr></table><p><a href="https://maps.apple.com/?q=Warhawk%20Air%20Museum%20Nampa%20ID" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Warhawk+Air+Museum+Nampa+Idaho" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_31a03db637f39442734320f8d428faf9.setContent(html_a519c545ffcd8ab57fc3a5bffdd69b95);
             
         
 
-        marker_dcfd619affd7a82ca77f0db3084df2ce.bindPopup(popup_09e46e807897166a0fe885903762a517)
+        marker_f89262e2d6aac557c3cd6967c51455a3.bindPopup(popup_31a03db637f39442734320f8d428faf9)
         ;
 
         
     
     
-            marker_dcfd619affd7a82ca77f0db3084df2ce.bindTooltip(
+            marker_f89262e2d6aac557c3cd6967c51455a3.bindTooltip(
                 `<div>
                      02-03 Warhawk Air Museum
                  </div>`,
@@ -310,17 +299,17 @@
             );
         
     
-                marker_dcfd619affd7a82ca77f0db3084df2ce.setIcon(div_icon_6be7163e6a65aa11568d6b0eeddbd22f);
+                marker_f89262e2d6aac557c3cd6967c51455a3.setIcon(div_icon_21126a4f671665d35b402e726eeafbd4);
             
     
-            var marker_f8a67fb118e28c5dc3714d1395d8acad = L.marker(
-                [41.1624, -112.0197],
+            var marker_cfe10786b91c44f48a508ed19c86bad0 = L.marker(
+                [40.7608, -113.8975],
                 {
 }
-            ).addTo(map_79f50f1ee66641c0d40b75aa1bc0dbec);
+            ).addTo(map_9d5f89c129ccba60c188f615e9c4d498);
         
     
-            var div_icon_42b123647da26aea9b17bf845b27a459 = L.divIcon({
+            var div_icon_40fc39f776c6b9e7f661164a8c6fa14f = L.divIcon({
   "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e02-05\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -328,24 +317,24 @@
 });
         
     
-        var popup_3c918e4cd779b42e29790168ce204525 = L.popup({
-  "maxWidth": 420,
+        var popup_f26a21ee8c3623c7234bad102a03d267 = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_bc6186dd38316f32521fab656d47a3ee = $(`<div id="html_bc6186dd38316f32521fab656d47a3ee" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>02-05 Bonneville Salt Flats / Salt Flats Rest Area</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Bonneville Salt Flats / Wendover, UT</td></tr><tr><th>Time</th><td>30–45 min + detour</td></tr><tr><th>Effort</th><td>休憩所または入口付近から短い歩行。塩が靴につく。イベント中は奥へ入らない前提。</td></tr><tr><th>Plan</th><td>白い塩原を短時間で見る。Salt Flats Rest AreaまたはSpeedway入口付近で写真休憩にする。</td></tr><tr><th>Skip rule</th><td>出発が遅い、疲労が強い、Speed Week規制が強い、またはSandy到着が遅れそうなら省略。博物館候補とは基本二択。</td></tr><tr><th>Notes</th><td>2026-08-01はSpeed Week期間中のため、自由に奥へ入る観光ではなく短時間の写真休憩扱い。濡れている場所へ車で入らない。</td></tr></table><p><a href="https://maps.apple.com/?q=Bonneville%20Salt%20Flats%20Rest%20Area%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Bonneville%20Salt%20Flats%20/%20Salt%20Flats%20Rest%20Area" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_3c918e4cd779b42e29790168ce204525.setContent(html_bc6186dd38316f32521fab656d47a3ee);
+                var html_69bf94cdb779fd5375363f96722efc26 = $(`<div id="html_69bf94cdb779fd5375363f96722efc26" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>02-05 Bonneville Salt Flats / Salt Flats Rest Area</h4><table><tr><th>Status</th><td>Possibly</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Bonneville Salt Flats / Wendover, UT</td></tr><tr><th>Time</th><td>30–45 min + detour</td></tr><tr><th>Effort</th><td>休憩所または入口付近から短い歩行。塩が靴につく。イベント中は奥へ入らない前提。</td></tr><tr><th>Plan</th><td>白い塩原を短時間で見る。Salt Flats Rest AreaまたはSpeedway入口付近で写真休憩にする。</td></tr><tr><th>Skip rule</th><td>出発が遅い、疲労が強い、Speed Week規制が強い、またはSandy到着が遅れそうなら省略。博物館候補とは基本二択。</td></tr><tr><th>Guide</th><td>Bonneville Salt Flatsは、かつてこの地域を覆っていた巨大なLake Bonnevilleが干上がり、塩分が平らに残った場所です。白く広い地面は雪のように見えますが、実際は塩でできた硬い平面です。20世紀以降は、非常に平らな地形を利用して land speed record の舞台にもなりました。子どもには「大昔の湖がなくなって、塩だけが白い地面として残った場所」と説明できます。</td></tr><tr><th>Notes</th><td>2026-08-01はSpeed Week期間中のため、自由に奥へ入る観光ではなく短時間の写真休憩扱い。濡れている場所へ車で入らない。</td></tr></table><p><a href="https://maps.apple.com/?q=Bonneville%20Salt%20Flats%20Rest%20Area%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Bonneville+Salt+Flats+Utah" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_f26a21ee8c3623c7234bad102a03d267.setContent(html_69bf94cdb779fd5375363f96722efc26);
             
         
 
-        marker_f8a67fb118e28c5dc3714d1395d8acad.bindPopup(popup_3c918e4cd779b42e29790168ce204525)
+        marker_cfe10786b91c44f48a508ed19c86bad0.bindPopup(popup_f26a21ee8c3623c7234bad102a03d267)
         ;
 
         
     
     
-            marker_f8a67fb118e28c5dc3714d1395d8acad.bindTooltip(
+            marker_cfe10786b91c44f48a508ed19c86bad0.bindTooltip(
                 `<div>
                      02-05 Bonneville Salt Flats / Salt Flats Rest Area
                  </div>`,
@@ -355,17 +344,17 @@
             );
         
     
-                marker_f8a67fb118e28c5dc3714d1395d8acad.setIcon(div_icon_42b123647da26aea9b17bf845b27a459);
+                marker_cfe10786b91c44f48a508ed19c86bad0.setIcon(div_icon_40fc39f776c6b9e7f661164a8c6fa14f);
             
     
-            var marker_1defc09d815611b6746acb9f348d8fa6 = L.marker(
-                [40.7648, -111.8222],
+            var marker_43e94d5ce5d52df193d2f7e361694f8b = L.marker(
+                [41.1614, -112.0193],
                 {
 }
-            ).addTo(map_79f50f1ee66641c0d40b75aa1bc0dbec);
+            ).addTo(map_9d5f89c129ccba60c188f615e9c4d498);
         
     
-            var div_icon_4663d71cd15d62148893bed4cfbf0d5b = L.divIcon({
+            var div_icon_f91cea435329c1471d2626e8946e6cf8 = L.divIcon({
   "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e02-06\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -373,24 +362,24 @@
 });
         
     
-        var popup_1d9ceb2bb37fc77616899d3268ea611a = L.popup({
-  "maxWidth": 420,
+        var popup_18784c5b426abf2a61d0b055b3050698 = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_5d32668f63e9d6e1628bfff56ff2b8cc = $(`<div id="html_5d32668f63e9d6e1628bfff56ff2b8cc" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>02-06 Hill Aerospace Museum</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Road to Sandy / Ogden-Roy, UT</td></tr><tr><th>Time</th><td>60–90 min</td></tr><tr><th>Effort</th><td>屋内＋屋外の航空機展示。歩行は軽〜中等度。</td></tr><tr><th>Plan</th><td>大型航空機・軍用機展示を短時間で見る。</td></tr><tr><th>Skip rule</th><td>16時前後に間に合わない、Warhawkに行った、またはSandy到着を優先する場合は省略。</td></tr><tr><th>Notes</th><td>火–土9:00–16:30、無料とされる。公式ページを直前確認。航空系はWarhawkとどちらか一つ。</td></tr></table><p><a href="https://maps.apple.com/?q=Hill%20Aerospace%20Museum%20Roy%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Hill%20Aerospace%20Museum" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_1d9ceb2bb37fc77616899d3268ea611a.setContent(html_5d32668f63e9d6e1628bfff56ff2b8cc);
+                var html_949e9b630d54fe34d8ef01260fbaffda = $(`<div id="html_949e9b630d54fe34d8ef01260fbaffda" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>02-06 Hill Aerospace Museum</h4><table><tr><th>Status</th><td>Possibly</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Road to Sandy / Ogden-Roy, UT</td></tr><tr><th>Time</th><td>60–90 min</td></tr><tr><th>Effort</th><td>屋内＋屋外の航空機展示。歩行は軽〜中等度。</td></tr><tr><th>Plan</th><td>大型航空機・軍用機展示を短時間で見る。</td></tr><tr><th>Skip rule</th><td>16時前後に間に合わない、Warhawkに行った、またはSandy到着を優先する場合は省略。</td></tr><tr><th>Guide</th><td>Hill Aerospace Museumは、Hill Air Force Baseの近くにある航空・空軍史の博物館です。展示機を時代順に見ると、プロペラ機からジェット機、偵察機、ステルス機へと技術が変化してきたことが分かります。戦闘機だけでなく、輸送、訓練、救助の機体もあり、航空機が多様な役割を持つことを理解できます。子どもには「飛行機が時代とともにどんどん速く、特殊な形になっていったことを見る場所」と説明できます。</td></tr><tr><th>Notes</th><td>火–土9:00–16:30、無料とされる。公式ページを直前確認。航空系はWarhawkとどちらか一つ。</td></tr></table><p><a href="https://maps.apple.com/?q=Hill%20Aerospace%20Museum%20Roy%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Hill+Aerospace+Museum+Utah" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_18784c5b426abf2a61d0b055b3050698.setContent(html_949e9b630d54fe34d8ef01260fbaffda);
             
         
 
-        marker_1defc09d815611b6746acb9f348d8fa6.bindPopup(popup_1d9ceb2bb37fc77616899d3268ea611a)
+        marker_43e94d5ce5d52df193d2f7e361694f8b.bindPopup(popup_18784c5b426abf2a61d0b055b3050698)
         ;
 
         
     
     
-            marker_1defc09d815611b6746acb9f348d8fa6.bindTooltip(
+            marker_43e94d5ce5d52df193d2f7e361694f8b.bindTooltip(
                 `<div>
                      02-06 Hill Aerospace Museum
                  </div>`,
@@ -400,17 +389,17 @@
             );
         
     
-                marker_1defc09d815611b6746acb9f348d8fa6.setIcon(div_icon_4663d71cd15d62148893bed4cfbf0d5b);
+                marker_43e94d5ce5d52df193d2f7e361694f8b.setIcon(div_icon_f91cea435329c1471d2626e8946e6cf8);
             
     
-            var marker_8dd9ad81177f47b321295327ad86f819 = L.marker(
-                [40.7345, -112.2122],
+            var marker_86aada8c443335063ec1c410276c98f7 = L.marker(
+                [40.7648, -111.8225],
                 {
 }
-            ).addTo(map_79f50f1ee66641c0d40b75aa1bc0dbec);
+            ).addTo(map_9d5f89c129ccba60c188f615e9c4d498);
         
     
-            var div_icon_2a3f39d7f1e330d431bcada95856f8ab = L.divIcon({
+            var div_icon_9819685b183f1ad816a44b38cc08a58e = L.divIcon({
   "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e02-07\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -418,24 +407,24 @@
 });
         
     
-        var popup_4f1a5a9b3b8865fa083a2502041c016b = L.popup({
-  "maxWidth": 420,
+        var popup_e0c198151ffcd58cb425590ac792924a = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_657ed6b750801939d07f5aaf377761e8 = $(`<div id="html_657ed6b750801939d07f5aaf377761e8" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>02-07 Natural History Museum of Utah</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Salt Lake City, UT</td></tr><tr><th>Time</th><td>90–120 min</td></tr><tr><th>Effort</th><td>屋内中心。恐竜・地質・鉱物・Great Salt Lakeなど。子供向き。</td></tr><tr><th>Plan</th><td>Utahの自然史展示を短時間で見る。Sandy到着前またはチェックイン前後に組み込む。</td></tr><tr><th>Skip rule</th><td>15:00以降にSalt Lake到着、疲労が強い、または夕食・チェックインを優先する場合は省略。</td></tr><tr><th>Notes</th><td>公式: 毎日10:00–17:00、水曜のみ21:00まで。最終入館は閉館30分前。8/1は土曜なので17:00閉館前提。</td></tr></table><p><a href="https://maps.apple.com/?q=Natural%20History%20Museum%20of%20Utah%20Salt%20Lake%20City%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Natural%20History%20Museum%20of%20Utah" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_4f1a5a9b3b8865fa083a2502041c016b.setContent(html_657ed6b750801939d07f5aaf377761e8);
+                var html_ab401e6d17a6e1df5f657f1c10865559 = $(`<div id="html_ab401e6d17a6e1df5f657f1c10865559" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>02-07 Natural History Museum of Utah</h4><table><tr><th>Status</th><td>Possibly</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Salt Lake City, UT</td></tr><tr><th>Time</th><td>90–120 min</td></tr><tr><th>Effort</th><td>屋内中心。恐竜・地質・鉱物・Great Salt Lakeなど。子供向き。</td></tr><tr><th>Plan</th><td>Utahの自然史展示を短時間で見る。Sandy到着前またはチェックイン前後に組み込む。</td></tr><tr><th>Skip rule</th><td>15:00以降にSalt Lake到着、疲労が強い、または夕食・チェックインを優先する場合は省略。</td></tr><tr><th>Guide</th><td>Natural History Museum of Utahは、Utahの地質、恐竜、鉱物、Great Salt Lake、先住民文化をまとめて学べる博物館です。これから向かう赤い岩の国や塩湖の景色は、ここで背景を見ておくと理解しやすくなります。特に恐竜化石と岩石の展示は、Colorado Plateauが長い時間をかけてできた場所だと実感しやすいです。子どもには「Utahの恐竜、岩、湖、人の歴史を一気に予習できる場所」と説明できます。</td></tr><tr><th>Notes</th><td>公式: 毎日10:00–17:00、水曜のみ21:00まで。最終入館は閉館30分前。8/1は土曜なので17:00閉館前提。</td></tr></table><p><a href="https://maps.apple.com/?q=Natural%20History%20Museum%20of%20Utah%20Salt%20Lake%20City%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Natural+History+Museum+of+Utah+Salt+Lake+City" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_e0c198151ffcd58cb425590ac792924a.setContent(html_ab401e6d17a6e1df5f657f1c10865559);
             
         
 
-        marker_8dd9ad81177f47b321295327ad86f819.bindPopup(popup_4f1a5a9b3b8865fa083a2502041c016b)
+        marker_86aada8c443335063ec1c410276c98f7.bindPopup(popup_e0c198151ffcd58cb425590ac792924a)
         ;
 
         
     
     
-            marker_8dd9ad81177f47b321295327ad86f819.bindTooltip(
+            marker_86aada8c443335063ec1c410276c98f7.bindTooltip(
                 `<div>
                      02-07 Natural History Museum of Utah
                  </div>`,
@@ -445,17 +434,17 @@
             );
         
     
-                marker_8dd9ad81177f47b321295327ad86f819.setIcon(div_icon_2a3f39d7f1e330d431bcada95856f8ab);
+                marker_86aada8c443335063ec1c410276c98f7.setIcon(div_icon_9819685b183f1ad816a44b38cc08a58e);
             
     
-            var marker_999c9087d944974f7ca6a5c513a962f3 = L.marker(
-                [41.0561, -112.2465],
+            var marker_cc5155f835cbafc64dbbc45a86a7f56a = L.marker(
+                [40.734, -112.212],
                 {
 }
-            ).addTo(map_79f50f1ee66641c0d40b75aa1bc0dbec);
+            ).addTo(map_9d5f89c129ccba60c188f615e9c4d498);
         
     
-            var div_icon_9ebc728f1b75850e61a02b7cedcf65d4 = L.divIcon({
+            var div_icon_088027fafe4faca5dec736244d0073ac = L.divIcon({
   "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e02-08\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
@@ -463,24 +452,24 @@
 });
         
     
-        var popup_93cff96f51514ee13826fd2d68ab41f5 = L.popup({
-  "maxWidth": 420,
+        var popup_e017937670b5b6141859c7fca13d096a = L.popup({
+  "maxWidth": 440,
 });
 
         
             
-                var html_66f20b2f704fdc86cd1410856970492a = $(`<div id="html_66f20b2f704fdc86cd1410856970492a" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>02-08 Great Salt Lake State Park</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Salt Lake City / Great Salt Lake</td></tr><tr><th>Time</th><td>45–90 min + detour</td></tr><tr><th>Effort</th><td>湖岸・ビジターセンター中心。暑さ、風、虫、においに注意。</td></tr><tr><th>Plan</th><td>Great Salt Lakeの湖岸と塩湖の景色を見る。時間があればビジターセンターで短時間学習。</td></tr><tr><th>Skip rule</th><td>Sandy到着が遅れそう、暑さ・虫・風が強い、NHMUを優先する場合は省略。</td></tr><tr><th>Notes</th><td>Day 2の追加候補。博物館と両方入れると重いので、入れるならNHMUなどと二択。</td></tr></table><p><a href="https://maps.apple.com/?q=Great%20Salt%20Lake%20State%20Park%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Great%20Salt%20Lake%20State%20Park" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_93cff96f51514ee13826fd2d68ab41f5.setContent(html_66f20b2f704fdc86cd1410856970492a);
+                var html_8cd1354399dc26c5531e74734305fff0 = $(`<div id="html_8cd1354399dc26c5531e74734305fff0" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>02-08 Great Salt Lake State Park</h4><table><tr><th>Status</th><td>Possibly</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Salt Lake City / Great Salt Lake</td></tr><tr><th>Time</th><td>45–90 min + detour</td></tr><tr><th>Effort</th><td>湖岸・ビジターセンター中心。暑さ、風、虫、においに注意。</td></tr><tr><th>Plan</th><td>Great Salt Lakeの湖岸と塩湖の景色を見る。時間があればビジターセンターで短時間学習。</td></tr><tr><th>Skip rule</th><td>Sandy到着が遅れそう、暑さ・虫・風が強い、NHMUを優先する場合は省略。</td></tr><tr><th>Guide</th><td>Great Salt Lakeは海につながらない terminal lake で、水が出ていく川がないため塩分が濃くなっています。湖水は蒸発しますが、塩分は残るため、海水よりずっと塩辛い湖になります。湖はbrine shrimpや渡り鳥にとって重要ですが、水位低下も大きな問題になっています。子どもには「水は蒸発してなくなるけれど、塩は残るから、どんどんしょっぱい湖になる」と説明できます。</td></tr><tr><th>Notes</th><td>Day 2の追加候補。博物館と両方入れると重いので、入れるならNHMUなどと二択。</td></tr></table><p><a href="https://maps.apple.com/?q=Great%20Salt%20Lake%20State%20Park%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Great+Salt+Lake+State+Park" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_e017937670b5b6141859c7fca13d096a.setContent(html_8cd1354399dc26c5531e74734305fff0);
             
         
 
-        marker_999c9087d944974f7ca6a5c513a962f3.bindPopup(popup_93cff96f51514ee13826fd2d68ab41f5)
+        marker_cc5155f835cbafc64dbbc45a86a7f56a.bindPopup(popup_e017937670b5b6141859c7fca13d096a)
         ;
 
         
     
     
-            marker_999c9087d944974f7ca6a5c513a962f3.bindTooltip(
+            marker_cc5155f835cbafc64dbbc45a86a7f56a.bindTooltip(
                 `<div>
                      02-08 Great Salt Lake State Park
                  </div>`,
@@ -490,7 +479,58 @@
             );
         
     
-                marker_999c9087d944974f7ca6a5c513a962f3.setIcon(div_icon_9ebc728f1b75850e61a02b7cedcf65d4);
+                marker_cc5155f835cbafc64dbbc45a86a7f56a.setIcon(div_icon_088027fafe4faca5dec736244d0073ac);
             
+    
+            var marker_248e0567e1b6fb2acefb913daa4da3ca = L.marker(
+                [40.9586, -112.2136],
+                {
+}
+            ).addTo(map_9d5f89c129ccba60c188f615e9c4d498);
+        
+    
+            var div_icon_90e2a2395e3e5fa9e59c897c5d93d9a9 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e02-09\u003c/div\u003e",
+  "iconSize": [56, 28],
+  "iconAnchor": [28, 14],
+  "className": "empty",
+});
+        
+    
+        var popup_c0f8f8696b9032143628908f61e2c53e = L.popup({
+  "maxWidth": 440,
+});
+
+        
+            
+                var html_9cee05ba70fa6587186917f7604eb57a = $(`<div id="html_9cee05ba70fa6587186917f7604eb57a" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>02-09 Antelope Island State Park</h4><table><tr><th>Status</th><td>Possibly</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Great Salt Lake / Antelope Island</td></tr><tr><th>Time</th><td>1.5–3 hr + detour</td></tr><tr><th>Effort</th><td>車移動＋短い展望。暑さ、虫、バイソンとの距離に注意。</td></tr><tr><th>Plan</th><td>Great Salt Lake、島の乾いた景観、野生動物を車中心で見る。</td></tr><tr><th>Skip rule</th><td>通常は省略。NHMU、Hill Aerospace、Great Salt Lake State Parkのどれかを優先した場合は入れない。</td></tr><tr><th>Guide</th><td>Antelope IslandはGreat Salt Lakeの中にある大きな島で、乾いた丘、塩湖、野生動物を一緒に見られる場所です。島にはbisonがいますが、野生動物なので近づいてはいけません。湖岸の白い塩、遠くの山、茶色い島の景色は、これから見る赤い岩の公園とはかなり違います。子どもには「しょっぱい湖の中にある島で、大きなバイソンも暮らしている」と説明できます。</td></tr><tr><th>Notes</th><td>時間がかなり余る場合のみ。虫・暑さ・到着時間を確認。</td></tr></table><p><a href="https://maps.apple.com/?q=Antelope%20Island%20State%20Park%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Antelope+Island+State+Park+Great+Salt+Lake" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_c0f8f8696b9032143628908f61e2c53e.setContent(html_9cee05ba70fa6587186917f7604eb57a);
+            
+        
+
+        marker_248e0567e1b6fb2acefb913daa4da3ca.bindPopup(popup_c0f8f8696b9032143628908f61e2c53e)
+        ;
+
+        
+    
+    
+            marker_248e0567e1b6fb2acefb913daa4da3ca.bindTooltip(
+                `<div>
+                     02-09 Antelope Island State Park
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_248e0567e1b6fb2acefb913daa4da3ca.setIcon(div_icon_90e2a2395e3e5fa9e59c897c5d93d9a9);
+            
+    
+            map_9d5f89c129ccba60c188f615e9c4d498.fitBounds(
+                [[40.589, -117.834], [44.8087, -111.8225]],
+                {"padding": [40, 40]}
+            );
+        
 </script>
 </html>
