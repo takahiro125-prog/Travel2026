@@ -3,6 +3,10 @@
 <head>
     
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+    <style>
+    .popup table{border-collapse:collapse;font-size:13px}.popup th{background:#f2f2f2;text-align:left;padding:4px 7px;border-bottom:1px solid #ddd;vertical-align:top;white-space:nowrap}.popup td{padding:4px 7px;border-bottom:1px solid #ddd;vertical-align:top}.popup h4{margin:0 0 8px;font-size:16px}.popup a{font-weight:700}.leaflet-popup-content{min-width:260px;max-width:420px}
+    </style>
     <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -17,7 +21,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_25345f9c049fad7d537223f53e735b03 {
+                #map_0279104539708b258850c828fe23fe97 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -54,37 +58,40 @@
 <body>
     
     
-    <div style="position: fixed; top: 18px; left: 50%; transform: translateX(-50%); z-index: 9999;
-                background: rgba(255,255,255,.94); border: 1px solid #aaa; border-radius: 10px;
-                padding: 10px 16px; font-family: Arial, sans-serif; box-shadow: 0 1px 5px rgba(0,0,0,.25);
-                text-align:center;">
+    <div style="position: fixed; top: 18px; left: 50%; transform: translateX(-50%); z-index: 9999;background: rgba(255,255,255,.94); border: 1px solid #aaa; border-radius: 10px;padding: 10px 16px; font-family: Arial, sans-serif; box-shadow: 0 1px 5px rgba(0,0,0,.25); text-align:center;">
       <div style="font-size:18px;font-weight:700;">Day 6 Travel Map</div>
       <div style="font-size:12px;color:#444;">Page → Grand Canyon Village / 135 miles / 2:32</div>
     </div>
     
-    
-    <div style="position: fixed; bottom: 28px; left: 28px; z-index: 9999; background: white;
-                border: 1px solid #999; border-radius: 8px; padding: 12px 14px;
-                font-family: Arial, sans-serif; font-size: 13px; box-shadow: 0 1px 5px rgba(0,0,0,.25);">
-      <div style="font-weight:700; margin-bottom:7px;">Day 6</div>
-      <div><span style="background:#1a9850;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Hotel: 2</div>
-      <div><span style="background:#d7191c;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>行く予定: 5</div>
-      <div><span style="background:#2c7bb6;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>候補: 6</div>
-      <div><span style="background:#7b3294;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>候補（重い）: 0</div>
-      <div style="margin-top:7px;color:#555;max-width:260px;">Planning map. Use Apple Maps / Google Maps / NPS for final navigation.</div>
+    <div style="position: fixed; bottom: 28px; left: 28px; z-index: 9999; background: white;border: 1px solid #999; border-radius: 8px; padding: 12px 14px;font-family: Arial, sans-serif; font-size: 13px; box-shadow: 0 1px 5px rgba(0,0,0,.25);">
+      <div style="font-weight:700; margin-bottom:7px;">Legend</div><div><span style="background:#1a9850;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Hotel</div><div><span style="background:#d7191c;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Must</div><div><span style="background:#2c7bb6;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Possibly</div><div><span style="background:#7b3294;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Backup / heavy</div><div><span style="background:#ff8c00;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Airport pickup</div>
+      <div style="margin-top:7px;color:#555;max-width:270px;">Planning map. Use Apple Maps / Google Maps / official park information for final navigation.</div>
     </div>
     
+    <script>
+    window._spotMarkers = {"H05": marker_962aa44dbf0652665c8d9e14a0710963, "H06": marker_5a563144ed533636e0d0fb1d4ba26bdf, "06-01": marker_a57f4da80ab18ac8922cae5eaa86fd03, "06-02": marker_9fac755fbcf5b719a53736559830ec21, "06-03": marker_0be578c9ce7e3808838e0895dea848ea, "06-04": marker_6e4e8d124fa33b46ed40e968fa3406eb, "06-05": marker_7edcc96d0e6e633e46b0504630a75d43, "06-06": marker_909b7bb3e40e0778bf0cbd880723c9b3, "06-07": marker_1524221ed283601139df905868ef2e09, "06-08": marker_2c534322c7c296263e1020e0255a24f3, "06-09": marker_9366c29df527a71011239812f09216ed, "06-10": marker_e8c6e5af408c8bd6cfca5c505b440b0e, "06-11": marker_8984a104a0b2f1c52534f54692d65980};
+    function openSpotFromHash() {
+      var id = decodeURIComponent((window.location.hash || '').replace('#',''));
+      if (!id || !window._spotMarkers || !window._spotMarkers[id]) return;
+      var marker = window._spotMarkers[id];
+      marker.openPopup();
+      map_0279104539708b258850c828fe23fe97.setView(marker.getLatLng(), Math.max(map_0279104539708b258850c828fe23fe97.getZoom(), 10));
+    }
+    setTimeout(openSpotFromHash, 600);
+    window.addEventListener('hashchange', openSpotFromHash);
+    </script>
     
-            <div class="folium-map" id="map_25345f9c049fad7d537223f53e735b03" ></div>
+    
+            <div class="folium-map" id="map_0279104539708b258850c828fe23fe97" ></div>
         
 </body>
 <script>
     
     
-            var map_25345f9c049fad7d537223f53e735b03 = L.map(
-                "map_25345f9c049fad7d537223f53e735b03",
+            var map_0279104539708b258850c828fe23fe97 = L.map(
+                "map_0279104539708b258850c828fe23fe97",
                 {
-                    center: [36.29552307692308, -111.79966153846155],
+                    center: [36.29528036923077, -111.80026917692308],
                     crs: L.CRS.EPSG3857,
                     ...{
   "zoom": 7,
@@ -94,13 +101,13 @@
 
                 }
             );
-            L.control.scale().addTo(map_25345f9c049fad7d537223f53e735b03);
+            L.control.scale().addTo(map_0279104539708b258850c828fe23fe97);
 
             
 
         
     
-            var tile_layer_40313736ebda57170762d5b0296ec4e4 = L.tileLayer(
+            var tile_layer_2a260e85a3ab56b12e7c6804ea5ec07f = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -117,44 +124,50 @@
             );
         
     
-            tile_layer_40313736ebda57170762d5b0296ec4e4.addTo(map_25345f9c049fad7d537223f53e735b03);
+            tile_layer_2a260e85a3ab56b12e7c6804ea5ec07f.addTo(map_0279104539708b258850c828fe23fe97);
         
     
-            var marker_82254962d6a6b9d3bf0a631ff0191f02 = L.marker(
-                [36.9147, -111.4558],
+            map_0279104539708b258850c828fe23fe97.fitBounds(
+                [[35.8751, -112.137], [36.9366, -111.4129]],
+                {"padding": [40, 40]}
+            );
+        
+    
+            var marker_962aa44dbf0652665c8d9e14a0710963 = L.marker(
+                [36.9115448, -111.4636993],
                 {
 }
-            ).addTo(map_25345f9c049fad7d537223f53e735b03);
+            ).addTo(map_0279104539708b258850c828fe23fe97);
         
     
-            var div_icon_2408bafb86f70213587c171a4a97f1f0 = L.divIcon({
-  "html": "\n            \u003cdiv style=\"\n                background:#1a9850; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                H05\n            \u003c/div\u003e",
+            var div_icon_20df387b7aa2f8d945f655efe4e84571 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#1a9850; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003eH05\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
   "className": "empty",
 });
         
     
-        var popup_654985d784ec8e7f99e1afc41d3258e4 = L.popup({
+        var popup_29b7b907c19d236b9c73d5bc9b79edb3 = L.popup({
   "maxWidth": 420,
 });
 
         
             
-                var html_8c33f1a72ac0a18ab988eb618d5f93a6 = $(`<div id="html_8c33f1a72ac0a18ab988eb618d5f93a6" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>H05 Page泊 / 出発</h4>       <table>         <tr><th>Status</th><td>Hotel</td></tr>         <tr><th>Category</th><td>Hotel</td></tr>         <tr><th>Area</th><td>Page, AZ</td></tr>                           <tr><th>Plan</th><td>Pageで宿泊。</td></tr>                  <tr><th>Notes</th><td>Host: Randy. ゲスト定員11人。ペットOK。騒音禁止 22:00–7:00。</td></tr>       </table>       <p><a href="https://maps.apple.com/?q=Page泊%20/%20出発" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&q=Page%E6%B3%8A" target="_blank">Google image search</a></p></div>     </div>`)[0];
-                popup_654985d784ec8e7f99e1afc41d3258e4.setContent(html_8c33f1a72ac0a18ab988eb618d5f93a6);
+                var html_bf332630a364ad30ca819c297e3cad20 = $(`<div id="html_bf332630a364ad30ca819c297e3cad20" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>H05 Page泊 / Sol Oasis - A sanctuary of comfortable space. / 出発</h4><table><tr><th>Status</th><td>Hotel</td></tr><tr><th>Category</th><td>Hotel</td></tr><tr><th>Area</th><td>Page, AZ</td></tr><tr><th>Plan</th><td>Pageで宿泊。チェックイン8/4 15:00以降、チェックアウト8/5 10:00まで。セルフチェックイン（キーパッド）。</td></tr><tr><th>Notes</th><td>Host: Rochelle. ゲスト定員7人。予約人数は大人3人・子ども4人。ペットOK。セルフチェックイン（キーパッド）。旧Page宿 HMYSBTSCJS はキャンセル済み、$199.87返金処理開始。追加参加者は8/6 Las Vegasから合流のため、Day 5 Page泊は7人で問題なし。</td></tr></table><p><a href="https://maps.apple.com/?q=373%20S%20Navajo%20Dr%2C%20Page%2C%20AZ%2086040" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Page%E6%B3%8A%20/%20Sol%20Oasis%20-%20A%20sanctuary%20of%20comfortable%20space." target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_29b7b907c19d236b9c73d5bc9b79edb3.setContent(html_bf332630a364ad30ca819c297e3cad20);
             
         
 
-        marker_82254962d6a6b9d3bf0a631ff0191f02.bindPopup(popup_654985d784ec8e7f99e1afc41d3258e4)
+        marker_962aa44dbf0652665c8d9e14a0710963.bindPopup(popup_29b7b907c19d236b9c73d5bc9b79edb3)
         ;
 
         
     
     
-            marker_82254962d6a6b9d3bf0a631ff0191f02.bindTooltip(
+            marker_962aa44dbf0652665c8d9e14a0710963.bindTooltip(
                 `<div>
-                     H05 Page泊 / 出発
+                     H05 Page泊 / Sol Oasis - A sanctuary of comfortable space. / 出発
                  </div>`,
                 {
   "sticky": true,
@@ -162,44 +175,44 @@
             );
         
     
-                marker_82254962d6a6b9d3bf0a631ff0191f02.setIcon(div_icon_2408bafb86f70213587c171a4a97f1f0);
+                marker_962aa44dbf0652665c8d9e14a0710963.setIcon(div_icon_20df387b7aa2f8d945f655efe4e84571);
             
     
-            var marker_2001913a7a63daef45e719a1d5c06db2 = L.marker(
+            var marker_5a563144ed533636e0d0fb1d4ba26bdf = L.marker(
                 [36.057, -112.137],
                 {
 }
-            ).addTo(map_25345f9c049fad7d537223f53e735b03);
+            ).addTo(map_0279104539708b258850c828fe23fe97);
         
     
-            var div_icon_2d68492ca2424109f357c87e6ca1885a = L.divIcon({
-  "html": "\n            \u003cdiv style=\"\n                background:#1a9850; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                H06\n            \u003c/div\u003e",
+            var div_icon_54ac1187b72e82660354d5ada700a704 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#1a9850; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003eH06\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
   "className": "empty",
 });
         
     
-        var popup_b1f0452c41e93f3cdf2157642b35edf0 = L.popup({
+        var popup_798f753edacfff80e31fdccad47accfc = L.popup({
   "maxWidth": 420,
 });
 
         
             
-                var html_b3a8938e76af20bd66d45a5795c2d47e = $(`<div id="html_b3a8938e76af20bd66d45a5795c2d47e" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>H06 Grand Canyon Village Lodge</h4>       <table>         <tr><th>Status</th><td>Hotel</td></tr>         <tr><th>Category</th><td>Hotel</td></tr>         <tr><th>Area</th><td>Grand Canyon Village, AZ</td></tr>                           <tr><th>Plan</th><td>Grand Canyon Villageのロッジに宿泊。</td></tr>                  <tr><th>Notes</th><td>メール本文ではホテル名が明示されず。最大5 guests/room-unitの記載あり。人数/部屋数は要確認。キャンセル/変更は8/3 16:00以降100% fee。</td></tr>       </table>       <p><a href="https://maps.apple.com/?q=Grand%20Canyon%20Village%20Lodge" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&q=Grand%20Canyon%20Village%20Lodge" target="_blank">Google image search</a></p></div>     </div>`)[0];
-                popup_b1f0452c41e93f3cdf2157642b35edf0.setContent(html_b3a8938e76af20bd66d45a5795c2d47e);
+                var html_2a5526ec82418bfd16a242168428c4cc = $(`<div id="html_2a5526ec82418bfd16a242168428c4cc" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>H06 Maswik Lodge / Grand Canyon Village泊</h4><table><tr><th>Status</th><td>Hotel</td></tr><tr><th>Category</th><td>Hotel</td></tr><tr><th>Area</th><td>Grand Canyon Village, AZ</td></tr><tr><th>Plan</th><td>Grand Canyon Villageのロッジに宿泊。</td></tr><tr><th>Notes</th><td>Hotels.com予約メールでは最大5 guests/room-unit。部屋数・ベッド構成は要確認。ホテル住所は公式Maswik Lodge住所と一致。キャンセル/変更は8/3 16:00以降100% fee。</td></tr></table><p><a href="https://maps.apple.com/?q=202%20South%20Village%20Loop%2C%20Grand%20Canyon%2C%20AZ%2086023%2C%20USA" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Maswik%20Lodge%20/%20Grand%20Canyon%20Village%E6%B3%8A" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_798f753edacfff80e31fdccad47accfc.setContent(html_2a5526ec82418bfd16a242168428c4cc);
             
         
 
-        marker_2001913a7a63daef45e719a1d5c06db2.bindPopup(popup_b1f0452c41e93f3cdf2157642b35edf0)
+        marker_5a563144ed533636e0d0fb1d4ba26bdf.bindPopup(popup_798f753edacfff80e31fdccad47accfc)
         ;
 
         
     
     
-            marker_2001913a7a63daef45e719a1d5c06db2.bindTooltip(
+            marker_5a563144ed533636e0d0fb1d4ba26bdf.bindTooltip(
                 `<div>
-                     H06 Grand Canyon Village Lodge
+                     H06 Maswik Lodge / Grand Canyon Village泊
                  </div>`,
                 {
   "sticky": true,
@@ -207,42 +220,42 @@
             );
         
     
-                marker_2001913a7a63daef45e719a1d5c06db2.setIcon(div_icon_2d68492ca2424109f357c87e6ca1885a);
+                marker_5a563144ed533636e0d0fb1d4ba26bdf.setIcon(div_icon_54ac1187b72e82660354d5ada700a704);
             
     
-            var marker_2eb62a2db295c7ae64fae4d62bd9fbe7 = L.marker(
+            var marker_a57f4da80ab18ac8922cae5eaa86fd03 = L.marker(
                 [36.8791, -111.5104],
                 {
 }
-            ).addTo(map_25345f9c049fad7d537223f53e735b03);
+            ).addTo(map_0279104539708b258850c828fe23fe97);
         
     
-            var div_icon_924354d20c800c6fde2ee941af06b9df = L.divIcon({
-  "html": "\n            \u003cdiv style=\"\n                background:#d7191c; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                06-01\n            \u003c/div\u003e",
+            var div_icon_59f5ac18d09902c1f3ad4894f8d014a3 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#d7191c; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e06-01\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
   "className": "empty",
 });
         
     
-        var popup_3ae32f64518720aa5b5ddcc46a596d21 = L.popup({
+        var popup_56238cafb3f1f142577318edc448dff9 = L.popup({
   "maxWidth": 420,
 });
 
         
             
-                var html_1af8c8bb7713d70251822322f1cdad7f = $(`<div id="html_1af8c8bb7713d70251822322f1cdad7f" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>06-01 Horseshoe Bend</h4>       <table>         <tr><th>Status</th><td>行く予定</td></tr>         <tr><th>Category</th><td>Must</td></tr>         <tr><th>Area</th><td>Page / Glen Canyon</td></tr>         <tr><th>Time</th><td>45–75 min</td></tr>         <tr><th>Effort</th><td>往復約1.5 miles。日陰少ない。崖の縁で子供注意。</td></tr>         <tr><th>Plan</th><td>朝にColorado Riverの大きな湾曲を展望する。</td></tr>         <tr><th>Skip rule</th><td>暑い、混雑、子供の安全管理が難しい場合は滞在を短縮。崖の縁に近づきすぎない。</td></tr>         <tr><th>Notes</th><td>朝推奨。水・帽子必須。</td></tr>       </table>       <p><a href="https://maps.apple.com/?q=Horseshoe%20Bend" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&q=Horseshoe%20Bend" target="_blank">Google image search</a></p></div>     </div>`)[0];
-                popup_3ae32f64518720aa5b5ddcc46a596d21.setContent(html_1af8c8bb7713d70251822322f1cdad7f);
+                var html_10580ec84e961da6b0fe9bae8fc6dc86 = $(`<div id="html_10580ec84e961da6b0fe9bae8fc6dc86" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>06-01 Horseshoe Bend</h4><table><tr><th>Status</th><td>行く予定</td></tr><tr><th>Category</th><td>Must</td></tr><tr><th>Area</th><td>Page / Glen Canyon</td></tr><tr><th>Time</th><td>45–75 min</td></tr><tr><th>Effort</th><td>往復約1.5 miles。日陰少ない。崖の縁で子供注意。</td></tr><tr><th>Plan</th><td>朝にColorado Riverの大きな湾曲を展望する。</td></tr><tr><th>Skip rule</th><td>暑い、混雑、子供の安全管理が難しい場合は滞在を短縮。崖の縁に近づきすぎない。</td></tr><tr><th>Notes</th><td>朝推奨。水・帽子必須。</td></tr></table><p><a href="https://maps.apple.com/?q=Horseshoe%20Bend%20Page%20/%20Glen%20Canyon" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Horseshoe%20Bend" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_56238cafb3f1f142577318edc448dff9.setContent(html_10580ec84e961da6b0fe9bae8fc6dc86);
             
         
 
-        marker_2eb62a2db295c7ae64fae4d62bd9fbe7.bindPopup(popup_3ae32f64518720aa5b5ddcc46a596d21)
+        marker_a57f4da80ab18ac8922cae5eaa86fd03.bindPopup(popup_56238cafb3f1f142577318edc448dff9)
         ;
 
         
     
     
-            marker_2eb62a2db295c7ae64fae4d62bd9fbe7.bindTooltip(
+            marker_a57f4da80ab18ac8922cae5eaa86fd03.bindTooltip(
                 `<div>
                      06-01 Horseshoe Bend
                  </div>`,
@@ -252,42 +265,42 @@
             );
         
     
-                marker_2eb62a2db295c7ae64fae4d62bd9fbe7.setIcon(div_icon_924354d20c800c6fde2ee941af06b9df);
+                marker_a57f4da80ab18ac8922cae5eaa86fd03.setIcon(div_icon_59f5ac18d09902c1f3ad4894f8d014a3);
             
     
-            var marker_b64418dfb714603b5dbbb7420c867fe4 = L.marker(
+            var marker_9fac755fbcf5b719a53736559830ec21 = L.marker(
                 [36.9366, -111.4845],
                 {
 }
-            ).addTo(map_25345f9c049fad7d537223f53e735b03);
+            ).addTo(map_0279104539708b258850c828fe23fe97);
         
     
-            var div_icon_e1806f919a4a7197ae96a59528b235ca = L.divIcon({
-  "html": "\n            \u003cdiv style=\"\n                background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                06-02\n            \u003c/div\u003e",
+            var div_icon_9bd51d4c402dd6948039bb1e9dfafd98 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e06-02\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
   "className": "empty",
 });
         
     
-        var popup_18c10df1714cb5ffc3ea23412f8debe1 = L.popup({
+        var popup_bfc74a56da8adea32cbe26cc4b43d7c1 = L.popup({
   "maxWidth": 420,
 });
 
         
             
-                var html_3074ac2d7994ecd8f2711a4e98c480b5 = $(`<div id="html_3074ac2d7994ecd8f2711a4e98c480b5" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>06-02 Carl Hayden Visitor Center / Glen Canyon Dam Bridge</h4>       <table>         <tr><th>Status</th><td>候補</td></tr>         <tr><th>Category</th><td>Possibly</td></tr>         <tr><th>Area</th><td>Page / Glen Canyon</td></tr>         <tr><th>Time</th><td>20–45 min</td></tr>         <tr><th>Effort</th><td>軽い。屋内休憩・橋の展望。</td></tr>         <tr><th>Plan</th><td>Horseshoe Bend後、時間があれば巨大ダムと橋を見る。</td></tr>         <tr><th>Skip rule</th><td>Grand Canyonへの出発が遅れる場合は省略。開館状況次第。</td></tr>         <tr><th>Notes</th><td>開館時間・セキュリティ・ツアー有無は直前確認。</td></tr>       </table>       <p><a href="https://maps.apple.com/?q=Carl%20Hayden%20Visitor%20Center%20/%20Glen%20Canyon%20Dam%20Bridge" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&q=Carl%20Hayden%20Visitor%20Center%20Glen%20Canyon%20Dam%20Bridge" target="_blank">Google image search</a></p></div>     </div>`)[0];
-                popup_18c10df1714cb5ffc3ea23412f8debe1.setContent(html_3074ac2d7994ecd8f2711a4e98c480b5);
+                var html_3757ea28c362ae9c00461a9d255bc761 = $(`<div id="html_3757ea28c362ae9c00461a9d255bc761" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>06-02 Carl Hayden Visitor Center / Glen Canyon Dam Bridge</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Page / Glen Canyon</td></tr><tr><th>Time</th><td>20–45 min</td></tr><tr><th>Effort</th><td>軽い。屋内休憩・橋の展望。</td></tr><tr><th>Plan</th><td>Horseshoe Bend後、時間があれば巨大ダムと橋を見る。</td></tr><tr><th>Skip rule</th><td>Grand Canyonへの出発が遅れる場合は省略。開館状況次第。</td></tr><tr><th>Notes</th><td>開館時間・セキュリティ・ツアー有無は直前確認。</td></tr></table><p><a href="https://maps.apple.com/?q=Carl%20Hayden%20Visitor%20Center%20/%20Glen%20Canyon%20Dam%20Bridge%20Page%20/%20Glen%20Canyon" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Carl%20Hayden%20Visitor%20Center%20/%20Glen%20Canyon%20Dam%20Bridge" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_bfc74a56da8adea32cbe26cc4b43d7c1.setContent(html_3757ea28c362ae9c00461a9d255bc761);
             
         
 
-        marker_b64418dfb714603b5dbbb7420c867fe4.bindPopup(popup_18c10df1714cb5ffc3ea23412f8debe1)
+        marker_9fac755fbcf5b719a53736559830ec21.bindPopup(popup_bfc74a56da8adea32cbe26cc4b43d7c1)
         ;
 
         
     
     
-            marker_b64418dfb714603b5dbbb7420c867fe4.bindTooltip(
+            marker_9fac755fbcf5b719a53736559830ec21.bindTooltip(
                 `<div>
                      06-02 Carl Hayden Visitor Center / Glen Canyon Dam Bridge
                  </div>`,
@@ -297,42 +310,42 @@
             );
         
     
-                marker_b64418dfb714603b5dbbb7420c867fe4.setIcon(div_icon_e1806f919a4a7197ae96a59528b235ca);
+                marker_9fac755fbcf5b719a53736559830ec21.setIcon(div_icon_9bd51d4c402dd6948039bb1e9dfafd98);
             
     
-            var marker_dd9480d98dc5a6433cbcdcbe0254a39c = L.marker(
+            var marker_0be578c9ce7e3808838e0895dea848ea = L.marker(
                 [36.9135, -111.4829],
                 {
 }
-            ).addTo(map_25345f9c049fad7d537223f53e735b03);
+            ).addTo(map_0279104539708b258850c828fe23fe97);
         
     
-            var div_icon_5cec379f31f8c76315a82505d84a5f58 = L.divIcon({
-  "html": "\n            \u003cdiv style=\"\n                background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                06-03\n            \u003c/div\u003e",
+            var div_icon_8c6aaafd24068f305dd9536871e2ccb7 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#7b3294; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e06-03\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
   "className": "empty",
 });
         
     
-        var popup_b790d9d32727d055ae219d7b5d5c3e11 = L.popup({
+        var popup_cb31c2a46393a74fbef475a61f3614c8 = L.popup({
   "maxWidth": 420,
 });
 
         
             
-                var html_0fbbc6816a936d2792d9900ed5831d2d = $(`<div id="html_0fbbc6816a936d2792d9900ed5831d2d" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>06-03 Hanging Garden Trail</h4>       <table>         <tr><th>Status</th><td>候補</td></tr>         <tr><th>Category</th><td>Backup</td></tr>         <tr><th>Area</th><td>Page / Glen Canyon</td></tr>         <tr><th>Time</th><td>30–60 min</td></tr>         <tr><th>Effort</th><td>短いハイク。ただし8月は暑い。</td></tr>         <tr><th>Plan</th><td>朝に時間と体力が十分あれば、短い自然散策として追加。</td></tr>         <tr><th>Skip rule</th><td>暑い、Horseshoe Bendで十分歩いた、Grand Canyon移動を優先する場合は省略。</td></tr>         <tr><th>Notes</th><td>Backup。水を持つ。</td></tr>       </table>       <p><a href="https://maps.apple.com/?q=Hanging%20Garden%20Trail" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&q=Hanging%20Garden%20Trail" target="_blank">Google image search</a></p></div>     </div>`)[0];
-                popup_b790d9d32727d055ae219d7b5d5c3e11.setContent(html_0fbbc6816a936d2792d9900ed5831d2d);
+                var html_8a16a9224bfb19b53bde8ddb5087b848 = $(`<div id="html_8a16a9224bfb19b53bde8ddb5087b848" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>06-03 Hanging Garden Trail</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Backup</td></tr><tr><th>Area</th><td>Page / Glen Canyon</td></tr><tr><th>Time</th><td>30–60 min</td></tr><tr><th>Effort</th><td>短いハイク。ただし8月は暑い。</td></tr><tr><th>Plan</th><td>朝に時間と体力が十分あれば、短い自然散策として追加。</td></tr><tr><th>Skip rule</th><td>暑い、Horseshoe Bendで十分歩いた、Grand Canyon移動を優先する場合は省略。</td></tr><tr><th>Notes</th><td>Backup。水を持つ。</td></tr></table><p><a href="https://maps.apple.com/?q=Hanging%20Garden%20Trail%20Page%20/%20Glen%20Canyon" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Hanging%20Garden%20Trail" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_cb31c2a46393a74fbef475a61f3614c8.setContent(html_8a16a9224bfb19b53bde8ddb5087b848);
             
         
 
-        marker_dd9480d98dc5a6433cbcdcbe0254a39c.bindPopup(popup_b790d9d32727d055ae219d7b5d5c3e11)
+        marker_0be578c9ce7e3808838e0895dea848ea.bindPopup(popup_cb31c2a46393a74fbef475a61f3614c8)
         ;
 
         
     
     
-            marker_dd9480d98dc5a6433cbcdcbe0254a39c.bindTooltip(
+            marker_0be578c9ce7e3808838e0895dea848ea.bindTooltip(
                 `<div>
                      06-03 Hanging Garden Trail
                  </div>`,
@@ -342,42 +355,42 @@
             );
         
     
-                marker_dd9480d98dc5a6433cbcdcbe0254a39c.setIcon(div_icon_5cec379f31f8c76315a82505d84a5f58);
+                marker_0be578c9ce7e3808838e0895dea848ea.setIcon(div_icon_8c6aaafd24068f305dd9536871e2ccb7);
             
     
-            var marker_78689482e74b12e5d3897909fe99472e = L.marker(
+            var marker_6e4e8d124fa33b46ed40e968fa3406eb = L.marker(
                 [35.8751, -111.4129],
                 {
 }
-            ).addTo(map_25345f9c049fad7d537223f53e735b03);
+            ).addTo(map_0279104539708b258850c828fe23fe97);
         
     
-            var div_icon_edfe7622a6b8f604a087952fd8ad5684 = L.divIcon({
-  "html": "\n            \u003cdiv style=\"\n                background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                06-04\n            \u003c/div\u003e",
+            var div_icon_076343bbad1e18cedb7214049cf4e11a = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e06-04\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
   "className": "empty",
 });
         
     
-        var popup_0662c15f9ae7233f37a89b1d70b2d9ee = L.popup({
+        var popup_924266c8d6a617e94178773d8bf3de27 = L.popup({
   "maxWidth": 420,
 });
 
         
             
-                var html_2f57e6b7f5188427180d1aab07cd08d6 = $(`<div id="html_2f57e6b7f5188427180d1aab07cd08d6" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>06-04 Cameron Trading Post / Cameron周辺</h4>       <table>         <tr><th>Status</th><td>候補</td></tr>         <tr><th>Category</th><td>Possibly</td></tr>         <tr><th>Area</th><td>Page → Grand Canyon South Rim</td></tr>         <tr><th>Time</th><td>20–45 min</td></tr>         <tr><th>Effort</th><td>軽い。昼食・トイレ・給油向き。</td></tr>         <tr><th>Plan</th><td>PageからGrand Canyon East Entranceへ向かう途中の休憩・昼食・給油候補。</td></tr>         <tr><th>Skip rule</th><td>補給が不要なら通過。Grand Canyon夕方時間を優先。</td></tr>         <tr><th>Notes</th><td>長居しない。</td></tr>       </table>       <p><a href="https://maps.apple.com/?q=Cameron%20Trading%20Post%20/%20Cameron周辺" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&q=Cameron%20Trading%20Post%20Cameron%E5%91%A8%E8%BE%BA" target="_blank">Google image search</a></p></div>     </div>`)[0];
-                popup_0662c15f9ae7233f37a89b1d70b2d9ee.setContent(html_2f57e6b7f5188427180d1aab07cd08d6);
+                var html_5ad0f54f266c9f4757a482fe6f9ddb9a = $(`<div id="html_5ad0f54f266c9f4757a482fe6f9ddb9a" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>06-04 Cameron Trading Post / Cameron周辺</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Page → Grand Canyon South Rim</td></tr><tr><th>Time</th><td>20–45 min</td></tr><tr><th>Effort</th><td>軽い。昼食・トイレ・給油向き。</td></tr><tr><th>Plan</th><td>PageからGrand Canyon East Entranceへ向かう途中の休憩・昼食・給油候補。</td></tr><tr><th>Skip rule</th><td>補給が不要なら通過。Grand Canyon夕方時間を優先。</td></tr><tr><th>Notes</th><td>長居しない。</td></tr></table><p><a href="https://maps.apple.com/?q=Cameron%20Trading%20Post%20/%20Cameron%E5%91%A8%E8%BE%BA%20Page%20%E2%86%92%20Grand%20Canyon%20South%20Rim" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Cameron%20Trading%20Post%20/%20Cameron%E5%91%A8%E8%BE%BA" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_924266c8d6a617e94178773d8bf3de27.setContent(html_5ad0f54f266c9f4757a482fe6f9ddb9a);
             
         
 
-        marker_78689482e74b12e5d3897909fe99472e.bindPopup(popup_0662c15f9ae7233f37a89b1d70b2d9ee)
+        marker_6e4e8d124fa33b46ed40e968fa3406eb.bindPopup(popup_924266c8d6a617e94178773d8bf3de27)
         ;
 
         
     
     
-            marker_78689482e74b12e5d3897909fe99472e.bindTooltip(
+            marker_6e4e8d124fa33b46ed40e968fa3406eb.bindTooltip(
                 `<div>
                      06-04 Cameron Trading Post / Cameron周辺
                  </div>`,
@@ -387,42 +400,42 @@
             );
         
     
-                marker_78689482e74b12e5d3897909fe99472e.setIcon(div_icon_edfe7622a6b8f604a087952fd8ad5684);
+                marker_6e4e8d124fa33b46ed40e968fa3406eb.setIcon(div_icon_076343bbad1e18cedb7214049cf4e11a);
             
     
-            var marker_8c30568ee5a3f3278cfa7892887bf2ef = L.marker(
+            var marker_7edcc96d0e6e633e46b0504630a75d43 = L.marker(
                 [36.0436, -111.8261],
                 {
 }
-            ).addTo(map_25345f9c049fad7d537223f53e735b03);
+            ).addTo(map_0279104539708b258850c828fe23fe97);
         
     
-            var div_icon_3d2b6801e048c84c7b4f4bf89040c23d = L.divIcon({
-  "html": "\n            \u003cdiv style=\"\n                background:#d7191c; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                06-05\n            \u003c/div\u003e",
+            var div_icon_4f937083cd71daf59e93fcddda2192c6 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#d7191c; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e06-05\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
   "className": "empty",
 });
         
     
-        var popup_2550470718d7f38128524582fbd86607 = L.popup({
+        var popup_16c3cd6143205033650921a8dc6b1e62 = L.popup({
   "maxWidth": 420,
 });
 
         
             
-                var html_aa0b540eb413e8212b9e1d1723ce1f95 = $(`<div id="html_aa0b540eb413e8212b9e1d1723ce1f95" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>06-05 Desert View Watchtower / Desert View Point</h4>       <table>         <tr><th>Status</th><td>行く予定</td></tr>         <tr><th>Category</th><td>Must</td></tr>         <tr><th>Area</th><td>Grand Canyon South Rim</td></tr>         <tr><th>Time</th><td>45–60 min</td></tr>         <tr><th>Effort</th><td>展望中心。Watchtower上階は時間次第。</td></tr>         <tr><th>Plan</th><td>East Entranceから入って最初にGrand Canyonの景観を見る。</td></tr>         <tr><th>Skip rule</th><td>到着が遅い場合はWatchtower内部を省略し、展望だけに短縮。</td></tr>         <tr><th>Notes</th><td>Day 6夕方観光の開始地点。</td></tr>       </table>       <p><a href="https://maps.apple.com/?q=Desert%20View%20Watchtower%20/%20Desert%20View%20Point" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&q=Desert%20View%20Watchtower%20Desert%20View%20Point" target="_blank">Google image search</a></p></div>     </div>`)[0];
-                popup_2550470718d7f38128524582fbd86607.setContent(html_aa0b540eb413e8212b9e1d1723ce1f95);
+                var html_90708f0e86b2b77a2ef6b4df7751e0f8 = $(`<div id="html_90708f0e86b2b77a2ef6b4df7751e0f8" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>06-05 Desert View Watchtower / Desert View Point</h4><table><tr><th>Status</th><td>行く予定</td></tr><tr><th>Category</th><td>Must</td></tr><tr><th>Area</th><td>Grand Canyon South Rim</td></tr><tr><th>Time</th><td>45–60 min</td></tr><tr><th>Effort</th><td>展望中心。Watchtower上階は時間次第。</td></tr><tr><th>Plan</th><td>East Entranceから入って最初にGrand Canyonの景観を見る。</td></tr><tr><th>Skip rule</th><td>到着が遅い場合はWatchtower内部を省略し、展望だけに短縮。</td></tr><tr><th>Notes</th><td>Day 6夕方観光の開始地点。</td></tr></table><p><a href="https://maps.apple.com/?q=Desert%20View%20Watchtower%20/%20Desert%20View%20Point%20Grand%20Canyon%20South%20Rim" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Desert%20View%20Watchtower%20/%20Desert%20View%20Point" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_16c3cd6143205033650921a8dc6b1e62.setContent(html_90708f0e86b2b77a2ef6b4df7751e0f8);
             
         
 
-        marker_8c30568ee5a3f3278cfa7892887bf2ef.bindPopup(popup_2550470718d7f38128524582fbd86607)
+        marker_7edcc96d0e6e633e46b0504630a75d43.bindPopup(popup_16c3cd6143205033650921a8dc6b1e62)
         ;
 
         
     
     
-            marker_8c30568ee5a3f3278cfa7892887bf2ef.bindTooltip(
+            marker_7edcc96d0e6e633e46b0504630a75d43.bindTooltip(
                 `<div>
                      06-05 Desert View Watchtower / Desert View Point
                  </div>`,
@@ -432,42 +445,42 @@
             );
         
     
-                marker_8c30568ee5a3f3278cfa7892887bf2ef.setIcon(div_icon_3d2b6801e048c84c7b4f4bf89040c23d);
+                marker_7edcc96d0e6e633e46b0504630a75d43.setIcon(div_icon_4f937083cd71daf59e93fcddda2192c6);
             
     
-            var marker_688a03cb97b907b5e66dd6d3f245f23b = L.marker(
+            var marker_909b7bb3e40e0778bf0cbd880723c9b3 = L.marker(
                 [36.0376, -111.8524],
                 {
 }
-            ).addTo(map_25345f9c049fad7d537223f53e735b03);
+            ).addTo(map_0279104539708b258850c828fe23fe97);
         
     
-            var div_icon_5a59b386c29ce449f2a9363f5c8a1576 = L.divIcon({
-  "html": "\n            \u003cdiv style=\"\n                background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                06-06\n            \u003c/div\u003e",
+            var div_icon_c6dbee93d42c16bfd1f25aa5e0367c77 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e06-06\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
   "className": "empty",
 });
         
     
-        var popup_a243ef66f38202608f313c3935b35c81 = L.popup({
+        var popup_d0a6c9067cc826e004dc96644a6d1500 = L.popup({
   "maxWidth": 420,
 });
 
         
             
-                var html_489a869aaf9afe98a78a6e20ba87efb7 = $(`<div id="html_489a869aaf9afe98a78a6e20ba87efb7" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>06-06 Navajo Point</h4>       <table>         <tr><th>Status</th><td>候補</td></tr>         <tr><th>Category</th><td>Possibly</td></tr>         <tr><th>Area</th><td>Grand Canyon South Rim</td></tr>         <tr><th>Time</th><td>10–20 min</td></tr>         <tr><th>Effort</th><td>ほぼ停車のみ。短時間展望。</td></tr>         <tr><th>Plan</th><td>Desert View近くで、Watchtowerを含むSouth Rim東側の展望を見る。</td></tr>         <tr><th>Skip rule</th><td>時間が押す、駐車しづらい場合は省略。</td></tr>         <tr><th>Notes</th><td>短時間だけ。Mustを削らない。</td></tr>       </table>       <p><a href="https://maps.apple.com/?q=Navajo%20Point" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&q=Navajo%20Point" target="_blank">Google image search</a></p></div>     </div>`)[0];
-                popup_a243ef66f38202608f313c3935b35c81.setContent(html_489a869aaf9afe98a78a6e20ba87efb7);
+                var html_2a1cc7de9ff1a583c857404a04fc7d11 = $(`<div id="html_2a1cc7de9ff1a583c857404a04fc7d11" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>06-06 Navajo Point</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Grand Canyon South Rim</td></tr><tr><th>Time</th><td>10–20 min</td></tr><tr><th>Effort</th><td>ほぼ停車のみ。短時間展望。</td></tr><tr><th>Plan</th><td>Desert View近くで、Watchtowerを含むSouth Rim東側の展望を見る。</td></tr><tr><th>Skip rule</th><td>時間が押す、駐車しづらい場合は省略。</td></tr><tr><th>Notes</th><td>短時間だけ。Mustを削らない。</td></tr></table><p><a href="https://maps.apple.com/?q=Navajo%20Point%20Grand%20Canyon%20South%20Rim" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Navajo%20Point" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_d0a6c9067cc826e004dc96644a6d1500.setContent(html_2a1cc7de9ff1a583c857404a04fc7d11);
             
         
 
-        marker_688a03cb97b907b5e66dd6d3f245f23b.bindPopup(popup_a243ef66f38202608f313c3935b35c81)
+        marker_909b7bb3e40e0778bf0cbd880723c9b3.bindPopup(popup_d0a6c9067cc826e004dc96644a6d1500)
         ;
 
         
     
     
-            marker_688a03cb97b907b5e66dd6d3f245f23b.bindTooltip(
+            marker_909b7bb3e40e0778bf0cbd880723c9b3.bindTooltip(
                 `<div>
                      06-06 Navajo Point
                  </div>`,
@@ -477,42 +490,42 @@
             );
         
     
-                marker_688a03cb97b907b5e66dd6d3f245f23b.setIcon(div_icon_5a59b386c29ce449f2a9363f5c8a1576);
+                marker_909b7bb3e40e0778bf0cbd880723c9b3.setIcon(div_icon_c6dbee93d42c16bfd1f25aa5e0367c77);
             
     
-            var marker_61a5a6404185ec3fa1373c74da81875d = L.marker(
+            var marker_1524221ed283601139df905868ef2e09 = L.marker(
                 [36.0001, -111.9114],
                 {
 }
-            ).addTo(map_25345f9c049fad7d537223f53e735b03);
+            ).addTo(map_0279104539708b258850c828fe23fe97);
         
     
-            var div_icon_e8b38e88cabb5a739e13615e7fd94bf6 = L.divIcon({
-  "html": "\n            \u003cdiv style=\"\n                background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                06-07\n            \u003c/div\u003e",
+            var div_icon_0c30318daeeb124eaf9710597b671657 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e06-07\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
   "className": "empty",
 });
         
     
-        var popup_70efef57ef5d171fcccd14cd86a01422 = L.popup({
+        var popup_37340f1dcbd732f7c98e72d84254310b = L.popup({
   "maxWidth": 420,
 });
 
         
             
-                var html_72b4133ba6469b18f62256c8a4933d12 = $(`<div id="html_72b4133ba6469b18f62256c8a4933d12" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>06-07 Moran Point</h4>       <table>         <tr><th>Status</th><td>候補</td></tr>         <tr><th>Category</th><td>Possibly</td></tr>         <tr><th>Area</th><td>Grand Canyon South Rim</td></tr>         <tr><th>Time</th><td>10–20 min</td></tr>         <tr><th>Effort</th><td>ほぼ停車のみ。短時間展望。</td></tr>         <tr><th>Plan</th><td>地層が見やすい展望台として短時間で見る。</td></tr>         <tr><th>Skip rule</th><td>夕方の主スポットに遅れそうなら省略。</td></tr>         <tr><th>Notes</th><td>地層を見る目的。長居しない。</td></tr>       </table>       <p><a href="https://maps.apple.com/?q=Moran%20Point" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&q=Moran%20Point" target="_blank">Google image search</a></p></div>     </div>`)[0];
-                popup_70efef57ef5d171fcccd14cd86a01422.setContent(html_72b4133ba6469b18f62256c8a4933d12);
+                var html_20185bed60083ed65175076d59d3c975 = $(`<div id="html_20185bed60083ed65175076d59d3c975" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>06-07 Moran Point</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Grand Canyon South Rim</td></tr><tr><th>Time</th><td>10–20 min</td></tr><tr><th>Effort</th><td>ほぼ停車のみ。短時間展望。</td></tr><tr><th>Plan</th><td>地層が見やすい展望台として短時間で見る。</td></tr><tr><th>Skip rule</th><td>夕方の主スポットに遅れそうなら省略。</td></tr><tr><th>Notes</th><td>地層を見る目的。長居しない。</td></tr></table><p><a href="https://maps.apple.com/?q=Moran%20Point%20Grand%20Canyon%20South%20Rim" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Moran%20Point" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_37340f1dcbd732f7c98e72d84254310b.setContent(html_20185bed60083ed65175076d59d3c975);
             
         
 
-        marker_61a5a6404185ec3fa1373c74da81875d.bindPopup(popup_70efef57ef5d171fcccd14cd86a01422)
+        marker_1524221ed283601139df905868ef2e09.bindPopup(popup_37340f1dcbd732f7c98e72d84254310b)
         ;
 
         
     
     
-            marker_61a5a6404185ec3fa1373c74da81875d.bindTooltip(
+            marker_1524221ed283601139df905868ef2e09.bindTooltip(
                 `<div>
                      06-07 Moran Point
                  </div>`,
@@ -522,42 +535,42 @@
             );
         
     
-                marker_61a5a6404185ec3fa1373c74da81875d.setIcon(div_icon_e8b38e88cabb5a739e13615e7fd94bf6);
+                marker_1524221ed283601139df905868ef2e09.setIcon(div_icon_0c30318daeeb124eaf9710597b671657);
             
     
-            var marker_38c701ba9088ecfb764a52e503cfdba6 = L.marker(
+            var marker_2c534322c7c296263e1020e0255a24f3 = L.marker(
                 [35.9983, -111.987],
                 {
 }
-            ).addTo(map_25345f9c049fad7d537223f53e735b03);
+            ).addTo(map_0279104539708b258850c828fe23fe97);
         
     
-            var div_icon_ea3f32b2db1b1b69e9158587feeadfce = L.divIcon({
-  "html": "\n            \u003cdiv style=\"\n                background:#d7191c; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                06-08\n            \u003c/div\u003e",
+            var div_icon_1d4b303aa9e086d326ba537622c80cb8 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#d7191c; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e06-08\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
   "className": "empty",
 });
         
     
-        var popup_8c0f7b334c8a8062aa53a7af9fbf8ce8 = L.popup({
+        var popup_320cf6c77df08009659203e1ae884193 = L.popup({
   "maxWidth": 420,
 });
 
         
             
-                var html_e225309a661f6e69e4d62a46cc7d73c9 = $(`<div id="html_e225309a661f6e69e4d62a46cc7d73c9" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>06-08 Grandview Point</h4>       <table>         <tr><th>Status</th><td>行く予定</td></tr>         <tr><th>Category</th><td>Must</td></tr>         <tr><th>Area</th><td>Grand Canyon South Rim</td></tr>         <tr><th>Time</th><td>20–30 min</td></tr>         <tr><th>Effort</th><td>展望のみ。Trailは急なので歩かない。</td></tr>         <tr><th>Plan</th><td>Desert View Drive上の強い展望を夕方に見る。</td></tr>         <tr><th>Skip rule</th><td>Trailには入らない。時間が押す場合は写真だけで短縮。</td></tr>         <tr><th>Notes</th><td>Day 6夕方の中核。</td></tr>       </table>       <p><a href="https://maps.apple.com/?q=Grandview%20Point" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&q=Grandview%20Point" target="_blank">Google image search</a></p></div>     </div>`)[0];
-                popup_8c0f7b334c8a8062aa53a7af9fbf8ce8.setContent(html_e225309a661f6e69e4d62a46cc7d73c9);
+                var html_fd490c62cc8454470499b52ab07ba2e8 = $(`<div id="html_fd490c62cc8454470499b52ab07ba2e8" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>06-08 Grandview Point</h4><table><tr><th>Status</th><td>行く予定</td></tr><tr><th>Category</th><td>Must</td></tr><tr><th>Area</th><td>Grand Canyon South Rim</td></tr><tr><th>Time</th><td>20–30 min</td></tr><tr><th>Effort</th><td>展望のみ。Trailは急なので歩かない。</td></tr><tr><th>Plan</th><td>Desert View Drive上の強い展望を夕方に見る。</td></tr><tr><th>Skip rule</th><td>Trailには入らない。時間が押す場合は写真だけで短縮。</td></tr><tr><th>Notes</th><td>Day 6夕方の中核。</td></tr></table><p><a href="https://maps.apple.com/?q=Grandview%20Point%20Grand%20Canyon%20South%20Rim" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Grandview%20Point" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_320cf6c77df08009659203e1ae884193.setContent(html_fd490c62cc8454470499b52ab07ba2e8);
             
         
 
-        marker_38c701ba9088ecfb764a52e503cfdba6.bindPopup(popup_8c0f7b334c8a8062aa53a7af9fbf8ce8)
+        marker_2c534322c7c296263e1020e0255a24f3.bindPopup(popup_320cf6c77df08009659203e1ae884193)
         ;
 
         
     
     
-            marker_38c701ba9088ecfb764a52e503cfdba6.bindTooltip(
+            marker_2c534322c7c296263e1020e0255a24f3.bindTooltip(
                 `<div>
                      06-08 Grandview Point
                  </div>`,
@@ -567,42 +580,42 @@
             );
         
     
-                marker_38c701ba9088ecfb764a52e503cfdba6.setIcon(div_icon_ea3f32b2db1b1b69e9158587feeadfce);
+                marker_2c534322c7c296263e1020e0255a24f3.setIcon(div_icon_1d4b303aa9e086d326ba537622c80cb8);
             
     
-            var marker_5dacd1a072caf6a2645d36daead82d26 = L.marker(
+            var marker_9366c29df527a71011239812f09216ed = L.marker(
                 [36.0591, -112.1093],
                 {
 }
-            ).addTo(map_25345f9c049fad7d537223f53e735b03);
+            ).addTo(map_0279104539708b258850c828fe23fe97);
         
     
-            var div_icon_862b54434f3d5cbc4c19355bdcd6ce09 = L.divIcon({
-  "html": "\n            \u003cdiv style=\"\n                background:#d7191c; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                06-09\n            \u003c/div\u003e",
+            var div_icon_889d3f53d6827053abbd95d39cf6e168 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#d7191c; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e06-09\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
   "className": "empty",
 });
         
     
-        var popup_cd088ad69f7a75d63109987329b0d7e4 = L.popup({
+        var popup_d07bd6ec94bac29264f2cb00f771abd8 = L.popup({
   "maxWidth": 420,
 });
 
         
             
-                var html_4b1944b076af578c74a11c657075a96d = $(`<div id="html_4b1944b076af578c74a11c657075a96d" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>06-09 Grand Canyon Visitor Center / Mather Point area</h4>       <table>         <tr><th>Status</th><td>行く予定</td></tr>         <tr><th>Category</th><td>Must</td></tr>         <tr><th>Area</th><td>Grand Canyon South Rim</td></tr>         <tr><th>Time</th><td>30–60 min</td></tr>         <tr><th>Effort</th><td>軽い。駐車・トイレ・水・Junior Ranger向き。Mather Pointへ短時間で行ける。</td></tr>         <tr><th>Plan</th><td>Visitor Centerで地図・Junior Rangerを確認し、必要ならMather Point周辺を短時間見る。</td></tr>         <tr><th>Skip rule</th><td>到着が遅い場合はトイレ・Junior Ranger確認だけに短縮し、Yavapaiへ進む。</td></tr>         <tr><th>Notes</th><td>Junior Ranger対象。Mather Point sunriseとは別に、情報拠点として追加。</td></tr>       </table>       <p><a href="https://maps.apple.com/?q=Grand%20Canyon%20Visitor%20Center%20Mather%20Point" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&q=Grand%20Canyon%20Visitor%20Center%20Mather%20Point%20area" target="_blank">Google image search</a></p>     </div>     </div>`)[0];
-                popup_cd088ad69f7a75d63109987329b0d7e4.setContent(html_4b1944b076af578c74a11c657075a96d);
+                var html_e73e02801a2b1ad9a54442a4f3bfaec1 = $(`<div id="html_e73e02801a2b1ad9a54442a4f3bfaec1" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>06-09 Grand Canyon Visitor Center / Mather Point area</h4><table><tr><th>Status</th><td>行く予定</td></tr><tr><th>Category</th><td>Must</td></tr><tr><th>Area</th><td>Grand Canyon South Rim</td></tr><tr><th>Time</th><td>30–60 min</td></tr><tr><th>Effort</th><td>軽い。駐車・トイレ・水・Junior Ranger向き。Mather Pointへ短時間で行ける。</td></tr><tr><th>Plan</th><td>Visitor Centerで地図・Junior Rangerを確認し、必要ならMather Point周辺を短時間見る。</td></tr><tr><th>Skip rule</th><td>到着が遅い場合はトイレ・Junior Ranger確認だけに短縮し、Yavapaiへ進む。</td></tr><tr><th>Notes</th><td>Junior Ranger対象。Mather Point sunriseとは別に、情報拠点として追加。</td></tr></table><p><a href="https://maps.apple.com/?q=Grand%20Canyon%20Visitor%20Center%20Mather%20Point" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Grand%20Canyon%20Visitor%20Center%20/%20Mather%20Point%20area" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_d07bd6ec94bac29264f2cb00f771abd8.setContent(html_e73e02801a2b1ad9a54442a4f3bfaec1);
             
         
 
-        marker_5dacd1a072caf6a2645d36daead82d26.bindPopup(popup_cd088ad69f7a75d63109987329b0d7e4)
+        marker_9366c29df527a71011239812f09216ed.bindPopup(popup_d07bd6ec94bac29264f2cb00f771abd8)
         ;
 
         
     
     
-            marker_5dacd1a072caf6a2645d36daead82d26.bindTooltip(
+            marker_9366c29df527a71011239812f09216ed.bindTooltip(
                 `<div>
                      06-09 Grand Canyon Visitor Center / Mather Point area
                  </div>`,
@@ -612,42 +625,42 @@
             );
         
     
-                marker_5dacd1a072caf6a2645d36daead82d26.setIcon(div_icon_862b54434f3d5cbc4c19355bdcd6ce09);
+                marker_9366c29df527a71011239812f09216ed.setIcon(div_icon_889d3f53d6827053abbd95d39cf6e168);
             
     
-            var marker_ccddd80c9c449e3f824d55209dc7e26a = L.marker(
+            var marker_e8c6e5af408c8bd6cfca5c505b440b0e = L.marker(
                 [36.0658, -112.1167],
                 {
 }
-            ).addTo(map_25345f9c049fad7d537223f53e735b03);
+            ).addTo(map_0279104539708b258850c828fe23fe97);
         
     
-            var div_icon_258ee881dbe2a93cb539ee2facc54088 = L.divIcon({
-  "html": "\n            \u003cdiv style=\"\n                background:#d7191c; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                06-10\n            \u003c/div\u003e",
+            var div_icon_238506f03d93a6eaa31dc8908a0244f5 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#d7191c; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e06-10\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
   "className": "empty",
 });
         
     
-        var popup_1c179990e7df0078c9bbccd298962881 = L.popup({
+        var popup_c4252db818954c10a368f1e468971b45 = L.popup({
   "maxWidth": 420,
 });
 
         
             
-                var html_3739725a6af66b9a4565f98665161fed = $(`<div id="html_3739725a6af66b9a4565f98665161fed" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>06-10 Yavapai Point / Yavapai Geology Museum</h4>       <table>         <tr><th>Status</th><td>行く予定</td></tr>         <tr><th>Category</th><td>Must</td></tr>         <tr><th>Area</th><td>Grand Canyon South Rim</td></tr>         <tr><th>Time</th><td>45–75 min</td></tr>         <tr><th>Effort</th><td>軽い。展望と屋内展示。夕方の締めに向く。</td></tr>         <tr><th>Plan</th><td>Village側に近い場所で夕方から日没を見て、必要ならGeology Museumで地形を確認。</td></tr>         <tr><th>Skip rule</th><td>混雑時はMather Pointへ切替。Museum閉館後なら展望だけ。</td></tr>         <tr><th>Notes</th><td>Day 6夕方の最終候補。</td></tr>       </table>       <p><a href="https://maps.apple.com/?q=Yavapai%20Point%20/%20Yavapai%20Geology%20Museum" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&q=Yavapai%20Point%20Yavapai%20Geology%20Museum" target="_blank">Google image search</a></p></div>     </div>`)[0];
-                popup_1c179990e7df0078c9bbccd298962881.setContent(html_3739725a6af66b9a4565f98665161fed);
+                var html_80049b9e41574db347d6c88401af8748 = $(`<div id="html_80049b9e41574db347d6c88401af8748" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>06-10 Yavapai Point / Yavapai Geology Museum</h4><table><tr><th>Status</th><td>行く予定</td></tr><tr><th>Category</th><td>Must</td></tr><tr><th>Area</th><td>Grand Canyon South Rim</td></tr><tr><th>Time</th><td>45–75 min</td></tr><tr><th>Effort</th><td>軽い。展望と屋内展示。夕方の締めに向く。</td></tr><tr><th>Plan</th><td>Village側に近い場所で夕方から日没を見て、必要ならGeology Museumで地形を確認。</td></tr><tr><th>Skip rule</th><td>混雑時はMather Pointへ切替。Museum閉館後なら展望だけ。</td></tr><tr><th>Notes</th><td>Day 6夕方の最終候補。</td></tr></table><p><a href="https://maps.apple.com/?q=Yavapai%20Point%20/%20Yavapai%20Geology%20Museum%20Grand%20Canyon%20South%20Rim" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Yavapai%20Point%20/%20Yavapai%20Geology%20Museum" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_c4252db818954c10a368f1e468971b45.setContent(html_80049b9e41574db347d6c88401af8748);
             
         
 
-        marker_ccddd80c9c449e3f824d55209dc7e26a.bindPopup(popup_1c179990e7df0078c9bbccd298962881)
+        marker_e8c6e5af408c8bd6cfca5c505b440b0e.bindPopup(popup_c4252db818954c10a368f1e468971b45)
         ;
 
         
     
     
-            marker_ccddd80c9c449e3f824d55209dc7e26a.bindTooltip(
+            marker_e8c6e5af408c8bd6cfca5c505b440b0e.bindTooltip(
                 `<div>
                      06-10 Yavapai Point / Yavapai Geology Museum
                  </div>`,
@@ -657,42 +670,42 @@
             );
         
     
-                marker_ccddd80c9c449e3f824d55209dc7e26a.setIcon(div_icon_258ee881dbe2a93cb539ee2facc54088);
+                marker_e8c6e5af408c8bd6cfca5c505b440b0e.setIcon(div_icon_238506f03d93a6eaa31dc8908a0244f5);
             
     
-            var marker_a243336f9fe17e4bcc401d753180a0c9 = L.marker(
+            var marker_8984a104a0b2f1c52534f54692d65980 = L.marker(
                 [36.0613, -112.1092],
                 {
 }
-            ).addTo(map_25345f9c049fad7d537223f53e735b03);
+            ).addTo(map_0279104539708b258850c828fe23fe97);
         
     
-            var div_icon_be6ae0c6a542221d6167c3976cc4a5ce = L.divIcon({
-  "html": "\n            \u003cdiv style=\"\n                background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                06-11\n            \u003c/div\u003e",
+            var div_icon_14201e0b8c929eebd2883c33d57d9be0 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#7b3294; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e06-11\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
   "className": "empty",
 });
         
     
-        var popup_0a07661692f8243459ebb35e80315211 = L.popup({
+        var popup_5315cf527290a7de044f449f6eda3a9b = L.popup({
   "maxWidth": 420,
 });
 
         
             
-                var html_9f4e5dee419eddece6524fa8f456de53 = $(`<div id="html_9f4e5dee419eddece6524fa8f456de53" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>06-11 Mather Point</h4>       <table>         <tr><th>Status</th><td>候補</td></tr>         <tr><th>Category</th><td>Backup</td></tr>         <tr><th>Area</th><td>Grand Canyon South Rim</td></tr>         <tr><th>Time</th><td>30–60 min</td></tr>         <tr><th>Effort</th><td>軽い。Visitor Center周辺からアクセスしやすい。</td></tr>         <tr><th>Plan</th><td>Yavapaiが混んでいる、またはVisitor Center周辺に停めた場合の夕方代替。</td></tr>         <tr><th>Skip rule</th><td>Day 7朝にも使う可能性があるため、Day 6で無理に長居しない。</td></tr>         <tr><th>Notes</th><td>Day 7朝日の主候補でもある。</td></tr>       </table>       <p><a href="https://maps.apple.com/?q=Mather%20Point" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&q=Mather%20Point" target="_blank">Google image search</a></p></div>     </div>`)[0];
-                popup_0a07661692f8243459ebb35e80315211.setContent(html_9f4e5dee419eddece6524fa8f456de53);
+                var html_518d47c229e1f108191b5198acae6bf9 = $(`<div id="html_518d47c229e1f108191b5198acae6bf9" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>06-11 Mather Point</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Backup</td></tr><tr><th>Area</th><td>Grand Canyon South Rim</td></tr><tr><th>Time</th><td>30–60 min</td></tr><tr><th>Effort</th><td>軽い。Visitor Center周辺からアクセスしやすい。</td></tr><tr><th>Plan</th><td>Yavapaiが混んでいる、またはVisitor Center周辺に停めた場合の夕方代替。</td></tr><tr><th>Skip rule</th><td>Day 7朝にも使う可能性があるため、Day 6で無理に長居しない。</td></tr><tr><th>Notes</th><td>Day 7朝日の主候補でもある。</td></tr></table><p><a href="https://maps.apple.com/?q=Mather%20Point%20Grand%20Canyon%20South%20Rim" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Mather%20Point" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_5315cf527290a7de044f449f6eda3a9b.setContent(html_518d47c229e1f108191b5198acae6bf9);
             
         
 
-        marker_a243336f9fe17e4bcc401d753180a0c9.bindPopup(popup_0a07661692f8243459ebb35e80315211)
+        marker_8984a104a0b2f1c52534f54692d65980.bindPopup(popup_5315cf527290a7de044f449f6eda3a9b)
         ;
 
         
     
     
-            marker_a243336f9fe17e4bcc401d753180a0c9.bindTooltip(
+            marker_8984a104a0b2f1c52534f54692d65980.bindTooltip(
                 `<div>
                      06-11 Mather Point
                  </div>`,
@@ -702,25 +715,7 @@
             );
         
     
-                marker_a243336f9fe17e4bcc401d753180a0c9.setIcon(div_icon_be6ae0c6a542221d6167c3976cc4a5ce);
+                marker_8984a104a0b2f1c52534f54692d65980.setIcon(div_icon_14201e0b8c929eebd2883c33d57d9be0);
             
-    
-            map_25345f9c049fad7d537223f53e735b03.fitBounds(
-                [[36.9147, -111.4558], [36.057, -112.137], [36.8791, -111.5104], [36.9366, -111.4845], [36.9135, -111.4829], [35.8751, -111.4129], [36.0436, -111.8261], [36.0376, -111.8524], [36.0001, -111.9114], [35.9983, -111.987], [36.0591, -112.1093], [36.0658, -112.1167], [36.0613, -112.1092]],
-                {"padding": [40, 40]}
-            );
-        
-    
-    window._spotMarkers = {"H05": marker_82254962d6a6b9d3bf0a631ff0191f02, "H06": marker_2001913a7a63daef45e719a1d5c06db2, "06-01": marker_2eb62a2db295c7ae64fae4d62bd9fbe7, "06-02": marker_b64418dfb714603b5dbbb7420c867fe4, "06-03": marker_dd9480d98dc5a6433cbcdcbe0254a39c, "06-04": marker_78689482e74b12e5d3897909fe99472e, "06-05": marker_8c30568ee5a3f3278cfa7892887bf2ef, "06-06": marker_688a03cb97b907b5e66dd6d3f245f23b, "06-07": marker_61a5a6404185ec3fa1373c74da81875d, "06-08": marker_38c701ba9088ecfb764a52e503cfdba6, "06-09": marker_5dacd1a072caf6a2645d36daead82d26, "06-10": marker_ccddd80c9c449e3f824d55209dc7e26a, "06-11": marker_a243336f9fe17e4bcc401d753180a0c9};
-    function openSpotFromHash() {
-      var id = decodeURIComponent((window.location.hash || '').replace('#',''));
-      if (!id || !window._spotMarkers || !window._spotMarkers[id]) return;
-      var marker = window._spotMarkers[id];
-      marker.openPopup();
-      map_25345f9c049fad7d537223f53e735b03.setView(marker.getLatLng(), Math.max(map_25345f9c049fad7d537223f53e735b03.getZoom(), 10));
-    }
-    setTimeout(openSpotFromHash, 600);
-    window.addEventListener('hashchange', openSpotFromHash);
-    
 </script>
 </html>

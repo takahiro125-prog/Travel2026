@@ -3,6 +3,10 @@
 <head>
     
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+    <style>
+    .popup table{border-collapse:collapse;font-size:13px}.popup th{background:#f2f2f2;text-align:left;padding:4px 7px;border-bottom:1px solid #ddd;vertical-align:top;white-space:nowrap}.popup td{padding:4px 7px;border-bottom:1px solid #ddd;vertical-align:top}.popup h4{margin:0 0 8px;font-size:16px}.popup a{font-weight:700}.leaflet-popup-content{min-width:260px;max-width:420px}
+    </style>
     <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -17,7 +21,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_29f1e9f49a2106b4fdfd122ab2ab45ec {
+                #map_79f50f1ee66641c0d40b75aa1bc0dbec {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -54,35 +58,38 @@
 <body>
     
     
-    <div style="position: fixed; top: 18px; left: 50%; transform: translateX(-50%); z-index: 9999;
-                background: rgba(255,255,255,.94); border: 1px solid #aaa; border-radius: 10px;
-                padding: 10px 16px; font-family: Arial, sans-serif; box-shadow: 0 1px 5px rgba(0,0,0,.25);
-                text-align:center;">
+    <div style="position: fixed; top: 18px; left: 50%; transform: translateX(-50%); z-index: 9999;background: rgba(255,255,255,.94); border: 1px solid #aaa; border-radius: 10px;padding: 10px 16px; font-family: Arial, sans-serif; box-shadow: 0 1px 5px rgba(0,0,0,.25); text-align:center;">
       <div style="font-size:18px;font-weight:700;">Day 2 Travel Map</div>
       <div style="font-size:12px;color:#444;">Baker City → Sandy / 478 miles / 約6:30–7:00 + 観光1–2h</div>
     </div>
     
-    
-    <div style="position: fixed; bottom: 28px; left: 28px; z-index: 9999; background: white;
-                border: 1px solid #999; border-radius: 8px; padding: 12px 14px;
-                font-family: Arial, sans-serif; font-size: 13px; box-shadow: 0 1px 5px rgba(0,0,0,.25);">
-      <div style="font-weight:700; margin-bottom:7px;">Day 2</div>
-      <div><span style="background:#1a9850;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Hotel: 2</div>
-      <div><span style="background:#d7191c;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>行く予定: 0</div>
-      <div><span style="background:#2c7bb6;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>候補: 6</div>
-      <div><span style="background:#7b3294;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>候補（重い）: 0</div>
-      <div style="margin-top:7px;color:#555;max-width:260px;">Planning map. Use Apple Maps / Google Maps / NPS for final navigation.</div>
+    <div style="position: fixed; bottom: 28px; left: 28px; z-index: 9999; background: white;border: 1px solid #999; border-radius: 8px; padding: 12px 14px;font-family: Arial, sans-serif; font-size: 13px; box-shadow: 0 1px 5px rgba(0,0,0,.25);">
+      <div style="font-weight:700; margin-bottom:7px;">Legend</div><div><span style="background:#1a9850;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Hotel</div><div><span style="background:#d7191c;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Must</div><div><span style="background:#2c7bb6;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Possibly</div><div><span style="background:#7b3294;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Backup / heavy</div><div><span style="background:#ff8c00;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Airport pickup</div>
+      <div style="margin-top:7px;color:#555;max-width:270px;">Planning map. Use Apple Maps / Google Maps / official park information for final navigation.</div>
     </div>
     
+    <script>
+    window._spotMarkers = {"H01": marker_f0223ef8ebbd2caa4806802aa8c94bbe, "H02": marker_3f9351c794a3de383966090eb34ee132, "02-01": marker_e6d75b5580073fa4d70975dc7fbfd32d, "02-03": marker_dcfd619affd7a82ca77f0db3084df2ce, "02-05": marker_f8a67fb118e28c5dc3714d1395d8acad, "02-06": marker_1defc09d815611b6746acb9f348d8fa6, "02-07": marker_8dd9ad81177f47b321295327ad86f819, "02-08": marker_999c9087d944974f7ca6a5c513a962f3};
+    function openSpotFromHash() {
+      var id = decodeURIComponent((window.location.hash || '').replace('#',''));
+      if (!id || !window._spotMarkers || !window._spotMarkers[id]) return;
+      var marker = window._spotMarkers[id];
+      marker.openPopup();
+      map_79f50f1ee66641c0d40b75aa1bc0dbec.setView(marker.getLatLng(), Math.max(map_79f50f1ee66641c0d40b75aa1bc0dbec.getZoom(), 10));
+    }
+    setTimeout(openSpotFromHash, 600);
+    window.addEventListener('hashchange', openSpotFromHash);
+    </script>
     
-            <div class="folium-map" id="map_29f1e9f49a2106b4fdfd122ab2ab45ec" ></div>
+    
+            <div class="folium-map" id="map_79f50f1ee66641c0d40b75aa1bc0dbec" ></div>
         
 </body>
 <script>
     
     
-            var map_29f1e9f49a2106b4fdfd122ab2ab45ec = L.map(
-                "map_29f1e9f49a2106b4fdfd122ab2ab45ec",
+            var map_79f50f1ee66641c0d40b75aa1bc0dbec = L.map(
+                "map_79f50f1ee66641c0d40b75aa1bc0dbec",
                 {
                     center: [42.180725, -114.0298625],
                     crs: L.CRS.EPSG3857,
@@ -94,13 +101,13 @@
 
                 }
             );
-            L.control.scale().addTo(map_29f1e9f49a2106b4fdfd122ab2ab45ec);
+            L.control.scale().addTo(map_79f50f1ee66641c0d40b75aa1bc0dbec);
 
             
 
         
     
-            var tile_layer_811e9b222920ccb4d7e6206d75265a94 = L.tileLayer(
+            var tile_layer_5637a3c6ac81118c8b424f6b4b266303 = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -117,42 +124,48 @@
             );
         
     
-            tile_layer_811e9b222920ccb4d7e6206d75265a94.addTo(map_29f1e9f49a2106b4fdfd122ab2ab45ec);
+            tile_layer_5637a3c6ac81118c8b424f6b4b266303.addTo(map_79f50f1ee66641c0d40b75aa1bc0dbec);
         
     
-            var marker_6c2588f16b7eca8e72b7d07a1002460b = L.marker(
+            map_79f50f1ee66641c0d40b75aa1bc0dbec.fitBounds(
+                [[40.589, -117.8344], [44.783, -111.8222]],
+                {"padding": [40, 40]}
+            );
+        
+    
+            var marker_f0223ef8ebbd2caa4806802aa8c94bbe = L.marker(
                 [44.7749, -117.8344],
                 {
 }
-            ).addTo(map_29f1e9f49a2106b4fdfd122ab2ab45ec);
+            ).addTo(map_79f50f1ee66641c0d40b75aa1bc0dbec);
         
     
-            var div_icon_fc5b2ed1dd6a474919c5a6ef11cc0676 = L.divIcon({
-  "html": "\n            \u003cdiv style=\"\n                background:#1a9850; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                H01\n            \u003c/div\u003e",
+            var div_icon_08cf22378ac0202782c818014a3663ad = L.divIcon({
+  "html": "\u003cdiv style=\"background:#1a9850; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003eH01\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
   "className": "empty",
 });
         
     
-        var popup_70b9dca3e2999e72382e924dcab68ecc = L.popup({
+        var popup_c9907726836094d972b7a5e51f304fce = L.popup({
   "maxWidth": 420,
 });
 
         
             
-                var html_4123dc9820cfdb139e5395520acd919f = $(`<div id="html_4123dc9820cfdb139e5395520acd919f" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>H01 Baker City泊 / 出発</h4>       <table>         <tr><th>Status</th><td>Hotel</td></tr>         <tr><th>Category</th><td>Hotel</td></tr>         <tr><th>Area</th><td>Baker City, OR</td></tr>                           <tr><th>Plan</th><td>Baker Cityで宿泊。</td></tr>                  <tr><th>Notes</th><td>Host: Troy. 騒音禁止 22:00–7:00。ペット不可。</td></tr>       </table>       <p><a href="https://maps.apple.com/?q=2621%20Grove%20St%2C%20Baker%20City%2C%20OR%2097814" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&q=Baker%20City%E6%B3%8A" target="_blank">Google image search</a></p>     </div>     </div>`)[0];
-                popup_70b9dca3e2999e72382e924dcab68ecc.setContent(html_4123dc9820cfdb139e5395520acd919f);
+                var html_c0b7565dd8010605979dcf696817a01d = $(`<div id="html_c0b7565dd8010605979dcf696817a01d" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>H01 Baker City泊 / 出発</h4><table><tr><th>Status</th><td>Hotel</td></tr><tr><th>Category</th><td>Hotel</td></tr><tr><th>Area</th><td>Baker City, OR</td></tr><tr><th>Plan</th><td>Baker Cityで宿泊。</td></tr><tr><th>Notes</th><td>Host: Troy. 騒音禁止 22:00–7:00。ペット不可。</td></tr></table><p><a href="https://maps.apple.com/?q=2621%20Grove%20St%2C%20Baker%20City%2C%20OR%2097814" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Baker%20City%E6%B3%8A" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_c9907726836094d972b7a5e51f304fce.setContent(html_c0b7565dd8010605979dcf696817a01d);
             
         
 
-        marker_6c2588f16b7eca8e72b7d07a1002460b.bindPopup(popup_70b9dca3e2999e72382e924dcab68ecc)
+        marker_f0223ef8ebbd2caa4806802aa8c94bbe.bindPopup(popup_c9907726836094d972b7a5e51f304fce)
         ;
 
         
     
     
-            marker_6c2588f16b7eca8e72b7d07a1002460b.bindTooltip(
+            marker_f0223ef8ebbd2caa4806802aa8c94bbe.bindTooltip(
                 `<div>
                      H01 Baker City泊 / 出発
                  </div>`,
@@ -162,42 +175,42 @@
             );
         
     
-                marker_6c2588f16b7eca8e72b7d07a1002460b.setIcon(div_icon_fc5b2ed1dd6a474919c5a6ef11cc0676);
+                marker_f0223ef8ebbd2caa4806802aa8c94bbe.setIcon(div_icon_08cf22378ac0202782c818014a3663ad);
             
     
-            var marker_475d79c77e23580c8e0de065a9e1f346 = L.marker(
+            var marker_3f9351c794a3de383966090eb34ee132 = L.marker(
                 [40.589, -111.833],
                 {
 }
-            ).addTo(map_29f1e9f49a2106b4fdfd122ab2ab45ec);
+            ).addTo(map_79f50f1ee66641c0d40b75aa1bc0dbec);
         
     
-            var div_icon_bf3a7f465eeb89217a944d8e4e284b9d = L.divIcon({
-  "html": "\n            \u003cdiv style=\"\n                background:#1a9850; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                H02\n            \u003c/div\u003e",
+            var div_icon_46534a8ca32913f136f15e7ce30341bd = L.divIcon({
+  "html": "\u003cdiv style=\"background:#1a9850; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003eH02\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
   "className": "empty",
 });
         
     
-        var popup_8e64c2a2174dcee3ee4d61151678cf53 = L.popup({
+        var popup_b1491a5465c46364b93c7d06de30bebc = L.popup({
   "maxWidth": 420,
 });
 
         
             
-                var html_2a2fee46e2a5fbaf948d905a54328e45 = $(`<div id="html_2a2fee46e2a5fbaf948d905a54328e45" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>H02 Sandy泊</h4>       <table>         <tr><th>Status</th><td>Hotel</td></tr>         <tr><th>Category</th><td>Hotel</td></tr>         <tr><th>Area</th><td>Sandy, UT</td></tr>                           <tr><th>Plan</th><td>Sandyで宿泊。</td></tr>                  <tr><th>Notes</th><td>Host: Andreanne &amp; Daniel. 敷地内屋外カメラあり。ペット不可。</td></tr>       </table>       <p><a href="https://maps.apple.com/?q=8558%20E%20Johnsonway%20Dr%2C%20Sandy%2C%20UT%2084094" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&q=Sandy%E6%B3%8A" target="_blank">Google image search</a></p>     </div>     </div>`)[0];
-                popup_8e64c2a2174dcee3ee4d61151678cf53.setContent(html_2a2fee46e2a5fbaf948d905a54328e45);
+                var html_2137fe2babec122f814f29bbbce8ba98 = $(`<div id="html_2137fe2babec122f814f29bbbce8ba98" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>H02 Sandy泊</h4><table><tr><th>Status</th><td>Hotel</td></tr><tr><th>Category</th><td>Hotel</td></tr><tr><th>Area</th><td>Sandy, UT</td></tr><tr><th>Plan</th><td>Sandyで宿泊。</td></tr><tr><th>Notes</th><td>Host: Andreanne &amp; Daniel. 敷地内屋外カメラあり。ペット不可。</td></tr></table><p><a href="https://maps.apple.com/?q=8558%20E%20Johnsonway%20Dr%2C%20Sandy%2C%20UT%2084094" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Sandy%E6%B3%8A" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_b1491a5465c46364b93c7d06de30bebc.setContent(html_2137fe2babec122f814f29bbbce8ba98);
             
         
 
-        marker_475d79c77e23580c8e0de065a9e1f346.bindPopup(popup_8e64c2a2174dcee3ee4d61151678cf53)
+        marker_3f9351c794a3de383966090eb34ee132.bindPopup(popup_b1491a5465c46364b93c7d06de30bebc)
         ;
 
         
     
     
-            marker_475d79c77e23580c8e0de065a9e1f346.bindTooltip(
+            marker_3f9351c794a3de383966090eb34ee132.bindTooltip(
                 `<div>
                      H02 Sandy泊
                  </div>`,
@@ -207,42 +220,42 @@
             );
         
     
-                marker_475d79c77e23580c8e0de065a9e1f346.setIcon(div_icon_bf3a7f465eeb89217a944d8e4e284b9d);
+                marker_3f9351c794a3de383966090eb34ee132.setIcon(div_icon_46534a8ca32913f136f15e7ce30341bd);
             
     
-            var marker_f98ca6fb65d1d8871d6184bf697811b8 = L.marker(
+            var marker_e6d75b5580073fa4d70975dc7fbfd32d = L.marker(
                 [44.783, -117.747],
                 {
 }
-            ).addTo(map_29f1e9f49a2106b4fdfd122ab2ab45ec);
+            ).addTo(map_79f50f1ee66641c0d40b75aa1bc0dbec);
         
     
-            var div_icon_5e8cdded7ff614ffd539efa85640c8ac = L.divIcon({
-  "html": "\n            \u003cdiv style=\"\n                background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                02-01\n            \u003c/div\u003e",
+            var div_icon_dc0fc3fbdd959d5b3a55134a2ef6eeaa = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e02-01\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
   "className": "empty",
 });
         
     
-        var popup_e4240682359eb3af8374d2891dd608c0 = L.popup({
+        var popup_0551ee7e486a03b2d7b6c2c71f6a8fda = L.popup({
   "maxWidth": 420,
 });
 
         
             
-                var html_3bdcd18b3d50a947f4f1e5366f64fabc = $(`<div id="html_3bdcd18b3d50a947f4f1e5366f64fabc" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>02-01 National Historic Oregon Trail Interpretive Center</h4>       <table>         <tr><th>Status</th><td>候補</td></tr>         <tr><th>Category</th><td>Possibly</td></tr>         <tr><th>Area</th><td>Road to Sandy / Baker City, OR</td></tr>         <tr><th>Time</th><td>60–120 min</td></tr>         <tr><th>Effort</th><td>屋内展示＋短い屋外。朝の開館時刻に注意。</td></tr>         <tr><th>Plan</th><td>Oregon Trailの開拓史、幌馬車、屋外の景色を見学する。</td></tr>         <tr><th>Skip rule</th><td>9時開館待ちで出発が遅れる、またはSandy到着を優先する場合は省略。</td></tr>         <tr><th>Notes</th><td>公式: 夏期9:00–17:00毎日。Day 2の主候補にすると朝の出発は遅れる。</td></tr>       </table>       <p><a href="https://maps.apple.com/?q=National%20Historic%20Oregon%20Trail%20Interpretive%20Center%20Baker%20City%20OR" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&q=National%20Historic%20Oregon%20Trail%20Interpretive%20Center" target="_blank">Google image search</a></p>     </div>     </div>`)[0];
-                popup_e4240682359eb3af8374d2891dd608c0.setContent(html_3bdcd18b3d50a947f4f1e5366f64fabc);
+                var html_29cad127a2fdc348c556f7227994d768 = $(`<div id="html_29cad127a2fdc348c556f7227994d768" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>02-01 National Historic Oregon Trail Interpretive Center</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Road to Sandy / Baker City, OR</td></tr><tr><th>Time</th><td>60–120 min</td></tr><tr><th>Effort</th><td>屋内展示＋短い屋外。朝の開館時刻に注意。</td></tr><tr><th>Plan</th><td>Oregon Trailの開拓史、幌馬車、屋外の景色を見学する。</td></tr><tr><th>Skip rule</th><td>9時開館待ちで出発が遅れる、またはSandy到着を優先する場合は省略。</td></tr><tr><th>Notes</th><td>公式: 夏期9:00–17:00毎日。Day 2の主候補にすると朝の出発は遅れる。</td></tr></table><p><a href="https://maps.apple.com/?q=National%20Historic%20Oregon%20Trail%20Interpretive%20Center%20Baker%20City%20OR" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=National%20Historic%20Oregon%20Trail%20Interpretive%20Center" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_0551ee7e486a03b2d7b6c2c71f6a8fda.setContent(html_29cad127a2fdc348c556f7227994d768);
             
         
 
-        marker_f98ca6fb65d1d8871d6184bf697811b8.bindPopup(popup_e4240682359eb3af8374d2891dd608c0)
+        marker_e6d75b5580073fa4d70975dc7fbfd32d.bindPopup(popup_0551ee7e486a03b2d7b6c2c71f6a8fda)
         ;
 
         
     
     
-            marker_f98ca6fb65d1d8871d6184bf697811b8.bindTooltip(
+            marker_e6d75b5580073fa4d70975dc7fbfd32d.bindTooltip(
                 `<div>
                      02-01 National Historic Oregon Trail Interpretive Center
                  </div>`,
@@ -252,42 +265,42 @@
             );
         
     
-                marker_f98ca6fb65d1d8871d6184bf697811b8.setIcon(div_icon_5e8cdded7ff614ffd539efa85640c8ac);
+                marker_e6d75b5580073fa4d70975dc7fbfd32d.setIcon(div_icon_dc0fc3fbdd959d5b3a55134a2ef6eeaa);
             
     
-            var marker_d08abba36367274009154195d51b1934 = L.marker(
+            var marker_dcfd619affd7a82ca77f0db3084df2ce = L.marker(
                 [43.5811, -116.5239],
                 {
 }
-            ).addTo(map_29f1e9f49a2106b4fdfd122ab2ab45ec);
+            ).addTo(map_79f50f1ee66641c0d40b75aa1bc0dbec);
         
     
-            var div_icon_1bbf4c084a75701ecd90d1652c27a88b = L.divIcon({
-  "html": "\n            \u003cdiv style=\"\n                background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                02-03\n            \u003c/div\u003e",
+            var div_icon_6be7163e6a65aa11568d6b0eeddbd22f = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e02-03\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
   "className": "empty",
 });
         
     
-        var popup_fa34573e0fc2453fc00f982e127e7109 = L.popup({
+        var popup_09e46e807897166a0fe885903762a517 = L.popup({
   "maxWidth": 420,
 });
 
         
             
-                var html_f752ff1713f06b1991332dc4e5105f3d = $(`<div id="html_f752ff1713f06b1991332dc4e5105f3d" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>02-03 Warhawk Air Museum</h4>       <table>         <tr><th>Status</th><td>候補</td></tr>         <tr><th>Category</th><td>Possibly</td></tr>         <tr><th>Area</th><td>Road to Sandy / Nampa, ID</td></tr>         <tr><th>Time</th><td>60–90 min</td></tr>         <tr><th>Effort</th><td>屋内中心。実機展示・軍事史。子供にも分かりやすい。</td></tr>         <tr><th>Plan</th><td>飛行機・戦争史・退役軍人の展示を見る。昼食休憩と組み合わせる。</td></tr>         <tr><th>Skip rule</th><td>到着が遅い、航空系が続きすぎる、Sandy到着を優先する場合は省略。</td></tr>         <tr><th>Notes</th><td>公式ページにTue–Sat 10:00–17:00、同ページ下部に9:00–17:00表記あり。8/1は土曜。直前確認。</td></tr>       </table>       <p><a href="https://maps.apple.com/?q=Warhawk%20Air%20Museum%20Nampa%20ID" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&q=Warhawk%20Air%20Museum" target="_blank">Google image search</a></p>     </div>     </div>`)[0];
-                popup_fa34573e0fc2453fc00f982e127e7109.setContent(html_f752ff1713f06b1991332dc4e5105f3d);
+                var html_d2d6ab6cceaf3d4aafafb72b9e49ce94 = $(`<div id="html_d2d6ab6cceaf3d4aafafb72b9e49ce94" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>02-03 Warhawk Air Museum</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Road to Sandy / Nampa, ID</td></tr><tr><th>Time</th><td>60–90 min</td></tr><tr><th>Effort</th><td>屋内中心。実機展示・軍事史。子供にも分かりやすい。</td></tr><tr><th>Plan</th><td>飛行機・戦争史・退役軍人の展示を見る。昼食休憩と組み合わせる。</td></tr><tr><th>Skip rule</th><td>到着が遅い、航空系が続きすぎる、Sandy到着を優先する場合は省略。</td></tr><tr><th>Notes</th><td>公式ページにTue–Sat 10:00–17:00、同ページ下部に9:00–17:00表記あり。8/1は土曜。直前確認。</td></tr></table><p><a href="https://maps.apple.com/?q=Warhawk%20Air%20Museum%20Nampa%20ID" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Warhawk%20Air%20Museum" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_09e46e807897166a0fe885903762a517.setContent(html_d2d6ab6cceaf3d4aafafb72b9e49ce94);
             
         
 
-        marker_d08abba36367274009154195d51b1934.bindPopup(popup_fa34573e0fc2453fc00f982e127e7109)
+        marker_dcfd619affd7a82ca77f0db3084df2ce.bindPopup(popup_09e46e807897166a0fe885903762a517)
         ;
 
         
     
     
-            marker_d08abba36367274009154195d51b1934.bindTooltip(
+            marker_dcfd619affd7a82ca77f0db3084df2ce.bindTooltip(
                 `<div>
                      02-03 Warhawk Air Museum
                  </div>`,
@@ -297,44 +310,44 @@
             );
         
     
-                marker_d08abba36367274009154195d51b1934.setIcon(div_icon_1bbf4c084a75701ecd90d1652c27a88b);
+                marker_dcfd619affd7a82ca77f0db3084df2ce.setIcon(div_icon_6be7163e6a65aa11568d6b0eeddbd22f);
             
     
-            var marker_3d4df96b2dec8b1638c4234b67defc1a = L.marker(
+            var marker_f8a67fb118e28c5dc3714d1395d8acad = L.marker(
                 [41.1624, -112.0197],
                 {
 }
-            ).addTo(map_29f1e9f49a2106b4fdfd122ab2ab45ec);
+            ).addTo(map_79f50f1ee66641c0d40b75aa1bc0dbec);
         
     
-            var div_icon_6699c870576db32d5a091b16d2a8ab41 = L.divIcon({
-  "html": "\n            \u003cdiv style=\"\n                background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                02-05\n            \u003c/div\u003e",
+            var div_icon_42b123647da26aea9b17bf845b27a459 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e02-05\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
   "className": "empty",
 });
         
     
-        var popup_68fb97c82928af69b18107c7c7273ecb = L.popup({
+        var popup_3c918e4cd779b42e29790168ce204525 = L.popup({
   "maxWidth": 420,
 });
 
         
             
-                var html_c578359d948964486181862bfa01f8ca = $(`<div id="html_c578359d948964486181862bfa01f8ca" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>02-05 Hill Aerospace Museum</h4>       <table>         <tr><th>Status</th><td>候補</td></tr>         <tr><th>Category</th><td>Possibly</td></tr>         <tr><th>Area</th><td>Road to Sandy / Ogden-Roy, UT</td></tr>         <tr><th>Time</th><td>60–90 min</td></tr>         <tr><th>Effort</th><td>屋内＋屋外の航空機展示。歩行は軽〜中等度。</td></tr>         <tr><th>Plan</th><td>大型航空機・軍用機展示を短時間で見る。</td></tr>         <tr><th>Skip rule</th><td>16時前後に間に合わない、Warhawkに行った、またはSandy到着を優先する場合は省略。</td></tr>         <tr><th>Notes</th><td>火–土9:00–16:30、無料とされる。公式ページを直前確認。航空系はWarhawkとどちらか一つ。</td></tr>       </table>       <p><a href="https://maps.apple.com/?q=Hill%20Aerospace%20Museum%20Roy%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&q=Hill%20Aerospace%20Museum" target="_blank">Google image search</a></p>     </div>     </div>`)[0];
-                popup_68fb97c82928af69b18107c7c7273ecb.setContent(html_c578359d948964486181862bfa01f8ca);
+                var html_bc6186dd38316f32521fab656d47a3ee = $(`<div id="html_bc6186dd38316f32521fab656d47a3ee" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>02-05 Bonneville Salt Flats / Salt Flats Rest Area</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Bonneville Salt Flats / Wendover, UT</td></tr><tr><th>Time</th><td>30–45 min + detour</td></tr><tr><th>Effort</th><td>休憩所または入口付近から短い歩行。塩が靴につく。イベント中は奥へ入らない前提。</td></tr><tr><th>Plan</th><td>白い塩原を短時間で見る。Salt Flats Rest AreaまたはSpeedway入口付近で写真休憩にする。</td></tr><tr><th>Skip rule</th><td>出発が遅い、疲労が強い、Speed Week規制が強い、またはSandy到着が遅れそうなら省略。博物館候補とは基本二択。</td></tr><tr><th>Notes</th><td>2026-08-01はSpeed Week期間中のため、自由に奥へ入る観光ではなく短時間の写真休憩扱い。濡れている場所へ車で入らない。</td></tr></table><p><a href="https://maps.apple.com/?q=Bonneville%20Salt%20Flats%20Rest%20Area%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Bonneville%20Salt%20Flats%20/%20Salt%20Flats%20Rest%20Area" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_3c918e4cd779b42e29790168ce204525.setContent(html_bc6186dd38316f32521fab656d47a3ee);
             
         
 
-        marker_3d4df96b2dec8b1638c4234b67defc1a.bindPopup(popup_68fb97c82928af69b18107c7c7273ecb)
+        marker_f8a67fb118e28c5dc3714d1395d8acad.bindPopup(popup_3c918e4cd779b42e29790168ce204525)
         ;
 
         
     
     
-            marker_3d4df96b2dec8b1638c4234b67defc1a.bindTooltip(
+            marker_f8a67fb118e28c5dc3714d1395d8acad.bindTooltip(
                 `<div>
-                     02-05 Hill Aerospace Museum
+                     02-05 Bonneville Salt Flats / Salt Flats Rest Area
                  </div>`,
                 {
   "sticky": true,
@@ -342,44 +355,44 @@
             );
         
     
-                marker_3d4df96b2dec8b1638c4234b67defc1a.setIcon(div_icon_6699c870576db32d5a091b16d2a8ab41);
+                marker_f8a67fb118e28c5dc3714d1395d8acad.setIcon(div_icon_42b123647da26aea9b17bf845b27a459);
             
     
-            var marker_0295e9189bbd82965d25e50c2e8e7a33 = L.marker(
+            var marker_1defc09d815611b6746acb9f348d8fa6 = L.marker(
                 [40.7648, -111.8222],
                 {
 }
-            ).addTo(map_29f1e9f49a2106b4fdfd122ab2ab45ec);
+            ).addTo(map_79f50f1ee66641c0d40b75aa1bc0dbec);
         
     
-            var div_icon_ec99c346543170d30459d39c3eb3ab78 = L.divIcon({
-  "html": "\n            \u003cdiv style=\"\n                background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                02-06\n            \u003c/div\u003e",
+            var div_icon_4663d71cd15d62148893bed4cfbf0d5b = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e02-06\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
   "className": "empty",
 });
         
     
-        var popup_5c805aed75c8f853dfa7732118ae888d = L.popup({
+        var popup_1d9ceb2bb37fc77616899d3268ea611a = L.popup({
   "maxWidth": 420,
 });
 
         
             
-                var html_611a2a6826fcf04ad3286e041d23d254 = $(`<div id="html_611a2a6826fcf04ad3286e041d23d254" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>02-06 Natural History Museum of Utah</h4>       <table>         <tr><th>Status</th><td>候補</td></tr>         <tr><th>Category</th><td>Possibly</td></tr>         <tr><th>Area</th><td>Salt Lake City, UT</td></tr>         <tr><th>Time</th><td>90–120 min</td></tr>         <tr><th>Effort</th><td>屋内中心。恐竜・地質・鉱物・Great Salt Lakeなど。子供向き。</td></tr>         <tr><th>Plan</th><td>Utahの自然史展示を短時間で見る。Sandy到着前またはチェックイン前後に組み込む。</td></tr>         <tr><th>Skip rule</th><td>15:00以降にSalt Lake到着、疲労が強い、または夕食・チェックインを優先する場合は省略。</td></tr>         <tr><th>Notes</th><td>公式: 毎日10:00–17:00、水曜のみ21:00まで。最終入館は閉館30分前。8/1は土曜なので17:00閉館前提。</td></tr>       </table>       <p><a href="https://maps.apple.com/?q=Natural%20History%20Museum%20of%20Utah%20Salt%20Lake%20City%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&q=Natural%20History%20Museum%20of%20Utah" target="_blank">Google image search</a></p>     </div>     </div>`)[0];
-                popup_5c805aed75c8f853dfa7732118ae888d.setContent(html_611a2a6826fcf04ad3286e041d23d254);
+                var html_5d32668f63e9d6e1628bfff56ff2b8cc = $(`<div id="html_5d32668f63e9d6e1628bfff56ff2b8cc" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>02-06 Hill Aerospace Museum</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Road to Sandy / Ogden-Roy, UT</td></tr><tr><th>Time</th><td>60–90 min</td></tr><tr><th>Effort</th><td>屋内＋屋外の航空機展示。歩行は軽〜中等度。</td></tr><tr><th>Plan</th><td>大型航空機・軍用機展示を短時間で見る。</td></tr><tr><th>Skip rule</th><td>16時前後に間に合わない、Warhawkに行った、またはSandy到着を優先する場合は省略。</td></tr><tr><th>Notes</th><td>火–土9:00–16:30、無料とされる。公式ページを直前確認。航空系はWarhawkとどちらか一つ。</td></tr></table><p><a href="https://maps.apple.com/?q=Hill%20Aerospace%20Museum%20Roy%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Hill%20Aerospace%20Museum" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_1d9ceb2bb37fc77616899d3268ea611a.setContent(html_5d32668f63e9d6e1628bfff56ff2b8cc);
             
         
 
-        marker_0295e9189bbd82965d25e50c2e8e7a33.bindPopup(popup_5c805aed75c8f853dfa7732118ae888d)
+        marker_1defc09d815611b6746acb9f348d8fa6.bindPopup(popup_1d9ceb2bb37fc77616899d3268ea611a)
         ;
 
         
     
     
-            marker_0295e9189bbd82965d25e50c2e8e7a33.bindTooltip(
+            marker_1defc09d815611b6746acb9f348d8fa6.bindTooltip(
                 `<div>
-                     02-06 Natural History Museum of Utah
+                     02-06 Hill Aerospace Museum
                  </div>`,
                 {
   "sticky": true,
@@ -387,44 +400,44 @@
             );
         
     
-                marker_0295e9189bbd82965d25e50c2e8e7a33.setIcon(div_icon_ec99c346543170d30459d39c3eb3ab78);
+                marker_1defc09d815611b6746acb9f348d8fa6.setIcon(div_icon_4663d71cd15d62148893bed4cfbf0d5b);
             
     
-            var marker_76269dc114a60bf463f357a5e396df40 = L.marker(
+            var marker_8dd9ad81177f47b321295327ad86f819 = L.marker(
                 [40.7345, -112.2122],
                 {
 }
-            ).addTo(map_29f1e9f49a2106b4fdfd122ab2ab45ec);
+            ).addTo(map_79f50f1ee66641c0d40b75aa1bc0dbec);
         
     
-            var div_icon_ce27dec3c7a77efba9d656c9159085d7 = L.divIcon({
-  "html": "\n            \u003cdiv style=\"\n                background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                02-07\n            \u003c/div\u003e",
+            var div_icon_2a3f39d7f1e330d431bcada95856f8ab = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e02-07\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
   "className": "empty",
 });
         
     
-        var popup_ba594ba89500450d1303899c97bc52b4 = L.popup({
+        var popup_4f1a5a9b3b8865fa083a2502041c016b = L.popup({
   "maxWidth": 420,
 });
 
         
             
-                var html_eea384419414a654b1ffb4e49ee9e3fb = $(`<div id="html_eea384419414a654b1ffb4e49ee9e3fb" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>02-07 Great Salt Lake State Park</h4>       <table>         <tr><th>Status</th><td>候補</td></tr>         <tr><th>Category</th><td>Possibly</td></tr>         <tr><th>Area</th><td>Salt Lake City / Great Salt Lake</td></tr>         <tr><th>Time</th><td>45–90 min + detour</td></tr>         <tr><th>Effort</th><td>湖岸・ビジターセンター中心。暑さ、風、虫、においに注意。</td></tr>         <tr><th>Plan</th><td>Great Salt Lakeの湖岸と塩湖の景色を見る。時間があればビジターセンターで短時間学習。</td></tr>         <tr><th>Skip rule</th><td>Sandy到着が遅れそう、暑さ・虫・風が強い、NHMUを優先する場合は省略。</td></tr>         <tr><th>Notes</th><td>Day 2の追加候補。博物館と両方入れると重いので、入れるならNHMUなどと二択。</td></tr>       </table>       <p><a href="https://maps.apple.com/?q=Great%20Salt%20Lake%20State%20Park%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&q=Great%20Salt%20Lake%20State%20Park" target="_blank">Google image search</a></p>     </div>     </div>`)[0];
-                popup_ba594ba89500450d1303899c97bc52b4.setContent(html_eea384419414a654b1ffb4e49ee9e3fb);
+                var html_657ed6b750801939d07f5aaf377761e8 = $(`<div id="html_657ed6b750801939d07f5aaf377761e8" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>02-07 Natural History Museum of Utah</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Salt Lake City, UT</td></tr><tr><th>Time</th><td>90–120 min</td></tr><tr><th>Effort</th><td>屋内中心。恐竜・地質・鉱物・Great Salt Lakeなど。子供向き。</td></tr><tr><th>Plan</th><td>Utahの自然史展示を短時間で見る。Sandy到着前またはチェックイン前後に組み込む。</td></tr><tr><th>Skip rule</th><td>15:00以降にSalt Lake到着、疲労が強い、または夕食・チェックインを優先する場合は省略。</td></tr><tr><th>Notes</th><td>公式: 毎日10:00–17:00、水曜のみ21:00まで。最終入館は閉館30分前。8/1は土曜なので17:00閉館前提。</td></tr></table><p><a href="https://maps.apple.com/?q=Natural%20History%20Museum%20of%20Utah%20Salt%20Lake%20City%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Natural%20History%20Museum%20of%20Utah" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_4f1a5a9b3b8865fa083a2502041c016b.setContent(html_657ed6b750801939d07f5aaf377761e8);
             
         
 
-        marker_76269dc114a60bf463f357a5e396df40.bindPopup(popup_ba594ba89500450d1303899c97bc52b4)
+        marker_8dd9ad81177f47b321295327ad86f819.bindPopup(popup_4f1a5a9b3b8865fa083a2502041c016b)
         ;
 
         
     
     
-            marker_76269dc114a60bf463f357a5e396df40.bindTooltip(
+            marker_8dd9ad81177f47b321295327ad86f819.bindTooltip(
                 `<div>
-                     02-07 Great Salt Lake State Park
+                     02-07 Natural History Museum of Utah
                  </div>`,
                 {
   "sticky": true,
@@ -432,44 +445,44 @@
             );
         
     
-                marker_76269dc114a60bf463f357a5e396df40.setIcon(div_icon_ce27dec3c7a77efba9d656c9159085d7);
+                marker_8dd9ad81177f47b321295327ad86f819.setIcon(div_icon_2a3f39d7f1e330d431bcada95856f8ab);
             
     
-            var marker_282b78a4e0dddc0d848531e39319bd11 = L.marker(
+            var marker_999c9087d944974f7ca6a5c513a962f3 = L.marker(
                 [41.0561, -112.2465],
                 {
 }
-            ).addTo(map_29f1e9f49a2106b4fdfd122ab2ab45ec);
+            ).addTo(map_79f50f1ee66641c0d40b75aa1bc0dbec);
         
     
-            var div_icon_f37ae1e02f1a8accea20731f520ad78b = L.divIcon({
-  "html": "\n            \u003cdiv style=\"\n                background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n                box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center;\n                font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px;\n                font-family:Arial, sans-serif;\"\u003e\n                02-08\n            \u003c/div\u003e",
+            var div_icon_9ebc728f1b75850e61a02b7cedcf65d4 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e02-08\u003c/div\u003e",
   "iconSize": [56, 28],
   "iconAnchor": [28, 14],
   "className": "empty",
 });
         
     
-        var popup_b2697725bc9164dcd62fc5cf616f6c48 = L.popup({
+        var popup_93cff96f51514ee13826fd2d68ab41f5 = L.popup({
   "maxWidth": 420,
 });
 
         
             
-                var html_97b2adf69307290f01212eb769042f88 = $(`<div id="html_97b2adf69307290f01212eb769042f88" style="width: 100.0%; height: 100.0%;">     <div class="popup">       <h4>02-08 Antelope Island State Park</h4>       <table>         <tr><th>Status</th><td>候補</td></tr>         <tr><th>Category</th><td>Possibly</td></tr>         <tr><th>Area</th><td>Great Salt Lake / Antelope Island</td></tr>         <tr><th>Time</th><td>1.5–3 hr + detour</td></tr>         <tr><th>Effort</th><td>車移動＋短い展望。暑さ、虫、バイソンとの距離に注意。</td></tr>         <tr><th>Plan</th><td>Great Salt Lake、島の乾いた景観、野生動物を車中心で見る。</td></tr>         <tr><th>Skip rule</th><td>通常は省略。NHMU、Hill Aerospace、Great Salt Lake State Parkのどれかを優先した場合は入れない。</td></tr>         <tr><th>Notes</th><td>時間がかなり余る場合のみ。虫・暑さ・到着時間を確認。</td></tr>       </table>       <p><a href="https://maps.apple.com/?q=Antelope%20Island%20State%20Park%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&q=Antelope%20Island%20State%20Park" target="_blank">Google image search</a></p>     </div>     </div>`)[0];
-                popup_b2697725bc9164dcd62fc5cf616f6c48.setContent(html_97b2adf69307290f01212eb769042f88);
+                var html_66f20b2f704fdc86cd1410856970492a = $(`<div id="html_66f20b2f704fdc86cd1410856970492a" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>02-08 Great Salt Lake State Park</h4><table><tr><th>Status</th><td>候補</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Salt Lake City / Great Salt Lake</td></tr><tr><th>Time</th><td>45–90 min + detour</td></tr><tr><th>Effort</th><td>湖岸・ビジターセンター中心。暑さ、風、虫、においに注意。</td></tr><tr><th>Plan</th><td>Great Salt Lakeの湖岸と塩湖の景色を見る。時間があればビジターセンターで短時間学習。</td></tr><tr><th>Skip rule</th><td>Sandy到着が遅れそう、暑さ・虫・風が強い、NHMUを優先する場合は省略。</td></tr><tr><th>Notes</th><td>Day 2の追加候補。博物館と両方入れると重いので、入れるならNHMUなどと二択。</td></tr></table><p><a href="https://maps.apple.com/?q=Great%20Salt%20Lake%20State%20Park%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Great%20Salt%20Lake%20State%20Park" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_93cff96f51514ee13826fd2d68ab41f5.setContent(html_66f20b2f704fdc86cd1410856970492a);
             
         
 
-        marker_282b78a4e0dddc0d848531e39319bd11.bindPopup(popup_b2697725bc9164dcd62fc5cf616f6c48)
+        marker_999c9087d944974f7ca6a5c513a962f3.bindPopup(popup_93cff96f51514ee13826fd2d68ab41f5)
         ;
 
         
     
     
-            marker_282b78a4e0dddc0d848531e39319bd11.bindTooltip(
+            marker_999c9087d944974f7ca6a5c513a962f3.bindTooltip(
                 `<div>
-                     02-08 Antelope Island State Park
+                     02-08 Great Salt Lake State Park
                  </div>`,
                 {
   "sticky": true,
@@ -477,25 +490,7 @@
             );
         
     
-                marker_282b78a4e0dddc0d848531e39319bd11.setIcon(div_icon_f37ae1e02f1a8accea20731f520ad78b);
+                marker_999c9087d944974f7ca6a5c513a962f3.setIcon(div_icon_9ebc728f1b75850e61a02b7cedcf65d4);
             
-    
-            map_29f1e9f49a2106b4fdfd122ab2ab45ec.fitBounds(
-                [[44.7749, -117.8344], [40.589, -111.833], [44.783, -117.747], [43.5811, -116.5239], [41.1624, -112.0197], [40.7648, -111.8222], [40.7345, -112.2122], [41.0561, -112.2465]],
-                {"padding": [40, 40]}
-            );
-        
-    
-    window._spotMarkers = {"H01": marker_6c2588f16b7eca8e72b7d07a1002460b, "H02": marker_475d79c77e23580c8e0de065a9e1f346, "02-01": marker_f98ca6fb65d1d8871d6184bf697811b8, "02-03": marker_d08abba36367274009154195d51b1934, "02-05": marker_3d4df96b2dec8b1638c4234b67defc1a, "02-06": marker_0295e9189bbd82965d25e50c2e8e7a33, "02-07": marker_76269dc114a60bf463f357a5e396df40, "02-08": marker_282b78a4e0dddc0d848531e39319bd11};
-    function openSpotFromHash() {
-      var id = decodeURIComponent((window.location.hash || '').replace('#',''));
-      if (!id || !window._spotMarkers || !window._spotMarkers[id]) return;
-      var marker = window._spotMarkers[id];
-      marker.openPopup();
-      map_29f1e9f49a2106b4fdfd122ab2ab45ec.setView(marker.getLatLng(), Math.max(map_29f1e9f49a2106b4fdfd122ab2ab45ec.getZoom(), 10));
-    }
-    setTimeout(openSpotFromHash, 600);
-    window.addEventListener('hashchange', openSpotFromHash);
-    
 </script>
 </html>
