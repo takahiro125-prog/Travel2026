@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_9d5f89c129ccba60c188f615e9c4d498 {
+                #map_da9f998bfbf091e590b136d3d227f05d {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -53,56 +53,53 @@
 </head>
 <body>
     
-    
-    <div style="position: fixed; top: 18px; left: 50%; transform: translateX(-50%); z-index:9999; background:rgba(255,255,255,.94); border:1px solid #aaa; border-radius:10px; padding:10px 16px; font-family:Arial,sans-serif; box-shadow:0 1px 5px rgba(0,0,0,.25); text-align:center;">
-      <div style="font-size:18px;font-weight:700;">Day 2 Travel Map</div>
-      <div style="font-size:12px;color:#444;">Baker City → Sandy / 478 miles / 約6:30–7:00 + 観光1–2h</div>
-    </div>
-    
-    <div style="position: fixed; bottom: 28px; left: 28px; z-index:9999; background:white; border:1px solid #999; border-radius:8px; padding:12px 14px; font-family:Arial,sans-serif; font-size:13px; box-shadow:0 1px 5px rgba(0,0,0,.25);">
-      <div style="font-weight:700; margin-bottom:7px;">Legend</div><div><span style="background:#1a9850;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Hotel: 2</div><div><span style="background:#2c7bb6;display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;"></span>Possibly: 7</div>
-      <div style="margin-top:7px;color:#555;max-width:260px;">Planning map. Use Apple Maps / Google Maps / NPS for final navigation.</div>
-    </div>
+    <style>
+.popup{font-family:Arial,Helvetica,sans-serif;width:360px;max-width:360px;font-size:13px;line-height:1.35}.popup h4{margin:0 0 8px;font-size:15px}.popup table{border-collapse:collapse;width:100%;font-size:12.5px}.popup th{width:92px;text-align:left;vertical-align:top;color:#333;padding:3px 7px 3px 0}.popup td{vertical-align:top;padding:3px 0}.popup .links{margin:8px 0 0;padding-top:7px;border-top:1px solid #ddd}.leaflet-tooltip{font-family:Arial,Helvetica,sans-serif}
+.legend{position:fixed;bottom:24px;left:24px;z-index:9999;background:white;border:1px solid #999;border-radius:8px;padding:10px 12px;box-shadow:0 1px 4px rgba(0,0,0,.22);font-size:13px;font-family:Arial,Helvetica,sans-serif}.legend b{display:block;margin-bottom:5px}.dot{display:inline-block;width:13px;height:13px;border-radius:50%;margin-right:6px;vertical-align:-2px}
+.map-title{position:fixed;top:12px;left:50px;z-index:9999;background:rgba(255,255,255,.96);padding:9px 13px;border:1px solid #bbb;border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,.15);font-family:Arial,Helvetica,sans-serif;max-width:520px}.map-title .t{font-size:20px;font-weight:700}.map-title .s{font-size:12px;color:#444;margin-top:2px}
+</style>
+    <div class="map-title"><div class="t">Day 2 Map</div><div class="s">Baker City → Sandy</div></div>
+    <div class="legend"><b>Legend</b><div><span class="dot" style="background:#1a9850"></span>Hotel</div><div><span class="dot" style="background:#d7191c"></span>Must</div><div><span class="dot" style="background:#2c7bb6"></span>Possible / Drive-by</div><div><span class="dot" style="background:#7b3294"></span>Heavy candidate</div><div><span class="dot" style="background:#f28e2b"></span>Gas</div><div><span class="dot" style="background:#009e73"></span>Supermarket</div><div><span class="dot" style="background:#8c6d31"></span>Souvenir</div><div><span class="dot" style="background:#d95f02"></span>Restaurant</div></div>
     
 <script>
-window._spotMarkers = {"H01": marker_0f33d6e9bfb2c84bde8b0ed23cf49b45, "H02": marker_83ae32d25538febb38ab87d84e3300cb, "02-01": marker_e2ff7b61b8925331f28abdc654f106ea, "02-03": marker_f89262e2d6aac557c3cd6967c51455a3, "02-05": marker_cfe10786b91c44f48a508ed19c86bad0, "02-06": marker_43e94d5ce5d52df193d2f7e361694f8b, "02-07": marker_86aada8c443335063ec1c410276c98f7, "02-08": marker_cc5155f835cbafc64dbbc45a86a7f56a, "02-09": marker_248e0567e1b6fb2acefb913daa4da3ca};
-function openSpotFromHash() {
+window._spotMarkers = {"H01":marker_5bef201485023c75c47ed66626f8f351,"H02":marker_908d22af26419fd097ce68bdee5b52b1,"02-05":marker_d00928b481b55adb21968aff21700bfa,"02-01":marker_373577e3ae99d0c493922a1e2fe0c413,"02-03":marker_8e6f23e94b1e31e4ad29ffe4e90e1d07,"02-06":marker_258c6285416d58acb22311cb837252ec,"02-07":marker_021022fdc56cd12cfdd5c96aee7351ad,"02-08":marker_c2603b007127fc110ddbfe78b59c3d92,"02-09":marker_356c7deb9fb726b1cd62e2c470fb9b06,"G06":marker_907acea7939ab95b9ac20446b38603fb,"G07":marker_3da0363bceaab564d0d17a3521d10e4c,"SP18":marker_87ffa795fc6bbee817d45b125f3cc42b,"SP23":marker_d6f436a7ca119a92d323474e3927b305,"SP24":marker_8221e01a12cbc3203dd4105ee1fe09a6,"SP25":marker_c13e1b5ca6611621fd819687be83eff2,"SP26":marker_24c3c44c1e0f232ecf0e9b378b88d4b2,"SP27":marker_d0f11d485a4726349da05faaa16ff457,"SP28":marker_4e5c7c68f6312c8335165a704bc24acb,"SP29":marker_65d7f52ccf73c20c89344bf726d91203,"SP30":marker_4c0014f5af652e76182c8c4732f83d68,"SP31":marker_a1fe542d47c44d7d0fb0bc5ed5126c67,"SP32":marker_e6164c9dab7d9b3fe55f2cc89fd3bb45,"SP33":marker_e6717264807400531a03354b3ef53ac7,"SP34":marker_f135d424aa8923332f18f153dc806315,"SP35":marker_ee546923651ffb0e6dfd8ca543bc7169,"SP36":marker_7b342993b132f8bd6cfab082f61f510f,"SP37":marker_f7dbc1efd949d2d755670e3151045eb1,"SP38":marker_729cb048df097dff267ab89b43013827,"SP39":marker_88f1dd8268487e610de13bde32522e5c,"SP40":marker_2ddf7c02ace2611708c3a89454f745d2,"SP41":marker_6da713dce0f48149333e6c101e700955,"SP42":marker_9fa4900899d7dd94b05d5f1167f9a38f,"SP43":marker_aefcf20bf1a8fd0a312aa350242cfec7,"SP44":marker_0518b653f9c6a59fc0e72c14057282d5,"SP45":marker_e93a340749235ceff6e0b8108c39b98a,"SP46":marker_263dcbde25f0a110df757e8d38221f8c,"SP47":marker_2f0d7f6ba0ecb2c90deceade25386522,"SP48":marker_1eb1f1cf6f099e0bd44662b4e4a6bdc3,"SP49":marker_a930b1c1d145d7039ea5efb736236739,"SP50":marker_81ba52b577a383d688bad1e64c599af2,"SP51":marker_c6713d3d2e3fe1c3210257391fa381d0,"SP52":marker_6757677c5475e2ec617029be41218421,"SP53":marker_fa92e77a04454923534f02cc64dcd310};
+function openSpotFromHash(){
   var id = decodeURIComponent((window.location.hash || '').replace('#',''));
-  if (!id || !window._spotMarkers || !window._spotMarkers[id]) return;
+  if(!id || !window._spotMarkers || !window._spotMarkers[id]) return;
   var marker = window._spotMarkers[id];
   marker.openPopup();
-  map_9d5f89c129ccba60c188f615e9c4d498.setView(marker.getLatLng(), Math.max(map_9d5f89c129ccba60c188f615e9c4d498.getZoom(), 10));
+  map_da9f998bfbf091e590b136d3d227f05d.setView(marker.getLatLng(), Math.max(map_da9f998bfbf091e590b136d3d227f05d.getZoom(), 10));
 }
 setTimeout(openSpotFromHash, 600);
 window.addEventListener('hashchange', openSpotFromHash);
 </script>
     
-            <div class="folium-map" id="map_9d5f89c129ccba60c188f615e9c4d498" ></div>
+            <div class="folium-map" id="map_da9f998bfbf091e590b136d3d227f05d" ></div>
         
 </body>
 <script>
     
     
-            var map_9d5f89c129ccba60c188f615e9c4d498 = L.map(
-                "map_9d5f89c129ccba60c188f615e9c4d498",
+            var map_da9f998bfbf091e590b136d3d227f05d = L.map(
+                "map_da9f998bfbf091e590b136d3d227f05d",
                 {
-                    center: [42.01551111111112, -114.01194444444445],
+                    center: [42.04109476744186, -113.86760032558139],
                     crs: L.CRS.EPSG3857,
                     ...{
-  "zoom": 7,
+  "zoom": 6,
   "zoomControl": true,
   "preferCanvas": false,
 }
 
                 }
             );
-            L.control.scale().addTo(map_9d5f89c129ccba60c188f615e9c4d498);
+            L.control.scale().addTo(map_da9f998bfbf091e590b136d3d227f05d);
 
             
 
         
     
-            var tile_layer_8b89ebf1eedaae2d5789a7afc6a5c511 = L.tileLayer(
+            var tile_layer_fe3e9f3df0210ee716799de2bb1ce2c6 = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -119,42 +116,42 @@ window.addEventListener('hashchange', openSpotFromHash);
             );
         
     
-            tile_layer_8b89ebf1eedaae2d5789a7afc6a5c511.addTo(map_9d5f89c129ccba60c188f615e9c4d498);
+            tile_layer_fe3e9f3df0210ee716799de2bb1ce2c6.addTo(map_da9f998bfbf091e590b136d3d227f05d);
         
     
-            var marker_0f33d6e9bfb2c84bde8b0ed23cf49b45 = L.marker(
-                [44.773, -117.834],
+            var marker_5bef201485023c75c47ed66626f8f351 = L.marker(
+                [44.776, -117.832],
                 {
 }
-            ).addTo(map_9d5f89c129ccba60c188f615e9c4d498);
+            ).addTo(map_da9f998bfbf091e590b136d3d227f05d);
         
     
-            var div_icon_e8801cdf7a542c8c59150fa049a9f061 = L.divIcon({
-  "html": "\u003cdiv style=\"background:#1a9850; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003eH01\u003c/div\u003e",
-  "iconSize": [56, 28],
-  "iconAnchor": [28, 14],
+            var div_icon_91ddaf1ac1695f95f022613c12d5c090 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background:#1a9850; color:white; border:2px solid white; border-radius:16px;\n        box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700;\n        font-size:12px; line-height:24px; min-width:50px; height:24px; padding:0 2px;\n        font-family:Arial,sans-serif;\"\u003eH01\u003c/div\u003e",
+  "iconSize": [54, 30],
+  "iconAnchor": [27, 15],
   "className": "empty",
 });
         
     
-        var popup_d03e473b9ebe06316790cefac7f9ffa3 = L.popup({
-  "maxWidth": 440,
+        var popup_905f7803f76ffd3b253575d7b5cde3cb = L.popup({
+  "maxWidth": 420,
 });
 
         
             
-                var html_79f61f793922b21e8bec4e84882888f2 = $(`<div id="html_79f61f793922b21e8bec4e84882888f2" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>H01 Baker City泊 / 出発</h4><table><tr><th>Status</th><td>Hotel</td></tr><tr><th>Category</th><td>Hotel</td></tr><tr><th>Area</th><td>Baker City, OR</td></tr><tr><th>Plan</th><td>Baker Cityで宿泊。</td></tr><tr><th>Notes</th><td>Host: Troy. 騒音禁止 22:00–7:00。ペット不可。</td></tr></table><p><a href="https://maps.apple.com/?q=2621%20Grove%20St%2C%20Baker%20City%2C%20OR%2097814" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Baker%20City%E6%B3%8A" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_d03e473b9ebe06316790cefac7f9ffa3.setContent(html_79f61f793922b21e8bec4e84882888f2);
+                var html_5cd208a88a00ec37ec3b23b8c2fc958d = $(`<div id="html_5cd208a88a00ec37ec3b23b8c2fc958d" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>H01 Baker City泊 / 出発</h4><table> <tr><th>Status</th><td>Hotel / Booked</td></tr> <tr><th>Area</th><td>Baker City, OR</td></tr> <tr><th>Reservation</th><td>Airbnb: Grove Street Couplet #1; code HMDP9B2232; check-in 7/31 15:00+, checkout 8/1 11:00; address 2621 Grove St, Baker City, OR 97814; guests 大人4人・子ども4人</td></tr> <tr><th>Address</th><td>2621 Grove St, Baker City, OR 97814, USA</td></tr> <tr><th>Payment</th><td>$217.00 total; scheduled charge 2026-07-23</td></tr> <tr><th>Facilities</th><td>Airbnbまるまる貸切。写真確認メモ: 普通の一軒家タイプに見える。外に芝生あり。外にベンチ/ピクニック用のテーブルがあり、外で軽く食べられそう。その他の屋外設備は目立たない。予約メール確認: ゲスト定員8人、check-in 15:00+、checkout 11:00。一酸化炭素検知器、火災報知器あり。キッチン・洗濯・駐車場・Wi‑Fi等の詳細は予約メール本文では未確認。</td></tr> <tr><th>Rules / safety</th><td>ペット不可。騒音禁止22:00–7:00。騒音の可能性あり。キャンセル無料は2026-07-30 15:00前まで、それ以降は返金不可。</td></tr> <tr><th>BBQ grill</th><td>No visible grill in user photo review. 外に芝生とピクニックテーブルは見えるが、BBQグリルは見当たらない。</td></tr> <tr><th>Notes</th><td>Host: Troy. 騒音禁止 22:00–7:00。ペット不可。</td></tr> </table><p class="links"><a href="https://maps.apple.com/?q=2621%20Grove%20St%2C%20Baker%20City%2C%20OR%2097814" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Baker%20City%E6%B3%8A%20Baker%20City%2C%20OR%202621%20Grove%20St%2C%20Baker%20City%2C%20OR%2097814%2C%20USA" target="_blank">Google image search</a><br><a href="https://www.airbnb.jp/rooms/1245944469706606147" target="_blank">Official / source</a></p></div></div>`)[0];
+                popup_905f7803f76ffd3b253575d7b5cde3cb.setContent(html_5cd208a88a00ec37ec3b23b8c2fc958d);
             
         
 
-        marker_0f33d6e9bfb2c84bde8b0ed23cf49b45.bindPopup(popup_d03e473b9ebe06316790cefac7f9ffa3)
+        marker_5bef201485023c75c47ed66626f8f351.bindPopup(popup_905f7803f76ffd3b253575d7b5cde3cb)
         ;
 
         
     
     
-            marker_0f33d6e9bfb2c84bde8b0ed23cf49b45.bindTooltip(
+            marker_5bef201485023c75c47ed66626f8f351.bindTooltip(
                 `<div>
                      H01 Baker City泊 / 出発
                  </div>`,
@@ -164,42 +161,42 @@ window.addEventListener('hashchange', openSpotFromHash);
             );
         
     
-                marker_0f33d6e9bfb2c84bde8b0ed23cf49b45.setIcon(div_icon_e8801cdf7a542c8c59150fa049a9f061);
+                marker_5bef201485023c75c47ed66626f8f351.setIcon(div_icon_91ddaf1ac1695f95f022613c12d5c090);
             
     
-            var marker_83ae32d25538febb38ab87d84e3300cb = L.marker(
-                [40.589, -111.833],
+            var marker_908d22af26419fd097ce68bdee5b52b1 = L.marker(
+                [40.595775, -111.870414],
                 {
 }
-            ).addTo(map_9d5f89c129ccba60c188f615e9c4d498);
+            ).addTo(map_da9f998bfbf091e590b136d3d227f05d);
         
     
-            var div_icon_610241c361f47955e53f8814c3bfcb06 = L.divIcon({
-  "html": "\u003cdiv style=\"background:#1a9850; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003eH02\u003c/div\u003e",
-  "iconSize": [56, 28],
-  "iconAnchor": [28, 14],
+            var div_icon_5756d38b5109895ea8c08645c10b8b5d = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background:#1a9850; color:white; border:2px solid white; border-radius:16px;\n        box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700;\n        font-size:12px; line-height:24px; min-width:50px; height:24px; padding:0 2px;\n        font-family:Arial,sans-serif;\"\u003eH02\u003c/div\u003e",
+  "iconSize": [54, 30],
+  "iconAnchor": [27, 15],
   "className": "empty",
 });
         
     
-        var popup_b1109486e97a0410f2a3ba7e9cc792ed = L.popup({
-  "maxWidth": 440,
+        var popup_40ba33edf09d09379f51c41adb803d58 = L.popup({
+  "maxWidth": 420,
 });
 
         
             
-                var html_24088bba98d3f3f29ae952ae1c28b698 = $(`<div id="html_24088bba98d3f3f29ae952ae1c28b698" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>H02 Sandy泊</h4><table><tr><th>Status</th><td>Hotel</td></tr><tr><th>Category</th><td>Hotel</td></tr><tr><th>Area</th><td>Sandy, UT</td></tr><tr><th>Plan</th><td>Sandyで宿泊。</td></tr><tr><th>Notes</th><td>Host: Andreanne &amp; Daniel. 敷地内屋外カメラあり。ペット不可。</td></tr></table><p><a href="https://maps.apple.com/?q=8558%20E%20Johnsonway%20Dr%2C%20Sandy%2C%20UT%2084094" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Sandy%E6%B3%8A" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_b1109486e97a0410f2a3ba7e9cc792ed.setContent(html_24088bba98d3f3f29ae952ae1c28b698);
+                var html_f7bc3b4eb3f749d50e57e6952261dfee = $(`<div id="html_f7bc3b4eb3f749d50e57e6952261dfee" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>H02 Sandy泊</h4><table> <tr><th>Status</th><td>Hotel / Booked</td></tr> <tr><th>Area</th><td>Sandy, UT</td></tr> <tr><th>Reservation</th><td>Airbnb: Brand new! 20m from ski! Close Mountain View!; code HMMY2MTPJ2; check-in 8/1 16:00+, checkout 8/2 11:00; address 8558 E Johnsonway Dr, Sandy, UT 84094; guests 大人4人・子ども4人</td></tr> <tr><th>Address</th><td>8558 E Johnsonway Dr, Sandy, UT 84094, USA</td></tr> <tr><th>Payment</th><td>$249.39 total; scheduled charge 2026-07-20</td></tr> <tr><th>Facilities</th><td>Airbnbまるまる貸切。写真確認メモ: 半地下のような構造に見える。外の山の景色がよさそう。バスタブは小さめだが湯をためられる可能性あり。食器は多く見える。予約メール確認: ゲスト定員8人、check-in 16:00+、checkout 11:00。一酸化炭素検知器、火災報知器あり。</td></tr> <tr><th>Rules / safety</th><td>ペット不可。商業目的の写真撮影禁止。敷地内屋外に防犯・監視カメラあり。キャンセル無料は2026-07-27 16:00前まで、それ以降は返金不可。</td></tr> <tr><th>BBQ grill</th><td>Unconfirmed / no visible grill noted. 写真確認ではBBQグリルの明確な記載・視認なし。</td></tr> <tr><th>Notes</th><td>Host: Andreanne &amp; Daniel. 敷地内屋外カメラあり。ペット不可。</td></tr> </table><p class="links"><a href="https://maps.apple.com/?q=8558%20E%20Johnsonway%20Dr%2C%20Sandy%2C%20UT%2084094" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Sandy%E6%B3%8A%20Sandy%2C%20UT%208558%20E%20Johnsonway%20Dr%2C%20Sandy%2C%20UT%2084094%2C%20USA" target="_blank">Google image search</a><br><a href="https://www.airbnb.jp/rooms/1296794820798195685" target="_blank">Official / source</a></p></div></div>`)[0];
+                popup_40ba33edf09d09379f51c41adb803d58.setContent(html_f7bc3b4eb3f749d50e57e6952261dfee);
             
         
 
-        marker_83ae32d25538febb38ab87d84e3300cb.bindPopup(popup_b1109486e97a0410f2a3ba7e9cc792ed)
+        marker_908d22af26419fd097ce68bdee5b52b1.bindPopup(popup_40ba33edf09d09379f51c41adb803d58)
         ;
 
         
     
     
-            marker_83ae32d25538febb38ab87d84e3300cb.bindTooltip(
+            marker_908d22af26419fd097ce68bdee5b52b1.bindTooltip(
                 `<div>
                      H02 Sandy泊
                  </div>`,
@@ -209,132 +206,42 @@ window.addEventListener('hashchange', openSpotFromHash);
             );
         
     
-                marker_83ae32d25538febb38ab87d84e3300cb.setIcon(div_icon_610241c361f47955e53f8814c3bfcb06);
+                marker_908d22af26419fd097ce68bdee5b52b1.setIcon(div_icon_5756d38b5109895ea8c08645c10b8b5d);
             
     
-            var marker_e2ff7b61b8925331f28abdc654f106ea = L.marker(
-                [44.8087, -117.7414],
+            var marker_d00928b481b55adb21968aff21700bfa = L.marker(
+                [40.762, -113.895],
                 {
 }
-            ).addTo(map_9d5f89c129ccba60c188f615e9c4d498);
+            ).addTo(map_da9f998bfbf091e590b136d3d227f05d);
         
     
-            var div_icon_6e0497ad2d2d45ba57650fc747d346fc = L.divIcon({
-  "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e02-01\u003c/div\u003e",
-  "iconSize": [56, 28],
-  "iconAnchor": [28, 14],
+            var div_icon_2522db9cc2e18f2f26ef5ea17cdd1904 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background:#d7191c; color:white; border:2px solid white; border-radius:16px;\n        box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700;\n        font-size:12px; line-height:24px; min-width:50px; height:24px; padding:0 2px;\n        font-family:Arial,sans-serif;\"\u003e02-05\u003c/div\u003e",
+  "iconSize": [54, 30],
+  "iconAnchor": [27, 15],
   "className": "empty",
 });
         
     
-        var popup_9aa47141e1198833f02bcafe36a83f5b = L.popup({
-  "maxWidth": 440,
+        var popup_e4af3916cb4260c4ae8a73b421d202a0 = L.popup({
+  "maxWidth": 420,
 });
 
         
             
-                var html_5d789d9a0cebf3fecaf686980e39711f = $(`<div id="html_5d789d9a0cebf3fecaf686980e39711f" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>02-01 National Historic Oregon Trail Interpretive Center</h4><table><tr><th>Status</th><td>Possibly</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Road to Sandy / Baker City, OR</td></tr><tr><th>Time</th><td>60–120 min</td></tr><tr><th>Effort</th><td>屋内展示＋短い屋外。朝の開館時刻に注意。</td></tr><tr><th>Plan</th><td>Oregon Trailの開拓史、幌馬車、屋外の景色を見学する。</td></tr><tr><th>Skip rule</th><td>9時開館待ちで出発が遅れる、またはSandy到着を優先する場合は省略。</td></tr><tr><th>Guide</th><td>National Historic Oregon Trail Interpretive Centerは、19世紀に多くの移民が西へ向かったOregon Trailを学ぶ場所です。幌馬車での移動は、冒険というより、病気、天候、水、家畜、食料を管理する長い移住でした。ここでは道具や展示だけでなく、人々がなぜ危険を承知で西へ向かったのかを考えると理解が深まります。子どもには「昔の人が車なしで何か月もかけて西へ移動した道を学ぶ場所」と説明できます。</td></tr><tr><th>Notes</th><td>公式: 夏期9:00–17:00毎日。Day 2の主候補にすると朝の出発は遅れる。</td></tr></table><p><a href="https://maps.apple.com/?q=National%20Historic%20Oregon%20Trail%20Interpretive%20Center%20Baker%20City%20OR" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=National+Historic+Oregon+Trail+Interpretive+Center+Baker+City" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_9aa47141e1198833f02bcafe36a83f5b.setContent(html_5d789d9a0cebf3fecaf686980e39711f);
+                var html_d9305bb79005a4284ad2ac3889510813 = $(`<div id="html_d9305bb79005a4284ad2ac3889510813" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>02-05 Bonneville Salt Flats / Salt Flats Rest Area</h4><table> <tr><th>Status</th><td>Ready</td></tr> <tr><th>Category</th><td>Must</td></tr> <tr><th>Area</th><td>Bonneville Salt Flats / Wendover, UT</td></tr> <tr><th>Time</th><td>30–45 min + detour</td></tr> <tr><th>Effort</th><td>休憩所または入口付近から短い歩行。塩が靴につく。イベント中は奥へ入らない前提。</td></tr> <tr><th>Plan</th><td>白い塩原を短時間で見る。Salt Flats Rest AreaまたはSpeedway入口付近で写真休憩にする。</td></tr> <tr><th>Why</th><td>Baker City→Sandyの行きで、塩原景観を入れる候補。Bonnevilleが今回の旅程では最も塩原らしい。</td></tr> <tr><th>Guide</th><td>Bonneville Salt Flatsは、かつてこの地域を覆っていた巨大なLake Bonnevilleが干上がり、塩分が平らに残った場所です。白く広い地面は雪のように見えますが、実際は塩でできた硬い平面です。20世紀以降は、非常に平らな地形を利用して land speed record の舞台にもなりました。子どもには「大昔の湖がなくなって、塩だけが白い地面として残った場所」と説明できます。</td></tr> <tr><th>Skip rule</th><td>出発が遅い、疲労が強い、Speed Week規制が強い、またはSandy到着が遅れそうなら省略。困難な場合は帰りで検討</td></tr> <tr><th>Cost</th><td>Free</td></tr> <tr><th>Notes</th><td>2026-08-01はSpeed Week期間中のため、自由に奥へ入る観光ではなく短時間の写真休憩扱い。濡れている場所へ車で入らない。</td></tr> <tr><th>Address</th><td>Bonneville Salt Flats Rest Area, I-80, Wendover, UT 84083（番地なし / rest area）</td></tr> </table><p class="links"><a href="https://maps.apple.com/?q=Bonneville%20Salt%20Flats%20Rest%20Area%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Bonneville+Salt+Flats+Utah" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_e4af3916cb4260c4ae8a73b421d202a0.setContent(html_d9305bb79005a4284ad2ac3889510813);
             
         
 
-        marker_e2ff7b61b8925331f28abdc654f106ea.bindPopup(popup_9aa47141e1198833f02bcafe36a83f5b)
+        marker_d00928b481b55adb21968aff21700bfa.bindPopup(popup_e4af3916cb4260c4ae8a73b421d202a0)
         ;
 
         
     
     
-            marker_e2ff7b61b8925331f28abdc654f106ea.bindTooltip(
-                `<div>
-                     02-01 National Historic Oregon Trail Interpretive Center
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_e2ff7b61b8925331f28abdc654f106ea.setIcon(div_icon_6e0497ad2d2d45ba57650fc747d346fc);
-            
-    
-            var marker_f89262e2d6aac557c3cd6967c51455a3 = L.marker(
-                [43.5893, -116.5342],
-                {
-}
-            ).addTo(map_9d5f89c129ccba60c188f615e9c4d498);
-        
-    
-            var div_icon_21126a4f671665d35b402e726eeafbd4 = L.divIcon({
-  "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e02-03\u003c/div\u003e",
-  "iconSize": [56, 28],
-  "iconAnchor": [28, 14],
-  "className": "empty",
-});
-        
-    
-        var popup_31a03db637f39442734320f8d428faf9 = L.popup({
-  "maxWidth": 440,
-});
-
-        
-            
-                var html_a519c545ffcd8ab57fc3a5bffdd69b95 = $(`<div id="html_a519c545ffcd8ab57fc3a5bffdd69b95" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>02-03 Warhawk Air Museum</h4><table><tr><th>Status</th><td>Possibly</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Road to Sandy / Nampa, ID</td></tr><tr><th>Time</th><td>60–90 min</td></tr><tr><th>Effort</th><td>屋内中心。実機展示・軍事史。子供にも分かりやすい。</td></tr><tr><th>Plan</th><td>飛行機・戦争史・退役軍人の展示を見る。昼食休憩と組み合わせる。</td></tr><tr><th>Skip rule</th><td>到着が遅い、航空系が続きすぎる、Sandy到着を優先する場合は省略。</td></tr><tr><th>Guide</th><td>Warhawk Air Museumは、航空機そのものだけでなく、戦争と個人の記憶を展示する軍事航空博物館です。第二次世界大戦から冷戦期にかけて、飛行機は戦争、偵察、輸送、救助の中心的な技術になりました。実機を見ると、写真や本だけでは分からない大きさ、金属感、操縦席の狭さが分かります。子どもには「昔の飛行機を見ながら、戦争の時代に人がどう飛んでいたかを知る場所」と説明できます。</td></tr><tr><th>Notes</th><td>公式ページにTue–Sat 10:00–17:00、同ページ下部に9:00–17:00表記あり。8/1は土曜。直前確認。</td></tr></table><p><a href="https://maps.apple.com/?q=Warhawk%20Air%20Museum%20Nampa%20ID" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Warhawk+Air+Museum+Nampa+Idaho" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_31a03db637f39442734320f8d428faf9.setContent(html_a519c545ffcd8ab57fc3a5bffdd69b95);
-            
-        
-
-        marker_f89262e2d6aac557c3cd6967c51455a3.bindPopup(popup_31a03db637f39442734320f8d428faf9)
-        ;
-
-        
-    
-    
-            marker_f89262e2d6aac557c3cd6967c51455a3.bindTooltip(
-                `<div>
-                     02-03 Warhawk Air Museum
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_f89262e2d6aac557c3cd6967c51455a3.setIcon(div_icon_21126a4f671665d35b402e726eeafbd4);
-            
-    
-            var marker_cfe10786b91c44f48a508ed19c86bad0 = L.marker(
-                [40.7608, -113.8975],
-                {
-}
-            ).addTo(map_9d5f89c129ccba60c188f615e9c4d498);
-        
-    
-            var div_icon_40fc39f776c6b9e7f661164a8c6fa14f = L.divIcon({
-  "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e02-05\u003c/div\u003e",
-  "iconSize": [56, 28],
-  "iconAnchor": [28, 14],
-  "className": "empty",
-});
-        
-    
-        var popup_f26a21ee8c3623c7234bad102a03d267 = L.popup({
-  "maxWidth": 440,
-});
-
-        
-            
-                var html_69bf94cdb779fd5375363f96722efc26 = $(`<div id="html_69bf94cdb779fd5375363f96722efc26" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>02-05 Bonneville Salt Flats / Salt Flats Rest Area</h4><table><tr><th>Status</th><td>Possibly</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Bonneville Salt Flats / Wendover, UT</td></tr><tr><th>Time</th><td>30–45 min + detour</td></tr><tr><th>Effort</th><td>休憩所または入口付近から短い歩行。塩が靴につく。イベント中は奥へ入らない前提。</td></tr><tr><th>Plan</th><td>白い塩原を短時間で見る。Salt Flats Rest AreaまたはSpeedway入口付近で写真休憩にする。</td></tr><tr><th>Skip rule</th><td>出発が遅い、疲労が強い、Speed Week規制が強い、またはSandy到着が遅れそうなら省略。博物館候補とは基本二択。</td></tr><tr><th>Guide</th><td>Bonneville Salt Flatsは、かつてこの地域を覆っていた巨大なLake Bonnevilleが干上がり、塩分が平らに残った場所です。白く広い地面は雪のように見えますが、実際は塩でできた硬い平面です。20世紀以降は、非常に平らな地形を利用して land speed record の舞台にもなりました。子どもには「大昔の湖がなくなって、塩だけが白い地面として残った場所」と説明できます。</td></tr><tr><th>Notes</th><td>2026-08-01はSpeed Week期間中のため、自由に奥へ入る観光ではなく短時間の写真休憩扱い。濡れている場所へ車で入らない。</td></tr></table><p><a href="https://maps.apple.com/?q=Bonneville%20Salt%20Flats%20Rest%20Area%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Bonneville+Salt+Flats+Utah" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_f26a21ee8c3623c7234bad102a03d267.setContent(html_69bf94cdb779fd5375363f96722efc26);
-            
-        
-
-        marker_cfe10786b91c44f48a508ed19c86bad0.bindPopup(popup_f26a21ee8c3623c7234bad102a03d267)
-        ;
-
-        
-    
-    
-            marker_cfe10786b91c44f48a508ed19c86bad0.bindTooltip(
+            marker_d00928b481b55adb21968aff21700bfa.bindTooltip(
                 `<div>
                      02-05 Bonneville Salt Flats / Salt Flats Rest Area
                  </div>`,
@@ -344,44 +251,44 @@ window.addEventListener('hashchange', openSpotFromHash);
             );
         
     
-                marker_cfe10786b91c44f48a508ed19c86bad0.setIcon(div_icon_40fc39f776c6b9e7f661164a8c6fa14f);
+                marker_d00928b481b55adb21968aff21700bfa.setIcon(div_icon_2522db9cc2e18f2f26ef5ea17cdd1904);
             
     
-            var marker_43e94d5ce5d52df193d2f7e361694f8b = L.marker(
-                [41.1614, -112.0193],
+            var marker_373577e3ae99d0c493922a1e2fe0c413 = L.marker(
+                [44.8263, -117.737],
                 {
 }
-            ).addTo(map_9d5f89c129ccba60c188f615e9c4d498);
+            ).addTo(map_da9f998bfbf091e590b136d3d227f05d);
         
     
-            var div_icon_f91cea435329c1471d2626e8946e6cf8 = L.divIcon({
-  "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e02-06\u003c/div\u003e",
-  "iconSize": [56, 28],
-  "iconAnchor": [28, 14],
+            var div_icon_19c483d9b09fc9aca86c4c1a4730024f = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n        box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700;\n        font-size:12px; line-height:24px; min-width:50px; height:24px; padding:0 2px;\n        font-family:Arial,sans-serif;\"\u003e02-01\u003c/div\u003e",
+  "iconSize": [54, 30],
+  "iconAnchor": [27, 15],
   "className": "empty",
 });
         
     
-        var popup_18784c5b426abf2a61d0b055b3050698 = L.popup({
-  "maxWidth": 440,
+        var popup_97d492eb1fd44abe2721de966c62e9bd = L.popup({
+  "maxWidth": 420,
 });
 
         
             
-                var html_949e9b630d54fe34d8ef01260fbaffda = $(`<div id="html_949e9b630d54fe34d8ef01260fbaffda" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>02-06 Hill Aerospace Museum</h4><table><tr><th>Status</th><td>Possibly</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Road to Sandy / Ogden-Roy, UT</td></tr><tr><th>Time</th><td>60–90 min</td></tr><tr><th>Effort</th><td>屋内＋屋外の航空機展示。歩行は軽〜中等度。</td></tr><tr><th>Plan</th><td>大型航空機・軍用機展示を短時間で見る。</td></tr><tr><th>Skip rule</th><td>16時前後に間に合わない、Warhawkに行った、またはSandy到着を優先する場合は省略。</td></tr><tr><th>Guide</th><td>Hill Aerospace Museumは、Hill Air Force Baseの近くにある航空・空軍史の博物館です。展示機を時代順に見ると、プロペラ機からジェット機、偵察機、ステルス機へと技術が変化してきたことが分かります。戦闘機だけでなく、輸送、訓練、救助の機体もあり、航空機が多様な役割を持つことを理解できます。子どもには「飛行機が時代とともにどんどん速く、特殊な形になっていったことを見る場所」と説明できます。</td></tr><tr><th>Notes</th><td>火–土9:00–16:30、無料とされる。公式ページを直前確認。航空系はWarhawkとどちらか一つ。</td></tr></table><p><a href="https://maps.apple.com/?q=Hill%20Aerospace%20Museum%20Roy%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Hill+Aerospace+Museum+Utah" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_18784c5b426abf2a61d0b055b3050698.setContent(html_949e9b630d54fe34d8ef01260fbaffda);
+                var html_72e20920676efda2b02cd3d0d90181b9 = $(`<div id="html_72e20920676efda2b02cd3d0d90181b9" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>02-01 National Historic Oregon Trail Interpretive Center</h4><table> <tr><th>Status</th><td>Ready</td></tr> <tr><th>Category</th><td>Possibly</td></tr> <tr><th>Area</th><td>Road to Sandy / Baker City, OR</td></tr> <tr><th>Time</th><td>60–120 min</td></tr> <tr><th>Effort</th><td>屋内展示＋短い屋外。朝の開館時刻に注意。</td></tr> <tr><th>Plan</th><td>Oregon Trailの開拓史、幌馬車、屋外の景色を見学する。</td></tr> <tr><th>Why</th><td>Baker City泊のすぐ近くから始められる。Twin Falls既訪の場合の朝の学習型候補。</td></tr> <tr><th>Guide</th><td>National Historic Oregon Trail Interpretive Centerは、19世紀に多くの移民が西へ向かったOregon Trailを学ぶ場所です。幌馬車での移動は、冒険というより、病気、天候、水、家畜、食料を管理する長い移住でした。ここでは道具や展示だけでなく、人々がなぜ危険を承知で西へ向かったのかを考えると理解が深まります。子どもには「昔の人が車なしで何か月もかけて西へ移動した道を学ぶ場所」と説明できます。</td></tr> <tr><th>Skip rule</th><td>9時開館待ちで出発が遅れるため原則省略。</td></tr> <tr><th>Cost</th><td>16歳以上$8 / Federal pass accepted</td></tr> <tr><th>Notes</th><td>公式: 夏期9:00–17:00毎日。Day 2の主候補にすると朝の出発は遅れる。</td></tr> <tr><th>Address</th><td>22267 OR-86, Baker City, OR 97814</td></tr> </table><p class="links"><a href="https://maps.apple.com/?q=National%20Historic%20Oregon%20Trail%20Interpretive%20Center%20Baker%20City%20OR" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=National+Historic+Oregon+Trail+Interpretive+Center+Baker+City" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_97d492eb1fd44abe2721de966c62e9bd.setContent(html_72e20920676efda2b02cd3d0d90181b9);
             
         
 
-        marker_43e94d5ce5d52df193d2f7e361694f8b.bindPopup(popup_18784c5b426abf2a61d0b055b3050698)
+        marker_373577e3ae99d0c493922a1e2fe0c413.bindPopup(popup_97d492eb1fd44abe2721de966c62e9bd)
         ;
 
         
     
     
-            marker_43e94d5ce5d52df193d2f7e361694f8b.bindTooltip(
+            marker_373577e3ae99d0c493922a1e2fe0c413.bindTooltip(
                 `<div>
-                     02-06 Hill Aerospace Museum
+                     02-01 National Historic Oregon Trail Interpretive Center
                  </div>`,
                 {
   "sticky": true,
@@ -389,44 +296,44 @@ window.addEventListener('hashchange', openSpotFromHash);
             );
         
     
-                marker_43e94d5ce5d52df193d2f7e361694f8b.setIcon(div_icon_f91cea435329c1471d2626e8946e6cf8);
+                marker_373577e3ae99d0c493922a1e2fe0c413.setIcon(div_icon_19c483d9b09fc9aca86c4c1a4730024f);
             
     
-            var marker_86aada8c443335063ec1c410276c98f7 = L.marker(
-                [40.7648, -111.8225],
+            var marker_8e6f23e94b1e31e4ad29ffe4e90e1d07 = L.marker(
+                [43.5816, -116.523],
                 {
 }
-            ).addTo(map_9d5f89c129ccba60c188f615e9c4d498);
+            ).addTo(map_da9f998bfbf091e590b136d3d227f05d);
         
     
-            var div_icon_9819685b183f1ad816a44b38cc08a58e = L.divIcon({
-  "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e02-07\u003c/div\u003e",
-  "iconSize": [56, 28],
-  "iconAnchor": [28, 14],
+            var div_icon_2ef914a60195da52856bbfef7b474964 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n        box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700;\n        font-size:12px; line-height:24px; min-width:50px; height:24px; padding:0 2px;\n        font-family:Arial,sans-serif;\"\u003e02-03\u003c/div\u003e",
+  "iconSize": [54, 30],
+  "iconAnchor": [27, 15],
   "className": "empty",
 });
         
     
-        var popup_e0c198151ffcd58cb425590ac792924a = L.popup({
-  "maxWidth": 440,
+        var popup_f9a2ed6f1908cde059a25c9de3d11b70 = L.popup({
+  "maxWidth": 420,
 });
 
         
             
-                var html_ab401e6d17a6e1df5f657f1c10865559 = $(`<div id="html_ab401e6d17a6e1df5f657f1c10865559" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>02-07 Natural History Museum of Utah</h4><table><tr><th>Status</th><td>Possibly</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Salt Lake City, UT</td></tr><tr><th>Time</th><td>90–120 min</td></tr><tr><th>Effort</th><td>屋内中心。恐竜・地質・鉱物・Great Salt Lakeなど。子供向き。</td></tr><tr><th>Plan</th><td>Utahの自然史展示を短時間で見る。Sandy到着前またはチェックイン前後に組み込む。</td></tr><tr><th>Skip rule</th><td>15:00以降にSalt Lake到着、疲労が強い、または夕食・チェックインを優先する場合は省略。</td></tr><tr><th>Guide</th><td>Natural History Museum of Utahは、Utahの地質、恐竜、鉱物、Great Salt Lake、先住民文化をまとめて学べる博物館です。これから向かう赤い岩の国や塩湖の景色は、ここで背景を見ておくと理解しやすくなります。特に恐竜化石と岩石の展示は、Colorado Plateauが長い時間をかけてできた場所だと実感しやすいです。子どもには「Utahの恐竜、岩、湖、人の歴史を一気に予習できる場所」と説明できます。</td></tr><tr><th>Notes</th><td>公式: 毎日10:00–17:00、水曜のみ21:00まで。最終入館は閉館30分前。8/1は土曜なので17:00閉館前提。</td></tr></table><p><a href="https://maps.apple.com/?q=Natural%20History%20Museum%20of%20Utah%20Salt%20Lake%20City%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Natural+History+Museum+of+Utah+Salt+Lake+City" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_e0c198151ffcd58cb425590ac792924a.setContent(html_ab401e6d17a6e1df5f657f1c10865559);
+                var html_9b1cf738eef879f80cb9a6d03a2bd7b4 = $(`<div id="html_9b1cf738eef879f80cb9a6d03a2bd7b4" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>02-03 Warhawk Air Museum</h4><table> <tr><th>Status</th><td>Ready</td></tr> <tr><th>Category</th><td>Possibly</td></tr> <tr><th>Area</th><td>Road to Sandy / Nampa, ID</td></tr> <tr><th>Time</th><td>60–90 min</td></tr> <tr><th>Effort</th><td>屋内中心。実機展示・軍事史。子供にも分かりやすい。</td></tr> <tr><th>Plan</th><td>飛行機・戦争史・退役軍人の展示を見る。昼食休憩と組み合わせる。</td></tr> <tr><th>Why</th><td>Boise/NampaのI-84動線から大きく外れにくい。Twin Falls既訪ならDay 2の主観光候補として現実的。</td></tr> <tr><th>Guide</th><td>Warhawk Air Museumは、航空機そのものだけでなく、戦争と個人の記憶を展示する軍事航空博物館です。第二次世界大戦から冷戦期にかけて、飛行機は戦争、偵察、輸送、救助の中心的な技術になりました。実機を見ると、写真や本だけでは分からない大きさ、金属感、操縦席の狭さが分かります。子どもには「昔の飛行機を見ながら、戦争の時代に人がどう飛んでいたかを知る場所」と説明できます。</td></tr> <tr><th>Skip rule</th><td>10時からであるため原則省略</td></tr> <tr><th>Cost</th><td>Adult $20 / Children 5–12 $5</td></tr> <tr><th>Notes</th><td>公式ページにTue–Sat 10:00–17:00、同ページ下部に9:00–17:00表記あり。8/1は土曜。直前確認。</td></tr> <tr><th>Address</th><td>201 Municipal Dr, Nampa, ID 83687</td></tr> </table><p class="links"><a href="https://maps.apple.com/?q=Warhawk%20Air%20Museum%20Nampa%20ID" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Warhawk+Air+Museum+Nampa+Idaho" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_f9a2ed6f1908cde059a25c9de3d11b70.setContent(html_9b1cf738eef879f80cb9a6d03a2bd7b4);
             
         
 
-        marker_86aada8c443335063ec1c410276c98f7.bindPopup(popup_e0c198151ffcd58cb425590ac792924a)
+        marker_8e6f23e94b1e31e4ad29ffe4e90e1d07.bindPopup(popup_f9a2ed6f1908cde059a25c9de3d11b70)
         ;
 
         
     
     
-            marker_86aada8c443335063ec1c410276c98f7.bindTooltip(
+            marker_8e6f23e94b1e31e4ad29ffe4e90e1d07.bindTooltip(
                 `<div>
-                     02-07 Natural History Museum of Utah
+                     02-03 Warhawk Air Museum
                  </div>`,
                 {
   "sticky": true,
@@ -434,44 +341,44 @@ window.addEventListener('hashchange', openSpotFromHash);
             );
         
     
-                marker_86aada8c443335063ec1c410276c98f7.setIcon(div_icon_9819685b183f1ad816a44b38cc08a58e);
+                marker_8e6f23e94b1e31e4ad29ffe4e90e1d07.setIcon(div_icon_2ef914a60195da52856bbfef7b474964);
             
     
-            var marker_cc5155f835cbafc64dbbc45a86a7f56a = L.marker(
-                [40.734, -112.212],
+            var marker_258c6285416d58acb22311cb837252ec = L.marker(
+                [40.732, -112.212],
                 {
 }
-            ).addTo(map_9d5f89c129ccba60c188f615e9c4d498);
+            ).addTo(map_da9f998bfbf091e590b136d3d227f05d);
         
     
-            var div_icon_088027fafe4faca5dec736244d0073ac = L.divIcon({
-  "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e02-08\u003c/div\u003e",
-  "iconSize": [56, 28],
-  "iconAnchor": [28, 14],
+            var div_icon_c1283756c8df74daccde2c2ea9769326 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n        box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700;\n        font-size:12px; line-height:24px; min-width:50px; height:24px; padding:0 2px;\n        font-family:Arial,sans-serif;\"\u003e02-06\u003c/div\u003e",
+  "iconSize": [54, 30],
+  "iconAnchor": [27, 15],
   "className": "empty",
 });
         
     
-        var popup_e017937670b5b6141859c7fca13d096a = L.popup({
-  "maxWidth": 440,
+        var popup_a1f54b081a222edd0546a06210d3f8cb = L.popup({
+  "maxWidth": 420,
 });
 
         
             
-                var html_8cd1354399dc26c5531e74734305fff0 = $(`<div id="html_8cd1354399dc26c5531e74734305fff0" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>02-08 Great Salt Lake State Park</h4><table><tr><th>Status</th><td>Possibly</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Salt Lake City / Great Salt Lake</td></tr><tr><th>Time</th><td>45–90 min + detour</td></tr><tr><th>Effort</th><td>湖岸・ビジターセンター中心。暑さ、風、虫、においに注意。</td></tr><tr><th>Plan</th><td>Great Salt Lakeの湖岸と塩湖の景色を見る。時間があればビジターセンターで短時間学習。</td></tr><tr><th>Skip rule</th><td>Sandy到着が遅れそう、暑さ・虫・風が強い、NHMUを優先する場合は省略。</td></tr><tr><th>Guide</th><td>Great Salt Lakeは海につながらない terminal lake で、水が出ていく川がないため塩分が濃くなっています。湖水は蒸発しますが、塩分は残るため、海水よりずっと塩辛い湖になります。湖はbrine shrimpや渡り鳥にとって重要ですが、水位低下も大きな問題になっています。子どもには「水は蒸発してなくなるけれど、塩は残るから、どんどんしょっぱい湖になる」と説明できます。</td></tr><tr><th>Notes</th><td>Day 2の追加候補。博物館と両方入れると重いので、入れるならNHMUなどと二択。</td></tr></table><p><a href="https://maps.apple.com/?q=Great%20Salt%20Lake%20State%20Park%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Great+Salt+Lake+State+Park" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_e017937670b5b6141859c7fca13d096a.setContent(html_8cd1354399dc26c5531e74734305fff0);
+                var html_4e234fc6bed23e9bc3924e61358e3c7f = $(`<div id="html_4e234fc6bed23e9bc3924e61358e3c7f" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>02-06 Great Salt Lake State Park</h4><table> <tr><th>Status</th><td>Ready</td></tr> <tr><th>Category</th><td>Possibly</td></tr> <tr><th>Area</th><td>Salt Lake City / Great Salt Lake</td></tr> <tr><th>Time</th><td>45–90 min + detour</td></tr> <tr><th>Effort</th><td>湖岸・ビジターセンター中心。暑さ、風、虫、においに注意。</td></tr> <tr><th>Plan</th><td>Great Salt Lakeの湖岸と塩湖の景色を見る。時間があればビジターセンターで短時間学習。</td></tr> <tr><th>Why</th><td>Salt Lake Cityらしい自然景観を直接見られる。Antelope Islandより短時間で入れやすい可能性がある。</td></tr> <tr><th>Guide</th><td>Great Salt Lakeは海につながらない terminal lake で、水が出ていく川がないため塩分が濃くなっています。湖水は蒸発しますが、塩分は残るため、海水よりずっと塩辛い湖になります。湖はbrine shrimpや渡り鳥にとって重要ですが、水位低下も大きな問題になっています。子どもには「水は蒸発してなくなるけれど、塩は残るから、どんどんしょっぱい湖になる」と説明できます。</td></tr> <tr><th>Skip rule</th><td>Sandy到着が遅れそう、暑さ・虫・風が強い、NHMUを優先する場合は省略。</td></tr> <tr><th>Cost</th><td>State park fee / conditions check</td></tr> <tr><th>Notes</th><td>Day 2の追加候補。博物館と両方入れると重いので、入れるならNHMUなどと二択。</td></tr> <tr><th>Address</th><td>13312 W 1075 S, Magna, UT 84044</td></tr> </table><p class="links"><a href="https://maps.apple.com/?q=Great%20Salt%20Lake%20State%20Park%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Great+Salt+Lake+State+Park" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_a1f54b081a222edd0546a06210d3f8cb.setContent(html_4e234fc6bed23e9bc3924e61358e3c7f);
             
         
 
-        marker_cc5155f835cbafc64dbbc45a86a7f56a.bindPopup(popup_e017937670b5b6141859c7fca13d096a)
+        marker_258c6285416d58acb22311cb837252ec.bindPopup(popup_a1f54b081a222edd0546a06210d3f8cb)
         ;
 
         
     
     
-            marker_cc5155f835cbafc64dbbc45a86a7f56a.bindTooltip(
+            marker_258c6285416d58acb22311cb837252ec.bindTooltip(
                 `<div>
-                     02-08 Great Salt Lake State Park
+                     02-06 Great Salt Lake State Park
                  </div>`,
                 {
   "sticky": true,
@@ -479,44 +386,44 @@ window.addEventListener('hashchange', openSpotFromHash);
             );
         
     
-                marker_cc5155f835cbafc64dbbc45a86a7f56a.setIcon(div_icon_088027fafe4faca5dec736244d0073ac);
+                marker_258c6285416d58acb22311cb837252ec.setIcon(div_icon_c1283756c8df74daccde2c2ea9769326);
             
     
-            var marker_248e0567e1b6fb2acefb913daa4da3ca = L.marker(
-                [40.9586, -112.2136],
+            var marker_021022fdc56cd12cfdd5c96aee7351ad = L.marker(
+                [41.058, -112.232],
                 {
 }
-            ).addTo(map_9d5f89c129ccba60c188f615e9c4d498);
+            ).addTo(map_da9f998bfbf091e590b136d3d227f05d);
         
     
-            var div_icon_90e2a2395e3e5fa9e59c897c5d93d9a9 = L.divIcon({
-  "html": "\u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700; font-size:12px; line-height:23px; width:52px; height:24px; font-family:Arial, sans-serif;\"\u003e02-09\u003c/div\u003e",
-  "iconSize": [56, 28],
-  "iconAnchor": [28, 14],
+            var div_icon_b1fc7ec37ab4a0f1f7402a0334a8748a = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n        box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700;\n        font-size:12px; line-height:24px; min-width:50px; height:24px; padding:0 2px;\n        font-family:Arial,sans-serif;\"\u003e02-07\u003c/div\u003e",
+  "iconSize": [54, 30],
+  "iconAnchor": [27, 15],
   "className": "empty",
 });
         
     
-        var popup_c0f8f8696b9032143628908f61e2c53e = L.popup({
-  "maxWidth": 440,
+        var popup_f57a13f2fbf5d503d33a20aea09f9106 = L.popup({
+  "maxWidth": 420,
 });
 
         
             
-                var html_9cee05ba70fa6587186917f7604eb57a = $(`<div id="html_9cee05ba70fa6587186917f7604eb57a" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>02-09 Antelope Island State Park</h4><table><tr><th>Status</th><td>Possibly</td></tr><tr><th>Category</th><td>Possibly</td></tr><tr><th>Area</th><td>Great Salt Lake / Antelope Island</td></tr><tr><th>Time</th><td>1.5–3 hr + detour</td></tr><tr><th>Effort</th><td>車移動＋短い展望。暑さ、虫、バイソンとの距離に注意。</td></tr><tr><th>Plan</th><td>Great Salt Lake、島の乾いた景観、野生動物を車中心で見る。</td></tr><tr><th>Skip rule</th><td>通常は省略。NHMU、Hill Aerospace、Great Salt Lake State Parkのどれかを優先した場合は入れない。</td></tr><tr><th>Guide</th><td>Antelope IslandはGreat Salt Lakeの中にある大きな島で、乾いた丘、塩湖、野生動物を一緒に見られる場所です。島にはbisonがいますが、野生動物なので近づいてはいけません。湖岸の白い塩、遠くの山、茶色い島の景色は、これから見る赤い岩の公園とはかなり違います。子どもには「しょっぱい湖の中にある島で、大きなバイソンも暮らしている」と説明できます。</td></tr><tr><th>Notes</th><td>時間がかなり余る場合のみ。虫・暑さ・到着時間を確認。</td></tr></table><p><a href="https://maps.apple.com/?q=Antelope%20Island%20State%20Park%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Antelope+Island+State+Park+Great+Salt+Lake" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_c0f8f8696b9032143628908f61e2c53e.setContent(html_9cee05ba70fa6587186917f7604eb57a);
+                var html_97ca152aac196b369b4955ba36272366 = $(`<div id="html_97ca152aac196b369b4955ba36272366" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>02-07 Antelope Island State Park</h4><table> <tr><th>Status</th><td>Ready</td></tr> <tr><th>Category</th><td>Possibly</td></tr> <tr><th>Area</th><td>Great Salt Lake / Antelope Island</td></tr> <tr><th>Time</th><td>1.5–3 hr + detour</td></tr> <tr><th>Effort</th><td>車移動＋短い展望。暑さ、虫、バイソンとの距離に注意。</td></tr> <tr><th>Plan</th><td>Great Salt Lake、島の乾いた景観、野生動物を車中心で見る。</td></tr> <tr><th>Why</th><td>景色は強いが、Day 2では寄り道と滞在時間が大きい。時間がかなり余る場合の候補。</td></tr> <tr><th>Guide</th><td>Antelope IslandはGreat Salt Lakeの中にある大きな島で、乾いた丘、塩湖、野生動物を一緒に見られる場所です。島にはbisonがいますが、野生動物なので近づいてはいけません。湖岸の白い塩、遠くの山、茶色い島の景色は、これから見る赤い岩の公園とはかなり違います。子どもには「しょっぱい湖の中にある島で、大きなバイソンも暮らしている」と説明できます。</td></tr> <tr><th>Skip rule</th><td>通常は省略。NHMU、Hill Aerospace、Great Salt Lake State Parkのどれかを優先した場合は入れない。</td></tr> <tr><th>Cost</th><td>State park fee</td></tr> <tr><th>Notes</th><td>時間がかなり余る場合のみ。虫・暑さ・到着時間を確認。</td></tr> <tr><th>Address</th><td>4528 W 1700 S, Syracuse, UT 84075</td></tr> </table><p class="links"><a href="https://maps.apple.com/?q=Antelope%20Island%20State%20Park%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Antelope+Island+State+Park+Great+Salt+Lake" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_f57a13f2fbf5d503d33a20aea09f9106.setContent(html_97ca152aac196b369b4955ba36272366);
             
         
 
-        marker_248e0567e1b6fb2acefb913daa4da3ca.bindPopup(popup_c0f8f8696b9032143628908f61e2c53e)
+        marker_021022fdc56cd12cfdd5c96aee7351ad.bindPopup(popup_f57a13f2fbf5d503d33a20aea09f9106)
         ;
 
         
     
     
-            marker_248e0567e1b6fb2acefb913daa4da3ca.bindTooltip(
+            marker_021022fdc56cd12cfdd5c96aee7351ad.bindTooltip(
                 `<div>
-                     02-09 Antelope Island State Park
+                     02-07 Antelope Island State Park
                  </div>`,
                 {
   "sticky": true,
@@ -524,11 +431,1631 @@ window.addEventListener('hashchange', openSpotFromHash);
             );
         
     
-                marker_248e0567e1b6fb2acefb913daa4da3ca.setIcon(div_icon_90e2a2395e3e5fa9e59c897c5d93d9a9);
+                marker_021022fdc56cd12cfdd5c96aee7351ad.setIcon(div_icon_b1fc7ec37ab4a0f1f7402a0334a8748a);
             
     
-            map_9d5f89c129ccba60c188f615e9c4d498.fitBounds(
-                [[40.589, -117.834], [44.8087, -111.8225]],
+            var marker_c2603b007127fc110ddbfe78b59c3d92 = L.marker(
+                [41.1624, -112.0193],
+                {
+}
+            ).addTo(map_da9f998bfbf091e590b136d3d227f05d);
+        
+    
+            var div_icon_56aa11391baf87d80eb8b72e185261a2 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n        box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700;\n        font-size:12px; line-height:24px; min-width:50px; height:24px; padding:0 2px;\n        font-family:Arial,sans-serif;\"\u003e02-08\u003c/div\u003e",
+  "iconSize": [54, 30],
+  "iconAnchor": [27, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_f6664293f004f4623ac997b2bb3d2cfe = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_8dd4b44fe0b7621f08498c0692723cab = $(`<div id="html_8dd4b44fe0b7621f08498c0692723cab" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>02-08 Hill Aerospace Museum</h4><table> <tr><th>Status</th><td>Ready</td></tr> <tr><th>Category</th><td>Possibly</td></tr> <tr><th>Area</th><td>Road to Sandy / Ogden-Roy, UT</td></tr> <tr><th>Time</th><td>60–90 min</td></tr> <tr><th>Effort</th><td>屋内＋屋外の航空機展示。歩行は軽〜中等度。</td></tr> <tr><th>Plan</th><td>大型航空機・軍用機展示を短時間で見る。</td></tr> <tr><th>Why</th><td>Ogden/Roy付近でI-15沿線に近く、Sandyへ南下する前に入れやすい。無料なら短時間でも寄りやすい。</td></tr> <tr><th>Guide</th><td>Hill Aerospace Museumは、Hill Air Force Baseの近くにある航空・空軍史の博物館です。展示機を時代順に見ると、プロペラ機からジェット機、偵察機、ステルス機へと技術が変化してきたことが分かります。戦闘機だけでなく、輸送、訓練、救助の機体もあり、航空機が多様な役割を持つことを理解できます。子どもには「飛行機が時代とともにどんどん速く、特殊な形になっていったことを見る場所」と説明できます。</td></tr> <tr><th>Skip rule</th><td>16時前後に間に合わない、Warhawkに行った、またはSandy到着を優先する場合は省略。</td></tr> <tr><th>Cost</th><td>Free / hours check</td></tr> <tr><th>Notes</th><td>火–土9:00–16:30、無料とされる。公式ページを直前確認。航空系はWarhawkとどちらか一つ。</td></tr> <tr><th>Address</th><td>7961 Wardleigh Rd, Hill AFB, UT 84056</td></tr> </table><p class="links"><a href="https://maps.apple.com/?q=Hill%20Aerospace%20Museum%20Roy%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Hill+Aerospace+Museum+Utah" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_f6664293f004f4623ac997b2bb3d2cfe.setContent(html_8dd4b44fe0b7621f08498c0692723cab);
+            
+        
+
+        marker_c2603b007127fc110ddbfe78b59c3d92.bindPopup(popup_f6664293f004f4623ac997b2bb3d2cfe)
+        ;
+
+        
+    
+    
+            marker_c2603b007127fc110ddbfe78b59c3d92.bindTooltip(
+                `<div>
+                     02-08 Hill Aerospace Museum
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c2603b007127fc110ddbfe78b59c3d92.setIcon(div_icon_56aa11391baf87d80eb8b72e185261a2);
+            
+    
+            var marker_356c7deb9fb726b1cd62e2c470fb9b06 = L.marker(
+                [40.7643, -111.8221],
+                {
+}
+            ).addTo(map_da9f998bfbf091e590b136d3d227f05d);
+        
+    
+            var div_icon_2dea70b324f81fa48b7597230d84ca53 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background:#2c7bb6; color:white; border:2px solid white; border-radius:16px;\n        box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700;\n        font-size:12px; line-height:24px; min-width:50px; height:24px; padding:0 2px;\n        font-family:Arial,sans-serif;\"\u003e02-09\u003c/div\u003e",
+  "iconSize": [54, 30],
+  "iconAnchor": [27, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_2b1a93f3d87300289b9db5bcc5b77770 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_1184044ffb5dcf09653ff9b5c5156285 = $(`<div id="html_1184044ffb5dcf09653ff9b5c5156285" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>02-09 Natural History Museum of Utah</h4><table> <tr><th>Status</th><td>Ready</td></tr> <tr><th>Category</th><td>Possibly</td></tr> <tr><th>Area</th><td>Salt Lake City, UT</td></tr> <tr><th>Time</th><td>90–120 min</td></tr> <tr><th>Effort</th><td>屋内中心。恐竜・地質・鉱物・Great Salt Lakeなど。子供向き。</td></tr> <tr><th>Plan</th><td>Utahの自然史展示を短時間で見る。Sandy到着前またはチェックイン前後に組み込む。</td></tr> <tr><th>Why</th><td>Salt Lake Cityらしさが最も強く、Twin Falls既訪の場合のDay 2第一候補。暑さ回避にもよい。</td></tr> <tr><th>Guide</th><td>Natural History Museum of Utahは、Utahの地質、恐竜、鉱物、Great Salt Lake、先住民文化をまとめて学べる博物館です。これから向かう赤い岩の国や塩湖の景色は、ここで背景を見ておくと理解しやすくなります。特に恐竜化石と岩石の展示は、Colorado Plateauが長い時間をかけてできた場所だと実感しやすいです。子どもには「Utahの恐竜、岩、湖、人の歴史を一気に予習できる場所」と説明できます。</td></tr> <tr><th>Skip rule</th><td>15:00以降にSalt Lake到着、疲労が強い、または夕食・チェックインを優先する場合は省略。</td></tr> <tr><th>Cost</th><td>Paid / reserve tickets recommended</td></tr> <tr><th>Notes</th><td>公式: 毎日10:00–17:00、水曜のみ21:00まで。最終入館は閉館30分前。8/1は土曜なので17:00閉館前提。</td></tr> <tr><th>Address</th><td>301 Wakara Way, Salt Lake City, UT 84108</td></tr> </table><p class="links"><a href="https://maps.apple.com/?q=Natural%20History%20Museum%20of%20Utah%20Salt%20Lake%20City%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Natural+History+Museum+of+Utah+Salt+Lake+City" target="_blank">Google image search</a></p></div></div>`)[0];
+                popup_2b1a93f3d87300289b9db5bcc5b77770.setContent(html_1184044ffb5dcf09653ff9b5c5156285);
+            
+        
+
+        marker_356c7deb9fb726b1cd62e2c470fb9b06.bindPopup(popup_2b1a93f3d87300289b9db5bcc5b77770)
+        ;
+
+        
+    
+    
+            marker_356c7deb9fb726b1cd62e2c470fb9b06.bindTooltip(
+                `<div>
+                     02-09 Natural History Museum of Utah
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_356c7deb9fb726b1cd62e2c470fb9b06.setIcon(div_icon_2dea70b324f81fa48b7597230d84ca53);
+            
+    
+            var marker_907acea7939ab95b9ac20446b38603fb = L.marker(
+                [43.5407, -116.5635],
+                {
+}
+            ).addTo(map_da9f998bfbf091e590b136d3d227f05d);
+        
+    
+            var div_icon_c24c8cb053f154c14c8250b0d5626910 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background:#f28e2b; color:white; border:2px solid white; border-radius:16px;\n        box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700;\n        font-size:12px; line-height:24px; min-width:50px; height:24px; padding:0 2px;\n        font-family:Arial,sans-serif;\"\u003eG06\u003c/div\u003e",
+  "iconSize": [54, 30],
+  "iconAnchor": [27, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_f3cc6476a134ed0909b7ea989b696dd2 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_00f385b275a7952a7f2ebcb0ee3841b4 = $(`<div id="html_00f385b275a7952a7f2ebcb0ee3841b4" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>G06 Boise / Meridian gas stop search</h4><table> <tr><th>Status</th><td>Candidate</td></tr> <tr><th>Category</th><td>Gas</td></tr> <tr><th>Priority</th><td>A</td></tr> <tr><th>Route / area</th><td>Baker City → Sandy</td></tr> <tr><th>Timing</th><td>Midday</td></tr> <tr><th>Relation</th><td>Along route</td></tr> <tr><th>Use case</th><td>中間給油・トイレ</td></tr> <tr><th>Address</th><td>I-84 Boise / Meridian</td></tr> <tr><th>Practical notes</th><td>Boise都市圏で給油すると選択肢が多い。</td></tr> <tr><th>Check before use</th><td>休憩と給油を同時に。</td></tr> </table><p class="links"><a href="https://maps.apple.com/?q=Boise%20/%20Meridian%20gas%20stop%20search%20Boise%20/%20Meridian%2C%20ID" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Boise%20/%20Meridian%20gas%20stop%20search%20Boise%20/%20Meridian%2C%20ID%20I-84%20Boise%20/%20Meridian" target="_blank">Google image search</a><br><a href="https://www.google.com/search?q=Boise%20Meridian%20I-84%20gas%20station%20Maverik%20Chevron" target="_blank">Official / source</a></p></div></div>`)[0];
+                popup_f3cc6476a134ed0909b7ea989b696dd2.setContent(html_00f385b275a7952a7f2ebcb0ee3841b4);
+            
+        
+
+        marker_907acea7939ab95b9ac20446b38603fb.bindPopup(popup_f3cc6476a134ed0909b7ea989b696dd2)
+        ;
+
+        
+    
+    
+            marker_907acea7939ab95b9ac20446b38603fb.bindTooltip(
+                `<div>
+                     G06 Boise / Meridian gas stop search
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_907acea7939ab95b9ac20446b38603fb.setIcon(div_icon_c24c8cb053f154c14c8250b0d5626910);
+            
+    
+            var marker_3da0363bceaab564d0d17a3521d10e4c = L.marker(
+                [40.572, -111.86],
+                {
+}
+            ).addTo(map_da9f998bfbf091e590b136d3d227f05d);
+        
+    
+            var div_icon_3b3fb2e2c56b5ffc265bad7d1626c258 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background:#f28e2b; color:white; border:2px solid white; border-radius:16px;\n        box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700;\n        font-size:12px; line-height:24px; min-width:50px; height:24px; padding:0 2px;\n        font-family:Arial,sans-serif;\"\u003eG07\u003c/div\u003e",
+  "iconSize": [54, 30],
+  "iconAnchor": [27, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_c2f6d6823014215a43cd0266281cdd0c = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_d6dbb06e245874994ba33b0e951bda90 = $(`<div id="html_d6dbb06e245874994ba33b0e951bda90" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>G07 Sandy / Draper gas station search</h4><table> <tr><th>Status</th><td>Candidate</td></tr> <tr><th>Category</th><td>Gas</td></tr> <tr><th>Priority</th><td>A</td></tr> <tr><th>Route / area</th><td>Sandy lodging</td></tr> <tr><th>Timing</th><td>Evening</td></tr> <tr><th>Relation</th><td>Near lodging</td></tr> <tr><th>Use case</th><td>Day 3前の満タン給油</td></tr> <tr><th>Address</th><td>Near 8558 E Johnsonway Dr, Sandy</td></tr> <tr><th>Practical notes</th><td>Moabまで長いので出発前に給油。</td></tr> <tr><th>Check before use</th><td>朝の混雑と価格。</td></tr> </table><p class="links"><a href="https://maps.apple.com/?q=Sandy%20/%20Draper%20gas%20station%20search%20Sandy%20/%20Draper%2C%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Sandy%20/%20Draper%20gas%20station%20search%20Sandy%20/%20Draper%2C%20UT%20Near%208558%20E%20Johnsonway%20Dr%2C%20Sandy" target="_blank">Google image search</a><br><a href="https://www.google.com/search?q=Sandy%20UT%20gas%20station%20near%208558%20E%20Johnsonway%20Dr" target="_blank">Official / source</a></p></div></div>`)[0];
+                popup_c2f6d6823014215a43cd0266281cdd0c.setContent(html_d6dbb06e245874994ba33b0e951bda90);
+            
+        
+
+        marker_3da0363bceaab564d0d17a3521d10e4c.bindPopup(popup_c2f6d6823014215a43cd0266281cdd0c)
+        ;
+
+        
+    
+    
+            marker_3da0363bceaab564d0d17a3521d10e4c.bindTooltip(
+                `<div>
+                     G07 Sandy / Draper gas station search
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3da0363bceaab564d0d17a3521d10e4c.setIcon(div_icon_3b3fb2e2c56b5ffc265bad7d1626c258);
+            
+    
+            var marker_87ffa795fc6bbee817d45b125f3cc42b = L.marker(
+                [44.7749, -117.8344],
+                {
+}
+            ).addTo(map_da9f998bfbf091e590b136d3d227f05d);
+        
+    
+            var div_icon_a360f186dac4ca80b8d6940bba64df0f = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background:#009e73; color:white; border:2px solid white; border-radius:16px;\n        box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700;\n        font-size:12px; line-height:24px; min-width:50px; height:24px; padding:0 2px;\n        font-family:Arial,sans-serif;\"\u003eSP18\u003c/div\u003e",
+  "iconSize": [54, 30],
+  "iconAnchor": [27, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_24f2d621065f8c12670f962007b73cdb = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_236d9cc93ad4023ce2f8d2b7c8e9249b = $(`<div id="html_236d9cc93ad4023ce2f8d2b7c8e9249b" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>SP18 Walmart Supercenter Baker City search</h4><table> <tr><th>Status</th><td>Candidate</td></tr> <tr><th>Category</th><td>Supermarket</td></tr> <tr><th>Priority</th><td>A</td></tr> <tr><th>Route / area</th><td>Baker City lodging</td></tr> <tr><th>Timing</th><td>Near lodging</td></tr> <tr><th>Relation</th><td>Near lodging</td></tr> <tr><th>Use case</th><td>水・朝食・日用品・薬・衣類補給</td></tr> <tr><th>Address</th><td>Near 2621 Grove St, Baker City</td></tr> <tr><th>Practical notes</th><td>Baker City泊で最も使いやすい大型店候補。Safewayと比較。</td></tr> <tr><th>Check before use</th><td>営業時間・駐車を直前確認。</td></tr> </table><p class="links"><a href="https://maps.apple.com/?q=Walmart%20Supercenter%20Baker%20City%20OR" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Walmart%20Supercenter%20Baker%20City%20search%20Baker%20City%2C%20OR%20Near%202621%20Grove%20St%2C%20Baker%20City" target="_blank">Google image search</a><br><a href="https://www.walmart.com/store-finder" target="_blank">Official / source</a></p></div></div>`)[0];
+                popup_24f2d621065f8c12670f962007b73cdb.setContent(html_236d9cc93ad4023ce2f8d2b7c8e9249b);
+            
+        
+
+        marker_87ffa795fc6bbee817d45b125f3cc42b.bindPopup(popup_24f2d621065f8c12670f962007b73cdb)
+        ;
+
+        
+    
+    
+            marker_87ffa795fc6bbee817d45b125f3cc42b.bindTooltip(
+                `<div>
+                     SP18 Walmart Supercenter Baker City search
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_87ffa795fc6bbee817d45b125f3cc42b.setIcon(div_icon_a360f186dac4ca80b8d6940bba64df0f);
+            
+    
+            var marker_d6f436a7ca119a92d323474e3927b305 = L.marker(
+                [40.572, -111.86],
+                {
+}
+            ).addTo(map_da9f998bfbf091e590b136d3d227f05d);
+        
+    
+            var div_icon_1179ee68caaf5f223a9349430e36a51b = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background:#009e73; color:white; border:2px solid white; border-radius:16px;\n        box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700;\n        font-size:12px; line-height:24px; min-width:50px; height:24px; padding:0 2px;\n        font-family:Arial,sans-serif;\"\u003eSP23\u003c/div\u003e",
+  "iconSize": [54, 30],
+  "iconAnchor": [27, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_40ed243549dc04ae9f3b0c3fa8ac0077 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_2259dda7d3a09d264aeb75e548915caa = $(`<div id="html_2259dda7d3a09d264aeb75e548915caa" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>SP23 Harmons / Smith&#x27;s grocery Sandy search</h4><table> <tr><th>Status</th><td>Candidate</td></tr> <tr><th>Category</th><td>Supermarket</td></tr> <tr><th>Priority</th><td>A</td></tr> <tr><th>Route / area</th><td>Sandy lodging</td></tr> <tr><th>Timing</th><td>Evening</td></tr> <tr><th>Relation</th><td>Near lodging</td></tr> <tr><th>Use case</th><td>翌日のMoab移動前の食料補充</td></tr> <tr><th>Address</th><td>Near 8558 E Johnsonway Dr, Sandy</td></tr> <tr><th>Practical notes</th><td>夕食と翌朝・Day 3の水をまとめて買う。</td></tr> <tr><th>Check before use</th><td>日曜営業時間を確認。</td></tr> </table><p class="links"><a href="https://maps.apple.com/?q=Harmons%20/%20Smith%27s%20grocery%20Sandy%20search%20Sandy%2C%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Harmons%20/%20Smith%27s%20grocery%20Sandy%20search%20Sandy%2C%20UT%20Near%208558%20E%20Johnsonway%20Dr%2C%20Sandy" target="_blank">Google image search</a><br><a href="https://www.harmonsgrocery.com/locations/" target="_blank">Official / source</a></p></div></div>`)[0];
+                popup_40ed243549dc04ae9f3b0c3fa8ac0077.setContent(html_2259dda7d3a09d264aeb75e548915caa);
+            
+        
+
+        marker_d6f436a7ca119a92d323474e3927b305.bindPopup(popup_40ed243549dc04ae9f3b0c3fa8ac0077)
+        ;
+
+        
+    
+    
+            marker_d6f436a7ca119a92d323474e3927b305.bindTooltip(
+                `<div>
+                     SP23 Harmons / Smith's grocery Sandy search
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d6f436a7ca119a92d323474e3927b305.setIcon(div_icon_1179ee68caaf5f223a9349430e36a51b);
+            
+    
+            var marker_8221e01a12cbc3203dd4105ee1fe09a6 = L.marker(
+                [42.5629, -114.4609],
+                {
+}
+            ).addTo(map_da9f998bfbf091e590b136d3d227f05d);
+        
+    
+            var div_icon_64d82548f9ec586ab1f91f6aab24d97b = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background:#009e73; color:white; border:2px solid white; border-radius:16px;\n        box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700;\n        font-size:12px; line-height:24px; min-width:50px; height:24px; padding:0 2px;\n        font-family:Arial,sans-serif;\"\u003eSP24\u003c/div\u003e",
+  "iconSize": [54, 30],
+  "iconAnchor": [27, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_401222bd3054a04ebc75a007d454129b = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_75fdc073d9c2290ac5b5d57b2aec4f16 = $(`<div id="html_75fdc073d9c2290ac5b5d57b2aec4f16" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>SP24 Costco Wholesale Twin Falls search</h4><table> <tr><th>Status</th><td>Candidate</td></tr> <tr><th>Category</th><td>Supermarket</td></tr> <tr><th>Priority</th><td>A</td></tr> <tr><th>Route / area</th><td>I-84 Idaho corridor</td></tr> <tr><th>Timing</th><td>Mid-route</td></tr> <tr><th>Relation</th><td>Along route</td></tr> <tr><th>Use case</th><td>水・食料・フードコート・ガソリン候補</td></tr> <tr><th>Address</th><td>Twin Falls, ID</td></tr> <tr><th>Practical notes</th><td>Idaho区間の中間補給として有用。Twin Falls観光を入れない日でも補給目的なら使いやすい。</td></tr> <tr><th>Check before use</th><td>営業日・営業時間・ガス併設・駐車を直前確認。</td></tr> </table><p class="links"><a href="https://maps.apple.com/?q=Costco%20Wholesale%20Twin%20Falls%20ID" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Costco%20Wholesale%20Twin%20Falls%20search%20Twin%20Falls%2C%20ID%20Twin%20Falls%2C%20ID" target="_blank">Google image search</a><br><a href="https://www.costco.com/warehouse-locations.html" target="_blank">Official / source</a></p></div></div>`)[0];
+                popup_401222bd3054a04ebc75a007d454129b.setContent(html_75fdc073d9c2290ac5b5d57b2aec4f16);
+            
+        
+
+        marker_8221e01a12cbc3203dd4105ee1fe09a6.bindPopup(popup_401222bd3054a04ebc75a007d454129b)
+        ;
+
+        
+    
+    
+            marker_8221e01a12cbc3203dd4105ee1fe09a6.bindTooltip(
+                `<div>
+                     SP24 Costco Wholesale Twin Falls search
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8221e01a12cbc3203dd4105ee1fe09a6.setIcon(div_icon_64d82548f9ec586ab1f91f6aab24d97b);
+            
+    
+            var marker_c13e1b5ca6611621fd819687be83eff2 = L.marker(
+                [41.173, -111.982],
+                {
+}
+            ).addTo(map_da9f998bfbf091e590b136d3d227f05d);
+        
+    
+            var div_icon_265303d0978dab0ae75063d9cba2f588 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background:#009e73; color:white; border:2px solid white; border-radius:16px;\n        box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700;\n        font-size:12px; line-height:24px; min-width:50px; height:24px; padding:0 2px;\n        font-family:Arial,sans-serif;\"\u003eSP25\u003c/div\u003e",
+  "iconSize": [54, 30],
+  "iconAnchor": [27, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_ae02429ce776c69535e45fec46eeb92d = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_81172450c3aa7c36d7ea86d967f5c25d = $(`<div id="html_81172450c3aa7c36d7ea86d967f5c25d" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>SP25 Costco Wholesale Ogden / Riverdale search</h4><table> <tr><th>Status</th><td>Candidate</td></tr> <tr><th>Category</th><td>Supermarket</td></tr> <tr><th>Priority</th><td>B</td></tr> <tr><th>Route / area</th><td>I-84 / Ogden corridor</td></tr> <tr><th>Timing</th><td>Approach Salt Lake City</td></tr> <tr><th>Relation</th><td>Along route</td></tr> <tr><th>Use case</th><td>水・食料・フードコート・ガソリン候補</td></tr> <tr><th>Address</th><td>Ogden / Riverdale, UT</td></tr> <tr><th>Practical notes</th><td>SLC都市圏北側の補給候補。Sandy到着前に余裕があれば使う。</td></tr> <tr><th>Check before use</th><td>営業日・営業時間・ガス併設・駐車を直前確認。</td></tr> </table><p class="links"><a href="https://maps.apple.com/?q=Costco%20Wholesale%20Ogden%20Riverdale%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Costco%20Wholesale%20Ogden%20/%20Riverdale%20search%20Ogden%20/%20Riverdale%2C%20UT%20Ogden%20/%20Riverdale%2C%20UT" target="_blank">Google image search</a><br><a href="https://www.costco.com/warehouse-locations.html" target="_blank">Official / source</a></p></div></div>`)[0];
+                popup_ae02429ce776c69535e45fec46eeb92d.setContent(html_81172450c3aa7c36d7ea86d967f5c25d);
+            
+        
+
+        marker_c13e1b5ca6611621fd819687be83eff2.bindPopup(popup_ae02429ce776c69535e45fec46eeb92d)
+        ;
+
+        
+    
+    
+            marker_c13e1b5ca6611621fd819687be83eff2.bindTooltip(
+                `<div>
+                     SP25 Costco Wholesale Ogden / Riverdale search
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c13e1b5ca6611621fd819687be83eff2.setIcon(div_icon_265303d0978dab0ae75063d9cba2f588);
+            
+    
+            var marker_24c3c44c1e0f232ecf0e9b378b88d4b2 = L.marker(
+                [41.089, -112.064],
+                {
+}
+            ).addTo(map_da9f998bfbf091e590b136d3d227f05d);
+        
+    
+            var div_icon_a2e4fcf42928e30e046d0a5ba224ad1f = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background:#009e73; color:white; border:2px solid white; border-radius:16px;\n        box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700;\n        font-size:12px; line-height:24px; min-width:50px; height:24px; padding:0 2px;\n        font-family:Arial,sans-serif;\"\u003eSP26\u003c/div\u003e",
+  "iconSize": [54, 30],
+  "iconAnchor": [27, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_14938d710b771fa3b64bb7dafbe5030c = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_a94dfd960341e588bf7a9aa562d413ff = $(`<div id="html_a94dfd960341e588bf7a9aa562d413ff" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>SP26 Costco Wholesale Syracuse search</h4><table> <tr><th>Status</th><td>Need verify</td></tr> <tr><th>Category</th><td>Supermarket</td></tr> <tr><th>Priority</th><td>B</td></tr> <tr><th>Route / area</th><td>Ogden to Salt Lake City corridor</td></tr> <tr><th>Timing</th><td>Approach Salt Lake City</td></tr> <tr><th>Relation</th><td>Along route</td></tr> <tr><th>Use case</th><td>水・食料・フードコート・ガソリン候補</td></tr> <tr><th>Address</th><td>Syracuse, UT</td></tr> <tr><th>Practical notes</th><td>2026年新規店舗。OgdenとBountifulの間で使える候補。</td></tr> <tr><th>Check before use</th><td>営業日・営業時間・ガス併設・駐車を直前確認。</td></tr> </table><p class="links"><a href="https://maps.apple.com/?q=Costco%20Wholesale%20Syracuse%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Costco%20Wholesale%20Syracuse%20search%20Syracuse%2C%20UT%20Syracuse%2C%20UT" target="_blank">Google image search</a><br><a href="https://www.costco.com/warehouse-locations.html" target="_blank">Official / source</a></p></div></div>`)[0];
+                popup_14938d710b771fa3b64bb7dafbe5030c.setContent(html_a94dfd960341e588bf7a9aa562d413ff);
+            
+        
+
+        marker_24c3c44c1e0f232ecf0e9b378b88d4b2.bindPopup(popup_14938d710b771fa3b64bb7dafbe5030c)
+        ;
+
+        
+    
+    
+            marker_24c3c44c1e0f232ecf0e9b378b88d4b2.bindTooltip(
+                `<div>
+                     SP26 Costco Wholesale Syracuse search
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_24c3c44c1e0f232ecf0e9b378b88d4b2.setIcon(div_icon_a2e4fcf42928e30e046d0a5ba224ad1f);
+            
+    
+            var marker_d0f11d485a4726349da05faaa16ff457 = L.marker(
+                [40.889, -111.88],
+                {
+}
+            ).addTo(map_da9f998bfbf091e590b136d3d227f05d);
+        
+    
+            var div_icon_3c6184222274c9fcfd3c3825b550d90d = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background:#009e73; color:white; border:2px solid white; border-radius:16px;\n        box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700;\n        font-size:12px; line-height:24px; min-width:50px; height:24px; padding:0 2px;\n        font-family:Arial,sans-serif;\"\u003eSP27\u003c/div\u003e",
+  "iconSize": [54, 30],
+  "iconAnchor": [27, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_44c0d10d145548eddbcb06c185bb4e57 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_5dd531fda2cd3b3584d321f82cb637df = $(`<div id="html_5dd531fda2cd3b3584d321f82cb637df" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>SP27 Costco Wholesale Bountiful search</h4><table> <tr><th>Status</th><td>Candidate</td></tr> <tr><th>Category</th><td>Supermarket</td></tr> <tr><th>Priority</th><td>B</td></tr> <tr><th>Route / area</th><td>Ogden to Salt Lake City corridor</td></tr> <tr><th>Timing</th><td>Approach Salt Lake City</td></tr> <tr><th>Relation</th><td>Along route</td></tr> <tr><th>Use case</th><td>水・食料・フードコート・ガソリン候補</td></tr> <tr><th>Address</th><td>Bountiful, UT</td></tr> <tr><th>Practical notes</th><td>SLC北側で寄りやすい候補。Sandyまで行く前に補給したい場合に使う。</td></tr> <tr><th>Check before use</th><td>営業日・営業時間・ガス併設・駐車を直前確認。</td></tr> </table><p class="links"><a href="https://maps.apple.com/?q=Costco%20Wholesale%20Bountiful%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Costco%20Wholesale%20Bountiful%20search%20Bountiful%2C%20UT%20Bountiful%2C%20UT" target="_blank">Google image search</a><br><a href="https://www.costco.com/warehouse-locations.html" target="_blank">Official / source</a></p></div></div>`)[0];
+                popup_44c0d10d145548eddbcb06c185bb4e57.setContent(html_5dd531fda2cd3b3584d321f82cb637df);
+            
+        
+
+        marker_d0f11d485a4726349da05faaa16ff457.bindPopup(popup_44c0d10d145548eddbcb06c185bb4e57)
+        ;
+
+        
+    
+    
+            marker_d0f11d485a4726349da05faaa16ff457.bindTooltip(
+                `<div>
+                     SP27 Costco Wholesale Bountiful search
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d0f11d485a4726349da05faaa16ff457.setIcon(div_icon_3c6184222274c9fcfd3c3825b550d90d);
+            
+    
+            var marker_4e5c7c68f6312c8335165a704bc24acb = L.marker(
+                [40.7608, -111.891],
+                {
+}
+            ).addTo(map_da9f998bfbf091e590b136d3d227f05d);
+        
+    
+            var div_icon_c2f90f025f1beb9251a6752f74cadc3e = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background:#009e73; color:white; border:2px solid white; border-radius:16px;\n        box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700;\n        font-size:12px; line-height:24px; min-width:50px; height:24px; padding:0 2px;\n        font-family:Arial,sans-serif;\"\u003eSP28\u003c/div\u003e",
+  "iconSize": [54, 30],
+  "iconAnchor": [27, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_b954bff3ac065f8505e52336b078a20f = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_a727714bfea6e103a40731a90535448c = $(`<div id="html_a727714bfea6e103a40731a90535448c" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>SP28 Costco Wholesale Salt Lake City search</h4><table> <tr><th>Status</th><td>Candidate</td></tr> <tr><th>Category</th><td>Supermarket</td></tr> <tr><th>Priority</th><td>B</td></tr> <tr><th>Route / area</th><td>Salt Lake City corridor</td></tr> <tr><th>Timing</th><td>SLC area</td></tr> <tr><th>Relation</th><td>Along route</td></tr> <tr><th>Use case</th><td>水・食料・フードコート・ガソリン候補</td></tr> <tr><th>Address</th><td>Salt Lake City, UT</td></tr> <tr><th>Practical notes</th><td>SLC中心寄り。市街地に入る場合の候補。</td></tr> <tr><th>Check before use</th><td>営業日・営業時間・ガス併設・駐車を直前確認。</td></tr> </table><p class="links"><a href="https://maps.apple.com/?q=Costco%20Wholesale%20Salt%20Lake%20City%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Costco%20Wholesale%20Salt%20Lake%20City%20search%20Salt%20Lake%20City%2C%20UT%20Salt%20Lake%20City%2C%20UT" target="_blank">Google image search</a><br><a href="https://www.costco.com/warehouse-locations.html" target="_blank">Official / source</a></p></div></div>`)[0];
+                popup_b954bff3ac065f8505e52336b078a20f.setContent(html_a727714bfea6e103a40731a90535448c);
+            
+        
+
+        marker_4e5c7c68f6312c8335165a704bc24acb.bindPopup(popup_b954bff3ac065f8505e52336b078a20f)
+        ;
+
+        
+    
+    
+            marker_4e5c7c68f6312c8335165a704bc24acb.bindTooltip(
+                `<div>
+                     SP28 Costco Wholesale Salt Lake City search
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4e5c7c68f6312c8335165a704bc24acb.setIcon(div_icon_c2f90f025f1beb9251a6752f74cadc3e);
+            
+    
+            var marker_65d7f52ccf73c20c89344bf726d91203 = L.marker(
+                [40.742, -111.903],
+                {
+}
+            ).addTo(map_da9f998bfbf091e590b136d3d227f05d);
+        
+    
+            var div_icon_eb3cdb60952736ac5804122372d989ba = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background:#009e73; color:white; border:2px solid white; border-radius:16px;\n        box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700;\n        font-size:12px; line-height:24px; min-width:50px; height:24px; padding:0 2px;\n        font-family:Arial,sans-serif;\"\u003eSP29\u003c/div\u003e",
+  "iconSize": [54, 30],
+  "iconAnchor": [27, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_eb746cdb7bd26186dc3a6deda1d7f4a6 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_db90433127b3f9e850892c758e95bf3d = $(`<div id="html_db90433127b3f9e850892c758e95bf3d" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>SP29 Costco Business Center Salt Lake City search</h4><table> <tr><th>Status</th><td>Candidate</td></tr> <tr><th>Category</th><td>Supermarket</td></tr> <tr><th>Priority</th><td>C</td></tr> <tr><th>Route / area</th><td>Salt Lake City corridor</td></tr> <tr><th>Timing</th><td>SLC area</td></tr> <tr><th>Relation</th><td>Along route</td></tr> <tr><th>Use case</th><td>業務用大容量補給・飲料・紙製品候補</td></tr> <tr><th>Address</th><td>Salt Lake City, UT</td></tr> <tr><th>Practical notes</th><td>Business Centerは通常Costcoと品揃えが違う。水・飲料・紙皿など大量補給向き。</td></tr> <tr><th>Check before use</th><td>営業日・営業時間・ガス併設の有無・日曜営業を直前確認。</td></tr> </table><p class="links"><a href="https://maps.apple.com/?q=Costco%20Business%20Center%20Salt%20Lake%20City%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Costco%20Business%20Center%20Salt%20Lake%20City%20search%20Salt%20Lake%20City%2C%20UT%20Salt%20Lake%20City%2C%20UT" target="_blank">Google image search</a><br><a href="https://www.costcobusinessdelivery.com/warehouse-locations.html" target="_blank">Official / source</a></p></div></div>`)[0];
+                popup_eb746cdb7bd26186dc3a6deda1d7f4a6.setContent(html_db90433127b3f9e850892c758e95bf3d);
+            
+        
+
+        marker_65d7f52ccf73c20c89344bf726d91203.bindPopup(popup_eb746cdb7bd26186dc3a6deda1d7f4a6)
+        ;
+
+        
+    
+    
+            marker_65d7f52ccf73c20c89344bf726d91203.bindTooltip(
+                `<div>
+                     SP29 Costco Business Center Salt Lake City search
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_65d7f52ccf73c20c89344bf726d91203.setIcon(div_icon_eb3cdb60952736ac5804122372d989ba);
+            
+    
+            var marker_4c0014f5af652e76182c8c4732f83d68 = L.marker(
+                [40.6669, -111.887],
+                {
+}
+            ).addTo(map_da9f998bfbf091e590b136d3d227f05d);
+        
+    
+            var div_icon_2c6e8c50825f0220e0d95370c14f17a1 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background:#009e73; color:white; border:2px solid white; border-radius:16px;\n        box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700;\n        font-size:12px; line-height:24px; min-width:50px; height:24px; padding:0 2px;\n        font-family:Arial,sans-serif;\"\u003eSP30\u003c/div\u003e",
+  "iconSize": [54, 30],
+  "iconAnchor": [27, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_bc977b20a17f2e876f9c91affbbe1621 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_9a01261ee3d2016bf42156d89c591a59 = $(`<div id="html_9a01261ee3d2016bf42156d89c591a59" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>SP30 Costco Wholesale Murray search</h4><table> <tr><th>Status</th><td>Candidate</td></tr> <tr><th>Category</th><td>Supermarket</td></tr> <tr><th>Priority</th><td>B</td></tr> <tr><th>Route / area</th><td>Salt Lake City to Sandy corridor</td></tr> <tr><th>Timing</th><td>Near Sandy lodging</td></tr> <tr><th>Relation</th><td>Near lodging / Along route</td></tr> <tr><th>Use case</th><td>水・食料・フードコート・ガソリン候補</td></tr> <tr><th>Address</th><td>Murray, UT</td></tr> <tr><th>Practical notes</th><td>Sandy宿泊地の北側候補。SLC側から来る時に使いやすい。</td></tr> <tr><th>Check before use</th><td>営業日・営業時間・ガス併設・駐車を直前確認。</td></tr> </table><p class="links"><a href="https://maps.apple.com/?q=Costco%20Wholesale%20Murray%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Costco%20Wholesale%20Murray%20search%20Murray%2C%20UT%20Murray%2C%20UT" target="_blank">Google image search</a><br><a href="https://www.costco.com/warehouse-locations.html" target="_blank">Official / source</a></p></div></div>`)[0];
+                popup_bc977b20a17f2e876f9c91affbbe1621.setContent(html_9a01261ee3d2016bf42156d89c591a59);
+            
+        
+
+        marker_4c0014f5af652e76182c8c4732f83d68.bindPopup(popup_bc977b20a17f2e876f9c91affbbe1621)
+        ;
+
+        
+    
+    
+            marker_4c0014f5af652e76182c8c4732f83d68.bindTooltip(
+                `<div>
+                     SP30 Costco Wholesale Murray search
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4c0014f5af652e76182c8c4732f83d68.setIcon(div_icon_2c6e8c50825f0220e0d95370c14f17a1);
+            
+    
+            var marker_a1fe542d47c44d7d0fb0bc5ed5126c67 = L.marker(
+                [42.5629, -114.4609],
+                {
+}
+            ).addTo(map_da9f998bfbf091e590b136d3d227f05d);
+        
+    
+            var div_icon_c2b538f7bebe9282bfe200ca993030a3 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background:#009e73; color:white; border:2px solid white; border-radius:16px;\n        box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700;\n        font-size:12px; line-height:24px; min-width:50px; height:24px; padding:0 2px;\n        font-family:Arial,sans-serif;\"\u003eSP31\u003c/div\u003e",
+  "iconSize": [54, 30],
+  "iconAnchor": [27, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_10a6f30965a75adb5a5ae61d9c053efd = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_b0ac009db97146afaaaff30323df0f10 = $(`<div id="html_b0ac009db97146afaaaff30323df0f10" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>SP31 WinCo Foods Twin Falls search</h4><table> <tr><th>Status</th><td>Candidate</td></tr> <tr><th>Category</th><td>Supermarket</td></tr> <tr><th>Priority</th><td>A</td></tr> <tr><th>Route / area</th><td>I-84 Idaho corridor</td></tr> <tr><th>Timing</th><td>Mid-route</td></tr> <tr><th>Relation</th><td>Along route</td></tr> <tr><th>Use case</th><td>安い食料・水・スナック大量補給</td></tr> <tr><th>Address</th><td>Twin Falls, ID</td></tr> <tr><th>Practical notes</th><td>Idaho区間の中間補給候補。Day 10の北上時にも使いやすい。</td></tr> <tr><th>Check before use</th><td>営業時間・支払い方法・駐車を直前確認。</td></tr> </table><p class="links"><a href="https://maps.apple.com/?q=WinCo%20Foods%20Twin%20Falls%20ID" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=WinCo%20Foods%20Twin%20Falls%20search%20Twin%20Falls%2C%20ID%20Twin%20Falls%2C%20ID" target="_blank">Google image search</a><br><a href="https://www.wincofoods.com/stores" target="_blank">Official / source</a></p></div></div>`)[0];
+                popup_10a6f30965a75adb5a5ae61d9c053efd.setContent(html_b0ac009db97146afaaaff30323df0f10);
+            
+        
+
+        marker_a1fe542d47c44d7d0fb0bc5ed5126c67.bindPopup(popup_10a6f30965a75adb5a5ae61d9c053efd)
+        ;
+
+        
+    
+    
+            marker_a1fe542d47c44d7d0fb0bc5ed5126c67.bindTooltip(
+                `<div>
+                     SP31 WinCo Foods Twin Falls search
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a1fe542d47c44d7d0fb0bc5ed5126c67.setIcon(div_icon_c2b538f7bebe9282bfe200ca993030a3);
+            
+    
+            var marker_e6164c9dab7d9b3fe55f2cc89fd3bb45 = L.marker(
+                [41.173, -111.982],
+                {
+}
+            ).addTo(map_da9f998bfbf091e590b136d3d227f05d);
+        
+    
+            var div_icon_14062d79aa5b13307dfb3cbf7a49a777 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background:#009e73; color:white; border:2px solid white; border-radius:16px;\n        box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700;\n        font-size:12px; line-height:24px; min-width:50px; height:24px; padding:0 2px;\n        font-family:Arial,sans-serif;\"\u003eSP32\u003c/div\u003e",
+  "iconSize": [54, 30],
+  "iconAnchor": [27, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_9bf4a2c3c5225de48bca3e47eb095025 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_16cb682f8cad44ec2feeb272e18ab349 = $(`<div id="html_16cb682f8cad44ec2feeb272e18ab349" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>SP32 WinCo Foods Ogden / Roy search</h4><table> <tr><th>Status</th><td>Candidate</td></tr> <tr><th>Category</th><td>Supermarket</td></tr> <tr><th>Priority</th><td>B</td></tr> <tr><th>Route / area</th><td>Ogden corridor</td></tr> <tr><th>Timing</th><td>Approach Salt Lake City</td></tr> <tr><th>Relation</th><td>Along route</td></tr> <tr><th>Use case</th><td>安い食料・水・スナック大量補給</td></tr> <tr><th>Address</th><td>Ogden / Roy, UT</td></tr> <tr><th>Practical notes</th><td>SLC北側のWinCo候補。Sandy到着前に補給したい場合。</td></tr> <tr><th>Check before use</th><td>営業時間・支払い方法・駐車を直前確認。</td></tr> </table><p class="links"><a href="https://maps.apple.com/?q=WinCo%20Foods%20Ogden%20Roy%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=WinCo%20Foods%20Ogden%20/%20Roy%20search%20Ogden%20/%20Roy%2C%20UT%20Ogden%20/%20Roy%2C%20UT" target="_blank">Google image search</a><br><a href="https://www.wincofoods.com/stores" target="_blank">Official / source</a></p></div></div>`)[0];
+                popup_9bf4a2c3c5225de48bca3e47eb095025.setContent(html_16cb682f8cad44ec2feeb272e18ab349);
+            
+        
+
+        marker_e6164c9dab7d9b3fe55f2cc89fd3bb45.bindPopup(popup_9bf4a2c3c5225de48bca3e47eb095025)
+        ;
+
+        
+    
+    
+            marker_e6164c9dab7d9b3fe55f2cc89fd3bb45.bindTooltip(
+                `<div>
+                     SP32 WinCo Foods Ogden / Roy search
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e6164c9dab7d9b3fe55f2cc89fd3bb45.setIcon(div_icon_14062d79aa5b13307dfb3cbf7a49a777);
+            
+    
+            var marker_e6717264807400531a03354b3ef53ac7 = L.marker(
+                [41.06, -111.971],
+                {
+}
+            ).addTo(map_da9f998bfbf091e590b136d3d227f05d);
+        
+    
+            var div_icon_64e3dbcf1710ba11ffda5216c9c8669c = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background:#009e73; color:white; border:2px solid white; border-radius:16px;\n        box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700;\n        font-size:12px; line-height:24px; min-width:50px; height:24px; padding:0 2px;\n        font-family:Arial,sans-serif;\"\u003eSP33\u003c/div\u003e",
+  "iconSize": [54, 30],
+  "iconAnchor": [27, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_7d093d4cc0e241acaa6a6ac43a52c521 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_3409b739d68a6abf7f26ca6b75e14620 = $(`<div id="html_3409b739d68a6abf7f26ca6b75e14620" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>SP33 WinCo Foods Layton search</h4><table> <tr><th>Status</th><td>Candidate</td></tr> <tr><th>Category</th><td>Supermarket</td></tr> <tr><th>Priority</th><td>B</td></tr> <tr><th>Route / area</th><td>Layton / Salt Lake City corridor</td></tr> <tr><th>Timing</th><td>Approach Salt Lake City</td></tr> <tr><th>Relation</th><td>Along route</td></tr> <tr><th>Use case</th><td>安い食料・水・スナック大量補給</td></tr> <tr><th>Address</th><td>Layton, UT</td></tr> <tr><th>Practical notes</th><td>Ogdenより南、SLCより北で寄る候補。</td></tr> <tr><th>Check before use</th><td>営業時間・支払い方法・駐車を直前確認。</td></tr> </table><p class="links"><a href="https://maps.apple.com/?q=WinCo%20Foods%20Layton%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=WinCo%20Foods%20Layton%20search%20Layton%2C%20UT%20Layton%2C%20UT" target="_blank">Google image search</a><br><a href="https://www.wincofoods.com/stores" target="_blank">Official / source</a></p></div></div>`)[0];
+                popup_7d093d4cc0e241acaa6a6ac43a52c521.setContent(html_3409b739d68a6abf7f26ca6b75e14620);
+            
+        
+
+        marker_e6717264807400531a03354b3ef53ac7.bindPopup(popup_7d093d4cc0e241acaa6a6ac43a52c521)
+        ;
+
+        
+    
+    
+            marker_e6717264807400531a03354b3ef53ac7.bindTooltip(
+                `<div>
+                     SP33 WinCo Foods Layton search
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e6717264807400531a03354b3ef53ac7.setIcon(div_icon_64e3dbcf1710ba11ffda5216c9c8669c);
+            
+    
+            var marker_f135d424aa8923332f18f153dc806315 = L.marker(
+                [43.133, -115.691],
+                {
+}
+            ).addTo(map_da9f998bfbf091e590b136d3d227f05d);
+        
+    
+            var div_icon_d1a3d13f62a77e63ffc342c600cab929 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background:#009e73; color:white; border:2px solid white; border-radius:16px;\n        box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700;\n        font-size:12px; line-height:24px; min-width:50px; height:24px; padding:0 2px;\n        font-family:Arial,sans-serif;\"\u003eSP34\u003c/div\u003e",
+  "iconSize": [54, 30],
+  "iconAnchor": [27, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_25c465177d1bec3546346c37d64cf636 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_380f76ef9cf2037808212858a051521f = $(`<div id="html_380f76ef9cf2037808212858a051521f" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>SP34 Walmart Supercenter Mountain Home search</h4><table> <tr><th>Status</th><td>Candidate</td></tr> <tr><th>Category</th><td>Supermarket</td></tr> <tr><th>Priority</th><td>A</td></tr> <tr><th>Route / area</th><td>I-84 Idaho corridor</td></tr> <tr><th>Timing</th><td>Mid-route</td></tr> <tr><th>Relation</th><td>Along route</td></tr> <tr><th>Use case</th><td>水・朝食・日用品・薬・衣類補給</td></tr> <tr><th>Address</th><td>Mountain Home, ID</td></tr> <tr><th>Practical notes</th><td>BoiseとTwin Fallsの間の重要補給候補。</td></tr> <tr><th>Check before use</th><td>営業時間・駐車を直前確認。</td></tr> </table><p class="links"><a href="https://maps.apple.com/?q=Walmart%20Supercenter%20Mountain%20Home%20ID" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Walmart%20Supercenter%20Mountain%20Home%20search%20Mountain%20Home%2C%20ID%20Mountain%20Home%2C%20ID" target="_blank">Google image search</a><br><a href="https://www.walmart.com/store-finder" target="_blank">Official / source</a></p></div></div>`)[0];
+                popup_25c465177d1bec3546346c37d64cf636.setContent(html_380f76ef9cf2037808212858a051521f);
+            
+        
+
+        marker_f135d424aa8923332f18f153dc806315.bindPopup(popup_25c465177d1bec3546346c37d64cf636)
+        ;
+
+        
+    
+    
+            marker_f135d424aa8923332f18f153dc806315.bindTooltip(
+                `<div>
+                     SP34 Walmart Supercenter Mountain Home search
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f135d424aa8923332f18f153dc806315.setIcon(div_icon_d1a3d13f62a77e63ffc342c600cab929);
+            
+    
+            var marker_ee546923651ffb0e6dfd8ca543bc7169 = L.marker(
+                [42.5629, -114.4609],
+                {
+}
+            ).addTo(map_da9f998bfbf091e590b136d3d227f05d);
+        
+    
+            var div_icon_9cdfb6d6155f5056018f34ebba3bc252 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background:#009e73; color:white; border:2px solid white; border-radius:16px;\n        box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700;\n        font-size:12px; line-height:24px; min-width:50px; height:24px; padding:0 2px;\n        font-family:Arial,sans-serif;\"\u003eSP35\u003c/div\u003e",
+  "iconSize": [54, 30],
+  "iconAnchor": [27, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_62b7b6c7cc1ba59498051e06d1359e66 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_32f044420b4a8b36940b69741efe620a = $(`<div id="html_32f044420b4a8b36940b69741efe620a" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>SP35 Walmart Supercenter Twin Falls search</h4><table> <tr><th>Status</th><td>Candidate</td></tr> <tr><th>Category</th><td>Supermarket</td></tr> <tr><th>Priority</th><td>A</td></tr> <tr><th>Route / area</th><td>I-84 Idaho corridor</td></tr> <tr><th>Timing</th><td>Mid-route</td></tr> <tr><th>Relation</th><td>Along route</td></tr> <tr><th>Use case</th><td>水・朝食・日用品・薬・衣類・ガソリン候補</td></tr> <tr><th>Address</th><td>Twin Falls, ID</td></tr> <tr><th>Practical notes</th><td>Idaho区間の中間大型補給候補。WinCoやCostcoと比較。</td></tr> <tr><th>Check before use</th><td>営業時間・ガソリン併設・駐車を直前確認。</td></tr> </table><p class="links"><a href="https://maps.apple.com/?q=Walmart%20Supercenter%20Twin%20Falls%20ID" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Walmart%20Supercenter%20Twin%20Falls%20search%20Twin%20Falls%2C%20ID%20Twin%20Falls%2C%20ID" target="_blank">Google image search</a><br><a href="https://www.walmart.com/store-finder" target="_blank">Official / source</a></p></div></div>`)[0];
+                popup_62b7b6c7cc1ba59498051e06d1359e66.setContent(html_32f044420b4a8b36940b69741efe620a);
+            
+        
+
+        marker_ee546923651ffb0e6dfd8ca543bc7169.bindPopup(popup_62b7b6c7cc1ba59498051e06d1359e66)
+        ;
+
+        
+    
+    
+            marker_ee546923651ffb0e6dfd8ca543bc7169.bindTooltip(
+                `<div>
+                     SP35 Walmart Supercenter Twin Falls search
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ee546923651ffb0e6dfd8ca543bc7169.setIcon(div_icon_9cdfb6d6155f5056018f34ebba3bc252);
+            
+    
+            var marker_7b342993b132f8bd6cfab082f61f510f = L.marker(
+                [42.536, -113.792],
+                {
+}
+            ).addTo(map_da9f998bfbf091e590b136d3d227f05d);
+        
+    
+            var div_icon_f7790bb46c1dcc2391b9a0e24e4dff3e = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background:#009e73; color:white; border:2px solid white; border-radius:16px;\n        box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700;\n        font-size:12px; line-height:24px; min-width:50px; height:24px; padding:0 2px;\n        font-family:Arial,sans-serif;\"\u003eSP36\u003c/div\u003e",
+  "iconSize": [54, 30],
+  "iconAnchor": [27, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_226ea40de3691910f7c2660a8cf29c86 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_0ccd877abc5f505fa755f5ef711e961e = $(`<div id="html_0ccd877abc5f505fa755f5ef711e961e" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>SP36 Walmart Supercenter Burley search</h4><table> <tr><th>Status</th><td>Candidate</td></tr> <tr><th>Category</th><td>Supermarket</td></tr> <tr><th>Priority</th><td>A</td></tr> <tr><th>Route / area</th><td>I-84 Idaho corridor</td></tr> <tr><th>Timing</th><td>Mid-route</td></tr> <tr><th>Relation</th><td>Along route</td></tr> <tr><th>Use case</th><td>水・朝食・日用品・薬・衣類補給</td></tr> <tr><th>Address</th><td>Burley, ID</td></tr> <tr><th>Practical notes</th><td>Twin Fallsの東側での補給候補。Salt Lake方面へ向かう途中で使える。</td></tr> <tr><th>Check before use</th><td>営業時間・駐車を直前確認。</td></tr> </table><p class="links"><a href="https://maps.apple.com/?q=Walmart%20Supercenter%20Burley%20ID" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Walmart%20Supercenter%20Burley%20search%20Burley%2C%20ID%20Burley%2C%20ID" target="_blank">Google image search</a><br><a href="https://www.walmart.com/store-finder" target="_blank">Official / source</a></p></div></div>`)[0];
+                popup_226ea40de3691910f7c2660a8cf29c86.setContent(html_0ccd877abc5f505fa755f5ef711e961e);
+            
+        
+
+        marker_7b342993b132f8bd6cfab082f61f510f.bindPopup(popup_226ea40de3691910f7c2660a8cf29c86)
+        ;
+
+        
+    
+    
+            marker_7b342993b132f8bd6cfab082f61f510f.bindTooltip(
+                `<div>
+                     SP36 Walmart Supercenter Burley search
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7b342993b132f8bd6cfab082f61f510f.setIcon(div_icon_f7790bb46c1dcc2391b9a0e24e4dff3e);
+            
+    
+            var marker_f7dbc1efd949d2d755670e3151045eb1 = L.marker(
+                [41.711, -112.165],
+                {
+}
+            ).addTo(map_da9f998bfbf091e590b136d3d227f05d);
+        
+    
+            var div_icon_24295840e164718a7c9499cb65d8918c = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background:#009e73; color:white; border:2px solid white; border-radius:16px;\n        box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700;\n        font-size:12px; line-height:24px; min-width:50px; height:24px; padding:0 2px;\n        font-family:Arial,sans-serif;\"\u003eSP37\u003c/div\u003e",
+  "iconSize": [54, 30],
+  "iconAnchor": [27, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_3b0f536cb77d30c622a3537cf26d47d8 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_4d8d277a6f4647de2358f24b321fa69c = $(`<div id="html_4d8d277a6f4647de2358f24b321fa69c" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>SP37 Walmart Supercenter Tremonton search</h4><table> <tr><th>Status</th><td>Candidate</td></tr> <tr><th>Category</th><td>Supermarket</td></tr> <tr><th>Priority</th><td>A</td></tr> <tr><th>Route / area</th><td>I-84 / I-15 Utah corridor</td></tr> <tr><th>Timing</th><td>Approach Salt Lake City</td></tr> <tr><th>Relation</th><td>Along route</td></tr> <tr><th>Use case</th><td>水・朝食・日用品・薬・衣類補給</td></tr> <tr><th>Address</th><td>Tremonton, UT</td></tr> <tr><th>Practical notes</th><td>IdahoからUtahへ入った後の補給候補。</td></tr> <tr><th>Check before use</th><td>営業時間・駐車を直前確認。</td></tr> </table><p class="links"><a href="https://maps.apple.com/?q=Walmart%20Supercenter%20Tremonton%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Walmart%20Supercenter%20Tremonton%20search%20Tremonton%2C%20UT%20Tremonton%2C%20UT" target="_blank">Google image search</a><br><a href="https://www.walmart.com/store-finder" target="_blank">Official / source</a></p></div></div>`)[0];
+                popup_3b0f536cb77d30c622a3537cf26d47d8.setContent(html_4d8d277a6f4647de2358f24b321fa69c);
+            
+        
+
+        marker_f7dbc1efd949d2d755670e3151045eb1.bindPopup(popup_3b0f536cb77d30c622a3537cf26d47d8)
+        ;
+
+        
+    
+    
+            marker_f7dbc1efd949d2d755670e3151045eb1.bindTooltip(
+                `<div>
+                     SP37 Walmart Supercenter Tremonton search
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f7dbc1efd949d2d755670e3151045eb1.setIcon(div_icon_24295840e164718a7c9499cb65d8918c);
+            
+    
+            var marker_729cb048df097dff267ab89b43013827 = L.marker(
+                [41.173, -111.982],
+                {
+}
+            ).addTo(map_da9f998bfbf091e590b136d3d227f05d);
+        
+    
+            var div_icon_066de3312532bc9ed3acf9cfc9f034d2 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background:#009e73; color:white; border:2px solid white; border-radius:16px;\n        box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700;\n        font-size:12px; line-height:24px; min-width:50px; height:24px; padding:0 2px;\n        font-family:Arial,sans-serif;\"\u003eSP38\u003c/div\u003e",
+  "iconSize": [54, 30],
+  "iconAnchor": [27, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_6adc59295882e2be846b5149c63f2e29 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_1b8e7a76367a76029acf05710b245b40 = $(`<div id="html_1b8e7a76367a76029acf05710b245b40" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>SP38 Walmart Supercenter Ogden / Riverdale search</h4><table> <tr><th>Status</th><td>Candidate</td></tr> <tr><th>Category</th><td>Supermarket</td></tr> <tr><th>Priority</th><td>B</td></tr> <tr><th>Route / area</th><td>Ogden corridor</td></tr> <tr><th>Timing</th><td>Approach Salt Lake City</td></tr> <tr><th>Relation</th><td>Along route</td></tr> <tr><th>Use case</th><td>水・朝食・日用品・薬・衣類補給</td></tr> <tr><th>Address</th><td>Ogden / Riverdale, UT</td></tr> <tr><th>Practical notes</th><td>SLC北側の補給候補。Costco/WinCoと比較。</td></tr> <tr><th>Check before use</th><td>営業時間・駐車を直前確認。</td></tr> </table><p class="links"><a href="https://maps.apple.com/?q=Walmart%20Supercenter%20Ogden%20Riverdale%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Walmart%20Supercenter%20Ogden%20/%20Riverdale%20search%20Ogden%20/%20Riverdale%2C%20UT%20Ogden%20/%20Riverdale%2C%20UT" target="_blank">Google image search</a><br><a href="https://www.walmart.com/store-finder" target="_blank">Official / source</a></p></div></div>`)[0];
+                popup_6adc59295882e2be846b5149c63f2e29.setContent(html_1b8e7a76367a76029acf05710b245b40);
+            
+        
+
+        marker_729cb048df097dff267ab89b43013827.bindPopup(popup_6adc59295882e2be846b5149c63f2e29)
+        ;
+
+        
+    
+    
+            marker_729cb048df097dff267ab89b43013827.bindTooltip(
+                `<div>
+                     SP38 Walmart Supercenter Ogden / Riverdale search
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_729cb048df097dff267ab89b43013827.setIcon(div_icon_066de3312532bc9ed3acf9cfc9f034d2);
+            
+    
+            var marker_88f1dd8268487e610de13bde32522e5c = L.marker(
+                [43.615, -116.202],
+                {
+}
+            ).addTo(map_da9f998bfbf091e590b136d3d227f05d);
+        
+    
+            var div_icon_8831f036c5095c437800f52bca35572f = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background:#009e73; color:white; border:2px solid white; border-radius:16px;\n        box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700;\n        font-size:12px; line-height:24px; min-width:50px; height:24px; padding:0 2px;\n        font-family:Arial,sans-serif;\"\u003eSP39\u003c/div\u003e",
+  "iconSize": [54, 30],
+  "iconAnchor": [27, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_a7883ab4326a576b77513c89fb6ff617 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_826689b32073851b76899d25915eceb9 = $(`<div id="html_826689b32073851b76899d25915eceb9" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>SP39 Costco Wholesale Boise search</h4><table> <tr><th>Status</th><td>Candidate</td></tr> <tr><th>Category</th><td>Supermarket</td></tr> <tr><th>Priority</th><td>A</td></tr> <tr><th>Route / area</th><td>Nampa lodging / I-84 corridor</td></tr> <tr><th>Timing</th><td>Boise area</td></tr> <tr><th>Relation</th><td>Near lodging / Along route</td></tr> <tr><th>Use case</th><td>水・食料・フードコート・ガソリン候補</td></tr> <tr><th>Address</th><td>Boise, ID</td></tr> <tr><th>Practical notes</th><td>Boise周辺泊が確定したら最寄り候補として使う。Day 11出発前補給にも有用。</td></tr> <tr><th>Check before use</th><td>営業日・営業時間・ガス併設・駐車を直前確認。</td></tr> </table><p class="links"><a href="https://maps.apple.com/?q=Costco%20Wholesale%20Boise%20ID" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Costco%20Wholesale%20Boise%20search%20Boise%2C%20ID%20Boise%2C%20ID" target="_blank">Google image search</a><br><a href="https://www.costco.com/warehouse-locations.html" target="_blank">Official / source</a></p></div></div>`)[0];
+                popup_a7883ab4326a576b77513c89fb6ff617.setContent(html_826689b32073851b76899d25915eceb9);
+            
+        
+
+        marker_88f1dd8268487e610de13bde32522e5c.bindPopup(popup_a7883ab4326a576b77513c89fb6ff617)
+        ;
+
+        
+    
+    
+            marker_88f1dd8268487e610de13bde32522e5c.bindTooltip(
+                `<div>
+                     SP39 Costco Wholesale Boise search
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_88f1dd8268487e610de13bde32522e5c.setIcon(div_icon_8831f036c5095c437800f52bca35572f);
+            
+    
+            var marker_2ddf7c02ace2611708c3a89454f745d2 = L.marker(
+                [43.615, -116.202],
+                {
+}
+            ).addTo(map_da9f998bfbf091e590b136d3d227f05d);
+        
+    
+            var div_icon_b6b7e375c8a0022cd29f3fe279be1343 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background:#009e73; color:white; border:2px solid white; border-radius:16px;\n        box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700;\n        font-size:12px; line-height:24px; min-width:50px; height:24px; padding:0 2px;\n        font-family:Arial,sans-serif;\"\u003eSP40\u003c/div\u003e",
+  "iconSize": [54, 30],
+  "iconAnchor": [27, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_226f21e2d8a877ad38dcfc1aba77e2de = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_ec812c480ee7786cc664fdf52ebe6da1 = $(`<div id="html_ec812c480ee7786cc664fdf52ebe6da1" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>SP40 WinCo Foods Boise search</h4><table> <tr><th>Status</th><td>Candidate</td></tr> <tr><th>Category</th><td>Supermarket</td></tr> <tr><th>Priority</th><td>A</td></tr> <tr><th>Route / area</th><td>Nampa lodging / I-84 corridor</td></tr> <tr><th>Timing</th><td>Boise area</td></tr> <tr><th>Relation</th><td>Near lodging / Along route</td></tr> <tr><th>Use case</th><td>安い食料・水・スナック大量補給</td></tr> <tr><th>Address</th><td>Boise, ID</td></tr> <tr><th>Practical notes</th><td>Boise周辺の主WinCo候補。宿泊地確定後に最寄り店舗へ絞る。</td></tr> <tr><th>Check before use</th><td>営業時間・支払い方法・駐車を直前確認。</td></tr> </table><p class="links"><a href="https://maps.apple.com/?q=WinCo%20Foods%20Boise%20ID" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=WinCo%20Foods%20Boise%20search%20Boise%2C%20ID%20Boise%2C%20ID" target="_blank">Google image search</a><br><a href="https://www.wincofoods.com/stores" target="_blank">Official / source</a></p></div></div>`)[0];
+                popup_226f21e2d8a877ad38dcfc1aba77e2de.setContent(html_ec812c480ee7786cc664fdf52ebe6da1);
+            
+        
+
+        marker_2ddf7c02ace2611708c3a89454f745d2.bindPopup(popup_226f21e2d8a877ad38dcfc1aba77e2de)
+        ;
+
+        
+    
+    
+            marker_2ddf7c02ace2611708c3a89454f745d2.bindTooltip(
+                `<div>
+                     SP40 WinCo Foods Boise search
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2ddf7c02ace2611708c3a89454f745d2.setIcon(div_icon_b6b7e375c8a0022cd29f3fe279be1343);
+            
+    
+            var marker_6da713dce0f48149333e6c101e700955 = L.marker(
+                [43.612, -116.391],
+                {
+}
+            ).addTo(map_da9f998bfbf091e590b136d3d227f05d);
+        
+    
+            var div_icon_2edc8836d400065213a762590d212d95 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background:#009e73; color:white; border:2px solid white; border-radius:16px;\n        box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700;\n        font-size:12px; line-height:24px; min-width:50px; height:24px; padding:0 2px;\n        font-family:Arial,sans-serif;\"\u003eSP41\u003c/div\u003e",
+  "iconSize": [54, 30],
+  "iconAnchor": [27, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_a7c88e8469c97b4e4ad5f5ee3c93f75a = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_754221225b5648ecacd8ad553e86b7ec = $(`<div id="html_754221225b5648ecacd8ad553e86b7ec" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>SP41 WinCo Foods Meridian search</h4><table> <tr><th>Status</th><td>Candidate</td></tr> <tr><th>Category</th><td>Supermarket</td></tr> <tr><th>Priority</th><td>A</td></tr> <tr><th>Route / area</th><td>Boise / Meridian corridor</td></tr> <tr><th>Timing</th><td>Boise area</td></tr> <tr><th>Relation</th><td>Along route</td></tr> <tr><th>Use case</th><td>安い食料・水・スナック大量補給</td></tr> <tr><th>Address</th><td>Meridian, ID</td></tr> <tr><th>Practical notes</th><td>Boise都市圏西側。I-84動線なら便利。</td></tr> <tr><th>Check before use</th><td>営業時間・支払い方法・駐車を直前確認。</td></tr> </table><p class="links"><a href="https://maps.apple.com/?q=WinCo%20Foods%20Meridian%20ID" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=WinCo%20Foods%20Meridian%20search%20Meridian%2C%20ID%20Meridian%2C%20ID" target="_blank">Google image search</a><br><a href="https://www.wincofoods.com/stores" target="_blank">Official / source</a></p></div></div>`)[0];
+                popup_a7c88e8469c97b4e4ad5f5ee3c93f75a.setContent(html_754221225b5648ecacd8ad553e86b7ec);
+            
+        
+
+        marker_6da713dce0f48149333e6c101e700955.bindPopup(popup_a7c88e8469c97b4e4ad5f5ee3c93f75a)
+        ;
+
+        
+    
+    
+            marker_6da713dce0f48149333e6c101e700955.bindTooltip(
+                `<div>
+                     SP41 WinCo Foods Meridian search
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6da713dce0f48149333e6c101e700955.setIcon(div_icon_2edc8836d400065213a762590d212d95);
+            
+    
+            var marker_9fa4900899d7dd94b05d5f1167f9a38f = L.marker(
+                [43.612, -116.391],
+                {
+}
+            ).addTo(map_da9f998bfbf091e590b136d3d227f05d);
+        
+    
+            var div_icon_0825974f2f0bdb6118cff06758b39259 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background:#009e73; color:white; border:2px solid white; border-radius:16px;\n        box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700;\n        font-size:12px; line-height:24px; min-width:50px; height:24px; padding:0 2px;\n        font-family:Arial,sans-serif;\"\u003eSP42\u003c/div\u003e",
+  "iconSize": [54, 30],
+  "iconAnchor": [27, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_7545057d9427b032d1542e9c0a6c56b5 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_766305c67d6d56165faba4c434d38b49 = $(`<div id="html_766305c67d6d56165faba4c434d38b49" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>SP42 Walmart Supercenter Meridian search</h4><table> <tr><th>Status</th><td>Candidate</td></tr> <tr><th>Category</th><td>Supermarket</td></tr> <tr><th>Priority</th><td>A</td></tr> <tr><th>Route / area</th><td>Boise / Meridian corridor</td></tr> <tr><th>Timing</th><td>Boise area</td></tr> <tr><th>Relation</th><td>Near lodging / Along route</td></tr> <tr><th>Use case</th><td>水・朝食・日用品・薬・衣類・ガソリン候補</td></tr> <tr><th>Address</th><td>Meridian, ID</td></tr> <tr><th>Practical notes</th><td>Boise都市圏の実用的なWalmart候補。宿泊地確定後に最寄りへ絞る。</td></tr> <tr><th>Check before use</th><td>営業時間・ガソリン併設・駐車を直前確認。</td></tr> </table><p class="links"><a href="https://maps.apple.com/?q=Walmart%20Supercenter%20Meridian%20ID" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Walmart%20Supercenter%20Meridian%20search%20Meridian%2C%20ID%20Meridian%2C%20ID" target="_blank">Google image search</a><br><a href="https://www.walmart.com/store-finder" target="_blank">Official / source</a></p></div></div>`)[0];
+                popup_7545057d9427b032d1542e9c0a6c56b5.setContent(html_766305c67d6d56165faba4c434d38b49);
+            
+        
+
+        marker_9fa4900899d7dd94b05d5f1167f9a38f.bindPopup(popup_7545057d9427b032d1542e9c0a6c56b5)
+        ;
+
+        
+    
+    
+            marker_9fa4900899d7dd94b05d5f1167f9a38f.bindTooltip(
+                `<div>
+                     SP42 Walmart Supercenter Meridian search
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9fa4900899d7dd94b05d5f1167f9a38f.setIcon(div_icon_0825974f2f0bdb6118cff06758b39259);
+            
+    
+            var marker_aefcf20bf1a8fd0a312aa350242cfec7 = L.marker(
+                [43.615, -116.202],
+                {
+}
+            ).addTo(map_da9f998bfbf091e590b136d3d227f05d);
+        
+    
+            var div_icon_635bac35ea97e64db94b1d64091144f3 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background:#009e73; color:white; border:2px solid white; border-radius:16px;\n        box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700;\n        font-size:12px; line-height:24px; min-width:50px; height:24px; padding:0 2px;\n        font-family:Arial,sans-serif;\"\u003eSP43\u003c/div\u003e",
+  "iconSize": [54, 30],
+  "iconAnchor": [27, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_e866185fe6ae96ce22b4e2ac4895cd0b = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_becf1651d34d9e96278ed213a60a6745 = $(`<div id="html_becf1651d34d9e96278ed213a60a6745" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>SP43 Walmart Supercenter Boise search</h4><table> <tr><th>Status</th><td>Candidate</td></tr> <tr><th>Category</th><td>Supermarket</td></tr> <tr><th>Priority</th><td>A</td></tr> <tr><th>Route / area</th><td>Nampa lodging / I-84 corridor</td></tr> <tr><th>Timing</th><td>Boise area</td></tr> <tr><th>Relation</th><td>Near lodging / Along route</td></tr> <tr><th>Use case</th><td>水・朝食・日用品・薬・衣類・ガソリン候補</td></tr> <tr><th>Address</th><td>Boise, ID</td></tr> <tr><th>Practical notes</th><td>Nampa泊が市内なら第一候補の一つ。</td></tr> <tr><th>Check before use</th><td>営業時間・ガソリン併設・駐車を直前確認。</td></tr> </table><p class="links"><a href="https://maps.apple.com/?q=Walmart%20Supercenter%20Boise%20ID" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Walmart%20Supercenter%20Boise%20search%20Boise%2C%20ID%20Boise%2C%20ID" target="_blank">Google image search</a><br><a href="https://www.walmart.com/store-finder" target="_blank">Official / source</a></p></div></div>`)[0];
+                popup_e866185fe6ae96ce22b4e2ac4895cd0b.setContent(html_becf1651d34d9e96278ed213a60a6745);
+            
+        
+
+        marker_aefcf20bf1a8fd0a312aa350242cfec7.bindPopup(popup_e866185fe6ae96ce22b4e2ac4895cd0b)
+        ;
+
+        
+    
+    
+            marker_aefcf20bf1a8fd0a312aa350242cfec7.bindTooltip(
+                `<div>
+                     SP43 Walmart Supercenter Boise search
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_aefcf20bf1a8fd0a312aa350242cfec7.setIcon(div_icon_635bac35ea97e64db94b1d64091144f3);
+            
+    
+            var marker_0518b653f9c6a59fc0e72c14057282d5 = L.marker(
+                [43.5407, -116.5635],
+                {
+}
+            ).addTo(map_da9f998bfbf091e590b136d3d227f05d);
+        
+    
+            var div_icon_27f6dade57065fa3bb27b2e94cab85c8 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background:#009e73; color:white; border:2px solid white; border-radius:16px;\n        box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700;\n        font-size:12px; line-height:24px; min-width:50px; height:24px; padding:0 2px;\n        font-family:Arial,sans-serif;\"\u003eSP44\u003c/div\u003e",
+  "iconSize": [54, 30],
+  "iconAnchor": [27, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_c62ac7438e83856ae7c817e0f023870b = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_3fe3b298ec38518f2833a07104d435ae = $(`<div id="html_3fe3b298ec38518f2833a07104d435ae" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>SP44 Costco Wholesale Nampa search</h4><table> <tr><th>Status</th><td>Candidate</td></tr> <tr><th>Category</th><td>Supermarket</td></tr> <tr><th>Priority</th><td>A</td></tr> <tr><th>Route / area</th><td>Baker City to Boise corridor</td></tr> <tr><th>Timing</th><td>Approach Boise / before return</td></tr> <tr><th>Relation</th><td>Along route</td></tr> <tr><th>Use case</th><td>水・食料・フードコート・ガソリン候補</td></tr> <tr><th>Address</th><td>Nampa, ID</td></tr> <tr><th>Practical notes</th><td>I-84沿いで使いやすい。Nampa宿泊地が西側なら第一候補。</td></tr> <tr><th>Check before use</th><td>営業日・営業時間・ガス併設・駐車を直前確認。</td></tr> </table><p class="links"><a href="https://maps.apple.com/?q=Costco%20Wholesale%20Nampa%20ID" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Costco%20Wholesale%20Nampa%20search%20Nampa%2C%20ID%20Nampa%2C%20ID" target="_blank">Google image search</a><br><a href="https://www.costco.com/warehouse-locations.html" target="_blank">Official / source</a></p></div></div>`)[0];
+                popup_c62ac7438e83856ae7c817e0f023870b.setContent(html_3fe3b298ec38518f2833a07104d435ae);
+            
+        
+
+        marker_0518b653f9c6a59fc0e72c14057282d5.bindPopup(popup_c62ac7438e83856ae7c817e0f023870b)
+        ;
+
+        
+    
+    
+            marker_0518b653f9c6a59fc0e72c14057282d5.bindTooltip(
+                `<div>
+                     SP44 Costco Wholesale Nampa search
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0518b653f9c6a59fc0e72c14057282d5.setIcon(div_icon_27f6dade57065fa3bb27b2e94cab85c8);
+            
+    
+            var marker_e93a340749235ceff6e0b8108c39b98a = L.marker(
+                [43.5407, -116.5635],
+                {
+}
+            ).addTo(map_da9f998bfbf091e590b136d3d227f05d);
+        
+    
+            var div_icon_fab281e34ee87b23e19d2528c75136f4 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background:#009e73; color:white; border:2px solid white; border-radius:16px;\n        box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700;\n        font-size:12px; line-height:24px; min-width:50px; height:24px; padding:0 2px;\n        font-family:Arial,sans-serif;\"\u003eSP45\u003c/div\u003e",
+  "iconSize": [54, 30],
+  "iconAnchor": [27, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_4ad96310d88e8b3d8f7faa24f92a9db9 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_95f0f7bb795553218c70879fc867b41d = $(`<div id="html_95f0f7bb795553218c70879fc867b41d" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>SP45 WinCo Foods Nampa search</h4><table> <tr><th>Status</th><td>Candidate</td></tr> <tr><th>Category</th><td>Supermarket</td></tr> <tr><th>Priority</th><td>A</td></tr> <tr><th>Route / area</th><td>Boise / Nampa corridor</td></tr> <tr><th>Timing</th><td>Boise area</td></tr> <tr><th>Relation</th><td>Along route</td></tr> <tr><th>Use case</th><td>安い食料・水・スナック大量補給</td></tr> <tr><th>Address</th><td>Nampa, ID</td></tr> <tr><th>Practical notes</th><td>I-84沿いで寄りやすい。Nampa泊が西側なら有力候補。</td></tr> <tr><th>Check before use</th><td>営業時間・支払い方法・駐車を直前確認。</td></tr> </table><p class="links"><a href="https://maps.apple.com/?q=WinCo%20Foods%20Nampa%20ID" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=WinCo%20Foods%20Nampa%20search%20Nampa%2C%20ID%20Nampa%2C%20ID" target="_blank">Google image search</a><br><a href="https://www.wincofoods.com/stores" target="_blank">Official / source</a></p></div></div>`)[0];
+                popup_4ad96310d88e8b3d8f7faa24f92a9db9.setContent(html_95f0f7bb795553218c70879fc867b41d);
+            
+        
+
+        marker_e93a340749235ceff6e0b8108c39b98a.bindPopup(popup_4ad96310d88e8b3d8f7faa24f92a9db9)
+        ;
+
+        
+    
+    
+            marker_e93a340749235ceff6e0b8108c39b98a.bindTooltip(
+                `<div>
+                     SP45 WinCo Foods Nampa search
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e93a340749235ceff6e0b8108c39b98a.setIcon(div_icon_fab281e34ee87b23e19d2528c75136f4);
+            
+    
+            var marker_263dcbde25f0a110df757e8d38221f8c = L.marker(
+                [44.0266, -116.9629],
+                {
+}
+            ).addTo(map_da9f998bfbf091e590b136d3d227f05d);
+        
+    
+            var div_icon_75b0a3c2641e0c61c462323f794f9656 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background:#009e73; color:white; border:2px solid white; border-radius:16px;\n        box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700;\n        font-size:12px; line-height:24px; min-width:50px; height:24px; padding:0 2px;\n        font-family:Arial,sans-serif;\"\u003eSP46\u003c/div\u003e",
+  "iconSize": [54, 30],
+  "iconAnchor": [27, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_a1f17123b288c5bc45c4d5a43dfcbbd5 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_0b2bc2ee78d63f17fa026976ce6b585c = $(`<div id="html_0b2bc2ee78d63f17fa026976ce6b585c" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>SP46 Walmart Ontario search</h4><table> <tr><th>Status</th><td>Candidate</td></tr> <tr><th>Category</th><td>Supermarket</td></tr> <tr><th>Priority</th><td>B</td></tr> <tr><th>Route / area</th><td>Baker City to Boise corridor</td></tr> <tr><th>Timing</th><td>Mid-route</td></tr> <tr><th>Relation</th><td>Along route</td></tr> <tr><th>Use case</th><td>水・朝食・日用品・薬・衣類補給</td></tr> <tr><th>Address</th><td>Ontario, OR</td></tr> <tr><th>Practical notes</th><td>Idaho州境前後の補給候補。店舗規模は当日確認。</td></tr> <tr><th>Check before use</th><td>営業時間・店舗規模・駐車を直前確認。</td></tr> </table><p class="links"><a href="https://maps.apple.com/?q=Walmart%20Ontario%20OR" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Walmart%20Ontario%20search%20Ontario%2C%20OR%20Ontario%2C%20OR" target="_blank">Google image search</a><br><a href="https://www.walmart.com/store-finder" target="_blank">Official / source</a></p></div></div>`)[0];
+                popup_a1f17123b288c5bc45c4d5a43dfcbbd5.setContent(html_0b2bc2ee78d63f17fa026976ce6b585c);
+            
+        
+
+        marker_263dcbde25f0a110df757e8d38221f8c.bindPopup(popup_a1f17123b288c5bc45c4d5a43dfcbbd5)
+        ;
+
+        
+    
+    
+            marker_263dcbde25f0a110df757e8d38221f8c.bindTooltip(
+                `<div>
+                     SP46 Walmart Ontario search
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_263dcbde25f0a110df757e8d38221f8c.setIcon(div_icon_75b0a3c2641e0c61c462323f794f9656);
+            
+    
+            var marker_2f0d7f6ba0ecb2c90deceade25386522 = L.marker(
+                [43.5407, -116.5635],
+                {
+}
+            ).addTo(map_da9f998bfbf091e590b136d3d227f05d);
+        
+    
+            var div_icon_8c88ccde602123af4993c6ab7e671676 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background:#009e73; color:white; border:2px solid white; border-radius:16px;\n        box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700;\n        font-size:12px; line-height:24px; min-width:50px; height:24px; padding:0 2px;\n        font-family:Arial,sans-serif;\"\u003eSP47\u003c/div\u003e",
+  "iconSize": [54, 30],
+  "iconAnchor": [27, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_9ecb44a66e26a846caaf1c3a6a8905a8 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_a04833a142c929f0bb894844f9aff7bb = $(`<div id="html_a04833a142c929f0bb894844f9aff7bb" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>SP47 Walmart Supercenter Nampa search</h4><table> <tr><th>Status</th><td>Candidate</td></tr> <tr><th>Category</th><td>Supermarket</td></tr> <tr><th>Priority</th><td>A</td></tr> <tr><th>Route / area</th><td>Boise / Nampa corridor</td></tr> <tr><th>Timing</th><td>Boise area</td></tr> <tr><th>Relation</th><td>Along route</td></tr> <tr><th>Use case</th><td>水・朝食・日用品・薬・衣類・ガソリン候補</td></tr> <tr><th>Address</th><td>Nampa, ID</td></tr> <tr><th>Practical notes</th><td>I-84沿いの大型補給候補。Nampa泊が西側なら使いやすい。</td></tr> <tr><th>Check before use</th><td>営業時間・ガソリン併設・駐車を直前確認。</td></tr> </table><p class="links"><a href="https://maps.apple.com/?q=Walmart%20Supercenter%20Nampa%20ID" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Walmart%20Supercenter%20Nampa%20search%20Nampa%2C%20ID%20Nampa%2C%20ID" target="_blank">Google image search</a><br><a href="https://www.walmart.com/store-finder" target="_blank">Official / source</a></p></div></div>`)[0];
+                popup_9ecb44a66e26a846caaf1c3a6a8905a8.setContent(html_a04833a142c929f0bb894844f9aff7bb);
+            
+        
+
+        marker_2f0d7f6ba0ecb2c90deceade25386522.bindPopup(popup_9ecb44a66e26a846caaf1c3a6a8905a8)
+        ;
+
+        
+    
+    
+            marker_2f0d7f6ba0ecb2c90deceade25386522.bindTooltip(
+                `<div>
+                     SP47 Walmart Supercenter Nampa search
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2f0d7f6ba0ecb2c90deceade25386522.setIcon(div_icon_8c88ccde602123af4993c6ab7e671676);
+            
+    
+            var marker_1eb1f1cf6f099e0bd44662b4e4a6bdc3 = L.marker(
+                [40.572, -111.86],
+                {
+}
+            ).addTo(map_da9f998bfbf091e590b136d3d227f05d);
+        
+    
+            var div_icon_36306ec9e2586ee36d6322477577745e = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background:#009e73; color:white; border:2px solid white; border-radius:16px;\n        box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700;\n        font-size:12px; line-height:24px; min-width:50px; height:24px; padding:0 2px;\n        font-family:Arial,sans-serif;\"\u003eSP48\u003c/div\u003e",
+  "iconSize": [54, 30],
+  "iconAnchor": [27, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_8069412dcda84f3719acb92e99dfc2f1 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_d86161ed9a04c704e52ec74752640bff = $(`<div id="html_d86161ed9a04c704e52ec74752640bff" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>SP48 Costco Wholesale Sandy search</h4><table> <tr><th>Status</th><td>Candidate</td></tr> <tr><th>Category</th><td>Supermarket</td></tr> <tr><th>Priority</th><td>A</td></tr> <tr><th>Route / area</th><td>Sandy lodging / Sandy to Moab</td></tr> <tr><th>Timing</th><td>Near Sandy lodging</td></tr> <tr><th>Relation</th><td>Near lodging</td></tr> <tr><th>Use case</th><td>水・食料・フードコート・ガソリン候補</td></tr> <tr><th>Address</th><td>Near 8558 E Johnsonway Dr, Sandy</td></tr> <tr><th>Practical notes</th><td>Sandy泊の主Costco候補。Moab以降はCostcoが長く空くため、ここで大量補給が有効。</td></tr> <tr><th>Check before use</th><td>営業日・営業時間・ガス併設・駐車を直前確認。</td></tr> </table><p class="links"><a href="https://maps.apple.com/?q=Costco%20Wholesale%20Sandy%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Costco%20Wholesale%20Sandy%20search%20Sandy%2C%20UT%20Near%208558%20E%20Johnsonway%20Dr%2C%20Sandy" target="_blank">Google image search</a><br><a href="https://www.costco.com/warehouse-locations.html" target="_blank">Official / source</a></p></div></div>`)[0];
+                popup_8069412dcda84f3719acb92e99dfc2f1.setContent(html_d86161ed9a04c704e52ec74752640bff);
+            
+        
+
+        marker_1eb1f1cf6f099e0bd44662b4e4a6bdc3.bindPopup(popup_8069412dcda84f3719acb92e99dfc2f1)
+        ;
+
+        
+    
+    
+            marker_1eb1f1cf6f099e0bd44662b4e4a6bdc3.bindTooltip(
+                `<div>
+                     SP48 Costco Wholesale Sandy search
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1eb1f1cf6f099e0bd44662b4e4a6bdc3.setIcon(div_icon_36306ec9e2586ee36d6322477577745e);
+            
+    
+            var marker_a930b1c1d145d7039ea5efb736236739 = L.marker(
+                [40.562, -111.929],
+                {
+}
+            ).addTo(map_da9f998bfbf091e590b136d3d227f05d);
+        
+    
+            var div_icon_5482466998c0de34325eb28d974cf81b = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background:#009e73; color:white; border:2px solid white; border-radius:16px;\n        box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700;\n        font-size:12px; line-height:24px; min-width:50px; height:24px; padding:0 2px;\n        font-family:Arial,sans-serif;\"\u003eSP49\u003c/div\u003e",
+  "iconSize": [54, 30],
+  "iconAnchor": [27, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_fdcb14762e6b847aae1a8be3dc47f60a = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_57527a68d997a75a38b2349d8a5c62ab = $(`<div id="html_57527a68d997a75a38b2349d8a5c62ab" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>SP49 Costco Wholesale South Jordan search</h4><table> <tr><th>Status</th><td>Candidate</td></tr> <tr><th>Category</th><td>Supermarket</td></tr> <tr><th>Priority</th><td>B</td></tr> <tr><th>Route / area</th><td>Sandy / South Valley</td></tr> <tr><th>Timing</th><td>Near Sandy lodging</td></tr> <tr><th>Relation</th><td>Near lodging</td></tr> <tr><th>Use case</th><td>水・食料・フードコート・ガソリン候補</td></tr> <tr><th>Address</th><td>South Jordan, UT</td></tr> <tr><th>Practical notes</th><td>Sandy泊から近い南西側候補。渋滞や行き先でSandy店と比較。</td></tr> <tr><th>Check before use</th><td>営業日・営業時間・ガス併設・駐車を直前確認。</td></tr> </table><p class="links"><a href="https://maps.apple.com/?q=Costco%20Wholesale%20South%20Jordan%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Costco%20Wholesale%20South%20Jordan%20search%20South%20Jordan%2C%20UT%20South%20Jordan%2C%20UT" target="_blank">Google image search</a><br><a href="https://www.costco.com/warehouse-locations.html" target="_blank">Official / source</a></p></div></div>`)[0];
+                popup_fdcb14762e6b847aae1a8be3dc47f60a.setContent(html_57527a68d997a75a38b2349d8a5c62ab);
+            
+        
+
+        marker_a930b1c1d145d7039ea5efb736236739.bindPopup(popup_fdcb14762e6b847aae1a8be3dc47f60a)
+        ;
+
+        
+    
+    
+            marker_a930b1c1d145d7039ea5efb736236739.bindTooltip(
+                `<div>
+                     SP49 Costco Wholesale South Jordan search
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a930b1c1d145d7039ea5efb736236739.setIcon(div_icon_5482466998c0de34325eb28d974cf81b);
+            
+    
+            var marker_81ba52b577a383d688bad1e64c599af2 = L.marker(
+                [40.521, -111.94],
+                {
+}
+            ).addTo(map_da9f998bfbf091e590b136d3d227f05d);
+        
+    
+            var div_icon_1349ed33a8806a538e51f543b2465169 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background:#009e73; color:white; border:2px solid white; border-radius:16px;\n        box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700;\n        font-size:12px; line-height:24px; min-width:50px; height:24px; padding:0 2px;\n        font-family:Arial,sans-serif;\"\u003eSP50\u003c/div\u003e",
+  "iconSize": [54, 30],
+  "iconAnchor": [27, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_d979397798f426b0845567169c88e9da = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_c9de118a6ae624a07d7501dbce9f5e6e = $(`<div id="html_c9de118a6ae624a07d7501dbce9f5e6e" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>SP50 Costco Wholesale Riverton search</h4><table> <tr><th>Status</th><td>Candidate</td></tr> <tr><th>Category</th><td>Supermarket</td></tr> <tr><th>Priority</th><td>B</td></tr> <tr><th>Route / area</th><td>Sandy / South Valley</td></tr> <tr><th>Timing</th><td>Near Sandy lodging</td></tr> <tr><th>Relation</th><td>Near lodging</td></tr> <tr><th>Use case</th><td>水・食料・フードコート・ガソリン候補</td></tr> <tr><th>Address</th><td>Riverton, UT</td></tr> <tr><th>Practical notes</th><td>Sandy南西側の候補。宿泊地からの距離は当日ナビで比較。</td></tr> <tr><th>Check before use</th><td>営業日・営業時間・ガス併設・駐車を直前確認。</td></tr> </table><p class="links"><a href="https://maps.apple.com/?q=Costco%20Wholesale%20Riverton%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Costco%20Wholesale%20Riverton%20search%20Riverton%2C%20UT%20Riverton%2C%20UT" target="_blank">Google image search</a><br><a href="https://www.costco.com/warehouse-locations.html" target="_blank">Official / source</a></p></div></div>`)[0];
+                popup_d979397798f426b0845567169c88e9da.setContent(html_c9de118a6ae624a07d7501dbce9f5e6e);
+            
+        
+
+        marker_81ba52b577a383d688bad1e64c599af2.bindPopup(popup_d979397798f426b0845567169c88e9da)
+        ;
+
+        
+    
+    
+            marker_81ba52b577a383d688bad1e64c599af2.bindTooltip(
+                `<div>
+                     SP50 Costco Wholesale Riverton search
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_81ba52b577a383d688bad1e64c599af2.setIcon(div_icon_1349ed33a8806a538e51f543b2465169);
+            
+    
+            var marker_c6713d3d2e3fe1c3210257391fa381d0 = L.marker(
+                [40.611, -111.899],
+                {
+}
+            ).addTo(map_da9f998bfbf091e590b136d3d227f05d);
+        
+    
+            var div_icon_1a69c434e120d01d14023f18d12dd548 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background:#009e73; color:white; border:2px solid white; border-radius:16px;\n        box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700;\n        font-size:12px; line-height:24px; min-width:50px; height:24px; padding:0 2px;\n        font-family:Arial,sans-serif;\"\u003eSP51\u003c/div\u003e",
+  "iconSize": [54, 30],
+  "iconAnchor": [27, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_185eeb33214e81f8d44ea02a88c71bc2 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_f2e911c2ca743f0208fc78dcbaa9db01 = $(`<div id="html_f2e911c2ca743f0208fc78dcbaa9db01" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>SP51 WinCo Foods Midvale search</h4><table> <tr><th>Status</th><td>Candidate</td></tr> <tr><th>Category</th><td>Supermarket</td></tr> <tr><th>Priority</th><td>A</td></tr> <tr><th>Route / area</th><td>Sandy lodging / Salt Lake Valley</td></tr> <tr><th>Timing</th><td>Near Sandy lodging</td></tr> <tr><th>Relation</th><td>Near lodging</td></tr> <tr><th>Use case</th><td>安い食料・水・スナック大量補給</td></tr> <tr><th>Address</th><td>Midvale, UT</td></tr> <tr><th>Practical notes</th><td>Sandy泊から近いWinCo候補。Costcoより少量補給に向く。</td></tr> <tr><th>Check before use</th><td>営業時間・支払い方法・駐車を直前確認。</td></tr> </table><p class="links"><a href="https://maps.apple.com/?q=WinCo%20Foods%20Midvale%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=WinCo%20Foods%20Midvale%20search%20Midvale%2C%20UT%20Midvale%2C%20UT" target="_blank">Google image search</a><br><a href="https://www.wincofoods.com/stores" target="_blank">Official / source</a></p></div></div>`)[0];
+                popup_185eeb33214e81f8d44ea02a88c71bc2.setContent(html_f2e911c2ca743f0208fc78dcbaa9db01);
+            
+        
+
+        marker_c6713d3d2e3fe1c3210257391fa381d0.bindPopup(popup_185eeb33214e81f8d44ea02a88c71bc2)
+        ;
+
+        
+    
+    
+            marker_c6713d3d2e3fe1c3210257391fa381d0.bindTooltip(
+                `<div>
+                     SP51 WinCo Foods Midvale search
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c6713d3d2e3fe1c3210257391fa381d0.setIcon(div_icon_1a69c434e120d01d14023f18d12dd548);
+            
+    
+            var marker_6757677c5475e2ec617029be41218421 = L.marker(
+                [40.698, -111.944],
+                {
+}
+            ).addTo(map_da9f998bfbf091e590b136d3d227f05d);
+        
+    
+            var div_icon_247fd6cfa0d4ae4d1449d0a17e9d1202 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background:#009e73; color:white; border:2px solid white; border-radius:16px;\n        box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700;\n        font-size:12px; line-height:24px; min-width:50px; height:24px; padding:0 2px;\n        font-family:Arial,sans-serif;\"\u003eSP52\u003c/div\u003e",
+  "iconSize": [54, 30],
+  "iconAnchor": [27, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_b4421eada57089176f64fb0468101d63 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_8aada07c0eb82c3ac1e5d959591dfc93 = $(`<div id="html_8aada07c0eb82c3ac1e5d959591dfc93" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>SP52 WinCo Foods South Salt Lake / West Valley search</h4><table> <tr><th>Status</th><td>Candidate</td></tr> <tr><th>Category</th><td>Supermarket</td></tr> <tr><th>Priority</th><td>B</td></tr> <tr><th>Route / area</th><td>Salt Lake Valley</td></tr> <tr><th>Timing</th><td>SLC area</td></tr> <tr><th>Relation</th><td>Along route</td></tr> <tr><th>Use case</th><td>安い食料・水・スナック大量補給</td></tr> <tr><th>Address</th><td>South Salt Lake / West Valley City, UT</td></tr> <tr><th>Practical notes</th><td>SLC市街地側で使えるWinCo候補。宿泊地から遠ければ省略。</td></tr> <tr><th>Check before use</th><td>営業時間・支払い方法・駐車を直前確認。</td></tr> </table><p class="links"><a href="https://maps.apple.com/?q=WinCo%20Foods%20South%20Salt%20Lake%20West%20Valley%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=WinCo%20Foods%20South%20Salt%20Lake%20/%20West%20Valley%20search%20South%20Salt%20Lake%20/%20West%20Valley%20City%2C%20UT%20South%20Salt%20Lake%20/%20West%20Valley%20City%2C%20UT" target="_blank">Google image search</a><br><a href="https://www.wincofoods.com/stores" target="_blank">Official / source</a></p></div></div>`)[0];
+                popup_b4421eada57089176f64fb0468101d63.setContent(html_8aada07c0eb82c3ac1e5d959591dfc93);
+            
+        
+
+        marker_6757677c5475e2ec617029be41218421.bindPopup(popup_b4421eada57089176f64fb0468101d63)
+        ;
+
+        
+    
+    
+            marker_6757677c5475e2ec617029be41218421.bindTooltip(
+                `<div>
+                     SP52 WinCo Foods South Salt Lake / West Valley search
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6757677c5475e2ec617029be41218421.setIcon(div_icon_247fd6cfa0d4ae4d1449d0a17e9d1202);
+            
+    
+            var marker_fa92e77a04454923534f02cc64dcd310 = L.marker(
+                [40.572, -111.86],
+                {
+}
+            ).addTo(map_da9f998bfbf091e590b136d3d227f05d);
+        
+    
+            var div_icon_6e8a85e70bca59fda9470018b5af2fa4 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background:#009e73; color:white; border:2px solid white; border-radius:16px;\n        box-shadow:0 1px 4px rgba(0,0,0,.45); text-align:center; font-weight:700;\n        font-size:12px; line-height:24px; min-width:50px; height:24px; padding:0 2px;\n        font-family:Arial,sans-serif;\"\u003eSP53\u003c/div\u003e",
+  "iconSize": [54, 30],
+  "iconAnchor": [27, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_5c4c039c3970d5d3acb8413a020d534b = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var html_3e5881344c78dcb632550b557005a682 = $(`<div id="html_3e5881344c78dcb632550b557005a682" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>SP53 Walmart Supercenter Sandy / Draper search</h4><table> <tr><th>Status</th><td>Candidate</td></tr> <tr><th>Category</th><td>Supermarket</td></tr> <tr><th>Priority</th><td>A</td></tr> <tr><th>Route / area</th><td>Sandy lodging / Salt Lake Valley</td></tr> <tr><th>Timing</th><td>Near Sandy lodging</td></tr> <tr><th>Relation</th><td>Near lodging</td></tr> <tr><th>Use case</th><td>水・朝食・日用品・薬・衣類補給</td></tr> <tr><th>Address</th><td>Near 8558 E Johnsonway Dr, Sandy</td></tr> <tr><th>Practical notes</th><td>Sandy泊の実用的な大型店候補。Costco/WinCoより小回りが効く可能性あり。</td></tr> <tr><th>Check before use</th><td>営業時間・駐車を直前確認。</td></tr> </table><p class="links"><a href="https://maps.apple.com/?q=Walmart%20Supercenter%20Sandy%20Draper%20UT" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Walmart%20Supercenter%20Sandy%20/%20Draper%20search%20Sandy%20/%20Draper%2C%20UT%20Near%208558%20E%20Johnsonway%20Dr%2C%20Sandy" target="_blank">Google image search</a><br><a href="https://www.walmart.com/store-finder" target="_blank">Official / source</a></p></div></div>`)[0];
+                popup_5c4c039c3970d5d3acb8413a020d534b.setContent(html_3e5881344c78dcb632550b557005a682);
+            
+        
+
+        marker_fa92e77a04454923534f02cc64dcd310.bindPopup(popup_5c4c039c3970d5d3acb8413a020d534b)
+        ;
+
+        
+    
+    
+            marker_fa92e77a04454923534f02cc64dcd310.bindTooltip(
+                `<div>
+                     SP53 Walmart Supercenter Sandy / Draper search
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fa92e77a04454923534f02cc64dcd310.setIcon(div_icon_6e8a85e70bca59fda9470018b5af2fa4);
+            
+    
+            map_da9f998bfbf091e590b136d3d227f05d.fitBounds(
+                [[40.521, -117.8344], [44.8263, -111.8221]],
                 {"padding": [40, 40]}
             );
         
