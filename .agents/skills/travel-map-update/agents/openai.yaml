@@ -1,7 +1,7 @@
 interface:
   display_name: "Travel2026 Roadtrip Map Update"
-  short_description: "Safely rebuild and publish Travel2026 maps"
-  default_prompt: "Use $travel-map-update to safely regenerate and publish the latest Travel2026 roadtrip maps."
+  short_description: "Google Driveの最新旅程からTravel2026地図を安全に更新・公開"
+  default_prompt: "Use $travel-map-update to fetch the latest protocol and itinerary, validate every generated map, and safely publish the Travel2026 update."
 
 policy:
   allow_implicit_invocation: true
