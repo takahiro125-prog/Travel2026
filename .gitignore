@@ -1,0 +1,4 @@
+.codex-map-work/
+.venv/
+__pycache__/
+*.pyc
