@@ -1,0 +1,7 @@
+interface:
+  display_name: "Travel2026 Roadtrip Map Update"
+  short_description: "Safely rebuild and publish Travel2026 maps"
+  default_prompt: "Use $travel-map-update to safely regenerate and publish the latest Travel2026 roadtrip maps."
+
+policy:
+  allow_implicit_invocation: true
