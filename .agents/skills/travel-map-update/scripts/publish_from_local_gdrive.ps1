@@ -98,6 +98,36 @@ if ($existingChanges.Count -gt 0) {
     throw 'The repository has uncommitted changes. Commit or remove them before publishing maps.'
 }
 
+Write-Host 'Synchronizing with origin/main...'
+& git -C $repoRoot fetch origin main
+if ($LASTEXITCODE -ne 0) {
+    throw 'git fetch failed. Check the network connection and Git credentials.'
+}
+
+$localHead = (& git -C $repoRoot rev-parse HEAD).Trim()
+$remoteHead = (& git -C $repoRoot rev-parse origin/main).Trim()
+if ($localHead -ne $remoteHead) {
+    & git -C $repoRoot merge-base --is-ancestor $localHead $remoteHead
+    $localIsAncestor = $LASTEXITCODE -eq 0
+    & git -C $repoRoot merge-base --is-ancestor $remoteHead $localHead
+    $remoteIsAncestor = $LASTEXITCODE -eq 0
+
+    if ($localIsAncestor) {
+        & git -C $repoRoot merge --ff-only origin/main
+        if ($LASTEXITCODE -ne 0) {
+            throw 'Could not fast-forward to origin/main.'
+        }
+    } elseif (-not $remoteIsAncestor) {
+        & git -C $repoRoot rebase origin/main
+        if ($LASTEXITCODE -ne 0) {
+            & git -C $repoRoot rebase --abort 2>$null
+            throw 'Could not rebase local commits onto origin/main.'
+        }
+    } else {
+        Write-Host 'An unpushed local commit was found. It will be pushed below.'
+    }
+}
+
 foreach ($item in $copyPlan) {
     Copy-Item -LiteralPath $item.Source -Destination (Join-Path $repoRoot $item.DestinationName) -Force
 }
@@ -113,23 +143,52 @@ if ($LASTEXITCODE -ne 0) {
     throw 'Could not inspect staged files.'
 }
 if ($staged.Count -eq 0) {
-    Write-Host 'No map changes to publish.'
+    Write-Host 'No new map file changes were found.'
+} else {
+    $unexpected = @($staged | Where-Object { $_ -notin $publishNames })
+    if ($unexpected.Count -gt 0) {
+        throw "Unexpected staged files: $($unexpected -join ', ')"
+    }
+
+    & git -C $repoRoot commit -m $CommitMessage
+    if ($LASTEXITCODE -ne 0) {
+        throw 'git commit failed.'
+    }
+}
+
+$aheadCount = [int]((& git -C $repoRoot rev-list --count origin/main..HEAD).Trim())
+if ($aheadCount -eq 0) {
+    Write-Host 'GitHub is already up to date.'
     exit 0
 }
 
-$unexpected = @($staged | Where-Object { $_ -notin $publishNames })
-if ($unexpected.Count -gt 0) {
-    throw "Unexpected staged files: $($unexpected -join ', ')"
+$pushSucceeded = $false
+for ($attempt = 1; $attempt -le 3; $attempt++) {
+    Write-Host "Pushing to GitHub (attempt $attempt of 3)..."
+    & git -C $repoRoot push origin main
+    if ($LASTEXITCODE -eq 0) {
+        $pushSucceeded = $true
+        break
+    }
+
+    if ($attempt -lt 3) {
+        Start-Sleep -Seconds 2
+        & git -C $repoRoot fetch origin main
+        if ($LASTEXITCODE -eq 0) {
+            & git -C $repoRoot merge-base --is-ancestor origin/main HEAD
+            if ($LASTEXITCODE -ne 0) {
+                & git -C $repoRoot rebase origin/main
+                if ($LASTEXITCODE -ne 0) {
+                    & git -C $repoRoot rebase --abort 2>$null
+                    throw 'GitHub changed during upload and automatic rebase failed.'
+                }
+            }
+        }
+    }
 }
 
-& git -C $repoRoot commit -m $CommitMessage
-if ($LASTEXITCODE -ne 0) {
-    throw 'git commit failed.'
-}
-
-& git -C $repoRoot push origin main
-if ($LASTEXITCODE -ne 0) {
-    throw 'git push failed. The local commit was kept.'
+if (-not $pushSucceeded) {
+    throw 'git push failed after 3 attempts. The local commit was kept; run Upload_2026tmap again to retry.'
 }
 
 $commit = (& git -C $repoRoot rev-parse HEAD).Trim()
