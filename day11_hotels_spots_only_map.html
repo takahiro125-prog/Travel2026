@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_d564bfcf505168ce559586140aadcecc {
+                #map_d2f8da0a6f30773425018b93d7f2473f {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -52,23 +52,29 @@
         
 
 <style>
-.popup{font-family:Arial,Helvetica,sans-serif;max-width:430px}.popup h4{margin:0 0 8px;font-size:15px}.popup table{border-collapse:collapse;width:100%;font-size:12px}.popup th{text-align:left;vertical-align:top;padding:3px 6px 3px 0;color:#333;white-space:nowrap}.popup td{padding:3px 0;vertical-align:top}.map-title{position:fixed;top:12px;left:52px;z-index:9999;background:rgba(255,255,255,.96);border:1px solid #bbb;border-radius:8px;padding:10px 14px;box-shadow:0 1px 4px rgba(0,0,0,.15);max-width:620px}.map-title .main{font-size:21px;font-weight:700}.map-title .sub{font-size:12px;color:#444;margin-top:3px}.empty{background:transparent!important;border:none!important}
+.popup{font-family:Arial,Helvetica,sans-serif;max-width:430px}.popup h4{margin:0 0 6px;font-size:15px;padding-right:18px}.popup table{border-collapse:collapse;width:100%;font-size:12px}.popup th{text-align:left;vertical-align:top;padding:4px 7px 4px 0;color:#333;white-space:nowrap}.popup td{padding:4px 0;vertical-align:top}.popup-category{display:inline-block;color:#fff;border-radius:999px;padding:3px 8px;font-size:11px;font-weight:700;margin:0 0 7px}.popup-actions{display:flex;gap:8px;align-items:center;margin:10px 0}.apple-button{display:inline-flex;min-height:40px;align-items:center;justify-content:center;padding:0 14px;border-radius:8px;background:#111;color:#fff!important;text-decoration:none;font-weight:700}.image-link{font-size:12px}.popup-details{margin-top:7px;border-top:1px solid #ddd;padding-top:7px}.popup-details summary{cursor:pointer;font-weight:700;color:#174a7e}.popup-detail-body{padding-top:5px}.map-title{position:fixed;top:12px;left:52px;z-index:9999;background:rgba(255,255,255,.96);border:1px solid #bbb;border-radius:8px;padding:8px 10px;box-shadow:0 1px 4px rgba(0,0,0,.15);max-width:620px;display:flex;align-items:center;gap:10px}.map-title-text{min-width:0}.map-title .main{font-size:19px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.map-title .sub{font-size:12px;color:#444;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.map-nav{display:flex;align-items:center;gap:4px;flex:0 0 auto}.map-nav a,.map-nav-placeholder{display:inline-flex;width:32px;height:32px;align-items:center;justify-content:center;border-radius:7px;background:#222;color:#fff;text-decoration:none;font-weight:700}.map-nav .map-index-link{width:auto;padding:0 9px;font-size:12px}.map-nav-placeholder{visibility:hidden}.map-legend{position:fixed;top:12px;right:12px;z-index:9998;background:rgba(255,255,255,.96);border:1px solid #bbb;border-radius:8px;padding:7px 9px;box-shadow:0 1px 4px rgba(0,0,0,.12);font:12px Arial,sans-serif}.map-legend summary{cursor:pointer;font-weight:700}.map-legend-body{display:grid;grid-template-columns:1fr 1fr;gap:5px 9px;margin-top:7px}.map-legend-item{display:flex;align-items:center;gap:5px;white-space:nowrap}.map-legend-item i{width:12px;height:12px;border-radius:50%;border:1px solid #fff;box-shadow:0 0 0 1px #aaa}.map-bottom-bar{position:fixed;left:50%;bottom:12px;transform:translateX(-50%);z-index:10001;display:flex;gap:6px;padding:6px;background:rgba(255,255,255,.96);border:1px solid #bbb;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.2)}.map-bottom-bar button{min-width:82px;min-height:40px;border:0;border-radius:8px;background:#222;color:#fff;font-weight:700;font-size:13px}.spot-list-panel{position:fixed;left:50%;bottom:66px;transform:translateX(-50%) translateY(calc(100% + 90px));width:min(520px,94vw);max-height:55vh;overflow-y:auto;z-index:10000;background:#fff;border:1px solid #bbb;border-radius:16px 16px 10px 10px;padding:10px;box-sizing:border-box;box-shadow:0 -3px 18px rgba(0,0,0,.28);transition:transform .2s ease}.spot-list-panel.open{transform:translateX(-50%) translateY(0)}.spot-list-heading{font:700 12px Arial,sans-serif;color:#555;padding:6px 4px}.spot-list-item{display:flex;width:100%;align-items:center;gap:9px;border:0;border-top:1px solid #e5e5e5;background:#fff;padding:9px 4px;text-align:left;min-height:44px}.spot-list-label{flex:0 0 auto;min-width:46px;border-radius:6px;padding:4px 6px;color:#fff;font:700 11px Arial,sans-serif;text-align:center}.spot-list-name{font:13px Arial,sans-serif;color:#222}.empty{background:transparent!important;border:none!important}
+@media(max-width:720px){
+.map-title{top:8px;left:52px;right:8px;max-width:none;padding:5px 7px;gap:6px}.map-title .main{font-size:14px}.map-title .sub{font-size:10px}.map-nav{gap:3px}.map-nav a,.map-nav-placeholder{width:30px;height:30px}.map-nav .map-index-link{padding:0 7px}.map-legend{top:54px;right:8px}.map-legend-body{grid-template-columns:1fr}.map-bottom-bar{bottom:calc(8px + env(safe-area-inset-bottom));width:94vw;box-sizing:border-box}.map-bottom-bar button{flex:1;min-width:0;min-height:44px}.spot-list-panel{bottom:calc(66px + env(safe-area-inset-bottom))}.roadtrip-marker{transform:scale(1.16);transform-origin:center}.leaflet-popup{position:fixed!important;left:3vw!important;right:auto!important;top:auto!important;bottom:calc(66px + env(safe-area-inset-bottom))!important;transform:none!important;width:94vw!important;margin:0!important}.leaflet-popup-content-wrapper{max-height:55vh;overflow-y:auto;border-radius:16px 16px 10px 10px}.leaflet-popup-content{width:auto!important;max-width:none!important;margin:13px 16px}.leaflet-popup-tip-container{display:none}.leaflet-popup-close-button{font-size:25px!important;width:38px!important;height:38px!important;padding:6px!important}.popup{max-width:none}.popup h4{font-size:16px}.popup table{font-size:13px}.popup th{white-space:normal;width:34%}.popup-actions{align-items:stretch;flex-direction:column}.apple-button{min-height:46px;width:100%;box-sizing:border-box;font-size:15px}.image-link{text-align:center;padding:5px}.popup-details:not([open]) .popup-detail-body{display:none}
+}
 </style>
 
 </head>
 <body>
-<div class="map-title"><div class="main">（11日目）Nampa → Hanford/Richland → Seattle</div><div class="sub">走行距離：520マイル / 想定時間：8時間 / 13件</div></div>
+<div class="map-title"><div class="map-nav"><a aria-label="Previous day" href="day10_hotels_spots_only_map.html">‹</a><a class="map-index-link" href="day1_day11_maps_index.html">一覧</a><span class="map-nav-placeholder"></span></div><div class="map-title-text"><div class="main">（11日目）Nampa → Hanford/Richland → Seattle</div><div class="sub">走行距離：520マイル / 想定時間：8時間 / 13件</div></div></div>
+<details class="map-legend" open><summary>凡例</summary><div class="map-legend-body"><span class="map-legend-item"><i style="background:#1a9850"></i>Hotel</span><span class="map-legend-item"><i style="background:#d7191c"></i>Must</span><span class="map-legend-item"><i style="background:#2c7bb6"></i>Possible</span><span class="map-legend-item"><i style="background:#2c7bb6"></i>Drive-by</span><span class="map-legend-item"><i style="background:#f28e2b"></i>Gas</span><span class="map-legend-item"><i style="background:#333333"></i>Supermarket</span><span class="map-legend-item"><i style="background:#8c6d31"></i>Souvenir</span><span class="map-legend-item"><i style="background:#d95f02"></i>Restaurant</span></div></details>
+<div id="spot-list-panel" class="spot-list-panel" aria-hidden="true"><div class="spot-list-heading">Route order</div><button type="button" class="spot-list-item" data-spot-id="11-03"><span class="spot-list-label" style="background:#2c7bb6">11-03</span><span class="spot-list-name">11-03 National Historic Oregon Trail Interpretive Center</span></button><button type="button" class="spot-list-item" data-spot-id="11-07"><span class="spot-list-label" style="background:#d7191c">11-07</span><span class="spot-list-name">11-07 Hanford Unit / Richland Visitor Center</span></button><button type="button" class="spot-list-item" data-spot-id="11-12"><span class="spot-list-label" style="background:#d7191c">11-12</span><span class="spot-list-name">11-12 Seattle帰着</span></button><div class="spot-list-heading">Hotel / airport / supplies</div><button type="button" class="spot-list-item" data-spot-id="G14"><span class="spot-list-label" style="background:#f28e2b">G14</span><span class="spot-list-name">G14 Nampa fuel before I-84 west</span></button><button type="button" class="spot-list-item" data-spot-id="G15"><span class="spot-list-label" style="background:#f28e2b">G15</span><span class="spot-list-name">G15 La Grande / Pendleton / Boardman fuel search</span></button><button type="button" class="spot-list-item" data-spot-id="SP14"><span class="spot-list-label" style="background:#333333">SP14</span><span class="spot-list-name">SP14 Costco Wholesale Union Gap</span></button><button type="button" class="spot-list-item" data-spot-id="SP15"><span class="spot-list-label" style="background:#333333">SP15</span><span class="spot-list-name">SP15 Walmart Supercenter Kennewick</span></button><button type="button" class="spot-list-item" data-spot-id="SP16"><span class="spot-list-label" style="background:#333333">SP16</span><span class="spot-list-name">SP16 Walmart Hermiston</span></button><button type="button" class="spot-list-item" data-spot-id="SP17"><span class="spot-list-label" style="background:#333333">SP17</span><span class="spot-list-name">SP17 Walmart Supercenter Island City #1889</span></button><button type="button" class="spot-list-item" data-spot-id="SP24"><span class="spot-list-label" style="background:#333333">SP24</span><span class="spot-list-name">SP24 WinCo Foods Meridian</span></button><button type="button" class="spot-list-item" data-spot-id="SP25"><span class="spot-list-label" style="background:#333333">SP25</span><span class="spot-list-name">SP25 Costco Wholesale Nampa</span></button><button type="button" class="spot-list-item" data-spot-id="SP41"><span class="spot-list-label" style="background:#333333">SP41</span><span class="spot-list-name">SP41 Walmart Supercenter Pendleton</span></button><button type="button" class="spot-list-item" data-spot-id="Sv09"><span class="spot-list-label" style="background:#8c6d31">Sv09</span><span class="spot-list-name">Sv09 REACH Museum / Manhattan Project Hanford visitor materials</span></button></div>
+<div class="map-bottom-bar"><button type="button" id="list-button">一覧</button><button type="button" id="location-button">現在地</button><button type="button" id="next-button">次の地点</button></div>
 
     
     
-            <div class="folium-map" id="map_d564bfcf505168ce559586140aadcecc" ></div>
+            <div class="folium-map" id="map_d2f8da0a6f30773425018b93d7f2473f" ></div>
         
 </body>
 <script>
     
     
-            var map_d564bfcf505168ce559586140aadcecc = L.map(
-                "map_d564bfcf505168ce559586140aadcecc",
+            var map_d2f8da0a6f30773425018b93d7f2473f = L.map(
+                "map_d2f8da0a6f30773425018b93d7f2473f",
                 {
                     center: [45.46212262307692, -118.6750864],
                     crs: L.CRS.EPSG3857,
@@ -80,13 +86,13 @@
 
                 }
             );
-            L.control.scale().addTo(map_d564bfcf505168ce559586140aadcecc);
+            L.control.scale().addTo(map_d2f8da0a6f30773425018b93d7f2473f);
 
             
 
         
     
-            var tile_layer_b6b927dfec84995f0fd6bfe28178df4a = L.tileLayer(
+            var tile_layer_3783c0e5e353e7f63b4f9a436e7fbf5a = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -103,42 +109,42 @@
             );
         
     
-            tile_layer_b6b927dfec84995f0fd6bfe28178df4a.addTo(map_d564bfcf505168ce559586140aadcecc);
+            tile_layer_3783c0e5e353e7f63b4f9a436e7fbf5a.addTo(map_d2f8da0a6f30773425018b93d7f2473f);
         
     
-            var marker_7d8e158610633cddbaab097f1d07a2fe = L.marker(
+            var marker_9cb1889aa18dfa944d65a8fa6da4bb8c = L.marker(
                 [46.2804, -119.2752],
                 {
 }
-            ).addTo(map_d564bfcf505168ce559586140aadcecc);
+            ).addTo(map_d2f8da0a6f30773425018b93d7f2473f);
         
     
-            var div_icon_e095f89c73a66f86448055fefd0ee004 = L.divIcon({
-  "html": "\u003cdiv style=\"background:#d7191c;color:white;border:2px solid white;border-radius:50%;box-shadow:0 1px 4px rgba(0,0,0,.45);text-align:center;font-weight:700;width:28px;height:28px;box-sizing:border-box;overflow:hidden;font-family:Arial, sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;\"\u003e\u003cspan style=\"display:block;font-size:10px;line-height:28px;\"\u003e07\u003c/span\u003e\u003c/div\u003e",
+            var div_icon_1b7762e2403aafbaf58e471bba862412 = L.divIcon({
+  "html": "\u003cdiv class=\"roadtrip-marker\" style=\"background:#d7191c;color:white;border:2px solid white;border-radius:50%;box-shadow:0 1px 4px rgba(0,0,0,.45);text-align:center;font-weight:700;width:28px;height:28px;box-sizing:border-box;overflow:hidden;font-family:Arial, sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;\"\u003e\u003cspan style=\"display:block;font-size:10px;line-height:28px;\"\u003e7\u003c/span\u003e\u003c/div\u003e",
   "iconSize": [28, 28],
   "iconAnchor": [14, 14],
   "className": "empty",
 });
         
     
-        var popup_dca3a7d73150cc941f5bfd14b6e74088 = L.popup({
+        var popup_5a62bf429b314798910138dba5d79afb = L.popup({
   "maxWidth": 460,
 });
 
         
             
-                var html_1090cd3c352b3ec10406949591ee0d20 = $(`<div id="html_1090cd3c352b3ec10406949591ee0d20" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>11-07 Hanford Unit / Richland Visitor Center</h4><table><tr><th>Time needed</th><td>45–90 min</td></tr><tr><th>Walking / Effort</th><td>駐車→館0.1mi未満＋館内約0.4mi</td></tr><tr><th>What to do</th><td>Hanfordの歴史展示を見学する。</td></tr><tr><th>GUIDE</th><td>Hanford Unitでは、Columbia Riverの大量の冷却水、Grand Coulee Dam由来の電力、広い隔離地がplutonium生産施設の立地を可能にしたことを学びます。B Reactorではuraniumの核分裂で生じたplutonium-239を化学分離し、長崎に投下された原子爆弾へ供給しました。展示では、原子炉の仕組みだけでなく、秘密主義、労働者の被曝、先住民の伝統的利用地の喪失、戦後の環境浄化を合わせて見ると、科学技術の成果と責任を立体的に理解できます。</td></tr><tr><th>Cost</th><td>Free / museum conditions may vary</td></tr><tr><th>Address / Location</th><td>Hanford Unit / Richland Visitor Center — Manhattan Project National Historical Park. Coordinate: 46.2804, -119.2752</td></tr></table><p><a href="https://maps.apple.com/?ll=46.2804,-119.2752&amp;q=Hanford%20Unit%20%2F%20Richland%20Visitor%20Center" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Manhattan+Project+National+Historical+Park+Hanford+Richland" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_dca3a7d73150cc941f5bfd14b6e74088.setContent(html_1090cd3c352b3ec10406949591ee0d20);
+                var html_e4e8bbb7939687acfec4b9ca373ac44b = $(`<div id="html_e4e8bbb7939687acfec4b9ca373ac44b" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>11-07 Hanford Unit / Richland Visitor Center</h4><span class="popup-category" style="background:#d7191c">Must</span><table class="popup-primary"><tr><th>Time needed</th><td>45–90 min</td></tr><tr><th>What to do</th><td>Hanfordの歴史展示を見学する。</td></tr><tr><th>Skip / Shorten rule</th><td>帰着が遅れる場合は見学を最短化。</td></tr></table><div class="popup-actions"><a class="apple-button" href="https://maps.apple.com/?ll=46.2804,-119.2752&amp;q=Hanford%20Unit%20%2F%20Richland%20Visitor%20Center" target="_blank">Open in Apple Maps</a><a class="image-link" href="https://www.google.com/search?tbm=isch&amp;q=Manhattan+Project+National+Historical+Park+Hanford+Richland" target="_blank">Google image search</a></div><details class="popup-details" open><summary>Show details</summary><div class="popup-detail-body"><table><tr><th>Walking / Effort</th><td>駐車→館0.1mi未満＋館内約0.4mi</td></tr><tr><th>GUIDE</th><td>Hanford Unitでは、Columbia Riverの大量の冷却水、Grand Coulee Dam由来の電力、広い隔離地がplutonium生産施設の立地を可能にしたことを学びます。B Reactorではuraniumの核分裂で生じたplutonium-239を化学分離し、長崎に投下された原子爆弾へ供給しました。展示では、原子炉の仕組みだけでなく、秘密主義、労働者の被曝、先住民の伝統的利用地の喪失、戦後の環境浄化を合わせて見ると、科学技術の成果と責任を立体的に理解できます。</td></tr><tr><th>Cost</th><td>Free / museum conditions may vary</td></tr><tr><th>Address / Location</th><td>Hanford Unit / Richland Visitor Center — Manhattan Project National Historical Park. Coordinate: 46.2804, -119.2752</td></tr><tr><th>Notes</th><td>Junior Rangerあり。帰着時間を優先して短めに。 営業時間メモ(2026-07-06): 公式ページ抽出範囲では具体時刻を確認できず。Visitor Centerは2000 Logston Blvd, Richland。月曜訪問予定なので直前確認必須。</td></tr></table></div></details></div></div>`)[0];
+                popup_5a62bf429b314798910138dba5d79afb.setContent(html_e4e8bbb7939687acfec4b9ca373ac44b);
             
         
 
-        marker_7d8e158610633cddbaab097f1d07a2fe.bindPopup(popup_dca3a7d73150cc941f5bfd14b6e74088)
+        marker_9cb1889aa18dfa944d65a8fa6da4bb8c.bindPopup(popup_5a62bf429b314798910138dba5d79afb)
         ;
 
         
     
     
-            marker_7d8e158610633cddbaab097f1d07a2fe.bindTooltip(
+            marker_9cb1889aa18dfa944d65a8fa6da4bb8c.bindTooltip(
                 `<div>
                      11-07 Hanford Unit / Richland Visitor Center
                  </div>`,
@@ -148,42 +154,42 @@
             );
         
     
-                marker_7d8e158610633cddbaab097f1d07a2fe.setIcon(div_icon_e095f89c73a66f86448055fefd0ee004);
+                marker_9cb1889aa18dfa944d65a8fa6da4bb8c.setIcon(div_icon_1b7762e2403aafbaf58e471bba862412);
             
     
-            var marker_3e904bf47746899600cfb54fa8b75bc2 = L.marker(
+            var marker_29f460f9984b2dd43b4c279bd8a2ff92 = L.marker(
                 [47.6062, -122.3321],
                 {
 }
-            ).addTo(map_d564bfcf505168ce559586140aadcecc);
+            ).addTo(map_d2f8da0a6f30773425018b93d7f2473f);
         
     
-            var div_icon_82559c2ea61e2068154415621fd20f9d = L.divIcon({
-  "html": "\u003cdiv style=\"background:#d7191c;color:white;border:2px solid white;border-radius:50%;box-shadow:0 1px 4px rgba(0,0,0,.45);text-align:center;font-weight:700;width:28px;height:28px;box-sizing:border-box;overflow:hidden;font-family:Arial, sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;\"\u003e\u003cspan style=\"display:block;font-size:10px;line-height:28px;\"\u003e12\u003c/span\u003e\u003c/div\u003e",
+            var div_icon_cce7e526239c767c406ff096d2b2fac8 = L.divIcon({
+  "html": "\u003cdiv class=\"roadtrip-marker\" style=\"background:#d7191c;color:white;border:2px solid white;border-radius:50%;box-shadow:0 1px 4px rgba(0,0,0,.45);text-align:center;font-weight:700;width:28px;height:28px;box-sizing:border-box;overflow:hidden;font-family:Arial, sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;\"\u003e\u003cspan style=\"display:block;font-size:10px;line-height:28px;\"\u003e12\u003c/span\u003e\u003c/div\u003e",
   "iconSize": [28, 28],
   "iconAnchor": [14, 14],
   "className": "empty",
 });
         
     
-        var popup_d972748f896066a646c09a537d3f27b8 = L.popup({
+        var popup_82ae97bae65626ee24739df97c4fd674 = L.popup({
   "maxWidth": 460,
 });
 
         
             
-                var html_71605427664b34e06cb2ec614890195c = $(`<div id="html_71605427664b34e06cb2ec614890195c" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>11-12 Seattle帰着</h4><table><tr><th>Time needed</th><td>—</td></tr><tr><th>Walking / Effort</th><td>到着後の荷下ろし歩行0–0.1mi</td></tr><tr><th>What to do</th><td>Seattleへ帰着する。</td></tr><tr><th>GUIDE</th><td>Seattle帰着は、Colorado Plateau、Mojave Desert、Great Basin、Snake River Plain、Columbia Plateau、Cascade Rangeという異なる地形・気候帯を一周した旅の終点です。I-90でCascade Mountainsを越えると、乾燥した東側から湿潤な西側へ植生と空気の印象が急に変わります。旅全体を振り返る際は、赤い砂岩、河川侵食、先住民文化、開拓、強制収容、核開発、巨大ダムという各地点のテーマが、米国西部の土地と水の利用史としてつながっていたことを確認するとよいです。</td></tr><tr><th>Cost</th><td>—</td></tr><tr><th>Address / Location</th><td>Seattle帰着 — Seattle, WA. Coordinate: 47.6062, -122.3321</td></tr></table><p><a href="https://maps.apple.com/?ll=47.6062,-122.3321&amp;q=Seattle%E5%B8%B0%E7%9D%80" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Seattle+Washington" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_d972748f896066a646c09a537d3f27b8.setContent(html_71605427664b34e06cb2ec614890195c);
+                var html_10d8cbd12f3748b7b767c9dcb75425a2 = $(`<div id="html_10d8cbd12f3748b7b767c9dcb75425a2" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>11-12 Seattle帰着</h4><span class="popup-category" style="background:#d7191c">Must</span><table class="popup-primary"><tr><th>Time needed</th><td>—</td></tr><tr><th>What to do</th><td>Seattleへ帰着する。</td></tr><tr><th>Skip / Shorten rule</th><td>省略不可。安全を優先し、遅延時は休憩と到着時刻を調整。</td></tr></table><div class="popup-actions"><a class="apple-button" href="https://maps.apple.com/?ll=47.6062,-122.3321&amp;q=Seattle%E5%B8%B0%E7%9D%80" target="_blank">Open in Apple Maps</a><a class="image-link" href="https://www.google.com/search?tbm=isch&amp;q=Seattle+Washington" target="_blank">Google image search</a></div><details class="popup-details" open><summary>Show details</summary><div class="popup-detail-body"><table><tr><th>Walking / Effort</th><td>到着後の荷下ろし歩行0–0.1mi</td></tr><tr><th>GUIDE</th><td>Seattle帰着は、Colorado Plateau、Mojave Desert、Great Basin、Snake River Plain、Columbia Plateau、Cascade Rangeという異なる地形・気候帯を一周した旅の終点です。I-90でCascade Mountainsを越えると、乾燥した東側から湿潤な西側へ植生と空気の印象が急に変わります。旅全体を振り返る際は、赤い砂岩、河川侵食、先住民文化、開拓、強制収容、核開発、巨大ダムという各地点のテーマが、米国西部の土地と水の利用史としてつながっていたことを確認するとよいです。</td></tr><tr><th>Cost</th><td>—</td></tr><tr><th>Address / Location</th><td>Seattle帰着 — Seattle, WA. Coordinate: 47.6062, -122.3321</td></tr><tr><th>Notes</th><td>到着後は荷物整理と休息。</td></tr></table></div></details></div></div>`)[0];
+                popup_82ae97bae65626ee24739df97c4fd674.setContent(html_10d8cbd12f3748b7b767c9dcb75425a2);
             
         
 
-        marker_3e904bf47746899600cfb54fa8b75bc2.bindPopup(popup_d972748f896066a646c09a537d3f27b8)
+        marker_29f460f9984b2dd43b4c279bd8a2ff92.bindPopup(popup_82ae97bae65626ee24739df97c4fd674)
         ;
 
         
     
     
-            marker_3e904bf47746899600cfb54fa8b75bc2.bindTooltip(
+            marker_29f460f9984b2dd43b4c279bd8a2ff92.bindTooltip(
                 `<div>
                      11-12 Seattle帰着
                  </div>`,
@@ -193,42 +199,42 @@
             );
         
     
-                marker_3e904bf47746899600cfb54fa8b75bc2.setIcon(div_icon_82559c2ea61e2068154415621fd20f9d);
+                marker_29f460f9984b2dd43b4c279bd8a2ff92.setIcon(div_icon_cce7e526239c767c406ff096d2b2fac8);
             
     
-            var marker_e5b8678d554fff6891fb6dc56ee0aaa4 = L.marker(
+            var marker_d0917ef88dc35f95f3e1b7f16013eaee = L.marker(
                 [44.8148244, -117.7286308],
                 {
 }
-            ).addTo(map_d564bfcf505168ce559586140aadcecc);
+            ).addTo(map_d2f8da0a6f30773425018b93d7f2473f);
         
     
-            var div_icon_ee34af387a01f451cea524f92ee95691 = L.divIcon({
-  "html": "\u003cdiv style=\"background:#2c7bb6;color:white;border:2px solid white;border-radius:50%;box-shadow:0 1px 4px rgba(0,0,0,.45);text-align:center;font-weight:700;width:28px;height:28px;box-sizing:border-box;overflow:hidden;font-family:Arial, sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;\"\u003e\u003cspan style=\"display:block;font-size:10px;line-height:28px;\"\u003e03\u003c/span\u003e\u003c/div\u003e",
+            var div_icon_ebc1047cba691555de0abc99914f5710 = L.divIcon({
+  "html": "\u003cdiv class=\"roadtrip-marker\" style=\"background:#2c7bb6;color:white;border:2px solid white;border-radius:50%;box-shadow:0 1px 4px rgba(0,0,0,.45);text-align:center;font-weight:700;width:28px;height:28px;box-sizing:border-box;overflow:hidden;font-family:Arial, sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;\"\u003e\u003cspan style=\"display:block;font-size:10px;line-height:28px;\"\u003e3\u003c/span\u003e\u003c/div\u003e",
   "iconSize": [28, 28],
   "iconAnchor": [14, 14],
   "className": "empty",
 });
         
     
-        var popup_21679e9d58638f055cbf4335a0d56975 = L.popup({
+        var popup_7cdf36fc8de7e3b8628f061ea9972b6b = L.popup({
   "maxWidth": 460,
 });
 
         
             
-                var html_cbe8444bfc31a5a3160c9635194bbd49 = $(`<div id="html_cbe8444bfc31a5a3160c9635194bbd49" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>11-03 National Historic Oregon Trail Interpretive Center</h4><table><tr><th>Time needed</th><td>45–90 min</td></tr><tr><th>Walking / Effort</th><td>駐車→館0.1mi未満＋屋外往復0.5mi</td></tr><tr><th>What to do</th><td>Oregon Trailの歴史展示を見る。</td></tr><tr><th>GUIDE</th><td>National Historic Oregon Trail Interpretive Centerでは、19世紀に多くの移民が幌馬車で西部へ移動したOregon Trailの歴史を学びます。ただし、この移動は“無人の土地への開拓”ではなく、先住民が暮らしていた土地への大規模な流入でもありました。展示では、幌馬車の積載量、家畜、病気、川越え、轍の跡に加え、移民の到来が先住民の土地・資源・生活へ与えた影響にも注目すると、単純な成功物語ではない西部拡張の全体像が見えます。</td></tr><tr><th>Cost</th><td>Fee may apply / Federal pass accepted可能性</td></tr><tr><th>Address / Location</th><td>National Historic Oregon Trail Interpretive Center — Oregon Trail / Baker City. Coordinate: 44.8148244, -117.7286308</td></tr></table><p><a href="https://maps.apple.com/?ll=44.8148244,-117.7286308&amp;q=National%20Historic%20Oregon%20Trail%20Interpretive%20Center" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=National+Historic+Oregon+Trail+Interpretive+Center+Baker+City" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_21679e9d58638f055cbf4335a0d56975.setContent(html_cbe8444bfc31a5a3160c9635194bbd49);
+                var html_c624ec2d65d9ad0eb561dea797d064ad = $(`<div id="html_c624ec2d65d9ad0eb561dea797d064ad" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>11-03 National Historic Oregon Trail Interpretive Center</h4><span class="popup-category" style="background:#2c7bb6">Possible</span><table class="popup-primary"><tr><th>Time needed</th><td>45–90 min</td></tr><tr><th>What to do</th><td>Oregon Trailの歴史展示を見る。</td></tr><tr><th>Skip / Shorten rule</th><td>HanfordのMustを優先。時間に余裕があれば実施し、遅延時は省略。</td></tr></table><div class="popup-actions"><a class="apple-button" href="https://maps.apple.com/?ll=44.8148244,-117.7286308&amp;q=National%20Historic%20Oregon%20Trail%20Interpretive%20Center" target="_blank">Open in Apple Maps</a><a class="image-link" href="https://www.google.com/search?tbm=isch&amp;q=National+Historic+Oregon+Trail+Interpretive+Center+Baker+City" target="_blank">Google image search</a></div><details class="popup-details" open><summary>Show details</summary><div class="popup-detail-body"><table><tr><th>Walking / Effort</th><td>駐車→館0.1mi未満＋屋外往復0.5mi</td></tr><tr><th>GUIDE</th><td>National Historic Oregon Trail Interpretive Centerでは、19世紀に多くの移民が幌馬車で西部へ移動したOregon Trailの歴史を学びます。ただし、この移動は“無人の土地への開拓”ではなく、先住民が暮らしていた土地への大規模な流入でもありました。展示では、幌馬車の積載量、家畜、病気、川越え、轍の跡に加え、移民の到来が先住民の土地・資源・生活へ与えた影響にも注目すると、単純な成功物語ではない西部拡張の全体像が見えます。</td></tr><tr><th>Cost</th><td>Fee may apply / Federal pass accepted可能性</td></tr><tr><th>Address / Location</th><td>National Historic Oregon Trail Interpretive Center — Oregon Trail / Baker City. Coordinate: 44.8148244, -117.7286308</td></tr><tr><th>Notes</th><td>2026-07-08ユーザー提供Google Maps pinで座標更新: 44.8148244, -117.7286308。時間に余裕がある場合のみ。Hanford到着を優先。</td></tr></table></div></details></div></div>`)[0];
+                popup_7cdf36fc8de7e3b8628f061ea9972b6b.setContent(html_c624ec2d65d9ad0eb561dea797d064ad);
             
         
 
-        marker_e5b8678d554fff6891fb6dc56ee0aaa4.bindPopup(popup_21679e9d58638f055cbf4335a0d56975)
+        marker_d0917ef88dc35f95f3e1b7f16013eaee.bindPopup(popup_7cdf36fc8de7e3b8628f061ea9972b6b)
         ;
 
         
     
     
-            marker_e5b8678d554fff6891fb6dc56ee0aaa4.bindTooltip(
+            marker_d0917ef88dc35f95f3e1b7f16013eaee.bindTooltip(
                 `<div>
                      11-03 National Historic Oregon Trail Interpretive Center
                  </div>`,
@@ -238,42 +244,42 @@
             );
         
     
-                marker_e5b8678d554fff6891fb6dc56ee0aaa4.setIcon(div_icon_ee34af387a01f451cea524f92ee95691);
+                marker_d0917ef88dc35f95f3e1b7f16013eaee.setIcon(div_icon_ebc1047cba691555de0abc99914f5710);
             
     
-            var marker_77888f933b6cab6062d4b693dea466e0 = L.marker(
+            var marker_c1d92b2ed40d61ef22cb4af92530de7d = L.marker(
                 [43.5407, -116.5635],
                 {
 }
-            ).addTo(map_d564bfcf505168ce559586140aadcecc);
+            ).addTo(map_d2f8da0a6f30773425018b93d7f2473f);
         
     
-            var div_icon_cf6e326bc8237fd011750745f99f860e = L.divIcon({
-  "html": "\u003cdiv style=\"background:#f28e2b;color:white;border:2px solid white;border-radius:50%;box-shadow:0 1px 4px rgba(0,0,0,.45);text-align:center;font-weight:700;width:28px;height:28px;box-sizing:border-box;overflow:hidden;font-family:Arial, sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;\"\u003e\u003cspan style=\"display:block;font-size:8px;line-height:28px;\"\u003eG14\u003c/span\u003e\u003c/div\u003e",
+            var div_icon_c50b09241b1703c6971a7491c60596c6 = L.divIcon({
+  "html": "\u003cdiv class=\"roadtrip-marker\" style=\"background:#f28e2b;color:white;border:2px solid white;border-radius:50%;box-shadow:0 1px 4px rgba(0,0,0,.45);text-align:center;font-weight:700;width:28px;height:28px;box-sizing:border-box;overflow:hidden;font-family:Arial, sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;\"\u003e\u003cspan style=\"display:block;font-size:8px;line-height:28px;\"\u003eG14\u003c/span\u003e\u003c/div\u003e",
   "iconSize": [28, 28],
   "iconAnchor": [14, 14],
   "className": "empty",
 });
         
     
-        var popup_6d3fce0af05f9ac93dd35ae1478d7fa6 = L.popup({
+        var popup_e45f8b81832dabc32e3a824c25102240 = L.popup({
   "maxWidth": 460,
 });
 
         
             
-                var html_b3280b40e6004d7afb894b7e1c6f3841 = $(`<div id="html_b3280b40e6004d7afb894b7e1c6f3841" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>G14 Nampa fuel before I-84 west</h4><table><tr><th>Plan</th><td>帰路前の満タン給油</td></tr><tr><th>Notes</th><td>Day 11は最長級。朝に満タン。 / 宿泊地から最寄り。</td></tr><tr><th>Timing</th><td>Morning</td></tr><tr><th>Priority</th><td>TBD</td></tr><tr><th>Address</th><td>Nampa, ID</td></tr></table><p><a href="https://maps.apple.com/?ll=43.5407,-116.5635&amp;q=Nampa%20fuel%20before%20I-84%20west" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Nampa%20fuel%20before%20I-84%20west%20Nampa%2C%20ID" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_6d3fce0af05f9ac93dd35ae1478d7fa6.setContent(html_b3280b40e6004d7afb894b7e1c6f3841);
+                var html_47ccad9c18caee3baf6a7bf260a432ec = $(`<div id="html_47ccad9c18caee3baf6a7bf260a432ec" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>G14 Nampa fuel before I-84 west</h4><span class="popup-category" style="background:#f28e2b">Gas</span><table class="popup-primary"><tr><th>Plan</th><td>帰路前の満タン給油</td></tr></table><div class="popup-actions"><a class="apple-button" href="https://maps.apple.com/?ll=43.5407,-116.5635&amp;q=Nampa%20fuel%20before%20I-84%20west" target="_blank">Open in Apple Maps</a><a class="image-link" href="https://www.google.com/search?tbm=isch&amp;q=Nampa%20fuel%20before%20I-84%20west%20Nampa%2C%20ID" target="_blank">Google image search</a></div><details class="popup-details" open><summary>Show details</summary><div class="popup-detail-body"><table><tr><th>Notes</th><td>Day 11は最長級。朝に満タン。 / 宿泊地から最寄り。</td></tr><tr><th>Timing</th><td>Morning</td></tr><tr><th>Priority</th><td>TBD</td></tr><tr><th>Address</th><td>Nampa, ID</td></tr></table></div></details></div></div>`)[0];
+                popup_e45f8b81832dabc32e3a824c25102240.setContent(html_47ccad9c18caee3baf6a7bf260a432ec);
             
         
 
-        marker_77888f933b6cab6062d4b693dea466e0.bindPopup(popup_6d3fce0af05f9ac93dd35ae1478d7fa6)
+        marker_c1d92b2ed40d61ef22cb4af92530de7d.bindPopup(popup_e45f8b81832dabc32e3a824c25102240)
         ;
 
         
     
     
-            marker_77888f933b6cab6062d4b693dea466e0.bindTooltip(
+            marker_c1d92b2ed40d61ef22cb4af92530de7d.bindTooltip(
                 `<div>
                      G14 Nampa fuel before I-84 west
                  </div>`,
@@ -283,42 +289,42 @@
             );
         
     
-                marker_77888f933b6cab6062d4b693dea466e0.setIcon(div_icon_cf6e326bc8237fd011750745f99f860e);
+                marker_c1d92b2ed40d61ef22cb4af92530de7d.setIcon(div_icon_c50b09241b1703c6971a7491c60596c6);
             
     
-            var marker_5df85e9cb6654bf6ab9fcc820ebc3dfc = L.marker(
+            var marker_0e8efc4c336172319a65655d6e766f7a = L.marker(
                 [45.6721, -118.7886],
                 {
 }
-            ).addTo(map_d564bfcf505168ce559586140aadcecc);
+            ).addTo(map_d2f8da0a6f30773425018b93d7f2473f);
         
     
-            var div_icon_1dd89cd3ce2ba578664e791c71e6658b = L.divIcon({
-  "html": "\u003cdiv style=\"background:#f28e2b;color:white;border:2px solid white;border-radius:50%;box-shadow:0 1px 4px rgba(0,0,0,.45);text-align:center;font-weight:700;width:28px;height:28px;box-sizing:border-box;overflow:hidden;font-family:Arial, sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;\"\u003e\u003cspan style=\"display:block;font-size:8px;line-height:28px;\"\u003eG15\u003c/span\u003e\u003c/div\u003e",
+            var div_icon_837ec5f58e583c42b06b075729827462 = L.divIcon({
+  "html": "\u003cdiv class=\"roadtrip-marker\" style=\"background:#f28e2b;color:white;border:2px solid white;border-radius:50%;box-shadow:0 1px 4px rgba(0,0,0,.45);text-align:center;font-weight:700;width:28px;height:28px;box-sizing:border-box;overflow:hidden;font-family:Arial, sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;\"\u003e\u003cspan style=\"display:block;font-size:8px;line-height:28px;\"\u003eG15\u003c/span\u003e\u003c/div\u003e",
   "iconSize": [28, 28],
   "iconAnchor": [14, 14],
   "className": "empty",
 });
         
     
-        var popup_4b8497f750112cd02e7b3673e89d1920 = L.popup({
+        var popup_29bb7ed4874d33f580d90dda3ccf7288 = L.popup({
   "maxWidth": 460,
 });
 
         
             
-                var html_839dae0091dd95e8a2dfff4e6f7b46ef = $(`<div id="html_839dae0091dd95e8a2dfff4e6f7b46ef" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>G15 La Grande / Pendleton / Boardman fuel search</h4><table><tr><th>Plan</th><td>中間給油</td></tr><tr><th>Notes</th><td>Tri-Cities前に余裕を作る。 / 残量確認。</td></tr><tr><th>Timing</th><td>Midday</td></tr><tr><th>Priority</th><td>TBD</td></tr><tr><th>Address</th><td>I-84 Eastern Oregon</td></tr></table><p><a href="https://maps.apple.com/?ll=45.6721,-118.7886&amp;q=La%20Grande%20%2F%20Pendleton%20%2F%20Boardman%20fuel%20search" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=La%20Grande%20/%20Pendleton%20/%20Boardman%20fuel%20search%20Eastern%20OR" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_4b8497f750112cd02e7b3673e89d1920.setContent(html_839dae0091dd95e8a2dfff4e6f7b46ef);
+                var html_bffce67b85b3c8a249c81995ea5c4ef9 = $(`<div id="html_bffce67b85b3c8a249c81995ea5c4ef9" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>G15 La Grande / Pendleton / Boardman fuel search</h4><span class="popup-category" style="background:#f28e2b">Gas</span><table class="popup-primary"><tr><th>Plan</th><td>中間給油</td></tr></table><div class="popup-actions"><a class="apple-button" href="https://maps.apple.com/?ll=45.6721,-118.7886&amp;q=La%20Grande%20%2F%20Pendleton%20%2F%20Boardman%20fuel%20search" target="_blank">Open in Apple Maps</a><a class="image-link" href="https://www.google.com/search?tbm=isch&amp;q=La%20Grande%20/%20Pendleton%20/%20Boardman%20fuel%20search%20Eastern%20OR" target="_blank">Google image search</a></div><details class="popup-details" open><summary>Show details</summary><div class="popup-detail-body"><table><tr><th>Notes</th><td>Tri-Cities前に余裕を作る。 / 残量確認。</td></tr><tr><th>Timing</th><td>Midday</td></tr><tr><th>Priority</th><td>TBD</td></tr><tr><th>Address</th><td>I-84 Eastern Oregon</td></tr></table></div></details></div></div>`)[0];
+                popup_29bb7ed4874d33f580d90dda3ccf7288.setContent(html_bffce67b85b3c8a249c81995ea5c4ef9);
             
         
 
-        marker_5df85e9cb6654bf6ab9fcc820ebc3dfc.bindPopup(popup_4b8497f750112cd02e7b3673e89d1920)
+        marker_0e8efc4c336172319a65655d6e766f7a.bindPopup(popup_29bb7ed4874d33f580d90dda3ccf7288)
         ;
 
         
     
     
-            marker_5df85e9cb6654bf6ab9fcc820ebc3dfc.bindTooltip(
+            marker_0e8efc4c336172319a65655d6e766f7a.bindTooltip(
                 `<div>
                      G15 La Grande / Pendleton / Boardman fuel search
                  </div>`,
@@ -328,42 +334,42 @@
             );
         
     
-                marker_5df85e9cb6654bf6ab9fcc820ebc3dfc.setIcon(div_icon_1dd89cd3ce2ba578664e791c71e6658b);
+                marker_0e8efc4c336172319a65655d6e766f7a.setIcon(div_icon_837ec5f58e583c42b06b075729827462);
             
     
-            var marker_8c84fbd6cfe2ba24e107081838c95f0b = L.marker(
+            var marker_c3f2db120fa10018036c62ffd4483978 = L.marker(
                 [46.5623016, -120.4964676],
                 {
 }
-            ).addTo(map_d564bfcf505168ce559586140aadcecc);
+            ).addTo(map_d2f8da0a6f30773425018b93d7f2473f);
         
     
-            var div_icon_ffcb017ba12dd3749551db8f1e4bb792 = L.divIcon({
-  "html": "\u003cdiv style=\"background:#333333;color:white;border:2px solid white;border-radius:50%;box-shadow:0 1px 4px rgba(0,0,0,.45);text-align:center;font-weight:700;width:28px;height:28px;box-sizing:border-box;overflow:hidden;font-family:Arial, sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;\"\u003e\u003cspan style=\"display:block;font-size:7px;line-height:8px;\"\u003eSP\u003c/span\u003e\u003cspan style=\"display:block;font-size:8px;line-height:9px;\"\u003e14\u003c/span\u003e\u003c/div\u003e",
+            var div_icon_573803c0b25a2dda1b87554be5641664 = L.divIcon({
+  "html": "\u003cdiv class=\"roadtrip-marker\" style=\"background:#333333;color:white;border:2px solid white;border-radius:50%;box-shadow:0 1px 4px rgba(0,0,0,.45);text-align:center;font-weight:700;width:28px;height:28px;box-sizing:border-box;overflow:hidden;font-family:Arial, sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;\"\u003e\u003cspan style=\"display:block;font-size:7px;line-height:8px;\"\u003eSP\u003c/span\u003e\u003cspan style=\"display:block;font-size:8px;line-height:9px;\"\u003e14\u003c/span\u003e\u003c/div\u003e",
   "iconSize": [28, 28],
   "iconAnchor": [14, 14],
   "className": "empty",
 });
         
     
-        var popup_68819431c54b20373abc64a469494457 = L.popup({
+        var popup_ff5a3b52885a921ea23eb0ed6cf64d46 = L.popup({
   "maxWidth": 460,
 });
 
         
             
-                var html_4881d78ee2564c688ce46f1bc2679793 = $(`<div id="html_4881d78ee2564c688ce46f1bc2679793" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>SP14 Costco Wholesale Union Gap</h4><table><tr><th>Plan</th><td>水・食料・フードコート・ガソリン候補</td></tr><tr><th>Notes</th><td>Day 11のI-82沿い。Day 1はYakimaを通らないため復路専用。 / 営業日・営業時間・ガス併設・駐車を直前確認。</td></tr><tr><th>Timing</th><td>Mid-route</td></tr><tr><th>Priority</th><td>B</td></tr><tr><th>Address</th><td>2310 Longfibre Rd, Union Gap, WA 98903</td></tr></table><p><a href="https://maps.apple.com/?daddr=46.5623016,-120.4964676&amp;dirflg=d" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Costco%20Wholesale%20Union%20Gap%20Union%20Gap%2C%20WA" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_68819431c54b20373abc64a469494457.setContent(html_4881d78ee2564c688ce46f1bc2679793);
+                var html_c35e20e2e77f63e7cf3574e0ba08b876 = $(`<div id="html_c35e20e2e77f63e7cf3574e0ba08b876" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>SP14 Costco Wholesale Union Gap</h4><span class="popup-category" style="background:#333333">Supermarket</span><table class="popup-primary"><tr><th>Plan</th><td>水・食料・フードコート・ガソリン候補</td></tr></table><div class="popup-actions"><a class="apple-button" href="https://maps.apple.com/?daddr=46.5623016,-120.4964676&amp;dirflg=d" target="_blank">Open in Apple Maps</a><a class="image-link" href="https://www.google.com/search?tbm=isch&amp;q=Costco%20Wholesale%20Union%20Gap%20Union%20Gap%2C%20WA" target="_blank">Google image search</a></div><details class="popup-details" open><summary>Show details</summary><div class="popup-detail-body"><table><tr><th>Notes</th><td>Day 11のI-82沿い。Day 1はYakimaを通らないため復路専用。 / 営業日・営業時間・ガス併設・駐車を直前確認。</td></tr><tr><th>Timing</th><td>Mid-route</td></tr><tr><th>Priority</th><td>B</td></tr><tr><th>Address</th><td>2310 Longfibre Rd, Union Gap, WA 98903</td></tr></table></div></details></div></div>`)[0];
+                popup_ff5a3b52885a921ea23eb0ed6cf64d46.setContent(html_c35e20e2e77f63e7cf3574e0ba08b876);
             
         
 
-        marker_8c84fbd6cfe2ba24e107081838c95f0b.bindPopup(popup_68819431c54b20373abc64a469494457)
+        marker_c3f2db120fa10018036c62ffd4483978.bindPopup(popup_ff5a3b52885a921ea23eb0ed6cf64d46)
         ;
 
         
     
     
-            marker_8c84fbd6cfe2ba24e107081838c95f0b.bindTooltip(
+            marker_c3f2db120fa10018036c62ffd4483978.bindTooltip(
                 `<div>
                      SP14 Costco Wholesale Union Gap
                  </div>`,
@@ -373,42 +379,42 @@
             );
         
     
-                marker_8c84fbd6cfe2ba24e107081838c95f0b.setIcon(div_icon_ffcb017ba12dd3749551db8f1e4bb792);
+                marker_c3f2db120fa10018036c62ffd4483978.setIcon(div_icon_573803c0b25a2dda1b87554be5641664);
             
     
-            var marker_e381b05b970ece75d909a4b560be1c05 = L.marker(
+            var marker_250b516a490ea7dd0f083ae9d245fffa = L.marker(
                 [46.1842, -119.1836],
                 {
 }
-            ).addTo(map_d564bfcf505168ce559586140aadcecc);
+            ).addTo(map_d2f8da0a6f30773425018b93d7f2473f);
         
     
-            var div_icon_b16c21dfd82176bd553d9ed89418c317 = L.divIcon({
-  "html": "\u003cdiv style=\"background:#333333;color:white;border:2px solid white;border-radius:50%;box-shadow:0 1px 4px rgba(0,0,0,.45);text-align:center;font-weight:700;width:28px;height:28px;box-sizing:border-box;overflow:hidden;font-family:Arial, sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;\"\u003e\u003cspan style=\"display:block;font-size:7px;line-height:8px;\"\u003eSP\u003c/span\u003e\u003cspan style=\"display:block;font-size:8px;line-height:9px;\"\u003e15\u003c/span\u003e\u003c/div\u003e",
+            var div_icon_068acdaa3a11d1f9c799390b6c5ff260 = L.divIcon({
+  "html": "\u003cdiv class=\"roadtrip-marker\" style=\"background:#333333;color:white;border:2px solid white;border-radius:50%;box-shadow:0 1px 4px rgba(0,0,0,.45);text-align:center;font-weight:700;width:28px;height:28px;box-sizing:border-box;overflow:hidden;font-family:Arial, sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;\"\u003e\u003cspan style=\"display:block;font-size:7px;line-height:8px;\"\u003eSP\u003c/span\u003e\u003cspan style=\"display:block;font-size:8px;line-height:9px;\"\u003e15\u003c/span\u003e\u003c/div\u003e",
   "iconSize": [28, 28],
   "iconAnchor": [14, 14],
   "className": "empty",
 });
         
     
-        var popup_3ea4178bc79650ab7321841d43acbabd = L.popup({
+        var popup_6c80a627b5ed1098ceca7ecb2c211a1a = L.popup({
   "maxWidth": 460,
 });
 
         
             
-                var html_a3e59b9b15da0c75fccdf286cf53657e = $(`<div id="html_a3e59b9b15da0c75fccdf286cf53657e" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>SP15 Walmart Supercenter Kennewick</h4><table><tr><th>Plan</th><td>水・朝食・日用品・薬・衣類・ガソリン候補</td></tr><tr><th>Notes</th><td>Tri-Citiesの大型補給候補。公式ページでKennewick Supercenter #2101、住所 2720 S Quillan St と確認。既存の検索行を実店舗行に更新。 / 営業時間・駐車・ガソリン併設・当日の在庫を直前確認。公式ページでは通常 6am–11pm 表示。</td></tr><tr><th>Timing</th><td>Mid-route</td></tr><tr><th>Priority</th><td>B</td></tr><tr><th>Address</th><td>2720 S Quillan St, Kennewick, WA 99337</td></tr></table><p><a href="https://maps.apple.com/?ll=46.1842,-119.1836&amp;q=Walmart%20Supercenter%20Kennewick" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Walmart%20Supercenter%20Kennewick%20Kennewick%2C%20WA" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_3ea4178bc79650ab7321841d43acbabd.setContent(html_a3e59b9b15da0c75fccdf286cf53657e);
+                var html_a5e0ab68203f0e864a792c0d68679747 = $(`<div id="html_a5e0ab68203f0e864a792c0d68679747" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>SP15 Walmart Supercenter Kennewick</h4><span class="popup-category" style="background:#333333">Supermarket</span><table class="popup-primary"><tr><th>Plan</th><td>水・朝食・日用品・薬・衣類・ガソリン候補</td></tr></table><div class="popup-actions"><a class="apple-button" href="https://maps.apple.com/?ll=46.1842,-119.1836&amp;q=Walmart%20Supercenter%20Kennewick" target="_blank">Open in Apple Maps</a><a class="image-link" href="https://www.google.com/search?tbm=isch&amp;q=Walmart%20Supercenter%20Kennewick%20Kennewick%2C%20WA" target="_blank">Google image search</a></div><details class="popup-details" open><summary>Show details</summary><div class="popup-detail-body"><table><tr><th>Notes</th><td>Tri-Citiesの大型補給候補。公式ページでKennewick Supercenter #2101、住所 2720 S Quillan St と確認。既存の検索行を実店舗行に更新。 / 営業時間・駐車・ガソリン併設・当日の在庫を直前確認。公式ページでは通常 6am–11pm 表示。</td></tr><tr><th>Timing</th><td>Mid-route</td></tr><tr><th>Priority</th><td>B</td></tr><tr><th>Address</th><td>2720 S Quillan St, Kennewick, WA 99337</td></tr></table></div></details></div></div>`)[0];
+                popup_6c80a627b5ed1098ceca7ecb2c211a1a.setContent(html_a5e0ab68203f0e864a792c0d68679747);
             
         
 
-        marker_e381b05b970ece75d909a4b560be1c05.bindPopup(popup_3ea4178bc79650ab7321841d43acbabd)
+        marker_250b516a490ea7dd0f083ae9d245fffa.bindPopup(popup_6c80a627b5ed1098ceca7ecb2c211a1a)
         ;
 
         
     
     
-            marker_e381b05b970ece75d909a4b560be1c05.bindTooltip(
+            marker_250b516a490ea7dd0f083ae9d245fffa.bindTooltip(
                 `<div>
                      SP15 Walmart Supercenter Kennewick
                  </div>`,
@@ -418,42 +424,42 @@
             );
         
     
-                marker_e381b05b970ece75d909a4b560be1c05.setIcon(div_icon_b16c21dfd82176bd553d9ed89418c317);
+                marker_250b516a490ea7dd0f083ae9d245fffa.setIcon(div_icon_068acdaa3a11d1f9c799390b6c5ff260);
             
     
-            var marker_23d19562637ebb1e9223646974a9fa5f = L.marker(
+            var marker_ce252a24a782fd75fec047bb5491b4d0 = L.marker(
                 [45.8505964, -119.286835],
                 {
 }
-            ).addTo(map_d564bfcf505168ce559586140aadcecc);
+            ).addTo(map_d2f8da0a6f30773425018b93d7f2473f);
         
     
-            var div_icon_95cde1db81661f382dca49198a4ea798 = L.divIcon({
-  "html": "\u003cdiv style=\"background:#333333;color:white;border:2px solid white;border-radius:50%;box-shadow:0 1px 4px rgba(0,0,0,.45);text-align:center;font-weight:700;width:28px;height:28px;box-sizing:border-box;overflow:hidden;font-family:Arial, sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;\"\u003e\u003cspan style=\"display:block;font-size:7px;line-height:8px;\"\u003eSP\u003c/span\u003e\u003cspan style=\"display:block;font-size:8px;line-height:9px;\"\u003e16\u003c/span\u003e\u003c/div\u003e",
+            var div_icon_8a19d3738842d3d194b1dbfe9acf2f6f = L.divIcon({
+  "html": "\u003cdiv class=\"roadtrip-marker\" style=\"background:#333333;color:white;border:2px solid white;border-radius:50%;box-shadow:0 1px 4px rgba(0,0,0,.45);text-align:center;font-weight:700;width:28px;height:28px;box-sizing:border-box;overflow:hidden;font-family:Arial, sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;\"\u003e\u003cspan style=\"display:block;font-size:7px;line-height:8px;\"\u003eSP\u003c/span\u003e\u003cspan style=\"display:block;font-size:8px;line-height:9px;\"\u003e16\u003c/span\u003e\u003c/div\u003e",
   "iconSize": [28, 28],
   "iconAnchor": [14, 14],
   "className": "empty",
 });
         
     
-        var popup_f23df422656735751bb0c6c6fd96879f = L.popup({
+        var popup_16054e50fb682ecd4389cc8647695503 = L.popup({
   "maxWidth": 460,
 });
 
         
             
-                var html_c06c78dc5bcf544328f152195ce17a00 = $(`<div id="html_c06c78dc5bcf544328f152195ce17a00" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>SP16 Walmart Hermiston</h4><table><tr><th>Plan</th><td>水・朝食・日用品・薬・衣類・ガソリン候補</td></tr><tr><th>Notes</th><td>Tri-Cities後、Oregon側での補給候補。既存の検索行をユーザー提供Google Maps pinの実地点に更新。 / 営業時間・駐車・ガソリン併設・当日の在庫を直前確認。</td></tr><tr><th>Timing</th><td>Mid-route</td></tr><tr><th>Priority</th><td>B</td></tr><tr><th>Address</th><td>Walmart, Hermiston, OR / Google Maps exact coordinate: 45.8505964, -119.286835</td></tr></table><p><a href="https://maps.apple.com/?ll=45.8505964,-119.286835&amp;q=Walmart%20Hermiston" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Walmart%20Hermiston%20Hermiston%2C%20OR" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_f23df422656735751bb0c6c6fd96879f.setContent(html_c06c78dc5bcf544328f152195ce17a00);
+                var html_d5615d940ca0b1cb275f4c5557e689d6 = $(`<div id="html_d5615d940ca0b1cb275f4c5557e689d6" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>SP16 Walmart Hermiston</h4><span class="popup-category" style="background:#333333">Supermarket</span><table class="popup-primary"><tr><th>Plan</th><td>水・朝食・日用品・薬・衣類・ガソリン候補</td></tr></table><div class="popup-actions"><a class="apple-button" href="https://maps.apple.com/?ll=45.8505964,-119.286835&amp;q=Walmart%20Hermiston" target="_blank">Open in Apple Maps</a><a class="image-link" href="https://www.google.com/search?tbm=isch&amp;q=Walmart%20Hermiston%20Hermiston%2C%20OR" target="_blank">Google image search</a></div><details class="popup-details" open><summary>Show details</summary><div class="popup-detail-body"><table><tr><th>Notes</th><td>Tri-Cities後、Oregon側での補給候補。既存の検索行をユーザー提供Google Maps pinの実地点に更新。 / 営業時間・駐車・ガソリン併設・当日の在庫を直前確認。</td></tr><tr><th>Timing</th><td>Mid-route</td></tr><tr><th>Priority</th><td>B</td></tr><tr><th>Address</th><td>Walmart, Hermiston, OR / Google Maps exact coordinate: 45.8505964, -119.286835</td></tr></table></div></details></div></div>`)[0];
+                popup_16054e50fb682ecd4389cc8647695503.setContent(html_d5615d940ca0b1cb275f4c5557e689d6);
             
         
 
-        marker_23d19562637ebb1e9223646974a9fa5f.bindPopup(popup_f23df422656735751bb0c6c6fd96879f)
+        marker_ce252a24a782fd75fec047bb5491b4d0.bindPopup(popup_16054e50fb682ecd4389cc8647695503)
         ;
 
         
     
     
-            marker_23d19562637ebb1e9223646974a9fa5f.bindTooltip(
+            marker_ce252a24a782fd75fec047bb5491b4d0.bindTooltip(
                 `<div>
                      SP16 Walmart Hermiston
                  </div>`,
@@ -463,42 +469,42 @@
             );
         
     
-                marker_23d19562637ebb1e9223646974a9fa5f.setIcon(div_icon_95cde1db81661f382dca49198a4ea798);
+                marker_ce252a24a782fd75fec047bb5491b4d0.setIcon(div_icon_8a19d3738842d3d194b1dbfe9acf2f6f);
             
     
-            var marker_f33f22de3ed784126175d852c31523a8 = L.marker(
+            var marker_4d675bcb3a9fb404c656619dc61d0fd9 = L.marker(
                 [45.3358446, -118.0580119],
                 {
 }
-            ).addTo(map_d564bfcf505168ce559586140aadcecc);
+            ).addTo(map_d2f8da0a6f30773425018b93d7f2473f);
         
     
-            var div_icon_a883da7b82e17272b7e183e441947231 = L.divIcon({
-  "html": "\u003cdiv style=\"background:#333333;color:white;border:2px solid white;border-radius:50%;box-shadow:0 1px 4px rgba(0,0,0,.45);text-align:center;font-weight:700;width:28px;height:28px;box-sizing:border-box;overflow:hidden;font-family:Arial, sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;\"\u003e\u003cspan style=\"display:block;font-size:7px;line-height:8px;\"\u003eSP\u003c/span\u003e\u003cspan style=\"display:block;font-size:8px;line-height:9px;\"\u003e17\u003c/span\u003e\u003c/div\u003e",
+            var div_icon_f92ac7ed1936fac441952b17978b7cf7 = L.divIcon({
+  "html": "\u003cdiv class=\"roadtrip-marker\" style=\"background:#333333;color:white;border:2px solid white;border-radius:50%;box-shadow:0 1px 4px rgba(0,0,0,.45);text-align:center;font-weight:700;width:28px;height:28px;box-sizing:border-box;overflow:hidden;font-family:Arial, sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;\"\u003e\u003cspan style=\"display:block;font-size:7px;line-height:8px;\"\u003eSP\u003c/span\u003e\u003cspan style=\"display:block;font-size:8px;line-height:9px;\"\u003e17\u003c/span\u003e\u003c/div\u003e",
   "iconSize": [28, 28],
   "iconAnchor": [14, 14],
   "className": "empty",
 });
         
     
-        var popup_8f0283ae42da93ec87948a3d651eadde = L.popup({
+        var popup_ef715decd608c254be3416af9668a024 = L.popup({
   "maxWidth": 460,
 });
 
         
             
-                var html_f7aff7c2cdd921ccc13009a6a2f71a3d = $(`<div id="html_f7aff7c2cdd921ccc13009a6a2f71a3d" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>SP17 Walmart Supercenter Island City #1889</h4><table><tr><th>Plan</th><td>水・朝食・日用品・薬・衣類補給</td></tr><tr><th>Notes</th><td>Blue Mountains通過前後の実用的な補給候補。ユーザー提供Google Maps pinで実地点に更新。 / 営業時間・駐車・ガソリン併設・当日の在庫を直前確認。</td></tr><tr><th>Timing</th><td>Mid-route</td></tr><tr><th>Priority</th><td>B</td></tr><tr><th>Address</th><td>11619 Island Ave, Island City, OR 97850</td></tr></table><p><a href="https://maps.apple.com/?daddr=45.3358446,-118.0580119&amp;dirflg=d" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Walmart%20Supercenter%20Island%20City%20%231889%20Island%20City%2C%20OR" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_8f0283ae42da93ec87948a3d651eadde.setContent(html_f7aff7c2cdd921ccc13009a6a2f71a3d);
+                var html_af06de1d084f76ddaab95c51e1ef2cf8 = $(`<div id="html_af06de1d084f76ddaab95c51e1ef2cf8" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>SP17 Walmart Supercenter Island City #1889</h4><span class="popup-category" style="background:#333333">Supermarket</span><table class="popup-primary"><tr><th>Plan</th><td>水・朝食・日用品・薬・衣類補給</td></tr></table><div class="popup-actions"><a class="apple-button" href="https://maps.apple.com/?daddr=45.3358446,-118.0580119&amp;dirflg=d" target="_blank">Open in Apple Maps</a><a class="image-link" href="https://www.google.com/search?tbm=isch&amp;q=Walmart%20Supercenter%20Island%20City%20%231889%20Island%20City%2C%20OR" target="_blank">Google image search</a></div><details class="popup-details" open><summary>Show details</summary><div class="popup-detail-body"><table><tr><th>Notes</th><td>Blue Mountains通過前後の実用的な補給候補。ユーザー提供Google Maps pinで実地点に更新。 / 営業時間・駐車・ガソリン併設・当日の在庫を直前確認。</td></tr><tr><th>Timing</th><td>Mid-route</td></tr><tr><th>Priority</th><td>B</td></tr><tr><th>Address</th><td>11619 Island Ave, Island City, OR 97850</td></tr></table></div></details></div></div>`)[0];
+                popup_ef715decd608c254be3416af9668a024.setContent(html_af06de1d084f76ddaab95c51e1ef2cf8);
             
         
 
-        marker_f33f22de3ed784126175d852c31523a8.bindPopup(popup_8f0283ae42da93ec87948a3d651eadde)
+        marker_4d675bcb3a9fb404c656619dc61d0fd9.bindPopup(popup_ef715decd608c254be3416af9668a024)
         ;
 
         
     
     
-            marker_f33f22de3ed784126175d852c31523a8.bindTooltip(
+            marker_4d675bcb3a9fb404c656619dc61d0fd9.bindTooltip(
                 `<div>
                      SP17 Walmart Supercenter Island City #1889
                  </div>`,
@@ -508,42 +514,42 @@
             );
         
     
-                marker_f33f22de3ed784126175d852c31523a8.setIcon(div_icon_a883da7b82e17272b7e183e441947231);
+                marker_4d675bcb3a9fb404c656619dc61d0fd9.setIcon(div_icon_f92ac7ed1936fac441952b17978b7cf7);
             
     
-            var marker_016365f070fddc812b54a94aa877c1e1 = L.marker(
+            var marker_4d871af92693ba0f7e7c5e0128044b96 = L.marker(
                 [43.596134, -116.3896202],
                 {
 }
-            ).addTo(map_d564bfcf505168ce559586140aadcecc);
+            ).addTo(map_d2f8da0a6f30773425018b93d7f2473f);
         
     
-            var div_icon_2f9b6cb8afd4cd91570db09139a1ca14 = L.divIcon({
-  "html": "\u003cdiv style=\"background:#333333;color:white;border:2px solid white;border-radius:50%;box-shadow:0 1px 4px rgba(0,0,0,.45);text-align:center;font-weight:700;width:28px;height:28px;box-sizing:border-box;overflow:hidden;font-family:Arial, sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;\"\u003e\u003cspan style=\"display:block;font-size:7px;line-height:8px;\"\u003eSP\u003c/span\u003e\u003cspan style=\"display:block;font-size:8px;line-height:9px;\"\u003e24\u003c/span\u003e\u003c/div\u003e",
+            var div_icon_1a24e22faf78cc246ee170232016329d = L.divIcon({
+  "html": "\u003cdiv class=\"roadtrip-marker\" style=\"background:#333333;color:white;border:2px solid white;border-radius:50%;box-shadow:0 1px 4px rgba(0,0,0,.45);text-align:center;font-weight:700;width:28px;height:28px;box-sizing:border-box;overflow:hidden;font-family:Arial, sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;\"\u003e\u003cspan style=\"display:block;font-size:7px;line-height:8px;\"\u003eSP\u003c/span\u003e\u003cspan style=\"display:block;font-size:8px;line-height:9px;\"\u003e24\u003c/span\u003e\u003c/div\u003e",
   "iconSize": [28, 28],
   "iconAnchor": [14, 14],
   "className": "empty",
 });
         
     
-        var popup_098d4c9d62d3fdcee63903ee3a870dd7 = L.popup({
+        var popup_871459415b656d2942a01599e8531ea8 = L.popup({
   "maxWidth": 460,
 });
 
         
             
-                var html_c057da7b560a29e65a3ca53467ae7098 = $(`<div id="html_c057da7b560a29e65a3ca53467ae7098" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>SP24 WinCo Foods Meridian</h4><table><tr><th>Plan</th><td>安い食料・水・スナック大量補給</td></tr><tr><th>Notes</th><td>I-84動線とNampa泊の双方で使いやすい南Meridian店。 / 営業時間・支払い方法・駐車を直前確認。</td></tr><tr><th>Timing</th><td>Along route / near Nampa</td></tr><tr><th>Priority</th><td>B</td></tr><tr><th>Address</th><td>1050 S Progress Ave, Meridian, ID 83642</td></tr></table><p><a href="https://maps.apple.com/?daddr=43.596134,-116.3896202&amp;dirflg=d" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=WinCo%20Foods%20Meridian%20Meridian%2C%20ID" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_098d4c9d62d3fdcee63903ee3a870dd7.setContent(html_c057da7b560a29e65a3ca53467ae7098);
+                var html_707adfaeadb411912605a04e2fb675ae = $(`<div id="html_707adfaeadb411912605a04e2fb675ae" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>SP24 WinCo Foods Meridian</h4><span class="popup-category" style="background:#333333">Supermarket</span><table class="popup-primary"><tr><th>Plan</th><td>安い食料・水・スナック大量補給</td></tr></table><div class="popup-actions"><a class="apple-button" href="https://maps.apple.com/?daddr=43.596134,-116.3896202&amp;dirflg=d" target="_blank">Open in Apple Maps</a><a class="image-link" href="https://www.google.com/search?tbm=isch&amp;q=WinCo%20Foods%20Meridian%20Meridian%2C%20ID" target="_blank">Google image search</a></div><details class="popup-details" open><summary>Show details</summary><div class="popup-detail-body"><table><tr><th>Notes</th><td>I-84動線とNampa泊の双方で使いやすい南Meridian店。 / 営業時間・支払い方法・駐車を直前確認。</td></tr><tr><th>Timing</th><td>Along route / near Nampa</td></tr><tr><th>Priority</th><td>B</td></tr><tr><th>Address</th><td>1050 S Progress Ave, Meridian, ID 83642</td></tr></table></div></details></div></div>`)[0];
+                popup_871459415b656d2942a01599e8531ea8.setContent(html_707adfaeadb411912605a04e2fb675ae);
             
         
 
-        marker_016365f070fddc812b54a94aa877c1e1.bindPopup(popup_098d4c9d62d3fdcee63903ee3a870dd7)
+        marker_4d871af92693ba0f7e7c5e0128044b96.bindPopup(popup_871459415b656d2942a01599e8531ea8)
         ;
 
         
     
     
-            marker_016365f070fddc812b54a94aa877c1e1.bindTooltip(
+            marker_4d871af92693ba0f7e7c5e0128044b96.bindTooltip(
                 `<div>
                      SP24 WinCo Foods Meridian
                  </div>`,
@@ -553,42 +559,42 @@
             );
         
     
-                marker_016365f070fddc812b54a94aa877c1e1.setIcon(div_icon_2f9b6cb8afd4cd91570db09139a1ca14);
+                marker_4d871af92693ba0f7e7c5e0128044b96.setIcon(div_icon_1a24e22faf78cc246ee170232016329d);
             
     
-            var marker_2b26adfeeaa66f727d1d54909f5957d3 = L.marker(
+            var marker_5a070727f7da9fb3d43a9d304c4d21cc = L.marker(
                 [43.6152891, -116.5893275],
                 {
 }
-            ).addTo(map_d564bfcf505168ce559586140aadcecc);
+            ).addTo(map_d2f8da0a6f30773425018b93d7f2473f);
         
     
-            var div_icon_af9ad9127376c5a7508f2b0310b00469 = L.divIcon({
-  "html": "\u003cdiv style=\"background:#333333;color:white;border:2px solid white;border-radius:50%;box-shadow:0 1px 4px rgba(0,0,0,.45);text-align:center;font-weight:700;width:28px;height:28px;box-sizing:border-box;overflow:hidden;font-family:Arial, sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;\"\u003e\u003cspan style=\"display:block;font-size:7px;line-height:8px;\"\u003eSP\u003c/span\u003e\u003cspan style=\"display:block;font-size:8px;line-height:9px;\"\u003e25\u003c/span\u003e\u003c/div\u003e",
+            var div_icon_beb1fcac5230ea08a0d4a12124eea393 = L.divIcon({
+  "html": "\u003cdiv class=\"roadtrip-marker\" style=\"background:#333333;color:white;border:2px solid white;border-radius:50%;box-shadow:0 1px 4px rgba(0,0,0,.45);text-align:center;font-weight:700;width:28px;height:28px;box-sizing:border-box;overflow:hidden;font-family:Arial, sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;\"\u003e\u003cspan style=\"display:block;font-size:7px;line-height:8px;\"\u003eSP\u003c/span\u003e\u003cspan style=\"display:block;font-size:8px;line-height:9px;\"\u003e25\u003c/span\u003e\u003c/div\u003e",
   "iconSize": [28, 28],
   "iconAnchor": [14, 14],
   "className": "empty",
 });
         
     
-        var popup_77a0eea6e087af17f46fe95d5a0df6d4 = L.popup({
+        var popup_515459fa3299e9d83fb8cb346403b27d = L.popup({
   "maxWidth": 460,
 });
 
         
             
-                var html_4f8fddec9344b4269dc7ab897d3f6e7d = $(`<div id="html_4f8fddec9344b4269dc7ab897d3f6e7d" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>SP25 Costco Wholesale Nampa</h4><table><tr><th>Plan</th><td>水・食料・フードコート・ガソリン候補</td></tr><tr><th>Notes</th><td>I-84沿いで使いやすい。Nampa宿泊地が西側なら第一候補。 / 営業日・営業時間・ガス併設・駐車を直前確認。</td></tr><tr><th>Timing</th><td>Approach Boise / before return</td></tr><tr><th>Priority</th><td>B</td></tr><tr><th>Address</th><td>16700 N Market Place Blvd, Nampa, ID 83687</td></tr></table><p><a href="https://maps.apple.com/?daddr=43.6152891,-116.5893275&amp;dirflg=d" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Costco%20Wholesale%20Nampa%20Nampa%2C%20ID" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_77a0eea6e087af17f46fe95d5a0df6d4.setContent(html_4f8fddec9344b4269dc7ab897d3f6e7d);
+                var html_117162e2e5e3076fb4d19bf7bcac4ea5 = $(`<div id="html_117162e2e5e3076fb4d19bf7bcac4ea5" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>SP25 Costco Wholesale Nampa</h4><span class="popup-category" style="background:#333333">Supermarket</span><table class="popup-primary"><tr><th>Plan</th><td>水・食料・フードコート・ガソリン候補</td></tr></table><div class="popup-actions"><a class="apple-button" href="https://maps.apple.com/?daddr=43.6152891,-116.5893275&amp;dirflg=d" target="_blank">Open in Apple Maps</a><a class="image-link" href="https://www.google.com/search?tbm=isch&amp;q=Costco%20Wholesale%20Nampa%20Nampa%2C%20ID" target="_blank">Google image search</a></div><details class="popup-details" open><summary>Show details</summary><div class="popup-detail-body"><table><tr><th>Notes</th><td>I-84沿いで使いやすい。Nampa宿泊地が西側なら第一候補。 / 営業日・営業時間・ガス併設・駐車を直前確認。</td></tr><tr><th>Timing</th><td>Approach Boise / before return</td></tr><tr><th>Priority</th><td>B</td></tr><tr><th>Address</th><td>16700 N Market Place Blvd, Nampa, ID 83687</td></tr></table></div></details></div></div>`)[0];
+                popup_515459fa3299e9d83fb8cb346403b27d.setContent(html_117162e2e5e3076fb4d19bf7bcac4ea5);
             
         
 
-        marker_2b26adfeeaa66f727d1d54909f5957d3.bindPopup(popup_77a0eea6e087af17f46fe95d5a0df6d4)
+        marker_5a070727f7da9fb3d43a9d304c4d21cc.bindPopup(popup_515459fa3299e9d83fb8cb346403b27d)
         ;
 
         
     
     
-            marker_2b26adfeeaa66f727d1d54909f5957d3.bindTooltip(
+            marker_5a070727f7da9fb3d43a9d304c4d21cc.bindTooltip(
                 `<div>
                      SP25 Costco Wholesale Nampa
                  </div>`,
@@ -598,42 +604,42 @@
             );
         
     
-                marker_2b26adfeeaa66f727d1d54909f5957d3.setIcon(div_icon_af9ad9127376c5a7508f2b0310b00469);
+                marker_5a070727f7da9fb3d43a9d304c4d21cc.setIcon(div_icon_beb1fcac5230ea08a0d4a12124eea393);
             
     
-            var marker_3f5b0bd56bdd0331bde3632ef6cc4609 = L.marker(
+            var marker_5397c72d8dd1d7be0a339f7e9f13dd70 = L.marker(
                 [45.668604, -118.8090302],
                 {
 }
-            ).addTo(map_d564bfcf505168ce559586140aadcecc);
+            ).addTo(map_d2f8da0a6f30773425018b93d7f2473f);
         
     
-            var div_icon_024ecc4897df5b265bf46d372531ad07 = L.divIcon({
-  "html": "\u003cdiv style=\"background:#333333;color:white;border:2px solid white;border-radius:50%;box-shadow:0 1px 4px rgba(0,0,0,.45);text-align:center;font-weight:700;width:28px;height:28px;box-sizing:border-box;overflow:hidden;font-family:Arial, sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;\"\u003e\u003cspan style=\"display:block;font-size:7px;line-height:8px;\"\u003eSP\u003c/span\u003e\u003cspan style=\"display:block;font-size:8px;line-height:9px;\"\u003e41\u003c/span\u003e\u003c/div\u003e",
+            var div_icon_65c5fc6af852556f4582045386f7a9d9 = L.divIcon({
+  "html": "\u003cdiv class=\"roadtrip-marker\" style=\"background:#333333;color:white;border:2px solid white;border-radius:50%;box-shadow:0 1px 4px rgba(0,0,0,.45);text-align:center;font-weight:700;width:28px;height:28px;box-sizing:border-box;overflow:hidden;font-family:Arial, sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;\"\u003e\u003cspan style=\"display:block;font-size:7px;line-height:8px;\"\u003eSP\u003c/span\u003e\u003cspan style=\"display:block;font-size:8px;line-height:9px;\"\u003e41\u003c/span\u003e\u003c/div\u003e",
   "iconSize": [28, 28],
   "iconAnchor": [14, 14],
   "className": "empty",
 });
         
     
-        var popup_3c09595420242613c207b1c7488978b7 = L.popup({
+        var popup_e32b9b328ab6a72ade0a416eeec241bd = L.popup({
   "maxWidth": 460,
 });
 
         
             
-                var html_68d29a7d5fce9059a9d71634b596ddba = $(`<div id="html_68d29a7d5fce9059a9d71634b596ddba" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>SP41 Walmart Supercenter Pendleton</h4><table><tr><th>Plan</th><td>水・朝食・日用品・薬・衣類補給</td></tr><tr><th>Notes</th><td>Day 1でWalmartを使うならPendleton。Day 11の帰路補給候補にもなる。ユーザー提供Google Maps pinで実地点に更新。 / 営業時間・駐車・当日の在庫を直前確認。</td></tr><tr><th>Timing</th><td>Mid-route</td></tr><tr><th>Priority</th><td>A</td></tr><tr><th>Address</th><td>2203 SW Court Ave, Pendleton, OR 97801 / Google Maps exact coordinate: 45.668604, -118.8090302</td></tr></table><p><a href="https://maps.apple.com/?ll=45.668604,-118.8090302&amp;q=Walmart%20Supercenter%20Pendleton" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=Walmart%20Supercenter%20Pendleton%20Pendleton%2C%20OR" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_3c09595420242613c207b1c7488978b7.setContent(html_68d29a7d5fce9059a9d71634b596ddba);
+                var html_3cc55358660ff853d5c89d8b0dc2717e = $(`<div id="html_3cc55358660ff853d5c89d8b0dc2717e" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>SP41 Walmart Supercenter Pendleton</h4><span class="popup-category" style="background:#333333">Supermarket</span><table class="popup-primary"><tr><th>Plan</th><td>水・朝食・日用品・薬・衣類補給</td></tr></table><div class="popup-actions"><a class="apple-button" href="https://maps.apple.com/?ll=45.668604,-118.8090302&amp;q=Walmart%20Supercenter%20Pendleton" target="_blank">Open in Apple Maps</a><a class="image-link" href="https://www.google.com/search?tbm=isch&amp;q=Walmart%20Supercenter%20Pendleton%20Pendleton%2C%20OR" target="_blank">Google image search</a></div><details class="popup-details" open><summary>Show details</summary><div class="popup-detail-body"><table><tr><th>Notes</th><td>Day 1でWalmartを使うならPendleton。Day 11の帰路補給候補にもなる。ユーザー提供Google Maps pinで実地点に更新。 / 営業時間・駐車・当日の在庫を直前確認。</td></tr><tr><th>Timing</th><td>Mid-route</td></tr><tr><th>Priority</th><td>A</td></tr><tr><th>Address</th><td>2203 SW Court Ave, Pendleton, OR 97801 / Google Maps exact coordinate: 45.668604, -118.8090302</td></tr></table></div></details></div></div>`)[0];
+                popup_e32b9b328ab6a72ade0a416eeec241bd.setContent(html_3cc55358660ff853d5c89d8b0dc2717e);
             
         
 
-        marker_3f5b0bd56bdd0331bde3632ef6cc4609.bindPopup(popup_3c09595420242613c207b1c7488978b7)
+        marker_5397c72d8dd1d7be0a339f7e9f13dd70.bindPopup(popup_e32b9b328ab6a72ade0a416eeec241bd)
         ;
 
         
     
     
-            marker_3f5b0bd56bdd0331bde3632ef6cc4609.bindTooltip(
+            marker_5397c72d8dd1d7be0a339f7e9f13dd70.bindTooltip(
                 `<div>
                      SP41 Walmart Supercenter Pendleton
                  </div>`,
@@ -643,42 +649,42 @@
             );
         
     
-                marker_3f5b0bd56bdd0331bde3632ef6cc4609.setIcon(div_icon_024ecc4897df5b265bf46d372531ad07);
+                marker_5397c72d8dd1d7be0a339f7e9f13dd70.setIcon(div_icon_65c5fc6af852556f4582045386f7a9d9);
             
     
-            var marker_44124832889b17bdf993091f60cfc6bd = L.marker(
+            var marker_49893769e841cbe20a7ab156a68d52b9 = L.marker(
                 [46.2804, -119.2752],
                 {
 }
-            ).addTo(map_d564bfcf505168ce559586140aadcecc);
+            ).addTo(map_d2f8da0a6f30773425018b93d7f2473f);
         
     
-            var div_icon_f56c4cc46ac33bdbc2ca165329930ca9 = L.divIcon({
-  "html": "\u003cdiv style=\"background:#8c6d31;color:white;border:2px solid white;border-radius:50%;box-shadow:0 1px 4px rgba(0,0,0,.45);text-align:center;font-weight:700;width:28px;height:28px;box-sizing:border-box;overflow:hidden;font-family:Arial, sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;\"\u003e\u003cspan style=\"display:block;font-size:7px;line-height:8px;\"\u003eSv\u003c/span\u003e\u003cspan style=\"display:block;font-size:8px;line-height:9px;\"\u003e09\u003c/span\u003e\u003c/div\u003e",
+            var div_icon_05d01483401f17140fc9c421147996bc = L.divIcon({
+  "html": "\u003cdiv class=\"roadtrip-marker\" style=\"background:#8c6d31;color:white;border:2px solid white;border-radius:50%;box-shadow:0 1px 4px rgba(0,0,0,.45);text-align:center;font-weight:700;width:28px;height:28px;box-sizing:border-box;overflow:hidden;font-family:Arial, sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;\"\u003e\u003cspan style=\"display:block;font-size:7px;line-height:8px;\"\u003eSv\u003c/span\u003e\u003cspan style=\"display:block;font-size:8px;line-height:9px;\"\u003e09\u003c/span\u003e\u003c/div\u003e",
   "iconSize": [28, 28],
   "iconAnchor": [14, 14],
   "className": "empty",
 });
         
     
-        var popup_b086052fe32a4a71970a8d65742d9670 = L.popup({
+        var popup_91357cf27fdde0c64dc20cee36e535fd = L.popup({
   "maxWidth": 460,
 });
 
         
             
-                var html_4e6183a65d4eac725570c67e212b0daa = $(`<div id="html_4e6183a65d4eac725570c67e212b0daa" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>Sv09 REACH Museum / Manhattan Project Hanford visitor materials</h4><table><tr><th>Plan</th><td>科学史・Junior Ranger関連</td></tr><tr><th>Notes</th><td>Hanford立ち寄りとセット。 / 開館状況。</td></tr><tr><th>Timing</th><td>Afternoon</td></tr><tr><th>Priority</th><td>TBD</td></tr><tr><th>Address</th><td>Richland, WA</td></tr></table><p><a href="https://maps.apple.com/?ll=46.2804,-119.2752&amp;q=REACH%20Museum%20%2F%20Manhattan%20Project%20Hanford%20visitor%20materials" target="_blank">Open in Apple Maps</a><br><a href="https://www.google.com/search?tbm=isch&amp;q=REACH%20Museum%20/%20Manhattan%20Project%20Hanford%20visitor%20materials%20Richland%2C%20WA" target="_blank">Google image search</a></p></div></div>`)[0];
-                popup_b086052fe32a4a71970a8d65742d9670.setContent(html_4e6183a65d4eac725570c67e212b0daa);
+                var html_819a1122433b4f799cb8952d60ecbce4 = $(`<div id="html_819a1122433b4f799cb8952d60ecbce4" style="width: 100.0%; height: 100.0%;"><div class="popup"><h4>Sv09 REACH Museum / Manhattan Project Hanford visitor materials</h4><span class="popup-category" style="background:#8c6d31">Souvenir</span><table class="popup-primary"><tr><th>Plan</th><td>科学史・Junior Ranger関連</td></tr></table><div class="popup-actions"><a class="apple-button" href="https://maps.apple.com/?ll=46.2804,-119.2752&amp;q=REACH%20Museum%20%2F%20Manhattan%20Project%20Hanford%20visitor%20materials" target="_blank">Open in Apple Maps</a><a class="image-link" href="https://www.google.com/search?tbm=isch&amp;q=REACH%20Museum%20/%20Manhattan%20Project%20Hanford%20visitor%20materials%20Richland%2C%20WA" target="_blank">Google image search</a></div><details class="popup-details" open><summary>Show details</summary><div class="popup-detail-body"><table><tr><th>Notes</th><td>Hanford立ち寄りとセット。 / 開館状況。</td></tr><tr><th>Timing</th><td>Afternoon</td></tr><tr><th>Priority</th><td>TBD</td></tr><tr><th>Address</th><td>Richland, WA</td></tr></table></div></details></div></div>`)[0];
+                popup_91357cf27fdde0c64dc20cee36e535fd.setContent(html_819a1122433b4f799cb8952d60ecbce4);
             
         
 
-        marker_44124832889b17bdf993091f60cfc6bd.bindPopup(popup_b086052fe32a4a71970a8d65742d9670)
+        marker_49893769e841cbe20a7ab156a68d52b9.bindPopup(popup_91357cf27fdde0c64dc20cee36e535fd)
         ;
 
         
     
     
-            marker_44124832889b17bdf993091f60cfc6bd.bindTooltip(
+            marker_49893769e841cbe20a7ab156a68d52b9.bindTooltip(
                 `<div>
                      Sv09 REACH Museum / Manhattan Project Hanford visitor materials
                  </div>`,
@@ -688,10 +694,10 @@
             );
         
     
-                marker_44124832889b17bdf993091f60cfc6bd.setIcon(div_icon_f56c4cc46ac33bdbc2ca165329930ca9);
+                marker_49893769e841cbe20a7ab156a68d52b9.setIcon(div_icon_05d01483401f17140fc9c421147996bc);
             
     
-            map_d564bfcf505168ce559586140aadcecc.fitBounds(
+            map_d2f8da0a6f30773425018b93d7f2473f.fitBounds(
                 [[43.5407, -122.3321], [47.6062, -116.3896202]],
                 {"padding": [35, 35]}
             );
@@ -700,18 +706,85 @@
 </html>
 
 <script>
-window._spotMarkerNames = {"11-07": "marker_7d8e158610633cddbaab097f1d07a2fe", "11-12": "marker_3e904bf47746899600cfb54fa8b75bc2", "11-03": "marker_e5b8678d554fff6891fb6dc56ee0aaa4", "G14": "marker_77888f933b6cab6062d4b693dea466e0", "G15": "marker_5df85e9cb6654bf6ab9fcc820ebc3dfc", "SP14": "marker_8c84fbd6cfe2ba24e107081838c95f0b", "SP15": "marker_e381b05b970ece75d909a4b560be1c05", "SP16": "marker_23d19562637ebb1e9223646974a9fa5f", "SP17": "marker_f33f22de3ed784126175d852c31523a8", "SP24": "marker_016365f070fddc812b54a94aa877c1e1", "SP25": "marker_2b26adfeeaa66f727d1d54909f5957d3", "SP41": "marker_3f5b0bd56bdd0331bde3632ef6cc4609", "Sv09": "marker_44124832889b17bdf993091f60cfc6bd"};
-function openSpotFromHash(retry) {
-  var id = decodeURIComponent((window.location.hash || '').replace('#',''));
+window._spotMarkerNames = {"11-07": "marker_9cb1889aa18dfa944d65a8fa6da4bb8c", "11-12": "marker_29f460f9984b2dd43b4c279bd8a2ff92", "11-03": "marker_d0917ef88dc35f95f3e1b7f16013eaee", "G14": "marker_c1d92b2ed40d61ef22cb4af92530de7d", "G15": "marker_0e8efc4c336172319a65655d6e766f7a", "SP14": "marker_c3f2db120fa10018036c62ffd4483978", "SP15": "marker_250b516a490ea7dd0f083ae9d245fffa", "SP16": "marker_ce252a24a782fd75fec047bb5491b4d0", "SP17": "marker_4d675bcb3a9fb404c656619dc61d0fd9", "SP24": "marker_4d871af92693ba0f7e7c5e0128044b96", "SP25": "marker_5a070727f7da9fb3d43a9d304c4d21cc", "SP41": "marker_5397c72d8dd1d7be0a339f7e9f13dd70", "Sv09": "marker_49893769e841cbe20a7ab156a68d52b9"};
+window._spotOrder = ["11-03", "11-07", "11-12"];
+window._activeSpotId = null;
+function isPhoneLayout() {
+  return window.matchMedia('(max-width:720px)').matches;
+}
+function setResponsiveDisclosureState() {
+  document.querySelectorAll('.popup-details').forEach(function(node) {
+    if (isPhoneLayout()) node.removeAttribute('open'); else node.setAttribute('open', '');
+  });
+  var legend = document.querySelector('.map-legend');
+  if (legend) {
+    if (isPhoneLayout()) legend.removeAttribute('open'); else legend.setAttribute('open', '');
+  }
+}
+function openSpotById(id, retry) {
   if (!id || !window._spotMarkerNames || !window._spotMarkerNames[id]) return;
   var marker = window[window._spotMarkerNames[id]];
   if (!marker) {
-    if ((retry || 0) < 10) setTimeout(function(){ openSpotFromHash((retry || 0) + 1); }, 300);
+    if ((retry || 0) < 10) setTimeout(function(){ openSpotById(id, (retry || 0) + 1); }, 300);
     return;
   }
+  window._activeSpotId = id;
   marker.openPopup();
-  map_d564bfcf505168ce559586140aadcecc.setView(marker.getLatLng(), Math.max(map_d564bfcf505168ce559586140aadcecc.getZoom(), 10));
+  map_d2f8da0a6f30773425018b93d7f2473f.setView(marker.getLatLng(), Math.max(map_d2f8da0a6f30773425018b93d7f2473f.getZoom(), 10));
+  if (window.location.hash !== '#' + encodeURIComponent(id)) {
+    history.replaceState(null, '', '#' + encodeURIComponent(id));
+  }
+  toggleSpotPanel(false);
 }
+function openSpotFromHash(retry) {
+  var id = decodeURIComponent((window.location.hash || '').replace('#',''));
+  if (id) openSpotById(id, retry || 0);
+}
+function toggleSpotPanel(forceOpen) {
+  var panel = document.getElementById('spot-list-panel');
+  if (!panel) return;
+  var shouldOpen = typeof forceOpen === 'boolean' ? forceOpen : !panel.classList.contains('open');
+  panel.classList.toggle('open', shouldOpen);
+  panel.setAttribute('aria-hidden', shouldOpen ? 'false' : 'true');
+}
+function openNextSpot() {
+  var order = window._spotOrder || [];
+  if (!order.length) return;
+  var index = order.indexOf(window._activeSpotId);
+  openSpotById(order[(index + 1 + order.length) % order.length], 0);
+}
+function locateUser() {
+  map_d2f8da0a6f30773425018b93d7f2473f.locate({setView:true,maxZoom:14,enableHighAccuracy:true});
+}
+function wireMarkers(retry) {
+  var missing = false;
+  Object.keys(window._spotMarkerNames || {}).forEach(function(id) {
+    var marker = window[window._spotMarkerNames[id]];
+    if (!marker) { missing = true; return; }
+    if (!marker._roadtripWired) {
+      marker.on('click', function(){ window._activeSpotId = id; });
+      marker._roadtripWired = true;
+    }
+  });
+  if (missing && (retry || 0) < 10) setTimeout(function(){ wireMarkers((retry || 0) + 1); }, 300);
+}
+document.getElementById('list-button').addEventListener('click', function(){ toggleSpotPanel(); });
+document.getElementById('location-button').addEventListener('click', locateUser);
+document.getElementById('next-button').addEventListener('click', openNextSpot);
+document.querySelectorAll('.spot-list-item').forEach(function(button) {
+  button.addEventListener('click', function(){ openSpotById(button.dataset.spotId, 0); });
+});
+map_d2f8da0a6f30773425018b93d7f2473f.on('locationfound', function(event) {
+  if (window._userLocationLayer) map_d2f8da0a6f30773425018b93d7f2473f.removeLayer(window._userLocationLayer);
+  window._userLocationLayer = L.circleMarker(event.latlng, {
+    radius:8,color:'#fff',weight:3,fillColor:'#1677ff',fillOpacity:1
+  }).addTo(map_d2f8da0a6f30773425018b93d7f2473f).bindTooltip('現在地');
+});
+map_d2f8da0a6f30773425018b93d7f2473f.on('locationerror', function(){ alert('現在地を取得できませんでした。ブラウザの位置情報設定を確認してください。'); });
+map_d2f8da0a6f30773425018b93d7f2473f.on('popupopen', setResponsiveDisclosureState);
+setResponsiveDisclosureState();
+wireMarkers(0);
 setTimeout(function(){ openSpotFromHash(0); }, 600);
 window.addEventListener('hashchange', function(){ openSpotFromHash(0); });
+window.addEventListener('resize', setResponsiveDisclosureState);
 </script>
