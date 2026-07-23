@@ -7,6 +7,8 @@ param(
 )
 
 $ErrorActionPreference = 'Stop'
+$env:GIT_TERMINAL_PROMPT = '0'
+$env:GCM_INTERACTIVE = 'Never'
 
 if (-not $SourceDirectory) {
     $sourceCandidates = @(Get-ChildItem -LiteralPath 'G:\' -Directory | ForEach-Object {
@@ -139,7 +141,7 @@ foreach ($item in $copyPlan) {
     Copy-Item -LiteralPath $item.Source -Destination (Join-Path $repoRoot $item.DestinationName) -Force
 }
 
-& git -C $repoRoot add -- $publishNames
+& git -C $repoRoot -c core.autocrlf=false add -- $publishNames
 if ($LASTEXITCODE -ne 0) {
     throw 'git add failed.'
 }
