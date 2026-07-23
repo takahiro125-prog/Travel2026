@@ -44,6 +44,7 @@ $htmlFiles = @(
     'day11_hotels_spots_only_map.html'
 )
 $zipName = '2026_summer_roadtrip_maps_latest_rebuilt.zip'
+$publishNames = @($htmlFiles) + @($zipName)
 
 if (-not (Test-Path -LiteralPath $sourceRoot -PathType Container)) {
     throw "Google Drive folder not found: $sourceRoot"
@@ -94,8 +95,14 @@ $existingChanges = @(& git -C $repoRoot status --porcelain)
 if ($LASTEXITCODE -ne 0) {
     throw 'Could not read Git status.'
 }
-if ($existingChanges.Count -gt 0) {
-    throw 'The repository has uncommitted changes. Commit or remove them before publishing maps.'
+$unrelatedChanges = @($existingChanges | Where-Object {
+    $line = $_
+    $path = if ($line.Length -ge 4) { $line.Substring(3).Trim('"') } else { $line }
+    if ($path -match ' -> ') { $path = ($path -split ' -> ')[-1].Trim('"') }
+    $path -notin $publishNames
+})
+if ($unrelatedChanges.Count -gt 0) {
+    throw "The repository has unrelated uncommitted changes: $($unrelatedChanges -join '; ')"
 }
 
 Write-Host 'Synchronizing with origin/main...'
@@ -132,7 +139,6 @@ foreach ($item in $copyPlan) {
     Copy-Item -LiteralPath $item.Source -Destination (Join-Path $repoRoot $item.DestinationName) -Force
 }
 
-$publishNames = @($htmlFiles) + @($zipName)
 & git -C $repoRoot add -- $publishNames
 if ($LASTEXITCODE -ne 0) {
     throw 'git add failed.'
